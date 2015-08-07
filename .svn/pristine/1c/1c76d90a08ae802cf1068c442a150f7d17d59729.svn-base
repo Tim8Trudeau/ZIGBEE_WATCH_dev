@@ -1,0 +1,512 @@
+/********************************************************************
+ *     program:  EverWrist_uart_isr.c
+ *      Project: Zigbee Watch
+ *     Version:  0.0.1 -- phase 1
+ *   Copyright:  2014, Barron Associates
+ *     Written:  Wednesday, March 18, 2015
+ *      Author:  Tim Trudeau - Timware
+ *   Processor:  TI CC2538
+ *        Tool:  IAR Embedded Workbench
+ *
+ *-------------------------------------------------------------------
+ * /brief This contains the interface to the UARTs.
+ * The CP2102 USB to UART converter is assigned to UART0
+ * The serial channel to the MSP processor is assinged to UART1
+ *******************************************************************/
+
+
+/* ------------------------------------------------------------------------------------------------
+ *                                          Includes
+ * ------------------------------------------------------------------------------------------------
+ */
+#include "hal_board.h"
+#include "hal_types.h"
+#include "OSAL.h"
+#include "OSAL_Timers.h"
+#include "ioc.h"
+#include "hw_ioc.h"
+#include "hw_uart.h"
+#include "hal_uart.h"
+#include "EverWrist_bsp.h"
+#include "WatchApp.h"
+
+/* ------------------------------------------------------------------------------------------------
+ *                                           Constants
+ * ------------------------------------------------------------------------------------------------
+ */
+#define CP2102_UART_BASE          UART0_BASE
+#define MSP_UART_BASE             UART1_BASE
+#define CP2102_UART_SYS_CTRL      SYS_CTRL_PERIPH_UART0
+#define MSP_UART_SYS_CTRL         SYS_CTRL_PERIPH_UART1
+#define UART0                     0
+#define UART1                     1
+
+/* ------------------------------------------------------------------------------------------------
+ *                                           Local Variables
+ * ------------------------------------------------------------------------------------------------
+ */
+
+const uint32 UBRRTable[] = {
+  9600,
+  19200,
+  38400,
+  57600,
+  115200
+};
+
+static halUARTCfg_t CP2102_Record;
+static halUARTCfg_t MSP_Record;
+
+/* ------------------------------------------------------------------------------------------------
+ *                                           Local Functions
+ * ------------------------------------------------------------------------------------------------
+ */
+static void recRst(halUARTCfg_t* config);
+static void procRx(uint8 port);
+static void procTx(uint8 port);
+
+void    HalUARTInitIsr(void);
+uint8   HalUARTOpenIsr(uint8 port, halUARTCfg_t* config);
+void    HalUARTCloseIsr(uint8 port);
+uint16  HalUARTReadIsr ( uint8 port, uint8* pBuffer, uint16 length );
+uint16  HalUARTWriteIsr(uint8 port, uint8* pBuffer, uint16 length);
+uint16  Hal_UART_RxBufLenIsr(uint8 port);
+
+void    interrupt_uart0(void);
+void    interrupt_uart1(void);
+void    CP2102_Message_Handler  (uint8 port, uint8 event);
+void    MSP_Message_Handler(uint8 port, uint8 event);
+
+/* ------------------------------------------------------------------------------------------------
+ *                                           Global Functions
+ * ------------------------------------------------------------------------------------------------
+ */
+
+ 
+/* ------------------------------------------------------------------------------------------------
+ *                                           Global Varables
+ * ------------------------------------------------------------------------------------------------
+ */
+
+/*************************************************************************************************
+ * @fn      HalUARTInitIsr()
+ *
+ * @brief   Initialize both UARTs using the same port configuration parameters. UART0 is assigned 
+ *          to the MSP processor. UART 1 is for the USB serial port.
+ * Note:    HalUARTOpen redirects to HalUARTOpenIsr. HalUARTOpen is called here because the stack may also call it.     
+ *
+ * @param   none
+ *
+ * @return  none
+ *
+ *************************************************************************************************/
+void HalUARTInitIsr(void)
+{
+  halUARTCfg_t uartConfig;
+
+  /* UART Configuration */
+  uartConfig.configured           = TRUE;
+  uartConfig.baudRate             = UART_SEL_BAUD;
+  uartConfig.flowControl          = UART_OVERFLOW;
+  uartConfig.flowControlThreshold = UART_THRESHOLD;
+  uartConfig.rx.maxBufSize        = UART_RX_BUFF_MAX;
+  uartConfig.tx.maxBufSize        = UART_TX_BUFF_MAX;
+  uartConfig.idleTimeout          = UART_IDLE_TIMEOUT;
+  uartConfig.intEnable            = TRUE;
+
+  /* Start both UARTs */
+  uartConfig.callBackFunc         = CP2102_Message_Handler;
+  HalUARTOpen (UART1, &uartConfig);
+  //Uart 0 is for the MSP
+  uartConfig.callBackFunc         = MSP_Message_Handler;
+  HalUARTOpen (UART0, &uartConfig);
+
+}
+
+/*************************************************************************************************
+ * @fn      HalUARTOpenIsr()
+ *
+ * @brief   Open a port based on the configuration
+ *
+ * @param   port   - UART port
+ *          config - contains configuration information
+ *          cBack  - Call back function where events will be reported back
+ *
+ * @return  Status of the function call
+ *************************************************************************************************/
+uint8 HalUARTOpenIsr(uint8 port, halUARTCfg_t* config)
+{
+  uint32_t      interrupt_assignment;
+  uint32_t      HAL_UART_port;
+  halUARTCfg_t* uartRecord;
+
+  if (port == UART1) {
+  /* PA7 as CP2102_UART_RTS  
+   * PA0 as CP2102_UART_TX and PA1 as CP2102_UART_RX
+   * CTS, RTS, TX and RX are with respest to the CP2102 thus opposite on the CC2538
+   */ 
+      uartRecord = &CP2102_Record;
+      interrupt_assignment = INT_UART1;
+      IOCPinConfigPeriphOutput(GPIO_A_BASE, GPIO_PIN_1, IOC_MUX_OUT_SEL_UART1_TXD);
+      IOCPinConfigPeriphOutput(GPIO_A_BASE, GPIO_PIN_7, IOC_MUX_OUT_SEL_UART1_RTS);
+      IOCPinConfigPeriphInput(GPIO_A_BASE, GPIO_PIN_0, IOC_UARTRXD_UART1);
+      GPIOPinTypeUARTOutput(GPIO_A_BASE, GPIO_PIN_1);    
+      GPIOPinTypeUARTOutput(GPIO_A_BASE, GPIO_PIN_7);    
+      GPIOPinTypeUARTInput(GPIO_A_BASE, GPIO_PIN_0);
+      HAL_UART_port = CP2102_UART_BASE;
+      SysCtrlPeripheralEnable(SYS_CTRL_PERIPH_UART0);
+  }else{
+   /* PA3 as MSP_UART_TX and PA4 as MSP_UART_RX
+   * TX and RX are with respest to the MSP thus opposite on the CC2538
+   */ 
+      uartRecord = &MSP_Record;
+      interrupt_assignment = INT_UART0;
+      IOCPinConfigPeriphOutput(GPIO_A_BASE, GPIO_PIN_4, IOC_MUX_OUT_SEL_UART0_TXD);
+      IOCPinConfigPeriphInput(GPIO_A_BASE, GPIO_PIN_3, IOC_UARTRXD_UART0);
+      GPIOPinTypeUARTOutput(GPIO_A_BASE, GPIO_PIN_4);  
+      GPIOPinTypeUARTInput(GPIO_A_BASE, GPIO_PIN_3);
+      HAL_UART_port = MSP_UART_BASE;
+      SysCtrlPeripheralEnable(SYS_CTRL_PERIPH_UART1);
+  }
+  recRst(uartRecord);
+  
+  if (uartRecord->configured) { // if already configured don't destroy buffers
+    HalUARTClose(port);
+  }
+
+  if (config->baudRate > HAL_UART_BR_115200) {
+    return HAL_UART_BAUDRATE_ERROR;
+  }
+
+  if (((uartRecord->rx.pBuffer = osal_mem_alloc(config->rx.maxBufSize)) == NULL) ||
+      ((uartRecord->tx.pBuffer = osal_mem_alloc(config->tx.maxBufSize)) == NULL)) {
+    if (uartRecord->rx.pBuffer != NULL) {
+      osal_mem_free(uartRecord->rx.pBuffer);
+      uartRecord->rx.pBuffer = NULL;
+    }
+
+    return HAL_UART_MEM_FAIL;
+  }
+   
+  IntEnable(interrupt_assignment);
+
+  uartRecord->configured = TRUE;
+  uartRecord->baudRate = config->baudRate;
+  uartRecord->flowControl = config->flowControl;
+  uartRecord->flowControlThreshold = (config->flowControlThreshold > config->rx.maxBufSize) ? 0 :
+                                     config->flowControlThreshold;
+  uartRecord->idleTimeout = config->idleTimeout;
+  uartRecord->rx.maxBufSize = config->rx.maxBufSize;
+  uartRecord->tx.maxBufSize = config->tx.maxBufSize;
+  uartRecord->intEnable = config->intEnable;
+  uartRecord->callBackFunc = config->callBackFunc;
+
+  UARTConfigSetExpClk(HAL_UART_port, SysCtrlClockGet(), UBRRTable[uartRecord->baudRate],
+                         (UART_CONFIG_WLEN_8 | UART_CONFIG_PAR_NONE | UART_CONFIG_STOP_ONE));
+
+  /* FIFO level set to 1/8th for both RX and TX which is 2 bytes */
+  UARTFIFOLevelSet(HAL_UART_port, UART_FIFO_TX1_8, UART_FIFO_RX1_8);
+  UARTFIFOEnable(HAL_UART_port);
+
+  /* Clear and enable UART TX, RX and Recieve Timeout interrupt. Not using CTS */
+  UARTIntClear(HAL_UART_port,  (UART_INT_RX | UART_INT_TX | UART_INT_CTS | UART_INT_RT ));
+  UARTIntEnable(HAL_UART_port, (UART_INT_RX | UART_INT_TX | UART_INT_CTS | UART_INT_RT ));
+  
+  if(config->flowControl) {
+    /* Enable hardware flow control by enabling RTS */
+    HWREG(HAL_UART_port + UART_O_CTL) |= (UART_CTL_RTSEN );
+  }
+  UARTEnable(HAL_UART_port);
+
+  return HAL_UART_SUCCESS;
+}
+
+
+/*************************************************************************************************
+ * @fn      HalUARTCloseIsr()
+ *
+ * @brief   Close the UART
+ *
+ * @param   port - UART port.
+ *
+ * @return  none
+ *************************************************************************************************/
+void HalUARTCloseIsr(uint8 port)
+{
+  halUARTCfg_t* uartRecord;
+
+  uartRecord = (port == UART1) ? &CP2102_Record : &MSP_Record;
+
+  UARTDisable(port);
+
+  if (uartRecord->configured) {
+    (void)osal_mem_free(uartRecord->rx.pBuffer);
+    (void)osal_mem_free(uartRecord->tx.pBuffer);
+    recRst(uartRecord);
+  }
+}
+
+/*************************************************************************************************
+ * @fn      HalUARTReadIsr()
+ *
+ * @brief   Read a buffer from the UART
+ *
+ * @param   port - UART port.
+ *          ppBuffer - pointer to a pointer that points to the data that will be read
+ *          length - length of the requested buffer
+ *
+ * @return  length of buffer that was read
+ *************************************************************************************************/
+uint16 HalUARTReadIsr ( uint8 port, uint8* pBuffer, uint16 length )
+{
+  uint16        cnt, idx;
+  halUARTCfg_t* uartRecord;
+
+ 
+  uartRecord = (port == UART1) ? &CP2102_Record : &MSP_Record;
+
+  /* If port is not configured, no point to read it. */
+  if (!uartRecord->configured) {
+    return 0;
+  }
+
+  idx = uartRecord->rx.bufferHead;
+  for (cnt = 0; cnt < length; cnt++) {
+    pBuffer[cnt] = uartRecord->rx.pBuffer[idx++];
+
+    if (idx >= uartRecord->rx.maxBufSize) {
+      idx = 0;
+    }
+  }
+  uartRecord->rx.bufferHead = idx;
+
+  /* Return number of bytes read. */
+  return length;  
+}
+
+/*************************************************************************************************
+ * @fn      HalUARTWriteIsr()
+ *
+ * @brief   Write a buffer to the UART
+ *
+ * @param   port    - UART port.
+ *          pBuffer - pointer to the buffer that will be written
+ *          length  - length of
+ *
+ * @return  length of the message that was sent
+ *************************************************************************************************/
+uint16 HalUARTWriteIsr(uint8 port, uint8 *pBuffer, uint16 length)
+{
+  halUARTCfg_t* uartRecord;
+
+  uartRecord = (port == UART1) ? &CP2102_Record : &MSP_Record;
+
+  if (!uartRecord->configured) {
+    return 0;
+  }
+
+  uint16 idx = uartRecord->tx.bufferHead;
+  uint16 cnt = uartRecord->tx.bufferTail;
+
+  if (cnt == idx) {
+    cnt = uartRecord->tx.maxBufSize;
+  }
+  else if (cnt > idx) {
+    cnt = uartRecord->tx.maxBufSize - cnt + idx;
+  }else{ /* (cnt < idx) */
+    cnt = idx - cnt;
+  }
+
+  /* Accept "all-or-none" on write request. */
+  if (cnt < length) {
+    return 0;
+  }
+
+   idx = uartRecord->tx.bufferTail;
+
+  for (cnt = 0; cnt < length; cnt++) {
+    uartRecord->tx.pBuffer[idx++] = pBuffer[cnt];
+
+    if (idx >= uartRecord->tx.maxBufSize) {
+      idx = 0;
+    }
+  }
+
+  halIntState_t intState;
+  HAL_ENTER_CRITICAL_SECTION(intState);
+  uartRecord->tx.bufferTail = idx;
+  procTx(port);
+  HAL_EXIT_CRITICAL_SECTION(intState);
+
+  /* Return the number of bytes actually put into the buffer. */
+  return length;  
+}
+
+/*************************************************************************************************
+ * @fn      Hal_UART_RxBufLenIsr()
+ *
+ * @brief   Calculate Rx message length of a port
+ *
+ * @param   port - UART port.
+ *
+ * @return  length of current Rx Buffer
+ *************************************************************************************************/
+uint16 Hal_UART_RxBufLenIsr(uint8 port)
+{
+  int16 length;
+  halUARTCfg_t* uartRecord;
+
+  uartRecord = (port == UART1) ? &CP2102_Record : &MSP_Record;
+  length = uartRecord->rx.bufferTail;
+  length -= uartRecord->rx.bufferHead;
+  if  (length < 0){
+      length += uartRecord->rx.maxBufSize;
+  }
+  return (uint16)length;
+}
+
+/*************************************************************************************************
+ * @fn      Hal_UART_TxBufLen()
+ *
+ * @brief   Calculate Tx Buffer length of a port
+ *
+ * @param   port - UART port.
+ *
+ * @return  length of current Tx buffer
+ *************************************************************************************************/
+uint16 Hal_UART_TxBufLen( uint8 port )
+{
+  int16 length;
+  halUARTCfg_t* uartRecord;
+
+  uartRecord = (port == UART1) ? &CP2102_Record : &MSP_Record;
+  length = uartRecord->tx.bufferTail;
+  length -= uartRecord->tx.bufferHead;
+  if  (length < 0) {
+    length += uartRecord->tx.maxBufSize;
+  }
+  return (uint16)length;
+}
+
+/*************************************************************************************************
+ * @fn      recRst()
+ *
+ * @brief   Reset the UART record.
+ *
+ * @param   uartRecord to reset
+ *
+ * @return  none
+ *************************************************************************************************/
+static void recRst( halUARTCfg_t* uartRecord )
+{
+  uartRecord->configured        = FALSE;
+  uartRecord->rx.bufferHead     = 0;
+  uartRecord->rx.bufferTail     = 0;
+  uartRecord->rx.pBuffer        = (uint8 *)NULL;
+  uartRecord->tx.bufferHead     = 0;
+  uartRecord->tx.bufferTail     = 0;
+  uartRecord->tx.pBuffer        = (uint8 *)NULL;
+  uartRecord->rxChRvdTime       = 0;
+  uartRecord->intEnable         = FALSE;
+}
+
+/*************************************************************************************************
+ * @fn      procRx
+ *
+ * @brief   Process Tx bytes.
+ *
+ * @param   void
+ *
+ * @return  void
+ *************************************************************************************************/
+static void procRx( uint8 port )
+{
+  halUARTCfg_t* uartRecord;
+  uint16 tail;
+  
+  uartRecord = (port == UART1) ? &CP2102_Record : &MSP_Record;
+
+  tail = uartRecord->rx.bufferTail;
+
+  while (UARTCharsAvail(port)) {
+    uartRecord->rx.pBuffer[tail++] = UARTCharGetNonBlocking(port);
+
+    if (tail >= uartRecord->rx.maxBufSize) {
+      tail = 0;
+    }
+  }
+
+  if (uartRecord->rx.bufferTail != tail) {
+    uartRecord->rx.bufferTail = tail;
+    uartRecord->rxChRvdTime = osal_GetSystemClock();
+  }
+}
+
+/*************************************************************************************************
+ * @fn      procTx
+ *
+ * @brief   Process Tx bytes.
+ *
+ * @param   void
+ *
+ * @return  void
+ *************************************************************************************************/
+static void procTx( uint8 port )
+{
+  uint16 head;
+  uint16 tail;
+  halUARTCfg_t* uartRecord;
+  
+  uartRecord = (port == UART1) ? &CP2102_Record : &MSP_Record;
+  head = uartRecord->tx.bufferHead;
+  tail = uartRecord->tx.bufferTail;
+
+  while ((head != tail) && (UARTCharPutNonBlocking(port, uartRecord->tx.pBuffer[head]))) {
+    if (++head >= uartRecord->tx.maxBufSize) {
+      head = 0;
+    }
+  }
+
+  uartRecord->tx.bufferHead = head;
+}
+
+/*************************************************************************************************
+ * @fn      UART0 Rx/Tx ISR
+ *
+ * @brief   Called when a serial byte is ready to read and/or write.
+ * NOTE:   Assumes that uartRecord.configured is TRUE if this interrupt is enabled.
+ *
+ * @param   void
+ *
+ * @return  void
+**************************************************************************************************/
+void interrupt_uart0(void)
+{
+  UARTIntClear(UART0_BASE, (UART_INT_RX |  UART_INT_RT));
+  procRx(UART0);
+
+  UARTIntClear(UART0_BASE, (UART_INT_TX | UART_INT_CTS));
+  procTx(UART0);
+}
+
+/*************************************************************************************************
+ * @fn      UART1 Rx/Tx ISR
+ *
+ * @brief   Called when a serial byte is ready to read and/or write.
+ * NOTE:   Assumes that uartRecord.configured is TRUE if this interrupt is enabled.
+ *
+ * @param   void
+ *
+ * @return  void
+**************************************************************************************************/
+void interrupt_uart1(void)
+{
+  UARTIntClear(UART1_BASE, (UART_INT_RX |  UART_INT_RT));
+  procRx(UART1);
+
+  UARTIntClear(UART1_BASE, (UART_INT_TX | UART_INT_CTS));
+  procTx(UART1);
+}
+
+/**************************************************************************************************
+*/

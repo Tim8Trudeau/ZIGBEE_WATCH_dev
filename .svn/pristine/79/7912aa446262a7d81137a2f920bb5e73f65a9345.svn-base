@@ -1,0 +1,385 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.40.1.8447/W32 for ARM        12/Apr/2015  15:43:25
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\mt\DebugTrace.c
+#    Command line =  
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\mt\DebugTrace.c"
+#        -D FEATURE_RESET_MACRO -D ewarm -D NWK_AUTO_POLL -D xPOWER_SAVING -D
+#        ZTOOL_P1 -D MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D LCD_SUPPORTED=YES
+#        -D CC2538_USE_ALTERNATE_INTERRUPT_MAP=1 --preprocess=cl
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\Debug\List\ -lC
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\Debug\List\ -lB
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\Debug\List\
+#        --diag_suppress Pa082 -o
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\Debug\Obj\ --no_cse
+#        --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering
+#        --no_scheduling --debug --endian=little --cpu=Cortex-M3 -f
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\f8wConfig.cfg
+#        (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+#        -DDEFAULT_CHANLIST=0x07FFF800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+#        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+#        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+#        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+#        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+#        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+#        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+#        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+#        -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01, 0x03, 0x05, 0x07,
+#        0x09, 0x0B, 0x0D, 0x0F, 0x00, 0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C,
+#        0x0D}" -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
+#        -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100
+#        -DRESPONSE_POLL_RATE=100 -DREJOIN_POLL_RATE=440) -f
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\f8wEndev.cfg
+#        (-DMAC_CFG_TX_DATA_MAX=3 -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -e
+#        --fpu=None --dlib_config "C:\Program Files (x86)\IAR Systems\Embedded
+#        Workbench 7.2\arm\INC\c\DLib_Config_Normal.h" -I
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\..\Source\ -I
+#        "C:\Texas Instruments\Z-Stack Mesh
+#        1.0.0\Projects\zstack\ZMain\TI2538DB\" -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Components\hal\include\" -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Components\hal\target\CC2538\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh
+#        1.0.0\Components\driverlib\cc2538\inc\" -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Components\driverlib\cc2538\source\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh
+#        1.0.0\Components\bsp\srf06eb_cc2538\drivers\source\" -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Components\mac\include\" -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Components\mac\high_level\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh
+#        1.0.0\Components\mac\low_level\srf05\single_chip\" -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Components\mac\low_level\srf05\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\mt\" -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Components\osal\include\" -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Components\services\sdata\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\services\saddr\"
+#        -I "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\af\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\nwk\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\sapi\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\sec\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\sys\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\zdo\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\zmac\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\zmac\f8w\" -Ol
+#    List file    =  
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\Debug\List\DebugTrace.lst
+#    Object file  =  
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\Debug\Obj\DebugTrace.o
+#
+###############################################################################
+
+C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\mt\DebugTrace.c
+      1          /**************************************************************************************************
+      2            Filename:       DebugTrace.c
+      3            Revised:        $Date: 2012-11-28 00:37:02 -0800 (Wed, 28 Nov 2012) $
+      4            Revision:       $Revision: 32329 $
+      5          
+      6          
+      7            Description:    This interface provides quick one-function-call functions to
+      8                            Monitor and Test reporting mechanisms.
+      9          
+     10          
+     11            Copyright 2007-2012 Texas Instruments Incorporated. All rights reserved.
+     12          
+     13            IMPORTANT: Your use of this Software is limited to those specific rights
+     14            granted under the terms of a software license agreement between the user
+     15            who downloaded the software, his/her employer (which must be your employer)
+     16            and Texas Instruments Incorporated (the "License").  You may not use this
+     17            Software unless you agree to abide by the terms of the License. The License
+     18            limits your use, and you acknowledge, that the Software may not be modified,
+     19            copied or distributed unless embedded on a Texas Instruments microcontroller
+     20            or used solely and exclusively in conjunction with a Texas Instruments radio
+     21            frequency transceiver, which is integrated into your product.  Other than for
+     22            the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     23            works of, modify, distribute, perform, display or sell this Software and/or
+     24            its documentation for any purpose.
+     25          
+     26            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     27            PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+     28            INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+     29            NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     30            TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     31            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     32            LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     33            INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     34            OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     35            OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     36            (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     37          
+     38            Should you have any questions regarding your right to use this Software,
+     39            contact Texas Instruments Incorporated at www.TI.com.
+     40          
+     41          **************************************************************************************************/
+     42          
+     43          #if defined( MT_TASK ) || defined( APP_DEBUG )
+     44          
+     45          /*********************************************************************
+     46           * INCLUDES
+     47           */
+     48          #include "ZComDef.h"
+     49          #include "OSAL.h"
+     50          #include "MT.h"
+     51          #include "MT_TASK.h"
+     52          #include "MT_DEBUG.h"
+     53          #include "DebugTrace.h"
+     54          
+     55          #if defined ( APP_DEBUG )
+     56            #include "DebugApp.h"
+     57          #endif
+     58          
+     59           /*********************************************************************
+     60           * MACROS
+     61           */
+     62          
+     63          /*********************************************************************
+     64           * CONSTANTS
+     65           */
+     66          
+     67          
+     68          /*********************************************************************
+     69           * TYPEDEFS
+     70           */
+     71          
+     72          /*********************************************************************
+     73           * GLOBAL VARIABLES
+     74           */
+     75          
+     76          /*********************************************************************
+     77           * EXTERNAL VARIABLES
+     78           */
+     79          
+     80          /*********************************************************************
+     81           * EXTERNAL FUNCTIONS
+     82           */
+     83          
+     84           /*********************************************************************
+     85           * LOCAL VARIABLES
+     86           */
+     87          
+     88          /*********************************************************************
+     89           * LOCAL FUNCTIONS
+     90           */
+     91          
+     92          /*********************************************************************
+     93           * @fn      debug_msg
+     94           *
+     95           * @brief
+     96           *
+     97           *   This feature allows modules to display debug information as
+     98           *   applications execute in real-time.  This feature will work similar
+     99           *   to "printf()" but will output to the serial port for display in
+    100           *   the Z-Test tool.
+    101           *
+    102           *   This feature will most likely be compiled out in the production code
+    103           *   to save code space.
+    104           *
+    105           * @param   byte compID - Component ID
+    106           * @param   byte severity - CRITICAL(0x01), ERROR(0x02), INFORMATION(0x03)
+    107           *                          or TRACE(0x04)
+    108           * @param   byte numParams - number of parameter fields (param1-3)
+    109           * @param   UINT16 param1 - user defined data
+    110           * @param   UINT16 param2 - user defined data
+    111           * @param   UINT16 param3 - user defined data
+    112           *
+    113           * @return  void
+    114           */
+
+   \                                 In section .text, align 2, keep-with-next
+    115          void debug_msg( byte compID, byte severity, byte numParams, UINT16 param1, UINT16 param2, UINT16 param3 )
+    116          {
+   \                     debug_msg: (+1)
+   \   00000000   0xE92D 0x41F0      PUSH     {R4-R8,LR}
+   \   00000004   0x0004             MOVS     R4,R0
+   \   00000006   0x000D             MOVS     R5,R1
+   \   00000008   0x0016             MOVS     R6,R2
+   \   0000000A   0x001F             MOVS     R7,R3
+    117          
+    118            mtDebugMsg_t *mtDebugMsg;
+    119            UINT16 timestamp;
+    120          
+    121            if ( debugThreshold == 0 || debugCompId != compID )
+   \   0000000C   0x....             LDR.N    R0,??DataTable1
+   \   0000000E   0x7800             LDRB     R0,[R0, #+0]
+   \   00000010   0x2800             CMP      R0,#+0
+   \   00000012   0xD004             BEQ.N    ??debug_msg_0
+   \   00000014   0x....             LDR.N    R0,??DataTable1_1
+   \   00000016   0x7800             LDRB     R0,[R0, #+0]
+   \   00000018   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   0000001A   0x42A0             CMP      R0,R4
+   \   0000001C   0xD000             BEQ.N    ??debug_msg_1
+    122              return;
+   \                     ??debug_msg_0: (+1)
+   \   0000001E   0xE017             B.N      ??debug_msg_2
+    123          
+    124            // Fill in the timestamp
+    125            timestamp = 0;
+   \                     ??debug_msg_1: (+1)
+   \   00000020   0xF05F 0x0800      MOVS     R8,#+0
+    126          
+    127            // Get a message buffer to build the debug message
+    128            mtDebugMsg = (mtDebugMsg_t *)osal_msg_allocate( sizeof( mtDebugMsg_t ) );
+   \   00000024   0x200E             MOVS     R0,#+14
+   \   00000026   0x.... 0x....      BL       osal_msg_allocate
+    129            if ( mtDebugMsg )
+   \   0000002A   0x2800             CMP      R0,#+0
+   \   0000002C   0xD010             BEQ.N    ??debug_msg_3
+    130            {
+    131                mtDebugMsg->hdr.event = CMD_DEBUG_MSG;
+   \   0000002E   0x2102             MOVS     R1,#+2
+   \   00000030   0x7001             STRB     R1,[R0, #+0]
+    132                mtDebugMsg->compID = compID;
+   \   00000032   0x7084             STRB     R4,[R0, #+2]
+    133                mtDebugMsg->severity = severity;
+   \   00000034   0x70C5             STRB     R5,[R0, #+3]
+    134                mtDebugMsg->numParams = numParams;
+   \   00000036   0x7106             STRB     R6,[R0, #+4]
+    135          
+    136                mtDebugMsg->param1 = param1;
+   \   00000038   0x80C7             STRH     R7,[R0, #+6]
+    137                mtDebugMsg->param2 = param2;
+   \   0000003A   0x9906             LDR      R1,[SP, #+24]
+   \   0000003C   0x8101             STRH     R1,[R0, #+8]
+    138                mtDebugMsg->param3 = param3;
+   \   0000003E   0x9907             LDR      R1,[SP, #+28]
+   \   00000040   0x8141             STRH     R1,[R0, #+10]
+    139                mtDebugMsg->timestamp = timestamp;
+   \   00000042   0xF8A0 0x800C      STRH     R8,[R0, #+12]
+    140          
+    141                osal_msg_send( MT_TaskID, (uint8 *)mtDebugMsg );
+   \   00000046   0x0001             MOVS     R1,R0
+   \   00000048   0x....             LDR.N    R0,??DataTable1_2
+   \   0000004A   0x7800             LDRB     R0,[R0, #+0]
+   \   0000004C   0x.... 0x....      BL       osal_msg_send
+    142            }
+    143          
+    144          } /* debug_msg() */
+   \                     ??debug_msg_3: (+1)
+   \                     ??debug_msg_2: (+1)
+   \   00000050   0xE8BD 0x81F0      POP      {R4-R8,PC}       ;; return
+    145          
+    146          /*********************************************************************
+    147           * @fn      debug_str
+    148           *
+    149           * @brief
+    150           *
+    151           *   This feature allows modules to display a debug text string as
+    152           *   applications execute in real-time. This feature will output to
+    153           *   the serial port for display in the Z-Test tool.
+    154           *
+    155           *   This feature will most likely be compiled out in the production
+    156           *   code in order to save code space.
+    157           *
+    158           * @param   byte *str_ptr - pointer to null-terminated string
+    159           *
+    160           * @return  void
+    161           */
+
+   \                                 In section .text, align 2, keep-with-next
+    162          void debug_str( byte *str_ptr )
+    163          {
+   \                     debug_str: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+    164            mtDebugStr_t *msg;
+    165            byte mln;
+    166            byte strLen;
+    167          
+    168            // Text string length
+    169            strLen = (byte)osal_strlen( (void*)str_ptr );
+   \   00000004   0x0020             MOVS     R0,R4
+   \   00000006   0x.... 0x....      BL       osal_strlen
+   \   0000000A   0x0006             MOVS     R6,R0
+    170          
+    171            // Debug string message length
+    172            mln = sizeof ( mtDebugStr_t ) + strLen;
+   \   0000000C   0xF116 0x0008      ADDS     R0,R6,#+8
+    173          
+    174            // Get a message buffer to build the debug message
+    175            msg = (mtDebugStr_t *)osal_msg_allocate( mln );
+   \   00000010   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000012   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   00000014   0x.... 0x....      BL       osal_msg_allocate
+   \   00000018   0x0005             MOVS     R5,R0
+    176            if ( msg )
+   \   0000001A   0x2D00             CMP      R5,#+0
+   \   0000001C   0xD010             BEQ.N    ??debug_str_0
+    177            {
+    178              // Message type, length
+    179              msg->hdr.event = CMD_DEBUG_STR;
+   \   0000001E   0x2006             MOVS     R0,#+6
+   \   00000020   0x7028             STRB     R0,[R5, #+0]
+    180              msg->strLen = strLen;
+   \   00000022   0x70AE             STRB     R6,[R5, #+2]
+    181          
+    182              // Append message, no terminator
+    183              msg->pString = (uint8 *)(msg+1);
+   \   00000024   0xF115 0x0008      ADDS     R0,R5,#+8
+   \   00000028   0x6068             STR      R0,[R5, #+4]
+    184              osal_memcpy ( msg->pString, str_ptr, strLen );
+   \   0000002A   0xB2F6             UXTB     R6,R6            ;; ZeroExt  R6,R6,#+24,#+24
+   \   0000002C   0x0032             MOVS     R2,R6
+   \   0000002E   0x0021             MOVS     R1,R4
+   \   00000030   0x6868             LDR      R0,[R5, #+4]
+   \   00000032   0x.... 0x....      BL       osal_memcpy
+    185          
+    186              osal_msg_send( MT_TaskID, (uint8 *)msg );
+   \   00000036   0x0029             MOVS     R1,R5
+   \   00000038   0x....             LDR.N    R0,??DataTable1_2
+   \   0000003A   0x7800             LDRB     R0,[R0, #+0]
+   \   0000003C   0x.... 0x....      BL       osal_msg_send
+    187            }
+    188          } // debug_str()
+   \                     ??debug_str_0: (+1)
+   \   00000040   0xBD70             POP      {R4-R6,PC}       ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1:
+   \   00000000   0x........         DC32     debugThreshold
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_1:
+   \   00000000   0x........         DC32     debugCompId
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_2:
+   \   00000000   0x........         DC32     MT_TaskID
+    189          
+    190          /*********************************************************************
+    191          *********************************************************************/
+    192          #endif  // MT_TASK
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      24   debug_msg
+        24   -> osal_msg_allocate
+        24   -> osal_msg_send
+      16   debug_str
+        16   -> osal_memcpy
+        16   -> osal_msg_allocate
+        16   -> osal_msg_send
+        16   -> osal_strlen
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+       4  ??DataTable1_1
+       4  ??DataTable1_2
+      84  debug_msg
+      66  debug_str
+
+ 
+ 162 bytes in section .text
+ 
+ 162 bytes of CODE memory
+
+Errors: none
+Warnings: none

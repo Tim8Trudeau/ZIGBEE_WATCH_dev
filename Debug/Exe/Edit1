@@ -1,0 +1,26 @@
+Thu Apr 02, 2015 00:54:41: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.2\arm\config\debugger\TexasInstruments\CC2538.dmac 
+Thu Apr 02, 2015 00:54:41: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.2\arm\config\flashloader\TexasInstruments\FlashCC2538.mac 
+Thu Apr 02, 2015 00:54:41: Connecting to TI XDS100 (Probe no: 06EB121006BA) 
+Thu Apr 02, 2015 00:54:43: Initial reset was performed 
+Thu Apr 02, 2015 00:54:43: TI XDS ARM, device revision: 0x00000001, big endian: false, cache: false, board revision: 0x00000000, driver revision: 0x0B020200 
+Thu Apr 02, 2015 00:54:44: 416 bytes downloaded and verified (3.73 Kbytes/sec) 
+Thu Apr 02, 2015 00:54:44: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.2\arm\config\flashloader\TexasInstruments\FlashCC2538RAM32K.out 
+Thu Apr 02, 2015 00:54:44: Target reset 
+Thu Apr 02, 2015 00:54:53: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.2\arm\config\flashloader\TexasInstruments\FlashCC2538.mac 
+Thu Apr 02, 2015 00:54:53: Downloaded C:\Texas Instruments\Z-Stack Mesh 1.0.0\Projects\zstack\Samples\GenericApp\CC2538\EndDevice\Exe\GenericApp.out to flash memory. 
+Thu Apr 02, 2015 00:54:59: 83220 bytes downloaded into FLASH and verified (5.38 Kbytes/sec) 
+Thu Apr 02, 2015 00:54:59: Loaded debugee: C:\Texas Instruments\Z-Stack Mesh 1.0.0\Projects\zstack\Samples\GenericApp\CC2538\EndDevice\Exe\GenericApp.out 
+Thu Apr 02, 2015 00:54:59: Target reset 
+Thu Apr 02, 2015 00:54:59: Hardware reset with delay 0 ms was performed 
+Thu Apr 02, 2015 00:55:00: Set SYS_CTRL:EMUOVR Register 
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+Thu Apr 02, 2015 00:56:41: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.2\arm\config\debugger\TexasInstruments\CC2538.dmac 
+Thu Apr 02, 2015 00:56:41: Connecting to TI XDS100 (Probe no: 06EB121006BA) 
+Thu Apr 02, 2015 00:56:43: Initial reset was performed 
+Thu Apr 02, 2015 00:56:43: TI XDS ARM, device revision: 0x00000001, big endian: false, cache: false, board revision: 0x00000000, driver revision: 0x0B020200 
+Thu Apr 02, 2015 00:56:48: 85419 bytes downloaded (17.08 Kbytes/sec) 
+Thu Apr 02, 2015 00:56:48: Loaded debugee: C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\Debug\Exe\BarronWatch.out 
+Thu Apr 02, 2015 00:56:49: Target reset 
+Thu Apr 02, 2015 00:56:49: Hardware reset with delay 0 ms was performed 
+Thu Apr 02, 2015 00:56:49: Set SYS_CTRL:EMUOVR Register 

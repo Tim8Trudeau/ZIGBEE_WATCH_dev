@@ -1,0 +1,1369 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR ANSI C/C++ Compiler V7.40.1.8447/W32 for ARM       12/Apr/2015  15:43:37
+// Copyright 1999-2015 IAR Systems AB.
+//
+//    Cpu mode     =  thumb
+//    Endian       =  little
+//    Source file  =  
+//        C:\Texas Instruments\Z-Stack Mesh
+//        1.0.0\Components\stack\sys\ZGlobals.c
+//    Command line =  
+//        "C:\Texas Instruments\Z-Stack Mesh
+//        1.0.0\Components\stack\sys\ZGlobals.c" -D FEATURE_RESET_MACRO -D
+//        ewarm -D NWK_AUTO_POLL -D xPOWER_SAVING -D ZTOOL_P1 -D MT_TASK -D
+//        MT_SYS_FUNC -D MT_ZDO_FUNC -D LCD_SUPPORTED=YES -D
+//        CC2538_USE_ALTERNATE_INTERRUPT_MAP=1 --preprocess=cl
+//        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\Debug\List\ -lC
+//        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\Debug\List\ -lB
+//        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\Debug\List\
+//        --diag_suppress Pa082 -o
+//        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\Debug\Obj\ --no_cse
+//        --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering
+//        --no_scheduling --debug --endian=little --cpu=Cortex-M3 -f
+//        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\f8wConfig.cfg
+//        (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+//        -DDEFAULT_CHANLIST=0x07FFF800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+//        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+//        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+//        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+//        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+//        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+//        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+//        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+//        -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01, 0x03, 0x05, 0x07,
+//        0x09, 0x0B, 0x0D, 0x0F, 0x00, 0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C,
+//        0x0D}" -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
+//        -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100
+//        -DRESPONSE_POLL_RATE=100 -DREJOIN_POLL_RATE=440) -f
+//        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\f8wEndev.cfg
+//        (-DMAC_CFG_TX_DATA_MAX=3 -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -e
+//        --fpu=None --dlib_config "C:\Program Files (x86)\IAR Systems\Embedded
+//        Workbench 7.2\arm\INC\c\DLib_Config_Normal.h" -I
+//        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\..\Source\ -I
+//        "C:\Texas Instruments\Z-Stack Mesh
+//        1.0.0\Projects\zstack\ZMain\TI2538DB\" -I "C:\Texas
+//        Instruments\Z-Stack Mesh 1.0.0\Components\hal\include\" -I "C:\Texas
+//        Instruments\Z-Stack Mesh 1.0.0\Components\hal\target\CC2538\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh
+//        1.0.0\Components\driverlib\cc2538\inc\" -I "C:\Texas
+//        Instruments\Z-Stack Mesh 1.0.0\Components\driverlib\cc2538\source\"
+//        -I "C:\Texas Instruments\Z-Stack Mesh
+//        1.0.0\Components\bsp\srf06eb_cc2538\drivers\source\" -I "C:\Texas
+//        Instruments\Z-Stack Mesh 1.0.0\Components\mac\include\" -I "C:\Texas
+//        Instruments\Z-Stack Mesh 1.0.0\Components\mac\high_level\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh
+//        1.0.0\Components\mac\low_level\srf05\single_chip\" -I "C:\Texas
+//        Instruments\Z-Stack Mesh 1.0.0\Components\mac\low_level\srf05\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\mt\" -I "C:\Texas
+//        Instruments\Z-Stack Mesh 1.0.0\Components\osal\include\" -I "C:\Texas
+//        Instruments\Z-Stack Mesh 1.0.0\Components\services\sdata\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\services\saddr\"
+//        -I "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\af\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\nwk\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\sapi\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\sec\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\sys\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\zdo\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\zmac\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\zmac\f8w\" -Ol
+//    List file    =  
+//        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\Debug\List\ZGlobals.s
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        #define SHT_PROGBITS 0x1
+
+        EXTERN ZMacGetReq
+        EXTERN osal_memcpy
+        EXTERN osal_nv_item_init
+        EXTERN osal_nv_read
+        EXTERN osal_nv_write
+
+        PUBLIC zgApsAckWaitMultiplier
+        PUBLIC zgApsAllowR19Sec
+        PUBLIC zgApsDefaultMaxBindingTime
+        PUBLIC zgApsLinkKeyType
+        PUBLIC zgApsMinDupRejTableSize
+        PUBLIC zgApsNonMemberRadius
+        PUBLIC zgApsTrustCenterAddr
+        PUBLIC zgApsUseExtendedPANID
+        PUBLIC zgApsUseInsecureJoin
+        PUBLIC zgApscAckWaitDurationPolled
+        PUBLIC zgApscDupRejTimeoutCount
+        PUBLIC zgApscDupRejTimeoutInc
+        PUBLIC zgApscMaxFrameRetries
+        PUBLIC zgBcastDeliveryTime
+        PUBLIC zgChildAgingEnable
+        PUBLIC zgConcentratorDiscoveryTime
+        PUBLIC zgConcentratorEnable
+        PUBLIC zgConcentratorRC
+        PUBLIC zgConcentratorRadius
+        PUBLIC zgConfigPANID
+        PUBLIC zgDefaultChannelList
+        PUBLIC zgDefaultStartingScanDuration
+        PUBLIC zgDeviceLogicalType
+        PUBLIC zgExtendedPANID
+        PUBLIC zgIndirectMsgTimeout
+        PUBLIC zgInit
+        PUBLIC zgInitItems
+        PUBLIC zgMaxBcastRetires
+        PUBLIC zgMaxDataRetries
+        PUBLIC zgMaxPollFailureRetries
+        PUBLIC zgNwkCommissionedNwkAddr
+        PUBLIC zgNwkLeaveRequestAllowed
+        PUBLIC zgNwkMgrMinTransmissions
+        PUBLIC zgNwkMgrMode
+        PUBLIC zgNwkMode
+        PUBLIC zgNwkSrcRtgExpiryTime
+        PUBLIC zgPassiveAckTimeout
+        PUBLIC zgPollRate
+        PUBLIC zgPreConfigKeys
+        PUBLIC zgQueuedPollRate
+        PUBLIC zgReadStartupOptions
+        PUBLIC zgRejoinPollRate
+        PUBLIC zgResponsePollRate
+        PUBLIC zgRouteDiscoveryTime
+        PUBLIC zgRouteExpiryTime
+        PUBLIC zgRouterOffAssocCleanup
+        PUBLIC zgSapiEndpoint
+        PUBLIC zgSecurePermitJoin
+        PUBLIC zgSecurityMode
+        PUBLIC zgSetItem
+        PUBLIC zgStackProfile
+        PUBLIC zgStartDelay
+        PUBLIC zgUseDefaultTCLK
+        PUBLIC zgWriteStartupOptions
+
+// C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\sys\ZGlobals.c
+//    1 /**************************************************************************************************
+//    2   Filename:       ZGlobals.c
+//    3   Revised:        $Date: 2014-03-13 10:55:58 -0700 (Thu, 13 Mar 2014) $
+//    4   Revision:       $Revision: 37665 $
+//    5 
+//    6   Description:    User definable Z-Stack parameters.
+//    7 
+//    8 
+//    9   Copyright 2007-2014 Texas Instruments Incorporated. All rights reserved.
+//   10 
+//   11   IMPORTANT: Your use of this Software is limited to those specific rights
+//   12   granted under the terms of a software license agreement between the user
+//   13   who downloaded the software, his/her employer (which must be your employer)
+//   14   and Texas Instruments Incorporated (the "License").  You may not use this
+//   15   Software unless you agree to abide by the terms of the License. The License
+//   16   limits your use, and you acknowledge, that the Software may not be modified,
+//   17   copied or distributed unless embedded on a Texas Instruments microcontroller
+//   18   or used solely and exclusively in conjunction with a Texas Instruments radio
+//   19   frequency transceiver, which is integrated into your product. Other than for
+//   20   the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+//   21   works of, modify, distribute, perform, display or sell this Software and/or
+//   22   its documentation for any purpose.
+//   23 
+//   24   YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+//   25   PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+//   26   INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+//   27   NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+//   28   TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+//   29   NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+//   30   LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+//   31   INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+//   32   OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+//   33   OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+//   34   (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+//   35 
+//   36   Should you have any questions regarding your right to use this Software,
+//   37   contact Texas Instruments Incorporated at www.TI.com.
+//   38 **************************************************************************************************/
+//   39 
+//   40 /*********************************************************************
+//   41  * INCLUDES
+//   42  */
+//   43 
+//   44 #include "ZComDef.h"
+//   45 #include "OSAL_Nv.h"
+//   46 #include "ZDObject.h"
+//   47 #include "ZGlobals.h"
+//   48 #include "ZDNwkMgr.h"
+//   49 #include "OnBoard.h"
+//   50 #include "ZDSecMgr.h"
+//   51 
+//   52 /*********************************************************************
+//   53  * MACROS
+//   54  */
+//   55 
+//   56 /*********************************************************************
+//   57  * CONSTANTS
+//   58  */
+//   59 
+//   60 /*********************************************************************
+//   61  * TYPEDEFS
+//   62  */
+//   63 
+//   64 typedef struct zgItem
+//   65 {
+//   66   uint16 id;
+//   67   uint16 len;
+//   68   void *buf;
+//   69 } zgItem_t;
+//   70 
+//   71 /*********************************************************************
+//   72  * NWK GLOBAL VARIABLES
+//   73  */
+//   74 
+//   75 // Polling values
+
+        SECTION `.data`:DATA:REORDER:NOROOT(1)
+//   76 uint16 zgPollRate = POLL_RATE;
+zgPollRate:
+        DATA
+        DC16 1000
+
+        SECTION `.data`:DATA:REORDER:NOROOT(1)
+//   77 uint16 zgQueuedPollRate = QUEUED_POLL_RATE;
+zgQueuedPollRate:
+        DATA
+        DC16 100
+
+        SECTION `.data`:DATA:REORDER:NOROOT(1)
+//   78 uint16 zgResponsePollRate = RESPONSE_POLL_RATE;
+zgResponsePollRate:
+        DATA
+        DC16 100
+
+        SECTION `.data`:DATA:REORDER:NOROOT(1)
+//   79 uint16 zgRejoinPollRate = REJOIN_POLL_RATE;
+zgRejoinPollRate:
+        DATA
+        DC16 440
+//   80 
+//   81 // Transmission retries numbers
+
+        SECTION `.data`:DATA:REORDER:NOROOT(0)
+//   82 uint8 zgMaxDataRetries = NWK_MAX_DATA_RETRIES;
+zgMaxDataRetries:
+        DATA
+        DC8 2
+
+        SECTION `.data`:DATA:REORDER:NOROOT(0)
+//   83 uint8 zgMaxPollFailureRetries = MAX_POLL_FAILURE_RETRIES;
+zgMaxPollFailureRetries:
+        DATA
+        DC8 2
+//   84 
+//   85 // Default channel list
+
+        SECTION `.data`:DATA:REORDER:NOROOT(2)
+//   86 uint32 zgDefaultChannelList = DEFAULT_CHANLIST;
+zgDefaultChannelList:
+        DATA
+        DC32 134215680
+//   87 
+//   88 // Default starting scan duration
+
+        SECTION `.data`:DATA:REORDER:NOROOT(0)
+//   89 uint8 zgDefaultStartingScanDuration = STARTING_SCAN_DURATION;
+zgDefaultStartingScanDuration:
+        DATA
+        DC8 5
+//   90 
+//   91 // Stack profile Id
+
+        SECTION `.data`:DATA:REORDER:NOROOT(0)
+//   92 uint8 zgStackProfile = STACK_PROFILE_ID;
+zgStackProfile:
+        DATA
+        DC8 2
+//   93 
+//   94 // Default indirect message holding timeout
+
+        SECTION `.data`:DATA:REORDER:NOROOT(0)
+//   95 uint8 zgIndirectMsgTimeout = NWK_INDIRECT_MSG_TIMEOUT;
+zgIndirectMsgTimeout:
+        DATA
+        DC8 7
+//   96 
+//   97 // Security mode
+
+        SECTION `.bss`:DATA:REORDER:NOROOT(0)
+//   98 uint8 zgSecurityMode = ZG_SECURITY_MODE;
+zgSecurityMode:
+        DS8 1
+//   99 
+//  100 // Secure permit join
+
+        SECTION `.data`:DATA:REORDER:NOROOT(0)
+//  101 uint8 zgSecurePermitJoin = TRUE;
+zgSecurePermitJoin:
+        DATA
+        DC8 1
+//  102 
+//  103 // Trust center address
+
+        SECTION `.bss`:DATA:REORDER:NOROOT(2)
+//  104 uint8 zgApsTrustCenterAddr[Z_EXTADDR_LEN] = { 0 };
+zgApsTrustCenterAddr:
+        DS8 8
+//  105 
+//  106 // Route Discovery Time - amount of time that a route request lasts
+
+        SECTION `.data`:DATA:REORDER:NOROOT(0)
+//  107 uint8 zgRouteDiscoveryTime = ROUTE_DISCOVERY_TIME;
+zgRouteDiscoveryTime:
+        DATA
+        DC8 5
+//  108 
+//  109 // Route expiry
+
+        SECTION `.data`:DATA:REORDER:NOROOT(0)
+//  110 uint8 zgRouteExpiryTime = ROUTE_EXPIRY_TIME;
+zgRouteExpiryTime:
+        DATA
+        DC8 30
+//  111 
+//  112 // Extended PAN Id
+
+        SECTION `.bss`:DATA:REORDER:NOROOT(2)
+//  113 uint8 zgExtendedPANID[Z_EXTADDR_LEN];
+zgExtendedPANID:
+        DS8 8
+//  114 
+//  115 // Broadcast parameters
+
+        SECTION `.data`:DATA:REORDER:NOROOT(0)
+//  116 uint8 zgMaxBcastRetires   = MAX_BCAST_RETRIES;
+zgMaxBcastRetires:
+        DATA
+        DC8 2
+
+        SECTION `.data`:DATA:REORDER:NOROOT(0)
+//  117 uint8 zgPassiveAckTimeout = PASSIVE_ACK_TIMEOUT;
+zgPassiveAckTimeout:
+        DATA
+        DC8 5
+
+        SECTION `.data`:DATA:REORDER:NOROOT(0)
+//  118 uint8 zgBcastDeliveryTime = BCAST_DELIVERY_TIME;
+zgBcastDeliveryTime:
+        DATA
+        DC8 30
+//  119 
+//  120 // Network mode
+
+        SECTION `.data`:DATA:REORDER:NOROOT(0)
+//  121 uint8 zgNwkMode = NWK_MODE;
+zgNwkMode:
+        DATA
+        DC8 2
+//  122 
+//  123 // Many-to-one values
+
+        SECTION `.bss`:DATA:REORDER:NOROOT(0)
+//  124 uint8 zgConcentratorEnable = CONCENTRATOR_ENABLE;
+zgConcentratorEnable:
+        DS8 1
+
+        SECTION `.bss`:DATA:REORDER:NOROOT(0)
+//  125 uint8 zgConcentratorDiscoveryTime = CONCENTRATOR_DISCOVERY_TIME;
+zgConcentratorDiscoveryTime:
+        DS8 1
+
+        SECTION `.data`:DATA:REORDER:NOROOT(0)
+//  126 uint8 zgConcentratorRadius = CONCENTRATOR_RADIUS;
+zgConcentratorRadius:
+        DATA
+        DC8 10
+
+        SECTION `.bss`:DATA:REORDER:NOROOT(0)
+//  127 uint8 zgConcentratorRC = CONCENTRATOR_ROUTE_CACHE;   // concentrator with route cache (no memory constraints)
+zgConcentratorRC:
+        DS8 1
+
+        SECTION `.data`:DATA:REORDER:NOROOT(0)
+//  128 uint8 zgNwkSrcRtgExpiryTime = SRC_RTG_EXPIRY_TIME;
+zgNwkSrcRtgExpiryTime:
+        DATA
+        DC8 10
+//  129 
+//  130 // Cleanup Child Table according to routing traffic
+
+        SECTION `.bss`:DATA:REORDER:NOROOT(0)
+//  131 uint8 zgRouterOffAssocCleanup = FALSE;
+zgRouterOffAssocCleanup:
+        DS8 1
+//  132 
+//  133 // Determines whether or not a remote NWK leave request command frame received
+//  134 // by the local device is accepted .
+
+        SECTION `.data`:DATA:REORDER:NOROOT(0)
+//  135 uint8 zgNwkLeaveRequestAllowed = TRUE;
+zgNwkLeaveRequestAllowed:
+        DATA
+        DC8 1
+//  136 
+//  137 // Determines if the Child Aging Table Management process is active or not.
+//  138 // This feature is optional and it is disabled by default.
+
+        SECTION `.bss`:DATA:REORDER:NOROOT(0)
+//  139 uint8 zgChildAgingEnable = FALSE;
+zgChildAgingEnable:
+        DS8 1
+//  140 
+//  141 /*********************************************************************
+//  142  * APS GLOBAL VARIABLES
+//  143  */
+//  144 
+//  145 // The maximum number of retries allowed after a transmission failure
+
+        SECTION `.data`:DATA:REORDER:NOROOT(0)
+//  146 uint8 zgApscMaxFrameRetries = APSC_MAX_FRAME_RETRIES;
+zgApscMaxFrameRetries:
+        DATA
+        DC8 3
+//  147 
+//  148 // The maximum number of seconds (milliseconds) to wait for an
+//  149 // acknowledgement to a transmitted frame.
+//  150 
+//  151 // This number is used by polled devices.
+
+        SECTION `.data`:DATA:REORDER:NOROOT(1)
+//  152 uint16 zgApscAckWaitDurationPolled = APSC_ACK_WAIT_DURATION_POLLED;
+zgApscAckWaitDurationPolled:
+        DATA
+        DC16 3000
+//  153 
+//  154 // This number is used by non-polled devices in the following formula:
+//  155 //   (100 mSec) * (_NIB.MaxDepth * zgApsAckWaitMultiplier)
+
+        SECTION `.data`:DATA:REORDER:NOROOT(0)
+//  156 uint8 zgApsAckWaitMultiplier = 2;
+zgApsAckWaitMultiplier:
+        DATA
+        DC8 2
+//  157 
+//  158 // The maximum number of milliseconds for the end device binding
+
+        SECTION `.data`:DATA:REORDER:NOROOT(1)
+//  159 uint16 zgApsDefaultMaxBindingTime = APS_DEFAULT_MAXBINDING_TIME;
+zgApsDefaultMaxBindingTime:
+        DATA
+        DC16 16000
+//  160 
+//  161 // The 64-big identifier of the network to join or form.
+//  162 // Default set to all zeros
+
+        SECTION `.bss`:DATA:REORDER:NOROOT(2)
+//  163 uint8 zgApsUseExtendedPANID[Z_EXTADDR_LEN] = {00,00,00,00,00,00,00,00};
+zgApsUseExtendedPANID:
+        DS8 8
+//  164 
+//  165 // A boolean flag that indicates whether it is OK to use insecure join
+//  166 // on startup. Default set to TRUE
+
+        SECTION `.data`:DATA:REORDER:NOROOT(0)
+//  167 uint8 zgApsUseInsecureJoin = TRUE;
+zgApsUseInsecureJoin:
+        DATA
+        DC8 1
+//  168 
+//  169 // The radius of broadcast multicast transmissions
+
+        SECTION `.data`:DATA:REORDER:NOROOT(0)
+//  170 uint8 zgApsNonMemberRadius = APS_DEFAULT_NONMEMBER_RADIUS;
+zgApsNonMemberRadius:
+        DATA
+        DC8 2
+//  171 
+//  172 // Commissioned Network Address
+
+        SECTION `.data`:DATA:REORDER:NOROOT(1)
+//  173 uint16 zgNwkCommissionedNwkAddr = INVALID_NODE_ADDR;
+zgNwkCommissionedNwkAddr:
+        DATA
+        DC16 65534
+//  174 
+//  175 // APS Duplication Rejection table variables
+
+        SECTION `.data`:DATA:REORDER:NOROOT(1)
+//  176 uint16 zgApscDupRejTimeoutInc = DEFAULT_APS_DUP_REJ_TIMEOUT_INCREMENT;
+zgApscDupRejTimeoutInc:
+        DATA
+        DC16 1000
+
+        SECTION `.data`:DATA:REORDER:NOROOT(0)
+//  177 uint8  zgApscDupRejTimeoutCount = DEFAULT_APS_DUP_REJ_TIMEOUT;
+zgApscDupRejTimeoutCount:
+        DATA
+        DC8 10
+
+        SECTION `.data`:DATA:REORDER:NOROOT(1)
+//  178 uint16 zgApsMinDupRejTableSize = APS_DUP_REJ_ENTRIES;
+zgApsMinDupRejTableSize:
+        DATA
+        DC16 5
+//  179 
+//  180 
+//  181 
+//  182 /*********************************************************************
+//  183  * SECURITY GLOBAL VARIABLES
+//  184  */
+//  185 
+//  186 // If TRUE, preConfigKey should be configured on all devices on the network
+//  187 // If false, it is configured only on the coordinator and sent to other
+//  188 // devices upon joining.
+
+        SECTION `.bss`:DATA:REORDER:NOROOT(0)
+//  189 uint8 zgPreConfigKeys = FALSE;
+zgPreConfigKeys:
+        DS8 1
+//  190 
+//  191 // The type of link key in use.  This will determine the security
+//  192 // policies associated with sending and receiving APS messages.
+//  193 // If ZG_GLOBAL_LINK_KEY APS TCLK security may be used for specific APS commands
+//  194 // If ZG_UNIQUE_LINK_KEY APS TCLK security is required for specific APS commands
+
+        SECTION `.data`:DATA:REORDER:NOROOT(0)
+//  195 uint8 zgApsLinkKeyType = ZG_GLOBAL_LINK_KEY;
+zgApsLinkKeyType:
+        DATA
+        DC8 1
+//  196 
+//  197 // With changes introduced in R20 of the ZigBee specification,
+//  198 // boolean value of zgUseDefaultTCLK is set depending on zgApsLinkKeyType value.
+//  199 //
+//  200 // For zgApsLinkKeyType = ZG_GLOBAL_LINK_KEY, zgUseDefaultTCLK = TRUE
+//  201 // For zgApsLinkKeyType = ZG_UNIQUE_LINK_KEY, different devices have
+//  202 // different value:
+//  203 //      ZC should have             zgUseDefaultTCLK = FALSE
+//  204 //      Other devices should have  zgUseDefaultTCLK = TRUE
+//  205 // This is initialized in zgInitItems()
+//  206 // If ZG_UNIQUE_LINK_KEY, individual trust center link key between each device
+//  207 // and the trust center should be manually configured via MT_SYS_OSAL_NV_WRITE
+
+        SECTION `.bss`:DATA:REORDER:NOROOT(0)
+//  208 uint8 zgUseDefaultTCLK;
+zgUseDefaultTCLK:
+        DS8 1
+//  209 
+//  210 #if defined ( APP_TP2_TEST_MODE )
+//  211 uint8 guTxApsSecON = FALSE;
+//  212 uint8 guEnforceRxApsSec = TP_GU_ALL;
+//  213 #endif
+//  214 
+
+        SECTION `.bss`:DATA:REORDER:NOROOT(0)
+//  215 uint8 zgApsAllowR19Sec = FALSE;
+zgApsAllowR19Sec:
+        DS8 1
+//  216 
+//  217 /*********************************************************************
+//  218  * ZDO GLOBAL VARIABLES
+//  219  */
+//  220 
+//  221 // Configured PAN ID
+//  222 //uint16 zgConfigPANID = ZDAPP_CONFIG_PAN_ID;  //Should be 0xFFFF
+
+        SECTION `.data`:DATA:REORDER:NOROOT(1)
+//  223 uint16 zgConfigPANID = 0xFFFF;  //Non-commissioned
+zgConfigPANID:
+        DATA
+        DC16 65535
+//  224 
+//  225 // Device Logical Type
+
+        SECTION `.data`:DATA:REORDER:NOROOT(0)
+//  226 uint8 zgDeviceLogicalType = DEVICE_LOGICAL_TYPE;
+zgDeviceLogicalType:
+        DATA
+        DC8 2
+//  227 
+//  228 // Startup Delay
+
+        SECTION `.data`:DATA:REORDER:NOROOT(0)
+//  229 uint8 zgStartDelay = START_DELAY;
+zgStartDelay:
+        DATA
+        DC8 10
+//  230 
+//  231 #if !defined MT_TASK
+//  232 // Flag to use verbose (i.e. "cc2480-style") direct MT callbacks in ZDProfile.c, ZDP_IncomingData().
+//  233 uint8 zgZdoDirectCB = FALSE;
+//  234 #endif
+//  235 
+//  236 // Min number of attempted transmissions for Channel Interference detection
+
+        SECTION `.data`:DATA:REORDER:NOROOT(0)
+//  237 uint8 zgNwkMgrMinTransmissions = ZDNWKMGR_MIN_TRANSMISSIONS;
+zgNwkMgrMinTransmissions:
+        DATA
+        DC8 20
+//  238 
+//  239 /*********************************************************************
+//  240  * APPLICATION GLOBAL VARIABLES
+//  241  */
+//  242 
+//  243 // Network Manager Mode
+
+        SECTION `.data`:DATA:REORDER:NOROOT(0)
+//  244 uint8 zgNwkMgrMode = ZDNWKMGR_ENABLE;
+zgNwkMgrMode:
+        DATA
+        DC8 1
+//  245 
+//  246 /*********************************************************************
+//  247  * NON-STANDARD GLOBAL VARIABLES
+//  248  */
+//  249 
+//  250 // Simple API Endpoint
+
+        SECTION `.data`:DATA:REORDER:NOROOT(0)
+//  251 uint8 zgSapiEndpoint = SAPI_ENDPOINT;
+zgSapiEndpoint:
+        DATA
+        DC8 224
+//  252 
+//  253 /*********************************************************************
+//  254  * LOCAL VARIABLES
+//  255  */
+//  256 
+//  257 /*********************************************************************
+//  258  * ZGlobal Item Table
+//  259  */
+
+        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
+//  260 static CONST zgItem_t zgItemTable[] =
+zgItemTable:
+        DATA
+        DC16 0, 0
+        DC32 0H
+//  261 {
+//  262 #if defined ( NV_INIT )
+//  263 #if !defined MT_TASK
+//  264   {
+//  265     ZCD_NV_ZDO_DIRECT_CB, sizeof(zgZdoDirectCB), &zgZdoDirectCB
+//  266   },
+//  267 #endif
+//  268   {
+//  269     ZCD_NV_LOGICAL_TYPE, sizeof(zgDeviceLogicalType), &zgDeviceLogicalType
+//  270   },
+//  271   {
+//  272     ZCD_NV_POLL_RATE, sizeof(zgPollRate), &zgPollRate
+//  273   },
+//  274   {
+//  275     ZCD_NV_QUEUED_POLL_RATE, sizeof(zgQueuedPollRate), &zgQueuedPollRate
+//  276   },
+//  277   {
+//  278     ZCD_NV_RESPONSE_POLL_RATE, sizeof(zgResponsePollRate), &zgResponsePollRate
+//  279   },
+//  280   {
+//  281     ZCD_NV_REJOIN_POLL_RATE, sizeof(zgRejoinPollRate), &zgRejoinPollRate
+//  282   },
+//  283   {
+//  284     ZCD_NV_DATA_RETRIES, sizeof(zgMaxDataRetries), &zgMaxDataRetries
+//  285   },
+//  286   {
+//  287     ZCD_NV_POLL_FAILURE_RETRIES, sizeof(zgMaxPollFailureRetries), &zgMaxPollFailureRetries
+//  288   },
+//  289   {
+//  290     ZCD_NV_CHANLIST, sizeof(zgDefaultChannelList), &zgDefaultChannelList
+//  291   },
+//  292   {
+//  293     ZCD_NV_SCAN_DURATION, sizeof(zgDefaultStartingScanDuration), &zgDefaultStartingScanDuration
+//  294   },
+//  295   {
+//  296     ZCD_NV_STACK_PROFILE, sizeof(zgStackProfile), &zgStackProfile
+//  297   },
+//  298   {
+//  299     ZCD_NV_INDIRECT_MSG_TIMEOUT, sizeof(zgIndirectMsgTimeout), &zgIndirectMsgTimeout
+//  300   },
+//  301   {
+//  302     ZCD_NV_ROUTE_EXPIRY_TIME, sizeof(zgRouteExpiryTime), &zgRouteExpiryTime
+//  303   },
+//  304   {
+//  305     ZCD_NV_EXTENDED_PAN_ID, Z_EXTADDR_LEN, zgExtendedPANID
+//  306   },
+//  307   {
+//  308     ZCD_NV_BCAST_RETRIES, sizeof(zgMaxBcastRetires), &zgMaxBcastRetires
+//  309   },
+//  310   {
+//  311     ZCD_NV_PASSIVE_ACK_TIMEOUT, sizeof(zgPassiveAckTimeout), &zgPassiveAckTimeout
+//  312   },
+//  313   {
+//  314     ZCD_NV_BCAST_DELIVERY_TIME, sizeof(zgBcastDeliveryTime), &zgBcastDeliveryTime
+//  315   },
+//  316   {
+//  317     ZCD_NV_NWK_MODE, sizeof(zgNwkMode), &zgNwkMode
+//  318   },
+//  319   {
+//  320     ZCD_NV_CONCENTRATOR_ENABLE, sizeof(zgConcentratorEnable), &zgConcentratorEnable
+//  321   },
+//  322   {
+//  323     ZCD_NV_CONCENTRATOR_DISCOVERY, sizeof(zgConcentratorDiscoveryTime), &zgConcentratorDiscoveryTime
+//  324   },
+//  325   {
+//  326     ZCD_NV_CONCENTRATOR_RADIUS, sizeof(zgConcentratorRadius), &zgConcentratorRadius
+//  327   },
+//  328   {
+//  329     ZCD_NV_CONCENTRATOR_RC, sizeof(zgConcentratorRC), &zgConcentratorRC
+//  330   },
+//  331   {
+//  332     ZCD_NV_SRC_RTG_EXPIRY_TIME, sizeof(zgNwkSrcRtgExpiryTime), &zgNwkSrcRtgExpiryTime
+//  333   },
+//  334   {
+//  335     ZCD_NV_ROUTE_DISCOVERY_TIME, sizeof(zgRouteDiscoveryTime), &zgRouteDiscoveryTime
+//  336   },
+//  337 #ifndef NONWK
+//  338   {
+//  339     ZCD_NV_PANID, sizeof(zgConfigPANID), &zgConfigPANID
+//  340   },
+//  341   {
+//  342     ZCD_NV_PRECFGKEYS_ENABLE, sizeof(zgPreConfigKeys), &zgPreConfigKeys
+//  343   },
+//  344   {
+//  345     ZCD_NV_SECURITY_MODE, sizeof(zgSecurityMode), &zgSecurityMode
+//  346   },
+//  347   {
+//  348     ZCD_NV_SECURE_PERMIT_JOIN, sizeof(zgSecurePermitJoin), &zgSecurePermitJoin
+//  349   },
+//  350   {
+//  351     ZCD_NV_USE_DEFAULT_TCLK, sizeof(zgUseDefaultTCLK), &zgUseDefaultTCLK
+//  352   },
+//  353   {
+//  354     ZCD_NV_TRUSTCENTER_ADDR, Z_EXTADDR_LEN, zgApsTrustCenterAddr
+//  355   },
+//  356   {
+//  357     ZCD_NV_APS_LINK_KEY_TYPE, sizeof(zgApsLinkKeyType), &zgApsLinkKeyType
+//  358   },
+//  359 #endif // NONWK
+//  360   {
+//  361     ZCD_NV_APS_FRAME_RETRIES, sizeof(zgApscMaxFrameRetries), &zgApscMaxFrameRetries
+//  362   },
+//  363   {
+//  364     ZCD_NV_APS_ACK_WAIT_DURATION, sizeof(zgApscAckWaitDurationPolled), &zgApscAckWaitDurationPolled
+//  365   },
+//  366   {
+//  367     ZCD_NV_APS_ACK_WAIT_MULTIPLIER, sizeof(zgApsAckWaitMultiplier), &zgApsAckWaitMultiplier
+//  368   },
+//  369   {
+//  370     ZCD_NV_BINDING_TIME, sizeof(zgApsDefaultMaxBindingTime), &zgApsDefaultMaxBindingTime
+//  371   },
+//  372   {
+//  373     ZCD_NV_APS_USE_EXT_PANID, Z_EXTADDR_LEN, zgApsUseExtendedPANID
+//  374   },
+//  375   {
+//  376     ZCD_NV_APS_USE_INSECURE_JOIN, sizeof(zgApsUseInsecureJoin), &zgApsUseInsecureJoin
+//  377   },
+//  378   {
+//  379     ZCD_NV_APS_NONMEMBER_RADIUS, sizeof(zgApsNonMemberRadius), &zgApsNonMemberRadius
+//  380   },
+//  381   {
+//  382     ZCD_NV_START_DELAY, sizeof(zgStartDelay), &zgStartDelay
+//  383   },
+//  384   {
+//  385     ZCD_NV_SAPI_ENDPOINT, sizeof(zgSapiEndpoint), &zgSapiEndpoint
+//  386   },
+//  387   {
+//  388     ZCD_NV_NWK_MGR_MODE, sizeof(zgNwkMgrMode), &zgNwkMgrMode
+//  389   },
+//  390   {
+//  391     ZCD_NV_NWKMGR_MIN_TX, sizeof(zgNwkMgrMinTransmissions), &zgNwkMgrMinTransmissions
+//  392   },
+//  393   {
+//  394     ZCD_NV_ROUTER_OFF_ASSOC_CLEANUP, sizeof(zgRouterOffAssocCleanup), &zgRouterOffAssocCleanup
+//  395   },
+//  396   {
+//  397     ZCD_NV_NWK_LEAVE_REQ_ALLOWED, sizeof(zgNwkLeaveRequestAllowed), &zgNwkLeaveRequestAllowed
+//  398   },
+//  399   {
+//  400     ZCD_NV_COMMISSIONED_NWK_ADDR, sizeof(zgNwkCommissionedNwkAddr), &zgNwkCommissionedNwkAddr
+//  401   },
+//  402   {
+//  403     ZCD_NV_APS_ALLOW_R19_SECURITY, sizeof(zgApsAllowR19Sec), &zgApsAllowR19Sec
+//  404   },
+//  405   {
+//  406     ZCD_NV_APS_DUPREJ_TIMEOUT_INC, sizeof(zgApscDupRejTimeoutInc), &zgApscDupRejTimeoutInc
+//  407   },
+//  408   {
+//  409     ZCD_NV_APS_DUPREJ_TIMEOUT_COUNT, sizeof(zgApscDupRejTimeoutCount), &zgApscDupRejTimeoutCount
+//  410   },
+//  411   {
+//  412     ZCD_NV_APS_DUPREJ_TABLE_SIZE, sizeof(zgApsMinDupRejTableSize), &zgApsMinDupRejTableSize
+//  413   },
+//  414 #if defined ( ZIGBEE_CHILD_AGING )
+//  415   {
+//  416     ZCD_NV_NWK_CHILD_AGE_ENABLE, sizeof(zgChildAgingEnable), &zgChildAgingEnable
+//  417   },
+//  418 #endif // ZIGBEE_CHILD_AGING
+//  419 #endif // NV_INIT
+//  420   // Last item -- DO NOT MOVE IT!
+//  421   {
+//  422     0x00, 0, NULL
+//  423   }
+//  424 };
+//  425 
+//  426 /*********************************************************************
+//  427  * LOCAL FUNCTIONS
+//  428  */
+//  429 
+//  430 static uint8 zgItemInit( uint16 id, uint16 len, void *buf, uint8 setDefault );
+//  431 
+//  432 #ifndef NONWK
+//  433 static uint8 zgPreconfigKeyInit( uint8 setDefault );
+//  434 #endif
+//  435 
+//  436 /*********************************************************************
+//  437  * @fn       zgItemInit()
+//  438  *
+//  439  * @brief
+//  440  *
+//  441  *   Initialize a global item. If the item doesn't exist in NV memory,
+//  442  *   write the system default (value passed in) into NV memory. But if
+//  443  *   it exists, set the item to the value stored in NV memory.
+//  444  *
+//  445  *   Also, if setDefault is TRUE and the item exists, we will write
+//  446  *   the default value to NV space.
+//  447  *
+//  448  * @param   id - item id
+//  449  * @param   len - item len
+//  450  * @param   buf - pointer to the item
+//  451  * @param   setDefault - TRUE to set default, not read
+//  452  *
+//  453  * @return  ZSUCCESS if successful, NV_ITEM_UNINIT if item did not
+//  454  *          exist in NV, NV_OPER_FAILED if failure.
+//  455  */
+
+        SECTION `.text`:CODE:NOROOT(1)
+        THUMB
+//  456 static uint8 zgItemInit( uint16 id, uint16 len, void *buf, uint8 setDefault )
+//  457 {
+zgItemInit:
+        PUSH     {R3-R7,LR}
+        MOVS     R4,R0
+        MOVS     R5,R1
+        MOVS     R6,R2
+        MOVS     R7,R3
+//  458   uint8 status;
+//  459 
+//  460   // If the item doesn't exist in NV memory, create and initialize
+//  461   // it with the value passed in.
+//  462   status = osal_nv_item_init( id, len, buf );
+        MOVS     R2,R6
+        MOVS     R1,R5
+        UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+        MOVS     R0,R4
+        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+        BL       osal_nv_item_init
+//  463   if ( status == ZSUCCESS )
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+        CMP      R0,#+0
+        BNE.N    ??zgItemInit_0
+//  464   {
+//  465     if ( setDefault )
+        UXTB     R7,R7            ;; ZeroExt  R7,R7,#+24,#+24
+        CMP      R7,#+0
+        BEQ.N    ??zgItemInit_1
+//  466     {
+//  467       // Write the default value back to NV
+//  468       status = osal_nv_write( id, 0, len, buf );
+        MOVS     R3,R6
+        MOVS     R2,R5
+        UXTH     R2,R2            ;; ZeroExt  R2,R2,#+16,#+16
+        MOVS     R1,#+0
+        MOVS     R0,R4
+        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+        BL       osal_nv_write
+        B.N      ??zgItemInit_0
+//  469     }
+//  470     else
+//  471     {
+//  472       // The item exists in NV memory, read it from NV memory
+//  473       status = osal_nv_read( id, 0, len, buf );
+??zgItemInit_1:
+        MOVS     R3,R6
+        MOVS     R2,R5
+        UXTH     R2,R2            ;; ZeroExt  R2,R2,#+16,#+16
+        MOVS     R1,#+0
+        MOVS     R0,R4
+        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+        BL       osal_nv_read
+//  474     }
+//  475   }
+//  476 
+//  477   return (status);
+??zgItemInit_0:
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+        POP      {R1,R4-R7,PC}    ;; return
+//  478 }
+//  479 
+//  480 /*********************************************************************
+//  481  * API FUNCTIONS
+//  482  */
+//  483 
+//  484 /*********************************************************************
+//  485  * @fn          zgInit
+//  486  *
+//  487  * @brief
+//  488  *
+//  489  *   Initialize the Z-Stack Globals. If an item doesn't exist in
+//  490  *   NV memory, write the system default into NV memory. But if
+//  491  *   it exists, set the item to the value stored in NV memory.
+//  492  *
+//  493  * NOTE: The Startup Options (ZCD_NV_STARTUP_OPTION) indicate
+//  494  *       that the Config state items (zgItemTable) need to be
+//  495  *       set to defaults (ZCD_STARTOPT_DEFAULT_CONFIG_STATE). The
+//  496  *
+//  497  * @param       none
+//  498  *
+//  499  * @return      ZSUCCESS if successful, NV_ITEM_UNINIT if item did not
+//  500  *              exist in NV, NV_OPER_FAILED if failure.
+//  501  */
+
+        SECTION `.text`:CODE:NOROOT(1)
+        THUMB
+//  502 uint8 zgInit( void )
+//  503 {
+zgInit:
+        PUSH     {R4,LR}
+//  504   uint8  setDefault = FALSE;
+        MOVS     R4,#+0
+//  505 
+//  506   // Do we want to default the Config state values
+//  507   if ( zgReadStartupOptions() & ZCD_STARTOPT_DEFAULT_CONFIG_STATE )
+        BL       zgReadStartupOptions
+        LSLS     R0,R0,#+31
+        BPL.N    ??zgInit_0
+//  508   {
+//  509     setDefault = TRUE;
+        MOVS     R4,#+1
+//  510   }
+//  511 
+//  512 #if defined ( FEATURE_SYSTEM_STATS )
+//  513   // This sections tracks the number of resets
+//  514   uint16 bootCnt = 0;
+//  515 
+//  516   // Update the Boot Counter
+//  517   if ( osal_nv_item_init( ZCD_NV_BOOTCOUNTER, sizeof(bootCnt), &bootCnt ) == ZSUCCESS )
+//  518   {
+//  519     // Get the old value from NV memory
+//  520     osal_nv_read( ZCD_NV_BOOTCOUNTER, 0, sizeof(bootCnt), &bootCnt );
+//  521   }
+//  522 
+//  523   // Increment the Boot Counter and store it into NV memory
+//  524   if ( setDefault )
+//  525   {
+//  526     bootCnt = 0;
+//  527   }
+//  528   else
+//  529   {
+//  530     bootCnt++;
+//  531   }
+//  532 
+//  533   osal_nv_write( ZCD_NV_BOOTCOUNTER, 0, sizeof(bootCnt), &bootCnt );
+//  534 #endif  // FEATURE_SYSTEM_STATS
+//  535 
+//  536   // Initialize the Extended PAN ID as my own extended address
+//  537   ZMacGetReq( ZMacExtAddr, zgExtendedPANID );
+??zgInit_0:
+        LDR.N    R1,??DataTable2
+        MOVS     R0,#+226
+        BL       ZMacGetReq
+//  538 
+//  539   // Initialize the items table
+//  540   zgInitItems( setDefault );
+        MOVS     R0,R4
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+        BL       zgInitItems
+//  541 
+//  542 #ifndef NONWK
+//  543   if ( ZG_SECURE_ENABLED )
+//  544   {
+//  545     // Initialize the Pre-Configured Key to the default key
+//  546     zgPreconfigKeyInit( setDefault );
+//  547 
+//  548     // Initialize NV items for all Keys: NWK, APS, TCLK and Master
+//  549     ZDSecMgrInitNVKeyTables( setDefault );
+//  550   }
+//  551 #endif // NONWK
+//  552 
+//  553   // Clear the Config State default
+//  554   if ( setDefault )
+        UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+        CMP      R4,#+0
+        BEQ.N    ??zgInit_1
+//  555   {
+//  556     zgWriteStartupOptions( ZG_STARTUP_CLEAR, ZCD_STARTOPT_DEFAULT_CONFIG_STATE );
+        MOVS     R1,#+1
+        MOVS     R0,#+0
+        BL       zgWriteStartupOptions
+//  557   }
+//  558 
+//  559   return ( ZSUCCESS );
+??zgInit_1:
+        MOVS     R0,#+0
+        POP      {R4,PC}          ;; return
+//  560 }
+//  561 
+//  562 /*********************************************************************
+//  563  * @fn          zgInitItems
+//  564  *
+//  565  * @brief       Initializes RAM variables from NV.  If NV items don't
+//  566  *              exist, then the NV is initialize with what is in RAM
+//  567  *              variables.
+//  568  *
+//  569  * @param       none
+//  570  *
+//  571  * @return      none
+//  572  */
+
+        SECTION `.text`:CODE:NOROOT(1)
+        THUMB
+//  573 void zgInitItems( uint8 setDefault )
+//  574 {
+zgInitItems:
+        PUSH     {R3-R5,LR}
+        MOVS     R4,R0
+//  575   uint8  i = 0;
+        MOVS     R5,#+0
+//  576 
+//  577   if ( ZG_BUILD_COORDINATOR_TYPE && ( zgApsLinkKeyType == ZG_UNIQUE_LINK_KEY ) )
+//  578   {
+//  579     zgUseDefaultTCLK = FALSE;
+//  580   }
+//  581   else
+//  582   {
+//  583     // Most of the time default TCLK will be used
+//  584     zgUseDefaultTCLK = TRUE;
+        MOVS     R0,#+1
+        LDR.N    R1,??DataTable2_1
+        STRB     R0,[R1, #+0]
+        B.N      ??zgInitItems_0
+//  585   }
+//  586 
+//  587   while ( zgItemTable[i].id != 0x00 )
+//  588   {
+//  589     // Initialize the item
+//  590     zgItemInit( zgItemTable[i].id, zgItemTable[i].len, zgItemTable[i].buf, setDefault  );
+??zgInitItems_1:
+        MOVS     R3,R4
+        UXTB     R3,R3            ;; ZeroExt  R3,R3,#+24,#+24
+        LDR.N    R0,??DataTable2_2
+        UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+        ADDS     R0,R0,R5, LSL #+3
+        LDR      R2,[R0, #+4]
+        LDR.N    R0,??DataTable2_2
+        UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+        ADDS     R0,R0,R5, LSL #+3
+        LDRH     R1,[R0, #+2]
+        LDR.N    R0,??DataTable2_2
+        UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+        LDRH     R0,[R0, R5, LSL #+3]
+        BL       zgItemInit
+//  591 
+//  592     // Move on to the next item
+//  593     i++;
+        ADDS     R5,R5,#+1
+//  594   }
+??zgInitItems_0:
+        LDR.N    R0,??DataTable2_2
+        UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+        LDRH     R0,[R0, R5, LSL #+3]
+        CMP      R0,#+0
+        BNE.N    ??zgInitItems_1
+//  595 }
+        POP      {R0,R4,R5,PC}    ;; return
+//  596 
+//  597 /*********************************************************************
+//  598  * @fn          zgReadStartupOptions
+//  599  *
+//  600  * @brief       Reads the ZCD_NV_STARTUP_OPTION NV Item.
+//  601  *
+//  602  * @param       none
+//  603  *
+//  604  * @return      the ZCD_NV_STARTUP_OPTION NV item
+//  605  */
+
+        SECTION `.text`:CODE:NOROOT(1)
+        THUMB
+//  606 uint8 zgReadStartupOptions( void )
+//  607 {
+zgReadStartupOptions:
+        PUSH     {R7,LR}
+//  608   // Default to Use Config State and Use Network State
+//  609   uint8 startupOption = 0;
+        MOVS     R0,#+0
+        STRB     R0,[SP, #+0]
+//  610 
+//  611   // This should have been done in ZMain.c, but just in case.
+//  612   if ( osal_nv_item_init( ZCD_NV_STARTUP_OPTION,
+//  613                               sizeof(startupOption),
+//  614                               &startupOption ) == ZSUCCESS )
+        ADD      R2,SP,#+0
+        MOVS     R1,#+1
+        MOVS     R0,#+3
+        BL       osal_nv_item_init
+        CMP      R0,#+0
+        BNE.N    ??zgReadStartupOptions_0
+//  615   {
+//  616     // Read saved startup control
+//  617     osal_nv_read( ZCD_NV_STARTUP_OPTION,
+//  618                   0,
+//  619                   sizeof( startupOption ),
+//  620                   &startupOption);
+        ADD      R3,SP,#+0
+        MOVS     R2,#+1
+        MOVS     R1,#+0
+        MOVS     R0,#+3
+        BL       osal_nv_read
+//  621   }
+//  622   return ( startupOption );
+??zgReadStartupOptions_0:
+        LDRB     R0,[SP, #+0]
+        POP      {R1,PC}          ;; return
+//  623 }
+//  624 
+//  625 /*********************************************************************
+//  626  * @fn          zgWriteStartupOptions
+//  627  *
+//  628  * @brief       Writes bits into the ZCD_NV_STARTUP_OPTION NV Item.
+//  629  *
+//  630  * @param       action - ZG_STARTUP_SET set bit, ZG_STARTUP_CLEAR to
+//  631  *               clear bit. The set bit is an OR operation, and the
+//  632  *               clear bit is an AND ~(bitOptions) operation.
+//  633  *
+//  634  * @param       bitOptions - which bits to perform action on:
+//  635  *                      ZCD_STARTOPT_DEFAULT_CONFIG_STATE
+//  636  *                      ZCD_STARTOPT_DEFAULT_NETWORK_STATE
+//  637  *
+//  638  * @return      ZSUCCESS if successful
+//  639  */
+
+        SECTION `.text`:CODE:NOROOT(1)
+        THUMB
+//  640 uint8 zgWriteStartupOptions( uint8 action, uint8 bitOptions )
+//  641 {
+zgWriteStartupOptions:
+        PUSH     {R3-R5,LR}
+        MOVS     R4,R0
+        MOVS     R5,R1
+//  642   uint8 status;
+//  643   uint8 startupOptions = 0;
+        MOVS     R0,#+0
+        STRB     R0,[SP, #+0]
+//  644 
+//  645   status = osal_nv_read( ZCD_NV_STARTUP_OPTION,
+//  646                 0,
+//  647                 sizeof( startupOptions ),
+//  648                 &startupOptions );
+        ADD      R3,SP,#+0
+        MOVS     R2,#+1
+        MOVS     R1,#+0
+        MOVS     R0,#+3
+        BL       osal_nv_read
+//  649 
+//  650   if ( status == ZSUCCESS )
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+        CMP      R0,#+0
+        BNE.N    ??zgWriteStartupOptions_0
+//  651   {
+//  652     if ( action == ZG_STARTUP_SET )
+        UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+        CMP      R4,#+255
+        BNE.N    ??zgWriteStartupOptions_1
+//  653     {
+//  654       // Set bits
+//  655       startupOptions |= bitOptions;
+        LDRB     R0,[SP, #+0]
+        ORRS     R0,R5,R0
+        STRB     R0,[SP, #+0]
+        B.N      ??zgWriteStartupOptions_2
+//  656     }
+//  657     else
+//  658     {
+//  659       // Clear bits
+//  660       startupOptions &= (bitOptions ^ 0xFF);
+??zgWriteStartupOptions_1:
+        LDRB     R0,[SP, #+0]
+        EORS     R1,R5,#0xFF
+        ANDS     R0,R1,R0
+        STRB     R0,[SP, #+0]
+//  661     }
+//  662 
+//  663     // Changed?
+//  664     status = osal_nv_write( ZCD_NV_STARTUP_OPTION,
+//  665                  0,
+//  666                  sizeof( startupOptions ),
+//  667                  &startupOptions );
+??zgWriteStartupOptions_2:
+        ADD      R3,SP,#+0
+        MOVS     R2,#+1
+        MOVS     R1,#+0
+        MOVS     R0,#+3
+        BL       osal_nv_write
+//  668   }
+//  669 
+//  670   return ( status );
+??zgWriteStartupOptions_0:
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+        POP      {R1,R4,R5,PC}    ;; return
+//  671 }
+//  672 
+//  673 /*********************************************************************
+//  674  * @fn          zgSetItem
+//  675  *
+//  676  * @brief       Set RAM variables from set-NV, if it exist in the zgItemTable
+//  677  *
+//  678  * @param       id - NV ID
+//  679  *              len - NV item length
+//  680  *              buf - pointer to the input buffer
+//  681  *
+//  682  * @return      none
+//  683  */
+
+        SECTION `.text`:CODE:NOROOT(1)
+        THUMB
+//  684 void zgSetItem( uint16 id, uint16 len, void *buf )
+//  685 {
+zgSetItem:
+        PUSH     {R4,LR}
+        MOVS     R3,R2
+//  686 
+//  687   uint8  i = 0;
+        MOVS     R4,#+0
+        B.N      ??zgSetItem_0
+//  688 
+//  689   // Look up the NV item table
+//  690   while ( zgItemTable[i].id != 0x00 )
+//  691   {
+//  692     if( zgItemTable[i].id == id )
+//  693     {
+//  694       if ( zgItemTable[i].len == len )
+//  695       {
+//  696         osal_memcpy( zgItemTable[i].buf, buf, len );
+//  697       }
+//  698       break;
+//  699     }
+//  700     // Move on to the next item
+//  701     i++;
+??zgSetItem_1:
+        ADDS     R4,R4,#+1
+??zgSetItem_0:
+        LDR.N    R2,??DataTable2_2
+        UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+        LDRH     R2,[R2, R4, LSL #+3]
+        CMP      R2,#+0
+        BEQ.N    ??zgSetItem_2
+        LDR.N    R2,??DataTable2_2
+        UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+        LDRH     R2,[R2, R4, LSL #+3]
+        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+        CMP      R2,R0
+        BNE.N    ??zgSetItem_1
+        LDR.N    R0,??DataTable2_2
+        UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+        ADDS     R0,R0,R4, LSL #+3
+        LDRH     R0,[R0, #+2]
+        UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+        CMP      R0,R1
+        BNE.N    ??zgSetItem_3
+        UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+        MOVS     R2,R1
+        MOVS     R1,R3
+        LDR.N    R0,??DataTable2_2
+        UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+        ADDS     R0,R0,R4, LSL #+3
+        LDR      R0,[R0, #+4]
+        BL       osal_memcpy
+//  702   }
+//  703 }
+??zgSetItem_3:
+??zgSetItem_2:
+        POP      {R4,PC}          ;; return
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable2:
+        DC32     zgExtendedPANID
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable2_1:
+        DC32     zgUseDefaultTCLK
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable2_2:
+        DC32     zgItemTable
+
+        SECTION `.iar_vfe_header`:DATA:NOALLOC:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+        DC32 0
+
+        SECTION __DLIB_PERTHREAD:DATA:REORDER:NOROOT(0)
+        SECTION_TYPE SHT_PROGBITS, 0
+
+        SECTION __DLIB_PERTHREAD_init:DATA:REORDER:NOROOT(0)
+        SECTION_TYPE SHT_PROGBITS, 0
+
+        END
+//  704 
+//  705 #ifndef NONWK
+//  706 /*********************************************************************
+//  707  * @fn       zgPreconfigKeyInit()
+//  708  *
+//  709  * @brief
+//  710  *
+//  711  *   Initialize ZCD_NV_PRECFGKEY NV item. If the item doesn't exist in NV memory,
+//  712  *   write the system default (value passed in) into NV memory. But if
+//  713  *   it exists do not overwrite it.
+//  714  *
+//  715  *   Also, if setDefault is TRUE and the item exists, we will write
+//  716  *   the default value to NV space.
+//  717  *
+//  718  * @param   setDefault - TRUE to set default
+//  719  *
+//  720  * @return  ZSUCCESS if successful, NV_ITEM_UNINIT if item did not
+//  721  *          exist in NV, NV_OPER_FAILED if failure.
+//  722  */
+//  723 static uint8 zgPreconfigKeyInit( uint8 setDefault )
+//  724 {
+//  725   uint8 zgPreConfigKey[SEC_KEY_LEN];
+//  726   uint8 status;
+//  727 
+//  728   // Initialize the Pre-Configured Key to the default key
+//  729   osal_memcpy( zgPreConfigKey, defaultKey, SEC_KEY_LEN );
+//  730 
+//  731   // If the item doesn't exist in NV memory, create and initialize it
+//  732   status = osal_nv_item_init( ZCD_NV_PRECFGKEY, SEC_KEY_LEN, zgPreConfigKey );
+//  733   if ( status == ZSUCCESS )
+//  734   {
+//  735     if ( setDefault )
+//  736     {
+//  737       // Write the default value back to NV
+//  738       status =  osal_nv_write( ZCD_NV_PRECFGKEY, 0, SEC_KEY_LEN, zgPreConfigKey );
+//  739     }
+//  740   }
+//  741 
+//  742   // clear local copy of default key
+//  743   osal_memset(zgPreConfigKey, 0x00, SEC_KEY_LEN);
+//  744 
+//  745   return (status);
+//  746 }
+//  747 #endif
+//  748 
+//  749 /*********************************************************************
+//  750 *********************************************************************/
+// 
+//  33 bytes in section .bss
+//  50 bytes in section .data
+//   8 bytes in section .rodata
+// 392 bytes in section .text
+// 
+// 392 bytes of CODE  memory
+//   8 bytes of CONST memory
+//  83 bytes of DATA  memory
+//
+//Errors: none
+//Warnings: none

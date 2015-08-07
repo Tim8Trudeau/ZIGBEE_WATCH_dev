@@ -1,0 +1,779 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR ANSI C/C++ Compiler V7.40.1.8447/W32 for ARM       12/Apr/2015  15:43:26
+// Copyright 1999-2015 IAR Systems AB.
+//
+//    Cpu mode     =  thumb
+//    Endian       =  little
+//    Source file  =  
+//        C:\Texas Instruments\Z-Stack Mesh
+//        1.0.0\Components\hal\target\CC2538\hal_key.c
+//    Command line =  
+//        "C:\Texas Instruments\Z-Stack Mesh
+//        1.0.0\Components\hal\target\CC2538\hal_key.c" -D FEATURE_RESET_MACRO
+//        -D ewarm -D NWK_AUTO_POLL -D xPOWER_SAVING -D ZTOOL_P1 -D MT_TASK -D
+//        MT_SYS_FUNC -D MT_ZDO_FUNC -D LCD_SUPPORTED=YES -D
+//        CC2538_USE_ALTERNATE_INTERRUPT_MAP=1 --preprocess=cl
+//        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\Debug\List\ -lC
+//        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\Debug\List\ -lB
+//        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\Debug\List\
+//        --diag_suppress Pa082 -o
+//        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\Debug\Obj\ --no_cse
+//        --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering
+//        --no_scheduling --debug --endian=little --cpu=Cortex-M3 -f
+//        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\f8wConfig.cfg
+//        (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+//        -DDEFAULT_CHANLIST=0x07FFF800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+//        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+//        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+//        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+//        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+//        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+//        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+//        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+//        -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01, 0x03, 0x05, 0x07,
+//        0x09, 0x0B, 0x0D, 0x0F, 0x00, 0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C,
+//        0x0D}" -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
+//        -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100
+//        -DRESPONSE_POLL_RATE=100 -DREJOIN_POLL_RATE=440) -f
+//        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\f8wEndev.cfg
+//        (-DMAC_CFG_TX_DATA_MAX=3 -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -e
+//        --fpu=None --dlib_config "C:\Program Files (x86)\IAR Systems\Embedded
+//        Workbench 7.2\arm\INC\c\DLib_Config_Normal.h" -I
+//        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\..\Source\ -I
+//        "C:\Texas Instruments\Z-Stack Mesh
+//        1.0.0\Projects\zstack\ZMain\TI2538DB\" -I "C:\Texas
+//        Instruments\Z-Stack Mesh 1.0.0\Components\hal\include\" -I "C:\Texas
+//        Instruments\Z-Stack Mesh 1.0.0\Components\hal\target\CC2538\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh
+//        1.0.0\Components\driverlib\cc2538\inc\" -I "C:\Texas
+//        Instruments\Z-Stack Mesh 1.0.0\Components\driverlib\cc2538\source\"
+//        -I "C:\Texas Instruments\Z-Stack Mesh
+//        1.0.0\Components\bsp\srf06eb_cc2538\drivers\source\" -I "C:\Texas
+//        Instruments\Z-Stack Mesh 1.0.0\Components\mac\include\" -I "C:\Texas
+//        Instruments\Z-Stack Mesh 1.0.0\Components\mac\high_level\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh
+//        1.0.0\Components\mac\low_level\srf05\single_chip\" -I "C:\Texas
+//        Instruments\Z-Stack Mesh 1.0.0\Components\mac\low_level\srf05\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\mt\" -I "C:\Texas
+//        Instruments\Z-Stack Mesh 1.0.0\Components\osal\include\" -I "C:\Texas
+//        Instruments\Z-Stack Mesh 1.0.0\Components\services\sdata\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\services\saddr\"
+//        -I "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\af\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\nwk\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\sapi\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\sec\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\sys\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\zdo\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\zmac\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\zmac\f8w\" -Ol
+//    List file    =  
+//        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\Debug\List\hal_key.s
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        #define SHT_PROGBITS 0x1
+
+        EXTERN Hal_TaskID
+        EXTERN IntPrioritySet
+        EXTERN SysCtrlPowIntClear
+        EXTERN bspKeyInit
+        EXTERN bspKeyIntEnable
+        EXTERN bspKeyIntRegister
+        EXTERN bspKeyPushed
+        EXTERN osal_set_event
+        EXTERN osal_stop_timerEx
+
+        PUBLIC HalKeyConfig
+        PUBLIC HalKeyInit
+        PUBLIC HalKeyPoll
+        PUBLIC HalKeyRead
+        PUBLIC Hal_KeyIntEnable
+        PUBLIC hal_key_int_keys
+        PUBLIC hal_key_keys
+        PUBLIC interrupt_keybd
+
+// C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\hal\target\CC2538\hal_key.c
+//    1 /**************************************************************************************************
+//    2   Filename:       hal_key.c
+//    3   Revised:        $Date: 2014-07-29 21:18:07 -0700 (Tue, 29 Jul 2014) $
+//    4   Revision:       $Revision: 39577 $
+//    5 
+//    6   Description:    This file contains the interface to the HAL KEY Service.
+//    7 
+//    8 
+//    9   Copyright 2012-2014 Texas Instruments Incorporated. All rights reserved.
+//   10 
+//   11   IMPORTANT: Your use of this Software is limited to those specific rights
+//   12   granted under the terms of a software license agreement between the user
+//   13   who downloaded the software, his/her employer (which must be your employer)
+//   14   and Texas Instruments Incorporated (the "License"). You may not use this
+//   15   Software unless you agree to abide by the terms of the License. The License
+//   16   limits your use, and you acknowledge, that the Software may not be modified,
+//   17   copied or distributed unless embedded on a Texas Instruments microcontroller
+//   18   or used solely and exclusively in conjunction with a Texas Instruments radio
+//   19   frequency transceiver, which is integrated into your product. Other than for
+//   20   the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+//   21   works of, modify, distribute, perform, display or sell this Software and/or
+//   22   its documentation for any purpose.
+//   23 
+//   24   YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+//   25   PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+//   26   INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+//   27   NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+//   28   TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+//   29   NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+//   30   LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+//   31   INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+//   32   OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+//   33   OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+//   34   (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+//   35 
+//   36   Should you have any questions regarding your right to use this Software,
+//   37   contact Texas Instruments Incorporated at www.TI.com.
+//   38 **************************************************************************************************/
+//   39 
+//   40 /**************************************************************************************************
+//   41  *                                            INCLUDES
+//   42  **************************************************************************************************/
+//   43 #include "hal_types.h"
+//   44 #include "hal_key.h"
+//   45 #include "hal_sleep.h"
+//   46 #include "osal.h"
+//   47 #include "OnBoard.h"
+//   48 #include "hal_drivers.h"
+//   49 #include "hal_mcu.h"
+//   50 
+//   51 /**************************************************************************************************
+//   52  *                                            CONSTANTS
+//   53  **************************************************************************************************/
+//   54 
+//   55 /**************************************************************************************************
+//   56  *                                              MACROS
+//   57  **************************************************************************************************/
+//   58 #define HAL_KEY_WAKE_INIT()
+//   59 
+//   60 /**************************************************************************************************
+//   61  *                                            TYPEDEFS
+//   62  **************************************************************************************************/
+//   63 
+//   64 /**************************************************************************************************
+//   65  *                                        GLOBAL VARIABLES
+//   66  **************************************************************************************************/
+//   67 #if (HAL_KEY == TRUE)
+
+        SECTION `.bss`:DATA:REORDER:NOROOT(0)
+//   68 static uint8 halSavedKeys;
+halSavedKeys:
+        DS8 1
+
+        SECTION `.bss`:DATA:REORDER:NOROOT(0)
+//   69 static uint8 halIntKeys;
+halIntKeys:
+        DS8 1
+
+        SECTION `.bss`:DATA:REORDER:NOROOT(2)
+//   70 static halKeyCBack_t pHal_KeyProcessFunction;
+pHal_KeyProcessFunction:
+        DS8 4
+
+        SECTION `.bss`:DATA:REORDER:NOROOT(0)
+//   71 bool Hal_KeyIntEnable;
+Hal_KeyIntEnable:
+        DS8 1
+//   72 #endif /* HAL_KEY */
+//   73 
+//   74 /**************************************************************************************************
+//   75  *                                        EXTERNAL VARIABLES
+//   76  **************************************************************************************************/
+//   77 
+//   78 /**************************************************************************************************
+//   79  *                                        FUNCTIONS - API
+//   80  **************************************************************************************************/
+//   81 void interrupt_keybd(void);
+//   82 uint8 hal_key_no_debounce(void);
+//   83 
+//   84 /**************************************************************************************************
+//   85  * @fn      HalKeyInit
+//   86  *
+//   87  * @brief   Initilize Key Service
+//   88  *
+//   89  * @param   none
+//   90  *
+//   91  * @return  None
+//   92  **************************************************************************************************/
+
+        SECTION `.text`:CODE:NOROOT(1)
+        THUMB
+//   93 void HalKeyInit( void )
+//   94 {
+//   95 #if (HAL_KEY == TRUE)
+//   96   /* Initialize previous key to 0 */
+//   97   halSavedKeys = 0;
+HalKeyInit:
+        MOVS     R0,#+0
+        LDR.N    R1,??DataTable4
+        STRB     R0,[R1, #+0]
+//   98 
+//   99   /* Initialize callback function */
+//  100   pHal_KeyProcessFunction  = NULL;
+        MOVS     R0,#+0
+        LDR.N    R1,??DataTable4_1
+        STR      R0,[R1, #+0]
+//  101 #endif /* HAL_KEY */
+//  102 }
+        BX       LR               ;; return
+//  103 
+//  104 /**************************************************************************************************
+//  105 * @fn      hal_key_keys()
+//  106 *
+//  107 * @brief   Determine if key was pressed and which key was pressed
+//  108 *
+//  109 * @param   none
+//  110 *
+//  111 * @return  0 if no key pressed, HAL_KEY_SW bit(s) if pressed
+//  112 **************************************************************************************************/
+
+        SECTION `.text`:CODE:NOROOT(1)
+        THUMB
+//  113 uint8 hal_key_keys(void)                                           
+//  114 {                                                                 
+hal_key_keys:
+        PUSH     {R4,LR}
+//  115   uint8 x = 0;
+        MOVS     R4,#+0
+//  116   uint8 ucKeysPressed = bspKeyPushed(BSP_KEY_ALL);
+        MOVS     R0,#+248
+        BL       bspKeyPushed
+//  117   
+//  118   if(ucKeysPressed & BSP_KEY_LEFT)
+        LSLS     R1,R0,#+27
+        BPL.N    ??hal_key_keys_0
+//  119   {
+//  120     x |= HAL_KEY_SW_4;
+        ORRS     R4,R4,#0x8
+//  121   }
+//  122   if(ucKeysPressed & BSP_KEY_RIGHT)
+??hal_key_keys_0:
+        LSLS     R1,R0,#+26
+        BPL.N    ??hal_key_keys_1
+//  123   {
+//  124     x |= HAL_KEY_SW_2;
+        ORRS     R4,R4,#0x2
+//  125   }
+//  126   if(ucKeysPressed & BSP_KEY_UP)
+??hal_key_keys_1:
+        LSLS     R1,R0,#+25
+        BPL.N    ??hal_key_keys_2
+//  127   {
+//  128     x |= HAL_KEY_SW_1;
+        ORRS     R4,R4,#0x1
+//  129   }
+//  130   if(ucKeysPressed & BSP_KEY_DOWN)
+??hal_key_keys_2:
+        LSLS     R1,R0,#+24
+        BPL.N    ??hal_key_keys_3
+//  131   {
+//  132     x |= HAL_KEY_SW_3;
+        ORRS     R4,R4,#0x10
+//  133   }
+//  134   if(ucKeysPressed & BSP_KEY_SELECT)
+??hal_key_keys_3:
+        LSLS     R0,R0,#+28
+        BPL.N    ??hal_key_keys_4
+//  135   {
+//  136     x |= HAL_KEY_SW_5;
+        ORRS     R4,R4,#0x4
+//  137   }
+//  138   return x; 
+??hal_key_keys_4:
+        MOVS     R0,R4
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+        POP      {R4,PC}          ;; return
+//  139 }
+//  140 
+//  141 /**************************************************************************************************
+//  142 * @fn      hal_key_int_keys()
+//  143 *
+//  144 * @brief   Determine if key was and which key was pressed during interrupt
+//  145 *
+//  146 * @param   None
+//  147 *
+//  148 * @return  0 if no key pressed, HAL_KEY_SW bit(s) if pressed
+//  149 **************************************************************************************************/
+
+        SECTION `.text`:CODE:NOROOT(1)
+        THUMB
+//  150 uint8 hal_key_int_keys(void)                                      
+//  151 { 
+hal_key_int_keys:
+        PUSH     {R4,LR}
+//  152   uint8 x = 0;
+        MOVS     R4,#+0
+//  153   /* Get bitmask of buttons pushed (clear directional keys' bitmask) */
+//  154   uint8 ucKeysPressed;
+//  155   
+//  156   ucKeysPressed = bspKeyPushed(BSP_KEY_DIR_ALL);
+        MOVS     R0,#+240
+        BL       bspKeyPushed
+//  157   if(ucKeysPressed & BSP_KEY_LEFT)
+        LSLS     R1,R0,#+27
+        BPL.N    ??hal_key_int_keys_0
+//  158   {
+//  159     x |= HAL_KEY_SW_4;
+        ORRS     R4,R4,#0x8
+//  160   }
+//  161   if(ucKeysPressed & BSP_KEY_RIGHT)
+??hal_key_int_keys_0:
+        LSLS     R1,R0,#+26
+        BPL.N    ??hal_key_int_keys_1
+//  162   {
+//  163     x |= HAL_KEY_SW_2;
+        ORRS     R4,R4,#0x2
+//  164   }
+//  165   if(ucKeysPressed & BSP_KEY_UP)
+??hal_key_int_keys_1:
+        LSLS     R1,R0,#+25
+        BPL.N    ??hal_key_int_keys_2
+//  166   {
+//  167     x |= HAL_KEY_SW_1;
+        ORRS     R4,R4,#0x1
+//  168   }
+//  169   if(ucKeysPressed & BSP_KEY_DOWN)
+??hal_key_int_keys_2:
+        LSLS     R0,R0,#+24
+        BPL.N    ??hal_key_int_keys_3
+//  170   {
+//  171     x |= HAL_KEY_SW_3;
+        ORRS     R4,R4,#0x10
+//  172   }
+//  173   
+//  174   ucKeysPressed = bspKeyPushed(BSP_KEY_SELECT);
+??hal_key_int_keys_3:
+        MOVS     R0,#+8
+        BL       bspKeyPushed
+//  175   if(ucKeysPressed & BSP_KEY_SELECT)
+        LSLS     R0,R0,#+28
+        BPL.N    ??hal_key_int_keys_4
+//  176   {
+//  177     x |= HAL_KEY_SW_5;
+        ORRS     R4,R4,#0x4
+//  178   }
+//  179   return x;
+??hal_key_int_keys_4:
+        MOVS     R0,R4
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+        POP      {R4,PC}          ;; return
+//  180 }
+//  181 
+//  182 /**************************************************************************************************
+//  183 * @fn      HalKeyConfig
+//  184 *
+//  185 * @brief   Configure the Key serivce
+//  186 *
+//  187 * @param   interruptEnable - TRUE/FALSE, enable/disable interrupt
+//  188 *          cback - pointer to the CallBack function
+//  189 *
+//  190 * @return  None
+//  191 **************************************************************************************************/
+
+        SECTION `.text`:CODE:NOROOT(1)
+        THUMB
+//  192 void HalKeyConfig( bool interruptEnable, halKeyCBack_t cback)
+//  193 {
+HalKeyConfig:
+        PUSH     {R4,LR}
+        MOVS     R4,R1
+//  194 #if (HAL_KEY == TRUE)
+//  195   /* Enable/Disable Interrupt or */
+//  196   Hal_KeyIntEnable = interruptEnable;
+        LDR.N    R1,??DataTable4_2
+        STRB     R0,[R1, #+0]
+//  197   
+//  198   /* Register the callback fucntion */
+//  199   pHal_KeyProcessFunction = cback;  
+        LDR.N    R0,??DataTable4_1
+        STR      R4,[R0, #+0]
+//  200   
+//  201   /* Determine if interrupt is enable or not */
+//  202   if ( Hal_KeyIntEnable )
+        LDR.N    R0,??DataTable4_2
+        LDRB     R0,[R0, #+0]
+        CMP      R0,#+0
+        BEQ.N    ??HalKeyConfig_0
+//  203   {
+//  204     
+//  205     /* Initialize key handler to use interrupts */
+//  206     bspKeyInit(BSP_KEY_MODE_ISR);
+        MOVS     R0,#+1
+        BL       bspKeyInit
+//  207     
+//  208     /* Map function dirKeyIsr to UP, LEFT, RIGHT and DOWN keys */
+//  209     bspKeyIntRegister((BSP_KEY_UP|BSP_KEY_LEFT|BSP_KEY_RIGHT|BSP_KEY_DOWN),
+//  210                       &interrupt_keybd);
+        ADR.W    R1,interrupt_keybd
+        MOVS     R0,#+240
+        BL       bspKeyIntRegister
+//  211     
+//  212     /* Map function selectKeyIsr to SELECT key */
+//  213     bspKeyIntRegister(BSP_KEY_SELECT, &interrupt_keybd);
+        ADR.W    R1,interrupt_keybd
+        MOVS     R0,#+8
+        BL       bspKeyIntRegister
+//  214     
+//  215     /* Enable interrupts on all keys */
+//  216     bspKeyIntEnable(BSP_KEY_ALL);
+        MOVS     R0,#+248
+        BL       bspKeyIntEnable
+//  217     
+//  218     IntPrioritySet(INT_GPIOC, HAL_INT_PRIOR_KEY);              
+        MOVS     R1,#+128
+        MOVS     R0,#+18
+        BL       IntPrioritySet
+//  219     IntPrioritySet(INT_GPIOA, HAL_INT_PRIOR_KEY);     
+        MOVS     R1,#+128
+        MOVS     R0,#+16
+        BL       IntPrioritySet
+//  220     
+//  221     /* Cancel polling if there is one active */
+//  222     osal_stop_timerEx(Hal_TaskID, HAL_KEY_EVENT);
+        MOVS     R1,#+16
+        LDR.N    R0,??DataTable4_3
+        LDRB     R0,[R0, #+0]
+        BL       osal_stop_timerEx
+        B.N      ??HalKeyConfig_1
+//  223   }
+//  224   else
+//  225   {
+//  226     bspKeyInit(BSP_KEY_MODE_POLL);
+??HalKeyConfig_0:
+        MOVS     R0,#+0
+        BL       bspKeyInit
+//  227     
+//  228     if( cback != NULL)
+        CMP      R4,#+0
+        BEQ.N    ??HalKeyConfig_1
+//  229     {
+//  230       /* Start polling if callback function is setup*/
+//  231       osal_set_event(Hal_TaskID, HAL_KEY_EVENT);
+        MOVS     R1,#+16
+        LDR.N    R0,??DataTable4_3
+        LDRB     R0,[R0, #+0]
+        BL       osal_set_event
+//  232     }
+//  233   }
+//  234 #endif /* HAL_KEY */
+//  235 }
+??HalKeyConfig_1:
+        POP      {R4,PC}          ;; return
+//  236 
+//  237 /**************************************************************************************************
+//  238  * @fn      HalKeyRead
+//  239  *
+//  240  * @brief   Read the current value of a key
+//  241  *
+//  242  * @param   None
+//  243  *
+//  244  * @return  0 if no key pressed, HAL_KEY_SW bit(s) if pressed
+//  245  **************************************************************************************************/
+
+        SECTION `.text`:CODE:NOROOT(1)
+        THUMB
+//  246 uint8 HalKeyRead( void )
+//  247 {
+HalKeyRead:
+        PUSH     {R7,LR}
+//  248   uint8 keys = 0;
+        MOVS     R0,#+0
+//  249 
+//  250 #if (HAL_KEY == TRUE)
+//  251   if (!Hal_KeyIntEnable)
+        LDR.N    R0,??DataTable4_2
+        LDRB     R0,[R0, #+0]
+        CMP      R0,#+0
+        BNE.N    ??HalKeyRead_0
+//  252   {
+//  253     keys = hal_key_keys();
+        BL       hal_key_keys
+        B.N      ??HalKeyRead_1
+//  254   }
+//  255   else
+//  256   {
+//  257     keys = hal_key_int_keys();
+??HalKeyRead_0:
+        BL       hal_key_int_keys
+//  258   }
+//  259 #endif /* HAL_KEY */
+//  260 
+//  261   return keys;
+??HalKeyRead_1:
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+        POP      {R1,PC}          ;; return
+//  262 }
+//  263 
+//  264 /**************************************************************************************************
+//  265  * @fn      HalKeyPoll
+//  266  *
+//  267  * @brief   Send call back if key(s) is pressed
+//  268  *
+//  269  * @param   None
+//  270  *
+//  271  * @return  None
+//  272  **************************************************************************************************/
+
+        SECTION `.text`:CODE:NOROOT(1)
+        THUMB
+//  273 void HalKeyPoll( void )
+//  274 {
+HalKeyPoll:
+        PUSH     {R7,LR}
+//  275 #if (HAL_KEY == TRUE)
+//  276   uint8 keys = 0;
+        MOVS     R0,#+0
+//  277   
+//  278   /* if polling is using */
+//  279   if (!Hal_KeyIntEnable)
+        LDR.N    R1,??DataTable4_2
+        LDRB     R1,[R1, #+0]
+        CMP      R1,#+0
+        BNE.N    ??HalKeyPoll_0
+//  280   {
+//  281     /* Get keys */
+//  282     keys = hal_key_keys ();
+        BL       hal_key_keys
+//  283 
+//  284     /* If same as before, no keys */
+//  285     if ( keys == halSavedKeys )
+        LDR.N    R1,??DataTable4
+        LDRB     R1,[R1, #+0]
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+        CMP      R0,R1
+        BEQ.N    ??HalKeyPoll_1
+//  286     {
+//  287       return;
+//  288     }
+//  289 
+//  290     /* Store the current keys for comparation next time */
+//  291     halSavedKeys = keys;
+??HalKeyPoll_2:
+        LDR.N    R1,??DataTable4
+        STRB     R0,[R1, #+0]
+//  292 
+//  293   }
+//  294   
+//  295   /* Callback */
+//  296   if (keys && (pHal_KeyProcessFunction))
+??HalKeyPoll_0:
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+        CMP      R0,#+0
+        BEQ.N    ??HalKeyPoll_3
+        LDR.N    R1,??DataTable4_1
+        LDR      R1,[R1, #+0]
+        CMP      R1,#+0
+        BEQ.N    ??HalKeyPoll_3
+//  297   {
+//  298     (pHal_KeyProcessFunction) (keys, HAL_KEY_STATE_NORMAL);
+        MOVS     R1,#+0
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+        LDR.N    R2,??DataTable4_1
+        LDR      R2,[R2, #+0]
+        BLX      R2
+//  299   }
+//  300   
+//  301 #endif /* HAL_KEY */
+//  302 }
+??HalKeyPoll_3:
+??HalKeyPoll_1:
+        POP      {R0,PC}          ;; return
+//  303 
+//  304 #ifdef POWER_SAVING
+//  305 /**************************************************************************************************
+//  306  * @fn      HalKeyEnterSleep
+//  307  *
+//  308  * @brief   Get called to enter sleep mode
+//  309  *
+//  310  * @param   None
+//  311  *
+//  312  * @return  None
+//  313  **************************************************************************************************/
+//  314 void HalKeyEnterSleep ( void )
+//  315 {
+//  316   /* nothing to do */
+//  317 }
+//  318 
+//  319 /**************************************************************************************************
+//  320 * @fn      hal_key_no_debounce()
+//  321 *
+//  322 * @brief   Determine if key is pressed and which key is pressed
+//  323 *
+//  324 * @param   None
+//  325 *
+//  326 * @return  0 if no key pressed, HAL_KEY_SW bit(s) if pressed
+//  327 **************************************************************************************************/
+//  328 
+//  329 uint8 hal_key_no_debounce(void)
+//  330 {
+//  331   uint8 x = 0;
+//  332   uint8 dirPins, selPin;
+//  333   
+//  334   dirPins = (~GPIOPinRead(BSP_KEY_DIR_BASE,
+//  335                           BSP_KEY_DIR_ALL)) \ 
+//  336                           & BSP_KEY_DIR_ALL;
+//  337   selPin  = (~GPIOPinRead(BSP_KEY_SEL_BASE,
+//  338                           BSP_KEY_SELECT)) \ 
+//  339                           & BSP_KEY_SELECT;
+//  340   if(dirPins & BSP_KEY_LEFT)
+//  341   {
+//  342     x |= HAL_KEY_SW_4;
+//  343   }
+//  344   if(dirPins & BSP_KEY_RIGHT)
+//  345   {
+//  346     x |= HAL_KEY_SW_2;
+//  347   }
+//  348   if(dirPins & BSP_KEY_UP)
+//  349   {
+//  350     x |= HAL_KEY_SW_1;
+//  351   }
+//  352   if(dirPins & BSP_KEY_DOWN)
+//  353   {
+//  354     x |= HAL_KEY_SW_3;
+//  355   }
+//  356   if(selPin & BSP_KEY_SELECT)
+//  357   {
+//  358     x |= HAL_KEY_SW_5;
+//  359   }
+//  360   return x;
+//  361 }
+//  362 
+//  363 /**************************************************************************************************
+//  364  * @fn      HalKeyExitSleep
+//  365  *
+//  366  * @brief   Get called when sleep is over
+//  367  *
+//  368  * @param   None
+//  369  *
+//  370  * @return  0 if no key pressed, HAL_KEY_SW bit(s) if pressed
+//  371  **************************************************************************************************/
+//  372 uint8 HalKeyExitSleep ( void )
+//  373 {
+//  374   uint8 keys = 0;
+//  375 
+//  376   /* Get keys */
+//  377   if (!Hal_KeyIntEnable)
+//  378   {
+//  379     keys = hal_key_no_debounce();
+//  380   }
+//  381   else
+//  382   {
+//  383     keys = hal_key_int_keys();
+//  384   }
+//  385   return ( keys );
+//  386 }
+//  387 #endif /* POWER_SAVING */
+//  388 
+//  389 /**************************************************************************************************
+//  390  * @fn      INTERRUPT_KEYBD
+//  391  *
+//  392  * @brief   Interrupt Service Routine for keyboard
+//  393  *
+//  394  * @param   None
+//  395  *
+//  396  * @return  None
+//  397  **************************************************************************************************/
+
+        SECTION `.text`:CODE:NOROOT(2)
+        THUMB
+//  398 void interrupt_keybd(void)
+//  399 {
+interrupt_keybd:
+        PUSH     {R7,LR}
+//  400   /* Clear the Power interrupt registers */
+//  401   SysCtrlPowIntClear();
+        BL       SysCtrlPowIntClear
+//  402   
+//  403 #if (HAL_KEY == TRUE)
+//  404   /* Read the key before it gone */
+//  405   halIntKeys = hal_key_int_keys();
+        BL       hal_key_int_keys
+        LDR.N    R1,??DataTable4_4
+        STRB     R0,[R1, #+0]
+//  406   
+//  407   if (halIntKeys && (pHal_KeyProcessFunction))
+        LDR.N    R0,??DataTable4_4
+        LDRB     R0,[R0, #+0]
+        CMP      R0,#+0
+        BEQ.N    ??interrupt_keybd_0
+        LDR.N    R0,??DataTable4_1
+        LDR      R0,[R0, #+0]
+        CMP      R0,#+0
+        BEQ.N    ??interrupt_keybd_0
+//  408   {
+//  409     (pHal_KeyProcessFunction) (halIntKeys, HAL_KEY_STATE_NORMAL);
+        MOVS     R1,#+0
+        LDR.N    R0,??DataTable4_4
+        LDRB     R0,[R0, #+0]
+        LDR.N    R2,??DataTable4_1
+        LDR      R2,[R2, #+0]
+        BLX      R2
+//  410   }
+//  411 #endif /* HAL_KEY */
+//  412   
+//  413   CLEAR_SLEEP_MODE();
+//  414 }
+??interrupt_keybd_0:
+        POP      {R0,PC}          ;; return
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable4:
+        DC32     halSavedKeys
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable4_1:
+        DC32     pHal_KeyProcessFunction
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable4_2:
+        DC32     Hal_KeyIntEnable
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable4_3:
+        DC32     Hal_TaskID
+
+        SECTION `.text`:CODE:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+??DataTable4_4:
+        DC32     halIntKeys
+
+        SECTION `.iar_vfe_header`:DATA:NOALLOC:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+        DC32 0
+
+        SECTION __DLIB_PERTHREAD:DATA:REORDER:NOROOT(0)
+        SECTION_TYPE SHT_PROGBITS, 0
+
+        SECTION __DLIB_PERTHREAD_init:DATA:REORDER:NOROOT(0)
+        SECTION_TYPE SHT_PROGBITS, 0
+
+        END
+//  415 
+//  416 /**************************************************************************************************
+//  417 **************************************************************************************************/
+// 
+//   7 bytes in section .bss
+// 380 bytes in section .text
+// 
+// 380 bytes of CODE memory
+//   7 bytes of DATA memory
+//
+//Errors: none
+//Warnings: none

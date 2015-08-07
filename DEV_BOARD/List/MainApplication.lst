@@ -1,0 +1,1876 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.40.1.8447/W32 for ARM        26/Jul/2015  22:56:20
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\MainApplication.c
+#    Command line =  
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\MainApplication.c -D
+#        FEATURE_RESET_MACRO -D ewarm -D NWK_AUTO_POLL -D xPOWER_SAVING -D
+#        ZTOOL_P1 -D xMT_TASK -D xMT_SYS_FUNC -D xMT_ZDO_FUNC -D
+#        LCD_SUPPORTED=TRUE -D CC2538_USE_ALTERNATE_INTERRUPT_MAP=1
+#        --preprocess=cl
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\DEV_BOARD\List\ -lC
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\DEV_BOARD\List\ -lB
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\DEV_BOARD\List\
+#        --diag_suppress Pa082 -o
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\DEV_BOARD\Obj\
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M3 -f
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\f8wConfig.cfg
+#        (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+#        -DDEFAULT_CHANLIST=0x07FFF800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+#        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+#        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+#        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+#        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+#        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+#        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+#        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+#        -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01, 0x03, 0x05, 0x07,
+#        0x09, 0x0B, 0x0D, 0x0F, 0x00, 0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C,
+#        0x0D}" -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
+#        -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=5000 -DQUEUED_POLL_RATE=100
+#        -DRESPONSE_POLL_RATE=100 -DREJOIN_POLL_RATE=440) -f
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\f8wEndev.cfg
+#        (-DMAC_CFG_TX_DATA_MAX=3 -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -e
+#        --fpu=None --dlib_config "C:\Program Files (x86)\IAR Systems\Embedded
+#        Workbench 7.2\arm\INC\c\DLib_Config_Normal.h" -I
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\..\Source\ -I
+#        "C:\Texas Instruments\Z-Stack Mesh
+#        1.0.0\Projects\zstack\ZMain\TI2538DB\" -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Components\hal\include\" -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Components\hal\target\CC2538\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh
+#        1.0.0\Components\driverlib\cc2538\inc\" -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Components\driverlib\cc2538\source\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh
+#        1.0.0\Components\bsp\srf06eb_cc2538\drivers\source\" -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Components\mac\include\" -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Components\mac\high_level\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh
+#        1.0.0\Components\mac\low_level\srf05\single_chip\" -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Components\mac\low_level\srf05\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\mt\" -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Components\osal\include\" -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Components\services\sdata\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\services\saddr\"
+#        -I "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\af\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\nwk\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\sapi\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\sec\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\sys\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\zdo\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\zmac\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\zmac\f8w\" -Ol
+#    List file    =  
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\DEV_BOARD\List\MainApplication.lst
+#    Object file  =  
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\DEV_BOARD\Obj\MainApplication.o
+#
+###############################################################################
+
+C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\MainApplication.c
+      1            /*****************************************************************************
+      2            *     program:  application.c
+      3            *      Project: Zigbee Watch
+      4            *     Version:  0.0.1 -- phase 1
+      5            *   Copyright:  2014, Barron Associates
+      6            *     Written:  Sunday, March 15, 2015
+      7            *          By:  Tim Trudeau - Timware
+      8            *   Processor:  TI CC2538
+      9            *        Tool:  IAR Embedded Workbench
+     10            *
+     11            *-------------------------------------------------------------------
+     12            This source file contains the MAIN function.
+     13            This is where all the ZSTACK and Watch hardware initilization calls are performed.
+     14            This application uses a proprietary profile and runs on a nonbeaconing sleepy end device.
+     15            After initilization  osal_start_system() is called to start the OS task handler.
+     16            This function call does not return.
+     17          
+     18               Note -- There are a large number of symbols used to control conditional
+     19                       compilization and to set the Zigbee Profile.  Many of these symbols
+     20                       (but not all!?) are defined in the configuration files:
+     21                    f8wConfig.cfg
+     22                    f8wEndev.cfg
+     23          
+     24                       Additional symbols are defined within the IAR project under
+     25           <options/compiler/preprocessor>
+     26                    ewarm
+     27                    FEATURE_RESET_MACRO
+     28                    NWK_AUTO_POLL
+     29                    ZTOOL_P1
+     30                    xPOWER_SAVING (The leading "x" means this option is deavtivated
+     31                    xMT_TASK
+     32                    xMT_SYS_FUNC
+     33                    xMT_ZDO_FUNC
+     34                    LCD_SUPPORTED=YES
+     35                    CC2538_USE_ALTERNATE_INTERRUPT_MAP=1
+     36            *****************************************************************************/
+     37           
+     38           
+     39           /* ------------------------------------------------------------------------------------------------
+     40            *                                          Includes
+     41            * ------------------------------------------------------------------------------------------------
+     42            */
+     43          #include "hal_board.h"
+     44          #include "ZComDef.h"
+     45          #include "OSAL_Nv.h"
+     46          
+     47          #include "AF.h"
+     48          #include "ZDApp.h"
+     49          #include "ZDObject.h"
+     50          #include "ZDProfile.h"
+     51          
+     52          #include "hal_drivers.h"
+     53          #include "hal_lcd.h"
+     54          #include "hal_led.h"
+     55          #include "hal_key.h"
+     56          #include "hal_uart.h" 
+     57          #include "hal_systick.h"
+     58          #include "OSAL_PwrMgr.h"
+     59          #include "mac_radio_defs.h"
+     60          
+     61          #include "WatchApp.h"
+     62          
+     63           /* ------------------------------------------------------------------------------------------------
+     64            *                                           Constants
+     65            * ------------------------------------------------------------------------------------------------
+     66            */
+     67          // TI IEEE Organizational Unique Identifier
+     68          #define IEEE_OUI 0x00124B
+     69          
+     70          // This list should be filled with Application specific Cluster IDs.
+
+   \                                 In section .rodata, align 2
+     71          const cId_t WatchApp_ClusterList[WATCHAPP_MAX_CLUSTERS] =
+   \                     WatchApp_ClusterList:
+   \   00000000   0x0001             DC16 1
+     72          {
+     73            WATCHAPP_CLUSTERID
+     74          };
+     75          
+     76          // The Simple Descripter is populated here. Const defined in WatchApp.h
+
+   \                                 In section .rodata, align 4
+     77          const SimpleDescriptionFormat_t       WatchApp_SimpleDesc =
+   \                     WatchApp_SimpleDesc:
+   \   00000000   0x0A 0x00          DC8 10, 0
+   \   00000002   0x0F04 0x0001      DC16 3844, 1
+   \   00000006   0x00 0x01          DC8 0, 1
+   \   00000008   0x........         DC32 WatchApp_ClusterList
+   \   0000000C   0x01 0x00          DC8 1, 0, 0, 0
+   \              0x00 0x00    
+   \   00000010   0x........         DC32 WatchApp_ClusterList
+     78          {
+     79            WATCHAPP_ENDPOINT,              //  int Endpoint;
+     80            WATCHAPP_PROFID,                //  uint16 AppProfId[2];
+     81            WATCHAPP_DEVICEID,              //  uint16 AppDeviceId[2];
+     82            WATCHAPP_DEVICE_VERSION,        //  int   AppDevVer:4;
+     83            WATCHAPP_FLAGS,                 //  int   AppFlags:4;
+     84            WATCHAPP_MAX_CLUSTERS,          //  byte  AppNumInClusters;
+     85            (cId_t *)WatchApp_ClusterList,  //  byte *pAppInClusterList;
+     86            WATCHAPP_MAX_CLUSTERS,          //  byte  AppNumOutClusters;
+     87            (cId_t *)WatchApp_ClusterList   //  byte *pAppOutClusterList;
+     88          };
+     89          
+     90           /* ------------------------------------------------------------------------------------------------
+     91            *                                           Functions Declarations
+     92            * ------------------------------------------------------------------------------------------------
+     93            */
+     94          static void zmain_dev_info( void );
+     95          static void zmain_lcd_init( void );
+     96          
+     97          extern void InitBoard( uint8 level );
+     98          extern void HalUARTInitIsr(void);
+     99          extern void CP2102_UartRegisterTaskID( byte taskID );
+    100          extern void MSP_UartRegisterTaskID( byte taskID );
+    101          
+    102          extern void InitWatch( void);
+    103          static void zmain_ext_addr( void );      
+    104          static void WatchApp_SendMsg(  char* textMsg );
+    105          static void WatchApp_UpdateLCD( void );
+    106          static void WatchApp_MessageMSGCB( afIncomingMSGPacket_t *pckt );
+    107          extern void WatchApp_ProcessZDOMsgs( zdoIncomingMsg_t  *pckt );
+    108          extern void _itoa(uint16 num, uint8 *buf, uint8 radix);
+    109          
+    110          
+    111          
+    112          
+    113           /* ------------------------------------------------------------------------------------------------
+    114            *                                           Global Variables
+    115            * ------------------------------------------------------------------------------------------------
+    116            */
+    117          
+    118          // This is the Endpoint/Interface description.  It is defined here, but
+    119          // filled-in in WatchApp_Init().  Another way to go would be to fill
+    120          // in the structure here and make it a "const" (in code space).  The
+    121          // way it's defined in this sample app it is define in RAM.
+
+   \                                 In section .bss, align 4
+    122          endPointDesc_t WatchApp_epDesc;
+   \                     WatchApp_epDesc:
+   \   00000000                      DS8 16
+    123          
+    124          // Registered keys task ID declaration.
+
+   \                                 In section .data, align 1
+    125          uint8 registeredButtonsTaskID   = NO_TASK_ID;
+   \                     registeredButtonsTaskID:
+   \   00000000   0xFF               DC8 255
+    126          // Registered UART task ID declarations.
+
+   \                                 In section .data, align 1
+    127          uint8 registeredCP2102TaskID    = NO_TASK_ID;
+   \                     registeredCP2102TaskID:
+   \   00000000   0xFF               DC8 255
+
+   \                                 In section .data, align 1
+    128          uint8 registeredMSPTaskID       = NO_TASK_ID;
+   \                     registeredMSPTaskID:
+   \   00000000   0xFF               DC8 255
+    129           
+    130           /* ------------------------------------------------------------------------------------------------
+    131             LOCAL VARIABLES
+    132            * ------------------------------------------------------------------------------------------------
+    133           */
+
+   \                                 In section .bss, align 1
+    134          byte WatchApp_TaskID;     // Task ID for internal task/event processing
+   \                     WatchApp_TaskID:
+   \   00000000                      DS8 1
+    135                                    // This variable will be received when
+    136                                    // WatchApp_Init() is called.
+    137          
+
+   \                                 In section .bss, align 1
+    138          devStates_t WatchApp_NwkState;
+   \                     WatchApp_NwkState:
+   \   00000000                      DS8 1
+    139          
+
+   \                                 In section .bss, align 1
+    140          byte WatchApp_TransID;  // This is the unique message ID (counter)
+   \                     WatchApp_TransID:
+   \   00000000                      DS8 1
+    141          
+
+   \                                 In section .bss, align 4
+    142          afAddrType_t WatchApp_DstAddr;
+   \                     WatchApp_DstAddr:
+   \   00000000                      DS8 12
+    143          
+    144          // Number of recieved messages
+
+   \                                 In section .bss, align 2
+    145          static uint16 rxMsgCount;
+   \                     rxMsgCount:
+   \   00000000                      DS8 2
+    146          
+    147          // Time interval between sending messages
+
+   \                                 In section .data, align 4
+    148          static uint32 txMsgDelay = WATCHAPP_SEND_MSG_TIMEOUT;
+   \                     txMsgDelay:
+   \   00000000   0x00001388         DC32 5000
+    149          
+    150            /*****************************************************************************
+    151             * @fn          main
+    152             *
+    153             * @brief    This function initializes the ZSTACK layers.
+    154               NOTE -- Do not make any changes to this function OR to any functions
+    155                       called within. This whole initilization process is incredibly
+    156                       fragile. 
+    157          
+    158             *
+    159             * Input Parameters 
+    160             *
+    161             * @param     None
+    162             *
+    163             * Output Parameters
+    164             *
+    165             * @param     None
+    166             *
+    167             * @return    Exit int
+    168             ****************************************************************************/
+    169           
+
+   \                                 In section .text, align 2, keep-with-next
+    170          int main( void )
+    171          {
+   \                     main: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    172          uint8 stat;
+                       ^
+Warning[Pe550]: variable "stat" was set but never used
+    173            
+    174            // Turn off interrupts
+    175            osal_int_disable( INTS_ALL );
+   \   00000002   0x20FF             MOVS     R0,#+255
+   \   00000004   0x.... 0x....      BL       osal_int_disable
+    176          
+    177            // Initialization for board related stuff for stack
+    178            HAL_BOARD_INIT();
+   \   00000008   0xF45F 0x1000      MOVS     R0,#+2097152
+   \   0000000C   0x.... 0x....      LDR.W    R1,??DataTable9  ;; 0xe000ed08
+   \   00000010   0x6008             STR      R0,[R1, #+0]
+   \   00000012   0x.... 0x....      BL       SysCtrlClockStartSetting
+   \                     ??main_0: (+1)
+   \   00000016   0x.... 0x....      LDR.W    R0,??DataTable9_1  ;; 0x400d2004
+   \   0000001A   0x6800             LDR      R0,[R0, #+0]
+   \   0000001C   0x0300             LSLS     R0,R0,#+12
+   \   0000001E   0xD5FA             BPL.N    ??main_0
+   \   00000020   0x2008             MOVS     R0,#+8
+   \   00000022   0x.... 0x....      LDR.W    R1,??DataTable9_2  ;; 0x400d3008
+   \   00000026   0x6008             STR      R0,[R1, #+0]
+   \   00000028   0x.... 0x....      BL       IntAltMapEnable
+   \   0000002C   0x.... 0x....      BL       SysCtrlDeepSleepSetting
+   \   00000030   0x.... 0x....      BL       SysCtrlSleepSetting
+   \   00000034   0x.... 0x....      BL       SysCtrlRunSetting
+   \   00000038   0x.... 0x....      BL       SysCtrlWakeupSetting
+   \   0000003C   0x2101             MOVS     R1,#+1
+   \   0000003E   0x.... 0x....      LDR.W    R0,??DataTable9_3  ;; 0x400db000
+   \   00000042   0x.... 0x....      BL       GPIOPinTypeGPIOOutput
+   \   00000046   0x2102             MOVS     R1,#+2
+   \   00000048   0x.... 0x....      LDR.W    R0,??DataTable9_3  ;; 0x400db000
+   \   0000004C   0x.... 0x....      BL       GPIOPinTypeGPIOOutput
+   \   00000050   0x2104             MOVS     R1,#+4
+   \   00000052   0x.... 0x....      LDR.W    R0,??DataTable9_3  ;; 0x400db000
+   \   00000056   0x.... 0x....      BL       GPIOPinTypeGPIOOutput
+   \   0000005A   0x2108             MOVS     R1,#+8
+   \   0000005C   0x.... 0x....      LDR.W    R0,??DataTable9_3  ;; 0x400db000
+   \   00000060   0x.... 0x....      BL       GPIOPinTypeGPIOOutput
+   \   00000064   0x2200             MOVS     R2,#+0
+   \   00000066   0x2101             MOVS     R1,#+1
+   \   00000068   0x.... 0x....      LDR.W    R0,??DataTable9_3  ;; 0x400db000
+   \   0000006C   0x.... 0x....      BL       GPIOPinWrite
+   \   00000070   0x2200             MOVS     R2,#+0
+   \   00000072   0x2102             MOVS     R1,#+2
+   \   00000074   0x.... 0x....      LDR.W    R0,??DataTable9_3  ;; 0x400db000
+   \   00000078   0x.... 0x....      BL       GPIOPinWrite
+   \   0000007C   0x2200             MOVS     R2,#+0
+   \   0000007E   0x2104             MOVS     R1,#+4
+   \   00000080   0x.... 0x....      LDR.W    R0,??DataTable9_3  ;; 0x400db000
+   \   00000084   0x.... 0x....      BL       GPIOPinWrite
+   \   00000088   0x2200             MOVS     R2,#+0
+   \   0000008A   0x2108             MOVS     R1,#+8
+   \   0000008C   0x.... 0x....      LDR.W    R0,??DataTable9_3  ;; 0x400db000
+   \   00000090   0x.... 0x....      BL       GPIOPinWrite
+   \   00000094   0x2110             MOVS     R1,#+16
+   \   00000096   0x.... 0x....      LDR.W    R0,??DataTable9_4  ;; 0x400da000
+   \   0000009A   0x.... 0x....      BL       GPIOPinTypeGPIOOutput
+   \   0000009E   0x2200             MOVS     R2,#+0
+   \   000000A0   0x2110             MOVS     R1,#+16
+   \   000000A2   0x.... 0x....      LDR.W    R0,??DataTable9_4  ;; 0x400da000
+   \   000000A6   0x.... 0x....      BL       GPIOPinWrite
+   \   000000AA   0x2120             MOVS     R1,#+32
+   \   000000AC   0x.... 0x....      LDR.W    R0,??DataTable9_4  ;; 0x400da000
+   \   000000B0   0x.... 0x....      BL       GPIOPinTypeGPIOInput
+    179          
+    180            // Initialize board I/O
+    181            InitBoard( OB_COLD );
+   \   000000B4   0x2000             MOVS     R0,#+0
+   \   000000B6   0x.... 0x....      BL       InitBoard
+    182          
+    183            // Initialze HAL drivers
+    184            HalDriverInit();
+   \   000000BA   0x.... 0x....      BL       HalDriverInit
+    185          
+    186            // Initialize NV System
+    187            osal_nv_init( NULL );
+   \   000000BE   0x2000             MOVS     R0,#+0
+   \   000000C0   0x.... 0x....      BL       osal_nv_init
+    188          
+    189            // Initialize the MAC --This is correct
+    190            MAC_Init();
+   \   000000C4   0x.... 0x....      BL       MAC_Init
+    191            MAC_InitDevice();
+   \   000000C8   0x.... 0x....      BL       MAC_InitDevice
+    192            stat = ZMacReset( TRUE );
+   \   000000CC   0x2001             MOVS     R0,#+1
+   \   000000CE   0x.... 0x....      BL       ZMacReset
+    193          
+    194            // Determine the extended address
+    195            zmain_ext_addr();
+   \   000000D2   0x.... 0x....      BL       zmain_ext_addr
+    196          
+    197          #if defined ZCL_KEY_ESTABLISH
+    198            // Initialize the Certicom certificate information.
+    199            zmain_cert_init();
+    200          #endif
+    201          
+    202            // Initialize basic NV items
+    203            zgInit();
+   \   000000D6   0x.... 0x....      BL       zgInit
+    204           
+    205            // Since the AF isn't a task, call it's initialization routine
+    206            afInit();
+    207          
+    208             // Initialize the operating system
+    209            osal_init_system();
+   \   000000DA   0x.... 0x....      BL       osal_init_system
+    210          
+    211            // Allow interrupts
+    212            osal_int_enable( INTS_ALL );
+   \   000000DE   0x20FF             MOVS     R0,#+255
+   \   000000E0   0x.... 0x....      BL       osal_int_enable
+    213          
+    214             SysTickSetup();
+   \   000000E4   0x.... 0x....      BL       SysTickSetup
+    215             
+    216              // Final board initialization
+    217            InitBoard( OB_READY );
+   \   000000E8   0x2002             MOVS     R0,#+2
+   \   000000EA   0x.... 0x....      BL       InitBoard
+    218          
+    219            /* Display the device info on the LCD */
+    220          #ifdef LCD_SUPPORTED
+    221            zmain_dev_info();
+   \   000000EE   0x.... 0x....      BL       zmain_dev_info
+    222            zmain_lcd_init();
+   \   000000F2   0x.... 0x....      BL       zmain_lcd_init
+    223          #endif
+    224          
+    225            osal_start_system(); // No Return from here
+   \   000000F6   0x.... 0x....      BL       osal_start_system
+    226          
+    227            return 0;  // Shouldn't get here.
+   \   000000FA   0x2000             MOVS     R0,#+0
+   \   000000FC   0xBD02             POP      {R1,PC}          ;; return
+    228          } // END main()
+    229          
+    230          /*********************************************************************
+    231           * @fn      WatchApp_Init
+    232           *
+    233           * @brief   Initialization function for the App Task.
+    234           *          This is called during initialization and should contain
+    235           *          any application specific initialization (ie. hardware
+    236           *          initialization/setup, table initialization, power up
+    237           *          notificaiton ... ).
+    238           *
+    239           * @param   task_id - the ID assigned by OSAL.  This ID should be
+    240           *                    used to send messages and set timers.
+    241           *
+    242           * @return  none
+    243             ****************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    244          void WatchApp_Init( uint8 task_id )
+    245          {
+   \                     WatchApp_Init: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    246            // Device hardware initialization can be added here or in main() (Zmain.c).
+    247            // If the hardware is application specific - add it here.
+    248            // If the hardware is other parts of the device add it in main().
+    249          
+    250            WatchApp_TaskID = task_id;    
+   \   00000002   0x.... 0x....      LDR.W    R1,??DataTable9_5
+   \   00000006   0x7008             STRB     R0,[R1, #+0]
+    251            WatchApp_NwkState = DEV_INIT;
+   \   00000008   0x2001             MOVS     R0,#+1
+   \   0000000A   0x.... 0x....      LDR.W    R1,??DataTable9_6
+   \   0000000E   0x7008             STRB     R0,[R1, #+0]
+    252            WatchApp_DstAddr.addrMode = (afAddrMode_t)AddrNotPresent;
+   \   00000010   0x2000             MOVS     R0,#+0
+   \   00000012   0x.... 0x....      LDR.W    R1,??DataTable9_7
+   \   00000016   0x7208             STRB     R0,[R1, #+8]
+    253            WatchApp_DstAddr.endPoint = 0;           //Destination endpoint is coord. ZDO
+   \   00000018   0x2000             MOVS     R0,#+0
+   \   0000001A   0x.... 0x....      LDR.W    R1,??DataTable9_7
+   \   0000001E   0x7248             STRB     R0,[R1, #+9]
+    254            WatchApp_DstAddr.addr.shortAddr = 0;     //Destination short address is coord.
+   \   00000020   0x2000             MOVS     R0,#+0
+   \   00000022   0x.... 0x....      LDR.W    R1,??DataTable9_7
+   \   00000026   0x8008             STRH     R0,[R1, #+0]
+    255          
+    256            // Fill out the endpoint description.
+    257            WatchApp_epDesc.endPoint = WATCHAPP_ENDPOINT;
+   \   00000028   0x200A             MOVS     R0,#+10
+   \   0000002A   0x.... 0x....      LDR.W    R1,??DataTable9_8
+   \   0000002E   0x7008             STRB     R0,[R1, #+0]
+    258            WatchApp_epDesc.task_id = &WatchApp_TaskID;
+   \   00000030   0x.... 0x....      LDR.W    R0,??DataTable9_5
+   \   00000034   0x.... 0x....      LDR.W    R1,??DataTable9_8
+   \   00000038   0x6048             STR      R0,[R1, #+4]
+    259            WatchApp_epDesc.simpleDesc
+    260                      = (SimpleDescriptionFormat_t *)&WatchApp_SimpleDesc;
+   \   0000003A   0x.... 0x....      LDR.W    R0,??DataTable9_9
+   \   0000003E   0x.... 0x....      LDR.W    R1,??DataTable9_8
+   \   00000042   0x6088             STR      R0,[R1, #+8]
+    261            WatchApp_epDesc.latencyReq = noLatencyReqs;
+   \   00000044   0x2000             MOVS     R0,#+0
+   \   00000046   0x.... 0x....      LDR.W    R1,??DataTable9_8
+   \   0000004A   0x7308             STRB     R0,[R1, #+12]
+    262          
+    263            // Register the endpoint description with the AF
+    264            afRegister( &WatchApp_epDesc );
+   \   0000004C   0x.... 0x....      LDR.W    R0,??DataTable9_8
+   \   00000050   0x.... 0x....      BL       afRegister
+    265          
+    266            // Register for all key events - The app will handle all key events
+    267            RegisterForKeys( WatchApp_TaskID );
+   \   00000054   0x.... 0x....      LDR.W    R0,??DataTable9_5
+   \   00000058   0x7800             LDRB     R0,[R0, #+0]
+   \   0000005A   0x.... 0x....      BL       RegisterForKeys
+    268          
+    269            // Update the display
+    270          #if defined ( LCD_SUPPORTED )
+    271            HalLcdWriteString( "WatchApp Started", HAL_LCD_LINE_1 );
+   \   0000005E   0x2101             MOVS     R1,#+1
+   \   00000060   0x.... 0x....      LDR.W    R0,??DataTable9_10
+   \   00000064   0x.... 0x....      BL       HalLcdWriteString
+    272          #endif
+    273            
+    274            // Start heartbeat
+    275            osal_start_timerEx(WatchApp_TaskID, WATCHAPP_TIMER1, 500); //500msec
+   \   00000068   0xF44F 0x72FA      MOV      R2,#+500
+   \   0000006C   0x2140             MOVS     R1,#+64
+   \   0000006E   0x.... 0x....      LDR.W    R0,??DataTable9_5
+   \   00000072   0x7800             LDRB     R0,[R0, #+0]
+   \   00000074   0x.... 0x....      BL       osal_start_timerEx
+    276            
+    277            //Start time keeper for watch display
+    278            osal_start_timerEx(WatchApp_TaskID, WATCHAPP_LCD_UPDATE, 1000); //1 sec
+   \   00000078   0xF44F 0x727A      MOV      R2,#+1000
+   \   0000007C   0x2104             MOVS     R1,#+4
+   \   0000007E   0x.... 0x....      LDR.W    R0,??DataTable9_5
+   \   00000082   0x7800             LDRB     R0,[R0, #+0]
+   \   00000084   0x.... 0x....      BL       osal_start_timerEx
+    279          
+    280            ZDO_RegisterForZDOMsg( WatchApp_TaskID, End_Device_Bind_rsp );
+   \   00000088   0xF248 0x0120      MOVW     R1,#+32800
+   \   0000008C   0x.... 0x....      LDR.W    R0,??DataTable9_5
+   \   00000090   0x7800             LDRB     R0,[R0, #+0]
+   \   00000092   0x.... 0x....      BL       ZDO_RegisterForZDOMsg
+    281            ZDO_RegisterForZDOMsg( WatchApp_TaskID, Match_Desc_rsp );
+   \   00000096   0xF248 0x0106      MOVW     R1,#+32774
+   \   0000009A   0x.... 0x....      LDR.W    R0,??DataTable9_5
+   \   0000009E   0x7800             LDRB     R0,[R0, #+0]
+   \   000000A0   0x.... 0x....      BL       ZDO_RegisterForZDOMsg
+    282          }
+   \   000000A4   0xBD01             POP      {R0,PC}          ;; return
+    283          
+    284          /*********************************************************************
+    285           * @fn      WatchApp_ProcessEvent
+    286           *
+    287           * @brief   Application Task event processor.  This function
+    288           *          is called to process all events for WatchApp_TaskID.  Events
+    289           *          include timers, messages and any other user defined events.
+    290           *
+    291           * @param   task_id  - The OSAL assigned task ID.
+    292           * @param   events - events to process.  This is a bit map and can
+    293           *                   contain more than one event.
+    294           *
+    295           * @return  none
+    296             ****************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    297          uint16 WatchApp_ProcessEvent( uint8 task_id, uint16 events )
+    298          {
+   \                     WatchApp_ProcessEvent: (+1)
+   \   00000000   0xB5F8             PUSH     {R3-R7,LR}
+   \   00000002   0x000C             MOVS     R4,R1
+    299            afIncomingMSGPacket_t *MSGpkt;
+    300            afDataConfirm_t *afDataConfirm;
+    301          
+    302            // Data Confirmation message fields
+    303            byte sentEP;
+    304            ZStatus_t sentStatus;
+    305            byte sentTransID;       // This should match the value sent
+    306            (void)task_id;  // Intentionally unreferenced parameter
+    307          
+    308            if ( events & SYS_EVENT_MSG ) { //Look for System Event first
+   \   00000004   0x0420             LSLS     R0,R4,#+16
+   \   00000006   0xD559             BPL.N    ??WatchApp_ProcessEvent_0
+    309              MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( WatchApp_TaskID );
+   \   00000008   0x.... 0x....      LDR.W    R0,??DataTable9_5
+   \   0000000C   0x7800             LDRB     R0,[R0, #+0]
+   \   0000000E   0x.... 0x....      BL       osal_msg_receive
+   \   00000012   0x0006             MOVS     R6,R0
+   \   00000014   0xE009             B.N      ??WatchApp_ProcessEvent_1
+    310              while ( MSGpkt )
+    311              {
+    312                switch ( MSGpkt->hdr.event ) {
+    313                  case ZDO_CB_MSG:
+    314                    WatchApp_ProcessZDOMsgs((zdoIncomingMsg_t *)MSGpkt );
+    315                    break;
+    316          
+    317                  case AF_DATA_CONFIRM_CMD:
+    318                    // This message is received as a confirmation of an data packet sent via WatchApp_SendMsg().
+    319                    // The status is of ZStatus_t type [defined in ZComDef.h]
+    320                    // The message fields are defined in AF.h
+    321                    afDataConfirm = (afDataConfirm_t *)MSGpkt;
+    322          
+    323                    sentEP = afDataConfirm->endpoint;
+    324                    (void)sentEP;  // This info not used now
+    325                    sentTransID = afDataConfirm->transID;
+    326                    (void)sentTransID;  // This info not used now
+    327          
+    328                    sentStatus = afDataConfirm->hdr.status;
+    329                    // Action taken when confirmation is received.
+    330          
+    331                    if ( sentStatus != ZSuccess ) {
+    332                      // The data wasn't delivered -- Do something
+    333                      HalLedBlink( HAL_LED_2, 2, 20, 500 );
+    334                      HalLcdWriteStringValue( "Mess FAIL:", sentStatus, 16, HAL_LCD_LINE_5 );
+    335                      sentEP++;  //Dummy instruction for debug
+    336                    }else{
+    337                      HalLcdWriteString( "MESSAGE SUCCESS!", HAL_LCD_LINE_5 );
+    338                    }
+    339                    break;
+    340          
+    341                  case AF_INCOMING_MSG_CMD:
+    342                    WatchApp_MessageMSGCB( MSGpkt );
+    343                    break;
+    344          
+    345                  case ZDO_STATE_CHANGE:
+    346                    WatchApp_NwkState = (devStates_t)(MSGpkt->hdr.status);
+    347                    if ( WatchApp_NwkState == DEV_END_DEVICE ) {
+    348                       //TODO make this wait until after binding
+    349                      // Start sending "the" message in a regular interval.
+    350                       osal_start_reload_timer( WatchApp_TaskID,
+    351                                          WATCHAPP_SEND_MSG_EVT,
+    352                                          txMsgDelay );
+    353                    }
+    354                    break;
+    355          
+    356                  default:
+    357                      sentEP++;  //Dummy instruction for debug
+   \                     ??WatchApp_ProcessEvent_2: (+1)
+   \   00000016   0x1C6D             ADDS     R5,R5,#+1
+    358                    break;
+    359                } //end switch
+    360          
+    361                // Release the memory
+    362                osal_msg_deallocate( (uint8 *)MSGpkt );
+   \                     ??WatchApp_ProcessEvent_3: (+1)
+   \   00000018   0x0030             MOVS     R0,R6
+   \   0000001A   0x.... 0x....      BL       osal_msg_deallocate
+    363          
+    364                // Next
+    365                MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( WatchApp_TaskID );
+   \   0000001E   0x.... 0x....      LDR.W    R0,??DataTable9_5
+   \   00000022   0x7800             LDRB     R0,[R0, #+0]
+   \   00000024   0x.... 0x....      BL       osal_msg_receive
+   \   00000028   0x0006             MOVS     R6,R0
+   \                     ??WatchApp_ProcessEvent_1: (+1)
+   \   0000002A   0x2E00             CMP      R6,#+0
+   \   0000002C   0xD042             BEQ.N    ??WatchApp_ProcessEvent_4
+   \   0000002E   0x7830             LDRB     R0,[R6, #+0]
+   \   00000030   0x281A             CMP      R0,#+26
+   \   00000032   0xD028             BEQ.N    ??WatchApp_ProcessEvent_5
+   \   00000034   0x28D1             CMP      R0,#+209
+   \   00000036   0xD02A             BEQ.N    ??WatchApp_ProcessEvent_6
+   \   00000038   0x28D3             CMP      R0,#+211
+   \   0000003A   0xD002             BEQ.N    ??WatchApp_ProcessEvent_7
+   \   0000003C   0x28FD             CMP      R0,#+253
+   \   0000003E   0xD004             BEQ.N    ??WatchApp_ProcessEvent_8
+   \   00000040   0xE7E9             B.N      ??WatchApp_ProcessEvent_2
+   \                     ??WatchApp_ProcessEvent_7: (+1)
+   \   00000042   0x0030             MOVS     R0,R6
+   \   00000044   0x.... 0x....      BL       WatchApp_ProcessZDOMsgs
+   \   00000048   0xE7E6             B.N      ??WatchApp_ProcessEvent_3
+   \                     ??WatchApp_ProcessEvent_8: (+1)
+   \   0000004A   0x78B5             LDRB     R5,[R6, #+2]
+   \   0000004C   0x78F0             LDRB     R0,[R6, #+3]
+   \   0000004E   0x7877             LDRB     R7,[R6, #+1]
+   \   00000050   0xB2FF             UXTB     R7,R7            ;; ZeroExt  R7,R7,#+24,#+24
+   \   00000052   0x2F00             CMP      R7,#+0
+   \   00000054   0xD011             BEQ.N    ??WatchApp_ProcessEvent_9
+   \   00000056   0xF44F 0x73FA      MOV      R3,#+500
+   \   0000005A   0x2214             MOVS     R2,#+20
+   \   0000005C   0x2102             MOVS     R1,#+2
+   \   0000005E   0x2002             MOVS     R0,#+2
+   \   00000060   0x.... 0x....      BL       HalLedBlink
+   \   00000064   0x2305             MOVS     R3,#+5
+   \   00000066   0x2210             MOVS     R2,#+16
+   \   00000068   0xB2FF             UXTB     R7,R7            ;; ZeroExt  R7,R7,#+24,#+24
+   \   0000006A   0x0039             MOVS     R1,R7
+   \   0000006C   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   0000006E   0x.... 0x....      LDR.W    R0,??DataTable9_11
+   \   00000072   0x.... 0x....      BL       HalLcdWriteStringValue
+   \   00000076   0x1C6D             ADDS     R5,R5,#+1
+   \   00000078   0xE004             B.N      ??WatchApp_ProcessEvent_10
+   \                     ??WatchApp_ProcessEvent_9: (+1)
+   \   0000007A   0x2105             MOVS     R1,#+5
+   \   0000007C   0x.... 0x....      LDR.W    R0,??DataTable9_12
+   \   00000080   0x.... 0x....      BL       HalLcdWriteString
+   \                     ??WatchApp_ProcessEvent_10: (+1)
+   \   00000084   0xE7C8             B.N      ??WatchApp_ProcessEvent_3
+   \                     ??WatchApp_ProcessEvent_5: (+1)
+   \   00000086   0x0030             MOVS     R0,R6
+   \   00000088   0x.... 0x....      BL       WatchApp_MessageMSGCB
+   \   0000008C   0xE7C4             B.N      ??WatchApp_ProcessEvent_3
+   \                     ??WatchApp_ProcessEvent_6: (+1)
+   \   0000008E   0x7870             LDRB     R0,[R6, #+1]
+   \   00000090   0x.... 0x....      LDR.W    R1,??DataTable9_6
+   \   00000094   0x7008             STRB     R0,[R1, #+0]
+   \   00000096   0x.... 0x....      LDR.W    R0,??DataTable9_6
+   \   0000009A   0x7800             LDRB     R0,[R0, #+0]
+   \   0000009C   0x2806             CMP      R0,#+6
+   \   0000009E   0xD108             BNE.N    ??WatchApp_ProcessEvent_11
+   \   000000A0   0x.... 0x....      LDR.W    R0,??DataTable9_13
+   \   000000A4   0x6802             LDR      R2,[R0, #+0]
+   \   000000A6   0x2101             MOVS     R1,#+1
+   \   000000A8   0x.... 0x....      LDR.W    R0,??DataTable9_5
+   \   000000AC   0x7800             LDRB     R0,[R0, #+0]
+   \   000000AE   0x.... 0x....      BL       osal_start_reload_timer
+   \                     ??WatchApp_ProcessEvent_11: (+1)
+   \   000000B2   0xE7B1             B.N      ??WatchApp_ProcessEvent_3
+    366              }
+    367          
+    368              // return unprocessed events
+    369              return (events ^ SYS_EVENT_MSG);
+   \                     ??WatchApp_ProcessEvent_4: (+1)
+   \   000000B4   0xF494 0x4000      EORS     R0,R4,#0x8000
+   \   000000B8   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   000000BA   0xE035             B.N      ??WatchApp_ProcessEvent_12
+    370            } // end system message handling
+    371            
+    372          //----------  Non System Messages do not have Message Packets -----------------
+    373            if ( events & WATCHAPP_SEND_MSG_EVT ) {
+   \                     ??WatchApp_ProcessEvent_0: (+1)
+   \   000000BC   0x07E0             LSLS     R0,R4,#+31
+   \   000000BE   0xD507             BPL.N    ??WatchApp_ProcessEvent_13
+    374            // Send "I'M Awake" message - This event is generated by a timer
+    375            //  (setup in WatchApp_Init()).
+    376                  WatchApp_SendMsg("AWAKE");
+   \   000000C0   0x.... 0x....      LDR.W    R0,??DataTable9_14
+   \   000000C4   0x.... 0x....      BL       WatchApp_SendMsg
+    377              return (events ^ WATCHAPP_SEND_MSG_EVT);
+   \   000000C8   0xF094 0x0001      EORS     R0,R4,#0x1
+   \   000000CC   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   000000CE   0xE02B             B.N      ??WatchApp_ProcessEvent_12
+    378            }
+    379          
+    380            if ( events & WATCHAPP_FALL_ALARM ) {
+   \                     ??WatchApp_ProcessEvent_13: (+1)
+   \   000000D0   0x07A0             LSLS     R0,R4,#+30
+   \   000000D2   0xD507             BPL.N    ??WatchApp_ProcessEvent_14
+    381                  WatchApp_SendMsg("FALL");
+   \   000000D4   0x.... 0x....      LDR.W    R0,??DataTable9_15
+   \   000000D8   0x.... 0x....      BL       WatchApp_SendMsg
+    382              return (events ^ WATCHAPP_FALL_ALARM);
+   \   000000DC   0xF094 0x0002      EORS     R0,R4,#0x2
+   \   000000E0   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   000000E2   0xE021             B.N      ??WatchApp_ProcessEvent_12
+    383            }
+    384          
+    385            if ( events & WATCHAPP_LCD_UPDATE ) {
+   \                     ??WatchApp_ProcessEvent_14: (+1)
+   \   000000E4   0x0760             LSLS     R0,R4,#+29
+   \   000000E6   0xD50C             BPL.N    ??WatchApp_ProcessEvent_15
+    386               osal_start_timerEx(WatchApp_TaskID, WATCHAPP_LCD_UPDATE, 1000); //1 sec
+   \   000000E8   0xF44F 0x727A      MOV      R2,#+1000
+   \   000000EC   0x2104             MOVS     R1,#+4
+   \   000000EE   0x....             LDR.N    R0,??DataTable9_5
+   \   000000F0   0x7800             LDRB     R0,[R0, #+0]
+   \   000000F2   0x.... 0x....      BL       osal_start_timerEx
+    387               WatchApp_UpdateLCD();   
+   \   000000F6   0x.... 0x....      BL       WatchApp_UpdateLCD
+    388               return (events ^ WATCHAPP_LCD_UPDATE);
+   \   000000FA   0xF094 0x0004      EORS     R0,R4,#0x4
+   \   000000FE   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   00000100   0xE012             B.N      ??WatchApp_ProcessEvent_12
+    389            }
+    390          
+    391            if ( events & WATCHAPP_TIMER1 ) {
+   \                     ??WatchApp_ProcessEvent_15: (+1)
+   \   00000102   0x0660             LSLS     R0,R4,#+25
+   \   00000104   0xD50F             BPL.N    ??WatchApp_ProcessEvent_16
+    392               osal_start_timerEx(WatchApp_TaskID, WATCHAPP_TIMER1, 100);    //100msec
+   \   00000106   0x2264             MOVS     R2,#+100
+   \   00000108   0x2140             MOVS     R1,#+64
+   \   0000010A   0x....             LDR.N    R0,??DataTable9_5
+   \   0000010C   0x7800             LDRB     R0,[R0, #+0]
+   \   0000010E   0x.... 0x....      BL       osal_start_timerEx
+    393               HalLedBlink( HAL_LED_1, 0, 5, 100 ); //Heart beat
+   \   00000112   0x2364             MOVS     R3,#+100
+   \   00000114   0x2205             MOVS     R2,#+5
+   \   00000116   0x2100             MOVS     R1,#+0
+   \   00000118   0x2001             MOVS     R0,#+1
+   \   0000011A   0x.... 0x....      BL       HalLedBlink
+    394               return (events ^ WATCHAPP_TIMER1);
+   \   0000011E   0xF094 0x0040      EORS     R0,R4,#0x40
+   \   00000122   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   00000124   0xE000             B.N      ??WatchApp_ProcessEvent_12
+    395            }
+    396          
+    397            // Discard unknown events
+    398            return 0;
+   \                     ??WatchApp_ProcessEvent_16: (+1)
+   \   00000126   0x2000             MOVS     R0,#+0
+   \                     ??WatchApp_ProcessEvent_12: (+1)
+   \   00000128   0xBDF2             POP      {R1,R4-R7,PC}    ;; return
+    399          }
+    400          
+    401          /*********************************************************************
+    402           * Event Generation Functions
+    403           */
+    404          
+    405          /*********************************************************************
+    406           * @fn      WatchApp_ProcessZDOMsgs()
+    407           *
+    408           * @brief   Process response messages
+    409           *
+    410           * @param   none
+    411           * @return  none
+    412             ****************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    413          static void WatchApp_ProcessZDOMsgs( zdoIncomingMsg_t *inMsg )
+    414          {
+   \                     WatchApp_ProcessZDOMsgs: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+    415            switch ( inMsg->clusterID ) {
+   \   00000002   0x89C1             LDRH     R1,[R0, #+14]
+   \   00000004   0xF248 0x0206      MOVW     R2,#+32774
+   \   00000008   0x1A89             SUBS     R1,R1,R2
+   \   0000000A   0xD00F             BEQ.N    ??WatchApp_ProcessZDOMsgs_0
+   \   0000000C   0x391A             SUBS     R1,R1,#+26
+   \   0000000E   0xD128             BNE.N    ??WatchApp_ProcessZDOMsgs_1
+    416              case End_Device_Bind_rsp:
+    417                if ( ZDO_ParseBindRsp( inMsg ) == ZSuccess ) {
+   \                     ??WatchApp_ProcessZDOMsgs_2: (+1)
+   \   00000010   0x6980             LDR      R0,[R0, #+24]
+   \   00000012   0x7800             LDRB     R0,[R0, #+0]
+   \   00000014   0x2800             CMP      R0,#+0
+   \   00000016   0xD104             BNE.N    ??WatchApp_ProcessZDOMsgs_3
+    418                  // Light LED
+    419                  HalLedSet( HAL_LED_3, HAL_LED_MODE_ON );
+   \   00000018   0x2101             MOVS     R1,#+1
+   \   0000001A   0x2004             MOVS     R0,#+4
+   \   0000001C   0x.... 0x....      BL       HalLedSet
+   \   00000020   0xE003             B.N      ??WatchApp_ProcessZDOMsgs_4
+    420                }
+    421          #if defined( BLINK_LEDS )
+    422                else {
+    423                  // Flash LED to show failure
+    424                  HalLedSet ( HAL_LED_3, HAL_LED_MODE_FLASH );
+   \                     ??WatchApp_ProcessZDOMsgs_3: (+1)
+   \   00000022   0x2104             MOVS     R1,#+4
+   \   00000024   0x2004             MOVS     R0,#+4
+   \   00000026   0x.... 0x....      BL       HalLedSet
+    425                }
+    426          #endif
+    427                break;
+   \                     ??WatchApp_ProcessZDOMsgs_4: (+1)
+   \   0000002A   0xE01A             B.N      ??WatchApp_ProcessZDOMsgs_1
+    428          
+    429              case Match_Desc_rsp:
+    430                {
+    431                  ZDO_ActiveEndpointRsp_t *pRsp = ZDO_ParseEPListRsp( inMsg );
+   \                     ??WatchApp_ProcessZDOMsgs_0: (+1)
+   \   0000002C   0x.... 0x....      BL       ZDO_ParseEPListRsp
+   \   00000030   0x0004             MOVS     R4,R0
+    432                  if ( pRsp ) {
+   \   00000032   0x2C00             CMP      R4,#+0
+   \   00000034   0xD015             BEQ.N    ??WatchApp_ProcessZDOMsgs_5
+    433                    if ( pRsp->status == ZSuccess && pRsp->cnt ) {
+   \   00000036   0x7820             LDRB     R0,[R4, #+0]
+   \   00000038   0x2800             CMP      R0,#+0
+   \   0000003A   0xD10F             BNE.N    ??WatchApp_ProcessZDOMsgs_6
+   \   0000003C   0x7920             LDRB     R0,[R4, #+4]
+   \   0000003E   0x2800             CMP      R0,#+0
+   \   00000040   0xD00C             BEQ.N    ??WatchApp_ProcessZDOMsgs_6
+    434                      WatchApp_DstAddr.addrMode = (afAddrMode_t)Addr16Bit;
+   \   00000042   0x2002             MOVS     R0,#+2
+   \   00000044   0x....             LDR.N    R1,??DataTable9_7
+   \   00000046   0x7208             STRB     R0,[R1, #+8]
+    435                      WatchApp_DstAddr.addr.shortAddr = pRsp->nwkAddr;
+   \   00000048   0x8860             LDRH     R0,[R4, #+2]
+   \   0000004A   0x....             LDR.N    R1,??DataTable9_7
+   \   0000004C   0x8008             STRH     R0,[R1, #+0]
+    436                      // Take the first endpoint, Can be changed to search through endpoints
+    437                      WatchApp_DstAddr.endPoint = pRsp->epList[0];
+   \   0000004E   0x7960             LDRB     R0,[R4, #+5]
+   \   00000050   0x....             LDR.N    R1,??DataTable9_7
+   \   00000052   0x7248             STRB     R0,[R1, #+9]
+    438          
+    439                      // Light LED
+    440                      HalLedSet( HAL_LED_4, HAL_LED_MODE_BLINK );
+   \   00000054   0x2102             MOVS     R1,#+2
+   \   00000056   0x2008             MOVS     R0,#+8
+   \   00000058   0x.... 0x....      BL       HalLedSet
+    441                    }
+    442                    osal_mem_free( pRsp );
+   \                     ??WatchApp_ProcessZDOMsgs_6: (+1)
+   \   0000005C   0x0020             MOVS     R0,R4
+   \   0000005E   0x.... 0x....      BL       osal_mem_free
+    443                  }
+    444                }
+    445                break;
+    446            }
+    447          }
+   \                     ??WatchApp_ProcessZDOMsgs_5: (+1)
+   \                     ??WatchApp_ProcessZDOMsgs_1: (+1)
+   \   00000062   0xBD10             POP      {R4,PC}          ;; return
+    448          
+    449          /******************************************************************************
+    450           * @fn      OnBoard_ButtonCallback
+    451           *
+    452           * @brief   Callback service for keys. If the watch is not yet bound to a 
+    453           *          coordinator then the key event is used to initiate binding, else
+    454           *          the key event is handled as an emergancy button press.
+    455           *
+    456           * @param   keys  - key that was pressed
+    457           *          state - key state modifier - not used. 
+    458           *
+    459           * @return  void
+    460           ******************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    461          void OnBoard_ButtonCallback ( uint8 keys, uint8 state )
+    462          {
+   \                     OnBoard_ButtonCallback: (+1)
+   \   00000000   0xB500             PUSH     {LR}
+   \   00000002   0xB089             SUB      SP,SP,#+36
+    463            zAddrType_t dstAddr;
+    464            
+    465            if ( registeredButtonsTaskID != NO_TASK_ID ) {
+   \   00000004   0x....             LDR.N    R1,??DataTable9_16
+   \   00000006   0x7809             LDRB     R1,[R1, #+0]
+   \   00000008   0x29FF             CMP      R1,#+255
+   \   0000000A   0xD02C             BEQ.N    ??OnBoard_ButtonCallback_0
+    466                if ( keys & HAL_KEY_SW_1 ){    
+   \   0000000C   0x07C0             LSLS     R0,R0,#+31
+   \   0000000E   0xD51B             BPL.N    ??OnBoard_ButtonCallback_1
+    467                    // Initiate an End Device Bind Request for the mandatory endpoint
+    468                    dstAddr.addrMode = Addr16Bit;
+   \   00000010   0x2002             MOVS     R0,#+2
+   \   00000012   0xF88D 0x001C      STRB     R0,[SP, #+28]
+    469                    dstAddr.addr.shortAddr = 0x0000; // Coordinator
+   \   00000016   0x2000             MOVS     R0,#+0
+   \   00000018   0xF8AD 0x0014      STRH     R0,[SP, #+20]
+    470                    ZDP_EndDeviceBindReq( &dstAddr, NLME_GetShortAddr(),
+    471                                         WatchApp_epDesc.endPoint,
+    472                                         WATCHAPP_PROFID,
+    473                                         WATCHAPP_MAX_CLUSTERS, (cId_t *)WatchApp_ClusterList,
+    474                                         WATCHAPP_MAX_CLUSTERS, (cId_t *)WatchApp_ClusterList,
+    475                                         FALSE );
+   \   0000001C   0x.... 0x....      BL       NLME_GetShortAddr
+   \   00000020   0x2100             MOVS     R1,#+0
+   \   00000022   0x9104             STR      R1,[SP, #+16]
+   \   00000024   0x....             LDR.N    R1,??DataTable9_17
+   \   00000026   0x9103             STR      R1,[SP, #+12]
+   \   00000028   0x2101             MOVS     R1,#+1
+   \   0000002A   0x9102             STR      R1,[SP, #+8]
+   \   0000002C   0x....             LDR.N    R1,??DataTable9_17
+   \   0000002E   0x9101             STR      R1,[SP, #+4]
+   \   00000030   0x2101             MOVS     R1,#+1
+   \   00000032   0x9100             STR      R1,[SP, #+0]
+   \   00000034   0xF640 0x7304      MOVW     R3,#+3844
+   \   00000038   0x....             LDR.N    R1,??DataTable9_8
+   \   0000003A   0x780A             LDRB     R2,[R1, #+0]
+   \   0000003C   0x0001             MOVS     R1,R0
+   \   0000003E   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   00000040   0xA805             ADD      R0,SP,#+20
+   \   00000042   0x.... 0x....      BL       ZDP_EndDeviceBindReq
+   \   00000046   0xE00E             B.N      ??OnBoard_ButtonCallback_0
+    476                }else{    // This is a FALL button press
+    477                    osal_set_event( WatchApp_TaskID, WATCHAPP_FALL_ALARM );
+   \                     ??OnBoard_ButtonCallback_1: (+1)
+   \   00000048   0x2102             MOVS     R1,#+2
+   \   0000004A   0x....             LDR.N    R0,??DataTable9_5
+   \   0000004C   0x7800             LDRB     R0,[R0, #+0]
+   \   0000004E   0x.... 0x....      BL       osal_set_event
+    478                    #ifndef EVERWRIST 
+    479                      HAL_TOGGLE_LED2();
+   \   00000052   0x2102             MOVS     R1,#+2
+   \   00000054   0x....             LDR.N    R0,??DataTable9_3  ;; 0x400db000
+   \   00000056   0x.... 0x....      BL       GPIOPinRead
+   \   0000005A   0x43C2             MVNS     R2,R0
+   \   0000005C   0xB2D2             UXTB     R2,R2            ;; ZeroExt  R2,R2,#+24,#+24
+   \   0000005E   0x2102             MOVS     R1,#+2
+   \   00000060   0x....             LDR.N    R0,??DataTable9_3  ;; 0x400db000
+   \   00000062   0x.... 0x....      BL       GPIOPinWrite
+    480                    #endif
+    481                }
+    482            }else{ 
+    483                //error ("Fall Message did not get sent");
+    484            }
+    485          }
+   \                     ??OnBoard_ButtonCallback_0: (+1)
+   \   00000066   0xB009             ADD      SP,SP,#+36
+   \   00000068   0xBD00             POP      {PC}             ;; return
+    486          /*********************************************************************
+    487           * @fn      WatchApp_MessageMSGCB
+    488           *
+    489           * @brief   Data message processor callback.  This function processes
+    490           *          any incoming data - probably from other devices.  So, based
+    491           *          on cluster ID, perform the intended action.
+    492           *
+    493           * @param   none
+    494           *
+    495           * @return  none
+    496             ****************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    497          static void WatchApp_MessageMSGCB( afIncomingMSGPacket_t *pkt )
+    498          {
+   \                     WatchApp_MessageMSGCB: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+    499            switch ( pkt->clusterId ) {
+   \   00000004   0x88A0             LDRH     R0,[R4, #+4]
+   \   00000006   0x2801             CMP      R0,#+1
+   \   00000008   0xD113             BNE.N    ??WatchApp_MessageMSGCB_0
+    500              case WATCHAPP_CLUSTERID:
+    501                rxMsgCount += 1;  // Count this message
+   \   0000000A   0x....             LDR.N    R0,??DataTable9_18
+   \   0000000C   0x8800             LDRH     R0,[R0, #+0]
+   \   0000000E   0x1C40             ADDS     R0,R0,#+1
+   \   00000010   0x....             LDR.N    R1,??DataTable9_18
+   \   00000012   0x8008             STRH     R0,[R1, #+0]
+    502                HalLedSet ( HAL_LED_4, HAL_LED_MODE_BLINK );  // Blink an LED
+   \   00000014   0x2102             MOVS     R1,#+2
+   \   00000016   0x2008             MOVS     R0,#+8
+   \   00000018   0x.... 0x....      BL       HalLedSet
+    503          #if defined( LCD_SUPPORTED )
+    504                HalLcdWriteString( (char*)pkt->cmd.Data, HAL_LCD_LINE_1 );
+   \   0000001C   0x2101             MOVS     R1,#+1
+   \   0000001E   0x6AA0             LDR      R0,[R4, #+40]
+   \   00000020   0x.... 0x....      BL       HalLcdWriteString
+    505                HalLcdWriteStringValue( "Rcvd:", rxMsgCount, 10, HAL_LCD_LINE_2 );
+   \   00000024   0x2302             MOVS     R3,#+2
+   \   00000026   0x220A             MOVS     R2,#+10
+   \   00000028   0x....             LDR.N    R0,??DataTable9_18
+   \   0000002A   0x8801             LDRH     R1,[R0, #+0]
+   \   0000002C   0x....             LDR.N    R0,??DataTable9_19
+   \   0000002E   0x.... 0x....      BL       HalLcdWriteStringValue
+    506          #elif defined( WIN32 )
+    507                // TODO - What is this??
+    508                WPRINTSTR( pkt->cmd.Data );
+    509          #endif
+    510                break;
+    511            }
+    512          }
+   \                     ??WatchApp_MessageMSGCB_0: (+1)
+   \   00000032   0xBD10             POP      {R4,PC}          ;; return
+    513          
+    514          /*******************************************************************************
+    515           * @fn          WatchApp_SendMsg
+    516           *
+    517           * @brief   Send text message.
+    518           *
+    519           * @param   Pointer to message to send
+    520           *
+    521           * @return  none
+    522          
+    523          5/28 Changed options from AF_DISCV_ROUTE to AF_MSG_ACK_REQUEST
+    524               Added LED 2 Blink
+    525               Note security is not enabled
+    526             ****************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    527          static void  WatchApp_SendMsg( char* textMsg )
+    528          {
+   \                     WatchApp_SendMsg: (+1)
+   \   00000000   0xB51F             PUSH     {R0-R4,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+    529          
+    530            if ( AF_DataRequest( &WatchApp_DstAddr, &WatchApp_epDesc,
+    531                               WATCHAPP_CLUSTERID,
+    532                               (byte)osal_strlen( textMsg ) + 1,
+    533                               (unsigned char*)textMsg,
+    534                               &WatchApp_TransID,
+    535                               AF_MSG_ACK_REQUEST, AF_DEFAULT_RADIUS ) == afStatus_SUCCESS ) {
+   \   00000004   0x0020             MOVS     R0,R4
+   \   00000006   0x.... 0x....      BL       osal_strlen
+   \   0000000A   0x211E             MOVS     R1,#+30
+   \   0000000C   0x9103             STR      R1,[SP, #+12]
+   \   0000000E   0x2110             MOVS     R1,#+16
+   \   00000010   0x9102             STR      R1,[SP, #+8]
+   \   00000012   0x....             LDR.N    R1,??DataTable9_20
+   \   00000014   0x9101             STR      R1,[SP, #+4]
+   \   00000016   0x9400             STR      R4,[SP, #+0]
+   \   00000018   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000001A   0x1C43             ADDS     R3,R0,#+1
+   \   0000001C   0xB29B             UXTH     R3,R3            ;; ZeroExt  R3,R3,#+16,#+16
+   \   0000001E   0x2201             MOVS     R2,#+1
+   \   00000020   0x....             LDR.N    R1,??DataTable9_8
+   \   00000022   0x....             LDR.N    R0,??DataTable9_7
+   \   00000024   0x.... 0x....      BL       AF_DataRequest
+   \   00000028   0x2800             CMP      R0,#+0
+   \   0000002A   0xD105             BNE.N    ??WatchApp_SendMsg_0
+    536              // Successfully requested to be sent.
+    537                 HalLedBlink( HAL_LED_2, 3, HAL_LED_DEFAULT_DUTY_CYCLE/2, 100 );
+   \   0000002C   0x2364             MOVS     R3,#+100
+   \   0000002E   0x2202             MOVS     R2,#+2
+   \   00000030   0x2103             MOVS     R1,#+3
+   \   00000032   0x2002             MOVS     R0,#+2
+   \   00000034   0x.... 0x....      BL       HalLedBlink
+    538            } else {
+    539              // Error occurred in request to send.
+    540            }
+    541          }
+   \                     ??WatchApp_SendMsg_0: (+1)
+   \   00000038   0xBD1F             POP      {R0-R4,PC}       ;; return
+    542          
+    543          /*******************************************************************************
+    544           * @fn          WatchApp_UpdateLCD
+    545           *
+    546           * @brief   Update LCD watch time.
+    547           *
+    548           * @param   none
+    549           *
+    550           * @return  none
+    551             ****************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    552          static void WatchApp_UpdateLCD( void )
+    553          {
+   \                     WatchApp_UpdateLCD: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+    554            uint32 timeInSec;
+    555            
+    556              timeInSec = osal_GetSystemClock()/1000;
+   \   00000002   0x.... 0x....      BL       osal_GetSystemClock
+   \   00000006   0xF44F 0x717A      MOV      R1,#+1000
+   \   0000000A   0xFBB0 0xF1F1      UDIV     R1,R0,R1
+    557              HalLcdWriteStringValue( "Time:", timeInSec, 10, HAL_LCD_LINE_4 );
+   \   0000000E   0x2304             MOVS     R3,#+4
+   \   00000010   0x220A             MOVS     R2,#+10
+   \   00000012   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   00000014   0x....             LDR.N    R0,??DataTable9_21
+   \   00000016   0x.... 0x....      BL       HalLcdWriteStringValue
+    558          
+    559          }
+   \   0000001A   0xBD01             POP      {R0,PC}          ;; return
+    560          
+    561          /*******************************************************************************
+    562           * @fn      zmain_ext_addr
+    563           *
+    564           * @brief   Execute a prioritized search for a valid extended address and write
+    565           *          the results into the OSAL NV memory. If a valid extended address is
+    566           *          not found this will create a Temporary address so a link can still be
+    567           *          established. The Temporary IEEE address is not saved to NV. At some 
+    568           *          point MAKE SURE the CC2538 device IEEE address is correctly placed in NV.
+    569           *
+    570           * @param   none
+    571           *
+    572           * @return  none
+    573             ****************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    574          static void zmain_ext_addr( void )
+    575          {
+   \                     zmain_ext_addr: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0xB084             SUB      SP,SP,#+16
+    576            uint8 nullAddr[Z_EXTADDR_LEN] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+   \   00000004   0xA801             ADD      R0,SP,#+4
+   \   00000006   0x....             LDR.N    R1,??DataTable9_22
+   \   00000008   0xC90C             LDM      R1!,{R2,R3}
+   \   0000000A   0xC00C             STM      R0!,{R2,R3}
+   \   0000000C   0x3908             SUBS     R1,R1,#+8
+   \   0000000E   0x3808             SUBS     R0,R0,#+8
+    577            uint8 temporaryIEEE_ADDR = FALSE;
+   \   00000010   0x2400             MOVS     R4,#+0
+    578          
+    579            // First check whether a non-erased extended address exists in the OSAL NV.
+    580            if ((SUCCESS != osal_nv_item_init(ZCD_NV_EXTADDR, Z_EXTADDR_LEN, NULL))  ||
+    581                (SUCCESS != osal_nv_read(ZCD_NV_EXTADDR, 0, Z_EXTADDR_LEN, aExtendedAddress)) ||
+    582                (osal_memcmp(aExtendedAddress, nullAddr, Z_EXTADDR_LEN))) {
+   \   00000012   0x2200             MOVS     R2,#+0
+   \   00000014   0x2108             MOVS     R1,#+8
+   \   00000016   0x2001             MOVS     R0,#+1
+   \   00000018   0x.... 0x....      BL       osal_nv_item_init
+   \   0000001C   0x2800             CMP      R0,#+0
+   \   0000001E   0xD10E             BNE.N    ??zmain_ext_addr_0
+   \   00000020   0x....             LDR.N    R3,??DataTable9_23
+   \   00000022   0x2208             MOVS     R2,#+8
+   \   00000024   0x2100             MOVS     R1,#+0
+   \   00000026   0x2001             MOVS     R0,#+1
+   \   00000028   0x.... 0x....      BL       osal_nv_read
+   \   0000002C   0x2800             CMP      R0,#+0
+   \   0000002E   0xD106             BNE.N    ??zmain_ext_addr_0
+   \   00000030   0x2208             MOVS     R2,#+8
+   \   00000032   0xA901             ADD      R1,SP,#+4
+   \   00000034   0x....             LDR.N    R0,??DataTable9_23
+   \   00000036   0x.... 0x....      BL       osal_memcmp
+   \   0000003A   0x2800             CMP      R0,#+0
+   \   0000003C   0xD05B             BEQ.N    ??zmain_ext_addr_1
+    583              // Attempt to read the extended address from the location in the last flash
+    584              // page where the commissioning tools know to reserve it.
+    585              if (!osal_memcmp((uint8 *)HAL_FLASH_IEEE_ADDR, nullAddr, Z_EXTADDR_LEN)) {
+   \                     ??zmain_ext_addr_0: (+1)
+   \   0000003E   0x2208             MOVS     R2,#+8
+   \   00000040   0xA901             ADD      R1,SP,#+4
+   \   00000042   0x....             LDR.N    R0,??DataTable9_24  ;; 0x27ffcc
+   \   00000044   0x.... 0x....      BL       osal_memcmp
+   \   00000048   0x2800             CMP      R0,#+0
+   \   0000004A   0xD105             BNE.N    ??zmain_ext_addr_2
+    586                (void)osal_memcpy(aExtendedAddress, (uint8 *)HAL_FLASH_IEEE_ADDR, Z_EXTADDR_LEN);
+   \   0000004C   0x2208             MOVS     R2,#+8
+   \   0000004E   0x....             LDR.N    R1,??DataTable9_24  ;; 0x27ffcc
+   \   00000050   0x....             LDR.N    R0,??DataTable9_23
+   \   00000052   0x.... 0x....      BL       osal_memcpy
+   \   00000056   0xE045             B.N      ??zmain_ext_addr_3
+    587              } else  {
+    588                // Disable prefetch when reading from Information Page.
+    589                uint32 fctl = HWREG(FLASH_CTRL_FCTL);
+   \                     ??zmain_ext_addr_2: (+1)
+   \   00000058   0x....             LDR.N    R0,??DataTable9_2  ;; 0x400d3008
+   \   0000005A   0x6805             LDR      R5,[R0, #+0]
+    590                HWREG(FLASH_CTRL_FCTL) = fctl & ~(FLASH_CTRL_FCTL_PREFETCH_ENABLE);
+   \   0000005C   0xF035 0x0008      BICS     R0,R5,#0x8
+   \   00000060   0x....             LDR.N    R1,??DataTable9_2  ;; 0x400d3008
+   \   00000062   0x6008             STR      R0,[R1, #+0]
+    591          
+    592                // Copy 64-bit extended address from the Information Page
+    593                (void)osal_memcpy(aExtendedAddress, (uint8*)HAL_INFO_IEEE_ADDR, Z_EXTADDR_LEN);
+   \   00000064   0x2208             MOVS     R2,#+8
+   \   00000066   0xF05F 0x1128      MOVS     R1,#+2621480
+   \   0000006A   0x....             LDR.N    R0,??DataTable9_23
+   \   0000006C   0x.... 0x....      BL       osal_memcpy
+    594                if (!osal_memcmp(aExtendedAddress, nullAddr, Z_EXTADDR_LEN)) {
+   \   00000070   0x2208             MOVS     R2,#+8
+   \   00000072   0xA901             ADD      R1,SP,#+4
+   \   00000074   0x....             LDR.N    R0,??DataTable9_23
+   \   00000076   0x.... 0x....      BL       osal_memcmp
+   \   0000007A   0x2800             CMP      R0,#+0
+   \   0000007C   0xD115             BNE.N    ??zmain_ext_addr_4
+    595                  uint32 oui = IEEE_OUI;
+   \   0000007E   0xF241 0x204B      MOVW     R0,#+4683
+   \   00000082   0x9000             STR      R0,[SP, #+0]
+    596                  // IEEE OUI is located in the upper 3 bytes of an 8-byte extended address
+    597                  // Early Test CC2538EMs had the TI OUI located in the 2nd word,
+    598                  // Production CC2538 devices have the TI OUI located in the 1st word
+    599                  if (osal_memcmp(&aExtendedAddress[1], &oui, 3)) {
+   \   00000084   0x2203             MOVS     R2,#+3
+   \   00000086   0xA900             ADD      R1,SP,#+0
+   \   00000088   0x....             LDR.N    R0,??DataTable9_25
+   \   0000008A   0x.... 0x....      BL       osal_memcmp
+   \   0000008E   0x2800             CMP      R0,#+0
+   \   00000090   0xD026             BEQ.N    ??zmain_ext_addr_5
+    600                    // OUI found in 1st word, swap words to place OUI in upper bytes
+    601                    (void)osal_memcpy(aExtendedAddress, &aExtendedAddress[4], Z_EXTADDR_LEN/2);
+   \   00000092   0x2204             MOVS     R2,#+4
+   \   00000094   0x....             LDR.N    R1,??DataTable9_26
+   \   00000096   0x....             LDR.N    R0,??DataTable9_23
+   \   00000098   0x.... 0x....      BL       osal_memcpy
+    602                    (void)osal_memcpy(&aExtendedAddress[4], (uint8*)HAL_INFO_IEEE_ADDR, Z_EXTADDR_LEN/2);
+   \   0000009C   0x2204             MOVS     R2,#+4
+   \   0000009E   0xF05F 0x1128      MOVS     R1,#+2621480
+   \   000000A2   0x....             LDR.N    R0,??DataTable9_26
+   \   000000A4   0x.... 0x....      BL       osal_memcpy
+   \   000000A8   0xE01A             B.N      ??zmain_ext_addr_5
+    603                  }
+    604                } else { // No valid extended address was found.
+    605                  uint8 idx;
+    606          
+    607          #if !defined ( NV_RESTORE )
+    608                  temporaryIEEE_ADDR = TRUE;  // Make a temporary IEEE address, not saved in NV
+   \                     ??zmain_ext_addr_4: (+1)
+   \   000000AA   0x2401             MOVS     R4,#+1
+    609          #endif
+    610          
+    611                 /* Create a sufficiently random extended address for expediency.
+    612                  * Note: this is only valid/legal in a test environment and
+    613                  *       must never be used for a commercial product.
+    614                  */
+    615                  for (idx = 0; idx < (Z_EXTADDR_LEN - 2);) {
+   \   000000AC   0x2600             MOVS     R6,#+0
+   \   000000AE   0xE00B             B.N      ??zmain_ext_addr_6
+    616                    uint16 randy = osal_rand();
+   \                     ??zmain_ext_addr_7: (+1)
+   \   000000B0   0x.... 0x....      BL       osal_rand
+    617                    aExtendedAddress[idx++] = LO_UINT16(randy);
+   \   000000B4   0x....             LDR.N    R1,??DataTable9_23
+   \   000000B6   0xB2F6             UXTB     R6,R6            ;; ZeroExt  R6,R6,#+24,#+24
+   \   000000B8   0x5470             STRB     R0,[R6, R1]
+   \   000000BA   0x1C76             ADDS     R6,R6,#+1
+    618                    aExtendedAddress[idx++] = HI_UINT16(randy);
+   \   000000BC   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   000000BE   0x0A00             LSRS     R0,R0,#+8
+   \   000000C0   0x....             LDR.N    R1,??DataTable9_23
+   \   000000C2   0xB2F6             UXTB     R6,R6            ;; ZeroExt  R6,R6,#+24,#+24
+   \   000000C4   0x5470             STRB     R0,[R6, R1]
+   \   000000C6   0x1C76             ADDS     R6,R6,#+1
+    619                  }
+   \                     ??zmain_ext_addr_6: (+1)
+   \   000000C8   0xB2F6             UXTB     R6,R6            ;; ZeroExt  R6,R6,#+24,#+24
+   \   000000CA   0x2E06             CMP      R6,#+6
+   \   000000CC   0xDBF0             BLT.N    ??zmain_ext_addr_7
+    620                // Next-to-MSB identifies ZigBee device type.
+    621                aExtendedAddress[idx++] = 0x30;  //This is an end device
+   \   000000CE   0x2030             MOVS     R0,#+48
+   \   000000D0   0x....             LDR.N    R1,??DataTable9_23
+   \   000000D2   0xB2F6             UXTB     R6,R6            ;; ZeroExt  R6,R6,#+24,#+24
+   \   000000D4   0x5470             STRB     R0,[R6, R1]
+   \   000000D6   0x1C76             ADDS     R6,R6,#+1
+    622                // MSB has historical signficance.
+    623                aExtendedAddress[idx] = 0xF8;
+   \   000000D8   0x20F8             MOVS     R0,#+248
+   \   000000DA   0x....             LDR.N    R1,??DataTable9_23
+   \   000000DC   0xB2F6             UXTB     R6,R6            ;; ZeroExt  R6,R6,#+24,#+24
+   \   000000DE   0x5470             STRB     R0,[R6, R1]
+    624                }
+    625          
+    626                // Restore flash control to previous state
+    627                HWREG(FLASH_CTRL_FCTL) = fctl;
+   \                     ??zmain_ext_addr_5: (+1)
+   \   000000E0   0x....             LDR.N    R0,??DataTable9_2  ;; 0x400d3008
+   \   000000E2   0x6005             STR      R5,[R0, #+0]
+    628              }
+    629          
+    630              if (temporaryIEEE_ADDR == FALSE) { // only if this is NOT a Temporary
+   \                     ??zmain_ext_addr_3: (+1)
+   \   000000E4   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   000000E6   0x2C00             CMP      R4,#+0
+   \   000000E8   0xD105             BNE.N    ??zmain_ext_addr_1
+    631                (void)osal_nv_write(ZCD_NV_EXTADDR, 0, Z_EXTADDR_LEN, aExtendedAddress);
+   \   000000EA   0x....             LDR.N    R3,??DataTable9_23
+   \   000000EC   0x2208             MOVS     R2,#+8
+   \   000000EE   0x2100             MOVS     R1,#+0
+   \   000000F0   0x2001             MOVS     R0,#+1
+   \   000000F2   0x.... 0x....      BL       osal_nv_write
+    632              }
+    633            }
+    634          
+    635            // Set the MAC PIB extended address according to results from above.
+    636            (void)ZMacSetReq(MAC_EXTENDED_ADDRESS, aExtendedAddress);
+   \                     ??zmain_ext_addr_1: (+1)
+   \   000000F6   0x....             LDR.N    R1,??DataTable9_23
+   \   000000F8   0x20E2             MOVS     R0,#+226
+   \   000000FA   0x.... 0x....      BL       ZMacSetReq
+    637          }
+   \   000000FE   0xBD7F             POP      {R0-R6,PC}       ;; return
+    638          
+    639          #if defined ZCL_KEY_ESTABLISH
+    640          /******************************************************************************
+    641           * @fn      zmain_cert_init
+    642           *
+    643           * @brief   Initialize the Certicom certificate information.
+    644           *
+    645           * @param   none
+    646           *
+    647           * @return  none
+    648             ****************************************************************************/
+    649          static void zmain_cert_init( void )
+    650          {
+    651            uint8 certData[ZCL_KE_IMPLICIT_CERTIFICATE_LEN];
+    652            uint8 nullData[ZCL_KE_IMPLICIT_CERTIFICATE_LEN] = {
+    653              0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+    654              0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+    655              0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+    656              0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+    657              0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+    658              0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF
+    659            };
+    660          
+    661            (void)osal_nv_item_init(ZCD_NV_IMPLICIT_CERTIFICATE, ZCL_KE_IMPLICIT_CERTIFICATE_LEN, NULL);
+    662            (void)osal_nv_item_init(ZCD_NV_DEVICE_PRIVATE_KEY, ZCL_KE_DEVICE_PRIVATE_KEY_LEN, NULL);
+    663          
+    664            // First, check whether non-null certificate data already exists in the OSAL NV.
+    665            // To save on code space, just use the CA_PUBLIC_KEY as the bellwether for all three.
+    666            if ((SUCCESS != osal_nv_item_init(ZCD_NV_CA_PUBLIC_KEY, ZCL_KE_CA_PUBLIC_KEY_LEN, NULL))   ||
+    667                (SUCCESS != osal_nv_read(ZCD_NV_CA_PUBLIC_KEY, 0, ZCL_KE_CA_PUBLIC_KEY_LEN, certData)) ||
+    668                (osal_memcmp(certData, nullData, ZCL_KE_CA_PUBLIC_KEY_LEN))) {
+    669                  
+    670              // If the certificate data is not NULL, use it to update the corresponding NV items.
+    671              if (!osal_memcmp((uint8 *)HAL_FLASH_CA_PUBLIC_KEY_ADDR, nullData, ZCL_KE_CA_PUBLIC_KEY_LEN)) {
+    672                (void)osal_memcpy(certData, (uint8 *)HAL_FLASH_CA_PUBLIC_KEY_ADDR, ZCL_KE_CA_PUBLIC_KEY_LEN);
+    673                (void)osal_nv_write(ZCD_NV_CA_PUBLIC_KEY, 0, ZCL_KE_CA_PUBLIC_KEY_LEN, certData);
+    674          
+    675                (void)osal_memcpy(certData, (uint8 *)HAL_FLASH_IMPLICIT_CERT_ADDR, ZCL_KE_IMPLICIT_CERTIFICATE_LEN);
+    676                (void)osal_nv_write(ZCD_NV_IMPLICIT_CERTIFICATE, 0, ZCL_KE_IMPLICIT_CERTIFICATE_LEN, certData);
+    677          
+    678                (void)osal_memcpy(certData, (uint8 *)HAL_FLASH_DEV_PRIVATE_KEY_ADDR, ZCL_KE_DEVICE_PRIVATE_KEY_LEN);
+    679                (void)osal_nv_write(ZCD_NV_DEVICE_PRIVATE_KEY, 0, ZCL_KE_DEVICE_PRIVATE_KEY_LEN, certData);
+    680              }
+    681            }
+    682          }
+    683          #endif
+    684          
+    685          #ifdef LCD_SUPPORTED
+    686          /* LCD_SUPPORTED means the DEV board LCD, NOT the watch LCD.
+    687             Undefine LCD_SUPPORTED when running on a watch
+    688          */
+    689          /******************************************************************************
+    690           * @fn      zmain_dev_info
+    691           *
+    692           * @brief   Displays the IEEE address (MSB to LSB) on the LCD.
+    693           *
+    694           * @param   none
+    695           *
+    696           * @return  none
+    697             ****************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    698          static void zmain_dev_info( void )
+    699          {
+   \                     zmain_dev_info: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+   \   00000002   0xB086             SUB      SP,SP,#+24
+    700            uint8 i;
+    701            uint8 *xad;
+    702            uint8 lcd_buf[(Z_EXTADDR_LEN*2)+1];
+    703          
+    704            // Display the extended address.
+    705            xad = aExtendedAddress + Z_EXTADDR_LEN - 1;
+   \   00000004   0x....             LDR.N    R1,??DataTable9_27
+    706          
+    707            for (i = 0; i < Z_EXTADDR_LEN*2; xad--) {
+   \   00000006   0x2000             MOVS     R0,#+0
+   \   00000008   0xE005             B.N      ??zmain_dev_info_0
+    708              uint8 ch;
+    709              ch = (*xad >> 4) & 0x0F;
+    710              lcd_buf[i++] = ch + (( ch < 10 ) ? '0' : '7');
+    711              ch = *xad & 0x0F;
+    712              lcd_buf[i++] = ch + (( ch < 10 ) ? '0' : '7');
+   \                     ??zmain_dev_info_1: (+1)
+   \   0000000A   0x2237             MOVS     R2,#+55
+   \                     ??zmain_dev_info_2: (+1)
+   \   0000000C   0x1912             ADDS     R2,R2,R4
+   \   0000000E   0xAC00             ADD      R4,SP,#+0
+   \   00000010   0xB2DB             UXTB     R3,R3            ;; ZeroExt  R3,R3,#+24,#+24
+   \   00000012   0x551A             STRB     R2,[R3, R4]
+   \   00000014   0x1E49             SUBS     R1,R1,#+1
+   \                     ??zmain_dev_info_0: (+1)
+   \   00000016   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000018   0x2810             CMP      R0,#+16
+   \   0000001A   0xDA18             BGE.N    ??zmain_dev_info_3
+   \   0000001C   0x780A             LDRB     R2,[R1, #+0]
+   \   0000001E   0xB2D2             UXTB     R2,R2            ;; ZeroExt  R2,R2,#+24,#+24
+   \   00000020   0x0914             LSRS     R4,R2,#+4
+   \   00000022   0x0002             MOVS     R2,R0
+   \   00000024   0x1C50             ADDS     R0,R2,#+1
+   \   00000026   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   00000028   0x2C0A             CMP      R4,#+10
+   \   0000002A   0xDA01             BGE.N    ??zmain_dev_info_4
+   \   0000002C   0x2330             MOVS     R3,#+48
+   \   0000002E   0xE000             B.N      ??zmain_dev_info_5
+   \                     ??zmain_dev_info_4: (+1)
+   \   00000030   0x2337             MOVS     R3,#+55
+   \                     ??zmain_dev_info_5: (+1)
+   \   00000032   0x191B             ADDS     R3,R3,R4
+   \   00000034   0xAC00             ADD      R4,SP,#+0
+   \   00000036   0xB2D2             UXTB     R2,R2            ;; ZeroExt  R2,R2,#+24,#+24
+   \   00000038   0x5513             STRB     R3,[R2, R4]
+   \   0000003A   0x780A             LDRB     R2,[R1, #+0]
+   \   0000003C   0xF012 0x040F      ANDS     R4,R2,#0xF
+   \   00000040   0x0003             MOVS     R3,R0
+   \   00000042   0x1C58             ADDS     R0,R3,#+1
+   \   00000044   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   00000046   0x2C0A             CMP      R4,#+10
+   \   00000048   0xDADF             BGE.N    ??zmain_dev_info_1
+   \   0000004A   0x2230             MOVS     R2,#+48
+   \   0000004C   0xE7DE             B.N      ??zmain_dev_info_2
+    713            }
+    714            lcd_buf[Z_EXTADDR_LEN*2] = '\0';
+   \                     ??zmain_dev_info_3: (+1)
+   \   0000004E   0x2000             MOVS     R0,#+0
+   \   00000050   0xF88D 0x0010      STRB     R0,[SP, #+16]
+    715            HalLcdWriteString( "IEEE: ", HAL_LCD_LINE_2 );
+   \   00000054   0x2102             MOVS     R1,#+2
+   \   00000056   0x....             LDR.N    R0,??DataTable9_28
+   \   00000058   0x.... 0x....      BL       HalLcdWriteString
+    716            HalLcdWriteString( (char*)lcd_buf, HAL_LCD_LINE_3 );
+   \   0000005C   0x2103             MOVS     R1,#+3
+   \   0000005E   0xA800             ADD      R0,SP,#+0
+   \   00000060   0x.... 0x....      BL       HalLcdWriteString
+    717          }
+   \   00000064   0xB006             ADD      SP,SP,#+24
+   \   00000066   0xBD10             POP      {R4,PC}          ;; return
+    718          #endif
+    719          
+    720          #ifdef LCD_SUPPORTED
+    721          /*********************************************************************
+    722           * @fn      zmain_lcd_init
+    723           * @brief   Initialize LCD at start up.
+    724           * @return  none
+    725           *********************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    726          static void zmain_lcd_init( void )
+    727          {
+    728          #ifdef SERIAL_DEBUG_SUPPORTED
+    729            {
+    730              HalLcdWriteString( "TexasInstruments", HAL_LCD_LINE_1 );
+    731          
+    732          #if defined( MT_MAC_FUNC )
+    733          #if defined( ZDO_COORDINATOR )
+    734                HalLcdWriteString( "MAC-MT Coord", HAL_LCD_LINE_2 );
+    735          #else
+    736                HalLcdWriteString( "MAC-MT Device", HAL_LCD_LINE_2 );
+    737          #endif // ZDO
+    738          #elif defined( MT_NWK_FUNC )
+    739          #if defined( ZDO_COORDINATOR )
+    740                HalLcdWriteString( "NWK Coordinator", HAL_LCD_LINE_2 );
+    741          #else
+    742                HalLcdWriteString( "NWK Device", HAL_LCD_LINE_2 );
+    743          #endif // ZDO
+    744          #endif // MT_FUNC
+    745            }
+    746          #endif // SERIAL_DEBUG_SUPPORTED
+    747          }
+   \                     zmain_lcd_init: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9:
+   \   00000000   0xE000ED08         DC32     0xe000ed08
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_1:
+   \   00000000   0x400D2004         DC32     0x400d2004
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_2:
+   \   00000000   0x400D3008         DC32     0x400d3008
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_3:
+   \   00000000   0x400DB000         DC32     0x400db000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_4:
+   \   00000000   0x400DA000         DC32     0x400da000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_5:
+   \   00000000   0x........         DC32     WatchApp_TaskID
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_6:
+   \   00000000   0x........         DC32     WatchApp_NwkState
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_7:
+   \   00000000   0x........         DC32     WatchApp_DstAddr
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_8:
+   \   00000000   0x........         DC32     WatchApp_epDesc
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_9:
+   \   00000000   0x........         DC32     WatchApp_SimpleDesc
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_10:
+   \   00000000   0x........         DC32     ?_0
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_11:
+   \   00000000   0x........         DC32     ?_1
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_12:
+   \   00000000   0x........         DC32     ?_2
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_13:
+   \   00000000   0x........         DC32     txMsgDelay
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_14:
+   \   00000000   0x........         DC32     ?_3
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_15:
+   \   00000000   0x........         DC32     ?_4
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_16:
+   \   00000000   0x........         DC32     registeredButtonsTaskID
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_17:
+   \   00000000   0x........         DC32     WatchApp_ClusterList
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_18:
+   \   00000000   0x........         DC32     rxMsgCount
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_19:
+   \   00000000   0x........         DC32     ?_5
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_20:
+   \   00000000   0x........         DC32     WatchApp_TransID
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_21:
+   \   00000000   0x........         DC32     ?_6
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_22:
+   \   00000000   0x........         DC32     ?_7
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_23:
+   \   00000000   0x........         DC32     aExtendedAddress
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_24:
+   \   00000000   0x0027FFCC         DC32     0x27ffcc
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_25:
+   \   00000000   0x........         DC32     aExtendedAddress+0x1
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_26:
+   \   00000000   0x........         DC32     aExtendedAddress+0x4
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_27:
+   \   00000000   0x........         DC32     aExtendedAddress+0x7
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_28:
+   \   00000000   0x........         DC32     ?_8
+
+   \                                 In section .rodata, align 4
+   \                     ?_0:
+   \   00000000   0x57 0x61          DC8 "WatchApp Started"
+   \              0x74 0x63    
+   \              0x68 0x41    
+   \              0x70 0x70    
+   \              0x20 0x53    
+   \              0x74 0x61    
+   \              0x72 0x74    
+   \              0x65 0x64    
+   \              0x00         
+   \   00000011   0x00 0x00          DC8 0, 0, 0
+   \              0x00         
+
+   \                                 In section .rodata, align 4
+   \                     ?_1:
+   \   00000000   0x4D 0x65          DC8 "Mess FAIL:"
+   \              0x73 0x73    
+   \              0x20 0x46    
+   \              0x41 0x49    
+   \              0x4C 0x3A    
+   \              0x00         
+   \   0000000B   0x00               DC8 0
+
+   \                                 In section .rodata, align 4
+   \                     ?_2:
+   \   00000000   0x4D 0x45          DC8 "MESSAGE SUCCESS!"
+   \              0x53 0x53    
+   \              0x41 0x47    
+   \              0x45 0x20    
+   \              0x53 0x55    
+   \              0x43 0x43    
+   \              0x45 0x53    
+   \              0x53 0x21    
+   \              0x00         
+   \   00000011   0x00 0x00          DC8 0, 0, 0
+   \              0x00         
+
+   \                                 In section .rodata, align 4
+   \                     ?_3:
+   \   00000000   0x41 0x57          DC8 "AWAKE"
+   \              0x41 0x4B    
+   \              0x45 0x00    
+   \   00000006   0x00 0x00          DC8 0, 0
+
+   \                                 In section .rodata, align 4
+   \                     ?_4:
+   \   00000000   0x46 0x41          DC8 "FALL"
+   \              0x4C 0x4C    
+   \              0x00         
+   \   00000005   0x00 0x00          DC8 0, 0, 0
+   \              0x00         
+
+   \                                 In section .rodata, align 4
+   \                     ?_5:
+   \   00000000   0x52 0x63          DC8 "Rcvd:"
+   \              0x76 0x64    
+   \              0x3A 0x00    
+   \   00000006   0x00 0x00          DC8 0, 0
+
+   \                                 In section .rodata, align 4
+   \                     ?_6:
+   \   00000000   0x54 0x69          DC8 "Time:"
+   \              0x6D 0x65    
+   \              0x3A 0x00    
+   \   00000006   0x00 0x00          DC8 0, 0
+
+   \                                 In section .rodata, align 4
+   \                     ?_7:
+   \   00000000   0xFF 0xFF          DC8 255, 255, 255, 255, 255, 255, 255, 255
+   \              0xFF 0xFF    
+   \              0xFF 0xFF    
+   \              0xFF 0xFF    
+
+   \                                 In section .rodata, align 4
+   \                     ?_8:
+   \   00000000   0x49 0x45          DC8 "IEEE: "
+   \              0x45 0x45    
+   \              0x3A 0x20    
+   \              0x00         
+   \   00000007   0x00               DC8 0
+    748          #endif
+    749          
+    750          /******************************************************************************
+    751           */
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      40   OnBoard_ButtonCallback
+        40   -> GPIOPinRead
+        40   -> GPIOPinWrite
+        40   -> NLME_GetShortAddr
+        40   -> ZDP_EndDeviceBindReq
+        40   -> osal_set_event
+       8   WatchApp_Init
+         8   -> HalLcdWriteString
+         8   -> RegisterForKeys
+         8   -> ZDO_RegisterForZDOMsg
+         8   -> afRegister
+         8   -> osal_start_timerEx
+       8   WatchApp_MessageMSGCB
+         8   -> HalLcdWriteString
+         8   -> HalLcdWriteStringValue
+         8   -> HalLedSet
+      24   WatchApp_ProcessEvent
+        24   -> HalLcdWriteString
+        24   -> HalLcdWriteStringValue
+        24   -> HalLedBlink
+        24   -> WatchApp_MessageMSGCB
+        24   -> WatchApp_ProcessZDOMsgs
+        24   -> WatchApp_SendMsg
+        24   -> WatchApp_UpdateLCD
+        24   -> osal_msg_deallocate
+        24   -> osal_msg_receive
+        24   -> osal_start_reload_timer
+        24   -> osal_start_timerEx
+       8   WatchApp_ProcessZDOMsgs
+         8   -> HalLedSet
+         8   -> ZDO_ParseEPListRsp
+         8   -> osal_mem_free
+      24   WatchApp_SendMsg
+        24   -> AF_DataRequest
+        24   -> HalLedBlink
+        24   -> osal_strlen
+       8   WatchApp_UpdateLCD
+         8   -> HalLcdWriteStringValue
+         8   -> osal_GetSystemClock
+       8   main
+         8   -> GPIOPinTypeGPIOInput
+         8   -> GPIOPinTypeGPIOOutput
+         8   -> GPIOPinWrite
+         8   -> HalDriverInit
+         8   -> InitBoard
+         8   -> IntAltMapEnable
+         8   -> MAC_Init
+         8   -> MAC_InitDevice
+         8   -> SysCtrlClockStartSetting
+         8   -> SysCtrlDeepSleepSetting
+         8   -> SysCtrlRunSetting
+         8   -> SysCtrlSleepSetting
+         8   -> SysCtrlWakeupSetting
+         8   -> SysTickSetup
+         8   -> ZMacReset
+         8   -> osal_init_system
+         8   -> osal_int_disable
+         8   -> osal_int_enable
+         8   -> osal_nv_init
+         8   -> osal_start_system
+         8   -> zgInit
+         8   -> zmain_dev_info
+         8   -> zmain_ext_addr
+         8   -> zmain_lcd_init
+      32   zmain_dev_info
+        32   -> HalLcdWriteString
+      32   zmain_ext_addr
+        32   -> ZMacSetReq
+        32   -> osal_memcmp
+        32   -> osal_memcpy
+        32   -> osal_nv_item_init
+        32   -> osal_nv_read
+        32   -> osal_nv_write
+        32   -> osal_rand
+       0   zmain_lcd_init
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable9
+       4  ??DataTable9_1
+       4  ??DataTable9_10
+       4  ??DataTable9_11
+       4  ??DataTable9_12
+       4  ??DataTable9_13
+       4  ??DataTable9_14
+       4  ??DataTable9_15
+       4  ??DataTable9_16
+       4  ??DataTable9_17
+       4  ??DataTable9_18
+       4  ??DataTable9_19
+       4  ??DataTable9_2
+       4  ??DataTable9_20
+       4  ??DataTable9_21
+       4  ??DataTable9_22
+       4  ??DataTable9_23
+       4  ??DataTable9_24
+       4  ??DataTable9_25
+       4  ??DataTable9_26
+       4  ??DataTable9_27
+       4  ??DataTable9_28
+       4  ??DataTable9_3
+       4  ??DataTable9_4
+       4  ??DataTable9_5
+       4  ??DataTable9_6
+       4  ??DataTable9_7
+       4  ??DataTable9_8
+       4  ??DataTable9_9
+      20  ?_0
+      12  ?_1
+      20  ?_2
+       8  ?_3
+       8  ?_4
+       8  ?_5
+       8  ?_6
+       8  ?_7
+       8  ?_8
+     106  OnBoard_ButtonCallback
+       2  WatchApp_ClusterList
+      12  WatchApp_DstAddr
+     166  WatchApp_Init
+      52  WatchApp_MessageMSGCB
+       1  WatchApp_NwkState
+     298  WatchApp_ProcessEvent
+     100  WatchApp_ProcessZDOMsgs
+      58  WatchApp_SendMsg
+      20  WatchApp_SimpleDesc
+       1  WatchApp_TaskID
+       1  WatchApp_TransID
+      28  WatchApp_UpdateLCD
+      16  WatchApp_epDesc
+     254  main
+       1  registeredButtonsTaskID
+       1  registeredCP2102TaskID
+       1  registeredMSPTaskID
+       2  rxMsgCount
+       4  txMsgDelay
+     104  zmain_dev_info
+     256  zmain_ext_addr
+       2  zmain_lcd_init
+
+ 
+    33 bytes in section .bss
+     7 bytes in section .data
+   122 bytes in section .rodata
+ 1 540 bytes in section .text
+ 
+ 1 540 bytes of CODE  memory
+   122 bytes of CONST memory
+    40 bytes of DATA  memory
+
+Errors: none
+Warnings: 1

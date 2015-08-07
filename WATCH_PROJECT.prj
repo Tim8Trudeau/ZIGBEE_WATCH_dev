@@ -1,0 +1,28 @@
+[Project ID]
+Signature=UE Proj: v.1
+[Project Information]
+Use Relative Directory=1
+Relative to Project File=1
+[Files]
+0=AF.c
+1=hal_key.c
+2=MainApplication.c
+3=nwk_globals.c
+4=OSAL_WatchApp.c
+5=SerialPorts.c
+6=WatchHW.c
+7=ZGlobals.c
+8=AF.h
+9=bsp.h
+10=hal_board.h
+11=nwk_globals.h
+12=WatchApp.h
+13=ZGlobals.h
+14=f8wConfig.cfg
+15=f8wEndev.cfg
+16=SmartRF06_hal_board.h
+17=SmartRF06_bsp.h
+18=EverWrist_hal_board.h
+19=EverWrist_bsp.h
+20=EverWrist_uart_isr.c
+21=EverWrist_startup_ewarm.c

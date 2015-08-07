@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\BarronWatch.ewp</path>
+    <scc>
+      <provider>Subversion</provider>
+      <projname>notused</projname>
+      <auxprojpath>notused</auxprojpath>
+    </scc>
+  </project>
+  <project>
+    <path>$WS_DIR$\..\..\..\..\..\Texas Instruments\Z-Stack Mesh 1.0.0\Projects\zstack\Samples\GenericApp\CC2538\GenericApp.ewp</path>
+  </project>
+  <batchBuild/>
+</workspace>
+
+

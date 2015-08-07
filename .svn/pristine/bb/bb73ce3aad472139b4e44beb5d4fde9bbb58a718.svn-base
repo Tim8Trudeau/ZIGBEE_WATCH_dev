@@ -1,0 +1,758 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.40.1.8447/W32 for ARM        12/Apr/2015  15:43:26
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        C:\Texas Instruments\Z-Stack Mesh
+#        1.0.0\Components\hal\target\CC2538\hal_lcd.c
+#    Command line =  
+#        "C:\Texas Instruments\Z-Stack Mesh
+#        1.0.0\Components\hal\target\CC2538\hal_lcd.c" -D FEATURE_RESET_MACRO
+#        -D ewarm -D NWK_AUTO_POLL -D xPOWER_SAVING -D ZTOOL_P1 -D MT_TASK -D
+#        MT_SYS_FUNC -D MT_ZDO_FUNC -D LCD_SUPPORTED=YES -D
+#        CC2538_USE_ALTERNATE_INTERRUPT_MAP=1 --preprocess=cl
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\Debug\List\ -lC
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\Debug\List\ -lB
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\Debug\List\
+#        --diag_suppress Pa082 -o
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\Debug\Obj\ --no_cse
+#        --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering
+#        --no_scheduling --debug --endian=little --cpu=Cortex-M3 -f
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\f8wConfig.cfg
+#        (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+#        -DDEFAULT_CHANLIST=0x07FFF800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+#        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+#        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+#        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+#        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+#        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+#        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+#        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+#        -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01, 0x03, 0x05, 0x07,
+#        0x09, 0x0B, 0x0D, 0x0F, 0x00, 0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C,
+#        0x0D}" -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
+#        -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100
+#        -DRESPONSE_POLL_RATE=100 -DREJOIN_POLL_RATE=440) -f
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\f8wEndev.cfg
+#        (-DMAC_CFG_TX_DATA_MAX=3 -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -e
+#        --fpu=None --dlib_config "C:\Program Files (x86)\IAR Systems\Embedded
+#        Workbench 7.2\arm\INC\c\DLib_Config_Normal.h" -I
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\..\Source\ -I
+#        "C:\Texas Instruments\Z-Stack Mesh
+#        1.0.0\Projects\zstack\ZMain\TI2538DB\" -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Components\hal\include\" -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Components\hal\target\CC2538\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh
+#        1.0.0\Components\driverlib\cc2538\inc\" -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Components\driverlib\cc2538\source\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh
+#        1.0.0\Components\bsp\srf06eb_cc2538\drivers\source\" -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Components\mac\include\" -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Components\mac\high_level\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh
+#        1.0.0\Components\mac\low_level\srf05\single_chip\" -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Components\mac\low_level\srf05\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\mt\" -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Components\osal\include\" -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Components\services\sdata\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\services\saddr\"
+#        -I "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\af\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\nwk\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\sapi\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\sec\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\sys\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\zdo\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\zmac\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\zmac\f8w\" -Ol
+#    List file    =  
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\Debug\List\hal_lcd.lst
+#    Object file  =  
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\Debug\Obj\hal_lcd.o
+#
+###############################################################################
+
+C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\hal\target\CC2538\hal_lcd.c
+      1          /**************************************************************************************************
+      2            Filename:       hal_lcd.c
+      3            Revised:        $Date: 2013-05-17 11:05:33 -0700 (Fri, 17 May 2013) $
+      4            Revision:       $Revision: 34353 $
+      5          
+      6            Description:    This file contains the interface to the HAL LCD Service.
+      7          
+      8          
+      9            Copyright 2011-2013 Texas Instruments Incorporated. All rights reserved.
+     10          
+     11            IMPORTANT: Your use of this Software is limited to those specific rights
+     12            granted under the terms of a software license agreement between the user
+     13            who downloaded the software, his/her employer (which must be your employer)
+     14            and Texas Instruments Incorporated (the "License"). You may not use this
+     15            Software unless you agree to abide by the terms of the License. The License
+     16            limits your use, and you acknowledge, that the Software may not be modified,
+     17            copied or distributed unless embedded on a Texas Instruments microcontroller
+     18            or used solely and exclusively in conjunction with a Texas Instruments radio
+     19            frequency transceiver, which is integrated into your product. Other than for
+     20            the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     21            works of, modify, distribute, perform, display or sell this Software and/or
+     22            its documentation for any purpose.
+     23          
+     24            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     25            PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+     26            INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+     27            NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     28            TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     29            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     30            LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     31            INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     32            OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     33            OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     34            (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     35          
+     36            Should you have any questions regarding your right to use this Software,
+     37            contact Texas Instruments Incorporated at www.TI.com.
+     38          **************************************************************************************************/
+     39          
+     40          /**************************************************************************************************
+     41           *                                           INCLUDES
+     42           **************************************************************************************************/
+     43          #include <string.h>
+     44          #include "hal_types.h"
+     45          #include "hal_lcd.h"
+     46          #include "OnBoard.h"
+     47          #include "OSAL.h"
+     48          #include "bsp.h"
+     49          /*
+     50           * "hal_mac_cfg.h" is included here because the OLED and CC2520 radio are
+     51           * sharing the same SSI port. CC2520 cSn needs to be disabled while writing
+     52           * to OLED.
+     53           */
+     54          #include "hal_mac_cfg.h"
+     55          #include "lcd_dogm128_6.h"
+     56          
+     57          #if defined (ZTOOL_P1) || defined (ZTOOL_P2)
+     58            #include "DebugTrace.h"
+     59          #endif
+     60          
+     61          /**************************************************************************************************
+     62           *                                          CONSTANTS
+     63           **************************************************************************************************/
+     64          
+     65          #if defined LCD_NO_DEFAULT_BUFFER
+     66          #define HAL_LCD_DEF_BUF     ((const char *)0x20007000)
+     67          #else
+     68          #define HAL_LCD_DEF_BUF     ((const char *)NULL)
+     69          #endif
+     70          
+     71          /**************************************************************************************************
+     72           *                                           MACROS
+     73           **************************************************************************************************/
+     74          
+     75          #define SPI_CLOCK 2000000UL
+     76          
+     77          
+     78          /**************************************************************************************************
+     79           *                                       LOCAL FUNCTIONS
+     80           **************************************************************************************************/
+     81          
+     82          #if (HAL_LCD == TRUE)
+     83          void HalLcd_HW_WriteLine(char str[], uint8 line);
+     84          #endif
+     85          
+     86          /**************************************************************************************************
+     87           * @fn      HalLcdInit
+     88           *
+     89           * @brief   Initilize LCD Service
+     90           *
+     91           * @param   init - pointer to void that contains the initialized value
+     92           *
+     93           * @return  None
+     94           **************************************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+     95          void HalLcdInit(void)
+     96          {
+   \                     HalLcdInit: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     97          #if (HAL_LCD == TRUE)
+     98            bspSpiInit(SPI_CLOCK);
+   \   00000002   0x....             LDR.N    R0,??DataTable2  ;; 0x1e8480
+   \   00000004   0x.... 0x....      BL       bspSpiInit
+     99            lcdInit();
+   \   00000008   0x.... 0x....      BL       lcdInit
+    100          #if defined LCD_NO_DEFAULT_BUFFER && (defined HAL_IMG_AREA && (HAL_IMG_AREA == 2))
+    101            (void)memset(HAL_LCD_DEF_BUF, 0, LCD_BYTES);
+    102          #endif
+    103          #endif
+    104          }
+   \   0000000C   0xBD01             POP      {R0,PC}          ;; return
+    105          
+    106          /*************************************************************************************************
+    107           *                    LCD EMULATION FUNCTIONS
+    108           *
+    109           * Some evaluation boards are equipped with Liquid Crystal Displays
+    110           * (LCD) which may be used to display diagnostic information. These
+    111           * functions provide LCD emulation, sending the diagnostic strings
+    112           * to Z-Tool via the RS232 serial port. These functions are enabled
+    113           * when the "LCD_SUPPORTED" compiler flag is placed in the makefile.
+    114           *
+    115           * Most applications update both lines (1 and 2) of the LCD whenever
+    116           * text is posted to the device. This emulator assumes that line 1 is
+    117           * updated first (saved locally) and the formatting and send operation
+    118           * is triggered by receipt of line 2. Nothing will be transmitted if
+    119           * only line 1 is updated.
+    120           *
+    121           *************************************************************************************************/
+    122          
+    123          
+    124          
+    125          /**************************************************************************************************
+    126           * @fn      HalLcdWriteString
+    127           *
+    128           * @brief   Write a string to the LCD
+    129           *
+    130           * @param   str    - pointer to the string that will be displayed
+    131           *          line   - line number to display
+    132           *
+    133           * @return  None
+    134           **************************************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    135          void HalLcdWriteString ( char *str, uint8 line)
+    136          {
+   \                     HalLcdWriteString: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+   \   00000004   0x000D             MOVS     R5,R1
+    137          #if (HAL_LCD == TRUE)
+    138          #if (defined HAL_IMG_AREA && (HAL_IMG_AREA == 3))
+    139            line += 4;
+    140          #endif
+    141          #if defined (ZTOOL_P1) || defined (ZTOOL_P2)
+    142          #if defined (SERIAL_DEBUG_SUPPORTED)
+    143            debug_str( (uint8*)str );
+   \   00000006   0x0020             MOVS     R0,R4
+   \   00000008   0x.... 0x....      BL       debug_str
+    144          #endif
+    145          #endif
+    146            HalLcd_HW_WriteLine (str, line - 1);
+   \   0000000C   0x1E69             SUBS     R1,R5,#+1
+   \   0000000E   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   00000010   0x0020             MOVS     R0,R4
+   \   00000012   0x.... 0x....      BL       HalLcd_HW_WriteLine
+    147          #endif
+    148          }
+   \   00000016   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+    149          
+    150          /**************************************************************************************************
+    151           * @fn      HalLcdWriteValue
+    152           *
+    153           * @brief   Write a value to the LCD
+    154           *
+    155           * @param   value  - value that will be displayed
+    156           *          radix  - 8, 10, 16
+    157           *          option - display options
+    158           *
+    159           * @return  None
+    160           **************************************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    161          void HalLcdWriteValue ( uint32 value, const uint8 radix, uint8 option)
+    162          {
+   \                     HalLcdWriteValue: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+   \   00000002   0xB086             SUB      SP,SP,#+24
+   \   00000004   0x0014             MOVS     R4,R2
+    163          #if (HAL_LCD == TRUE)
+    164            uint8 buf[HAL_LCD_MAX_CHARS];
+    165          
+    166            _ltoa( value, &buf[0], radix );
+   \   00000006   0x000A             MOVS     R2,R1
+   \   00000008   0xB2D2             UXTB     R2,R2            ;; ZeroExt  R2,R2,#+24,#+24
+   \   0000000A   0xA900             ADD      R1,SP,#+0
+   \   0000000C   0x.... 0x....      BL       _ltoa
+    167            HalLcdWriteString( (char*)buf, option );
+   \   00000010   0x0021             MOVS     R1,R4
+   \   00000012   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   00000014   0xA800             ADD      R0,SP,#+0
+   \   00000016   0x.... 0x....      BL       HalLcdWriteString
+    168          #endif /* HAL_LCD */
+    169          }
+   \   0000001A   0xB006             ADD      SP,SP,#+24
+   \   0000001C   0xBD10             POP      {R4,PC}          ;; return
+    170          
+    171          /**************************************************************************************************
+    172           * @fn      HalLcdWriteScreen
+    173           *
+    174           * @brief   Write a value to the LCD
+    175           *
+    176           * @param   line1  - string that will be displayed on line 1
+    177           *          line2  - string that will be displayed on line 2
+    178           *
+    179           * @return  None
+    180           **************************************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    181          void HalLcdWriteScreen( char *line1, char *line2 )
+    182          {
+   \                     HalLcdWriteScreen: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+   \   00000002   0x000C             MOVS     R4,R1
+    183          #if (HAL_LCD == TRUE)
+    184            HalLcdWriteString( line1, 1 );
+   \   00000004   0x2101             MOVS     R1,#+1
+   \   00000006   0x.... 0x....      BL       HalLcdWriteString
+    185            HalLcdWriteString( line2, 2 );
+   \   0000000A   0x2102             MOVS     R1,#+2
+   \   0000000C   0x0020             MOVS     R0,R4
+   \   0000000E   0x.... 0x....      BL       HalLcdWriteString
+    186          #endif /* HAL_LCD */
+    187          }
+   \   00000012   0xBD10             POP      {R4,PC}          ;; return
+    188          
+    189          /**************************************************************************************************
+    190           * @fn      HalLcdWriteStringValue
+    191           *
+    192           * @brief   Write a string followed by a value to the LCD
+    193           *
+    194           * @param   title  - Title that will be displayed before the value
+    195           *          value  - value
+    196           *          format - redix
+    197           *          line   - line number
+    198           *
+    199           * @return  None
+    200           **************************************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    201          void HalLcdWriteStringValue( char *title, uint16 value, uint8 format, uint8 line )
+    202          {
+   \                     HalLcdWriteStringValue: (+1)
+   \   00000000   0xE92D 0x41F0      PUSH     {R4-R8,LR}
+   \   00000004   0xB086             SUB      SP,SP,#+24
+   \   00000006   0x0006             MOVS     R6,R0
+   \   00000008   0x000D             MOVS     R5,R1
+   \   0000000A   0x0017             MOVS     R7,R2
+   \   0000000C   0x001C             MOVS     R4,R3
+    203          #if (HAL_LCD == TRUE)
+    204            uint8 tmpLen;
+    205            uint8 buf[HAL_LCD_MAX_CHARS];
+    206            uint32 err;
+    207          
+    208            tmpLen = (uint8)osal_strlen( (char*)title );
+   \   0000000E   0x0030             MOVS     R0,R6
+   \   00000010   0x.... 0x....      BL       osal_strlen
+   \   00000014   0x4680             MOV      R8,R0
+    209            osal_memcpy( buf, title, tmpLen );
+   \   00000016   0xFA5F 0xF888      UXTB     R8,R8            ;; ZeroExt  R8,R8,#+24,#+24
+   \   0000001A   0x4642             MOV      R2,R8
+   \   0000001C   0x0031             MOVS     R1,R6
+   \   0000001E   0xA800             ADD      R0,SP,#+0
+   \   00000020   0x.... 0x....      BL       osal_memcpy
+    210            buf[tmpLen] = ' ';
+   \   00000024   0x2020             MOVS     R0,#+32
+   \   00000026   0xA900             ADD      R1,SP,#+0
+   \   00000028   0xFA5F 0xF888      UXTB     R8,R8            ;; ZeroExt  R8,R8,#+24,#+24
+   \   0000002C   0xF808 0x0001      STRB     R0,[R8, R1]
+    211            err = (uint32)(value);
+   \   00000030   0xB2AD             UXTH     R5,R5            ;; ZeroExt  R5,R5,#+16,#+16
+    212            _ltoa( err, &buf[tmpLen+1], format );
+   \   00000032   0x003A             MOVS     R2,R7
+   \   00000034   0xB2D2             UXTB     R2,R2            ;; ZeroExt  R2,R2,#+24,#+24
+   \   00000036   0xA800             ADD      R0,SP,#+0
+   \   00000038   0xFA5F 0xF888      UXTB     R8,R8            ;; ZeroExt  R8,R8,#+24,#+24
+   \   0000003C   0xEB18 0x0000      ADDS     R0,R8,R0
+   \   00000040   0x1C41             ADDS     R1,R0,#+1
+   \   00000042   0x0028             MOVS     R0,R5
+   \   00000044   0x.... 0x....      BL       _ltoa
+    213            HalLcdWriteString( (char*)buf, line );		
+   \   00000048   0x0021             MOVS     R1,R4
+   \   0000004A   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   0000004C   0xA800             ADD      R0,SP,#+0
+   \   0000004E   0x.... 0x....      BL       HalLcdWriteString
+    214          #endif /* HAL_LCD */
+    215          }
+   \   00000052   0xB006             ADD      SP,SP,#+24
+   \   00000054   0xE8BD 0x81F0      POP      {R4-R8,PC}       ;; return
+    216          
+    217          /**************************************************************************************************
+    218           * @fn      HalLcdWriteStringValue
+    219           *
+    220           * @brief   Write a string followed by a value to the LCD
+    221           *
+    222           * @param   title   - Title that will be displayed before the value
+    223           *          value1  - value #1
+    224           *          format1 - redix of value #1
+    225           *          value2  - value #2
+    226           *          format2 - redix of value #2
+    227           *          line    - line number
+    228           *
+    229           * @return  None
+    230           **************************************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    231          void HalLcdWriteStringValueValue( char *title, uint16 value1, uint8 format1,
+    232                                            uint16 value2, uint8 format2, uint8 line )
+    233          {
+   \                     HalLcdWriteStringValueValue: (+1)
+   \   00000000   0xE92D 0x41F0      PUSH     {R4-R8,LR}
+   \   00000004   0xB086             SUB      SP,SP,#+24
+   \   00000006   0x0007             MOVS     R7,R0
+   \   00000008   0x000E             MOVS     R6,R1
+   \   0000000A   0x4690             MOV      R8,R2
+   \   0000000C   0x001C             MOVS     R4,R3
+    234          #if (HAL_LCD == TRUE)
+    235            uint8 tmpLen;
+    236            uint8 buf[HAL_LCD_MAX_CHARS];
+    237            uint32 err;
+    238          
+    239            tmpLen = (uint8)osal_strlen( (char*)title );
+   \   0000000E   0x0038             MOVS     R0,R7
+   \   00000010   0x.... 0x....      BL       osal_strlen
+   \   00000014   0x0005             MOVS     R5,R0
+    240            if ( tmpLen )
+   \   00000016   0xB2ED             UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+   \   00000018   0x2D00             CMP      R5,#+0
+   \   0000001A   0xD00A             BEQ.N    ??HalLcdWriteStringValueValue_0
+    241            {
+    242              osal_memcpy( buf, title, tmpLen );
+   \   0000001C   0xB2ED             UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+   \   0000001E   0x002A             MOVS     R2,R5
+   \   00000020   0x0039             MOVS     R1,R7
+   \   00000022   0xA800             ADD      R0,SP,#+0
+   \   00000024   0x.... 0x....      BL       osal_memcpy
+    243              buf[tmpLen++] = ' ';
+   \   00000028   0x2020             MOVS     R0,#+32
+   \   0000002A   0xA900             ADD      R1,SP,#+0
+   \   0000002C   0xB2ED             UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+   \   0000002E   0x5468             STRB     R0,[R5, R1]
+   \   00000030   0x1C6D             ADDS     R5,R5,#+1
+    244            }
+    245          
+    246            err = (uint32)(value1);
+   \                     ??HalLcdWriteStringValueValue_0: (+1)
+   \   00000032   0xB2B6             UXTH     R6,R6            ;; ZeroExt  R6,R6,#+16,#+16
+    247            _ltoa( err, &buf[tmpLen], format1 );
+   \   00000034   0x4642             MOV      R2,R8
+   \   00000036   0xB2D2             UXTB     R2,R2            ;; ZeroExt  R2,R2,#+24,#+24
+   \   00000038   0xA800             ADD      R0,SP,#+0
+   \   0000003A   0xB2ED             UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+   \   0000003C   0x1829             ADDS     R1,R5,R0
+   \   0000003E   0x0030             MOVS     R0,R6
+   \   00000040   0x.... 0x....      BL       _ltoa
+    248            tmpLen = (uint8)osal_strlen( (char*)buf );
+   \   00000044   0xA800             ADD      R0,SP,#+0
+   \   00000046   0x.... 0x....      BL       osal_strlen
+   \   0000004A   0x0005             MOVS     R5,R0
+    249          
+    250            buf[tmpLen++] = ',';
+   \   0000004C   0x202C             MOVS     R0,#+44
+   \   0000004E   0xA900             ADD      R1,SP,#+0
+   \   00000050   0xB2ED             UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+   \   00000052   0x5468             STRB     R0,[R5, R1]
+   \   00000054   0x1C6D             ADDS     R5,R5,#+1
+    251            buf[tmpLen++] = ' ';
+   \   00000056   0x2020             MOVS     R0,#+32
+   \   00000058   0xA900             ADD      R1,SP,#+0
+   \   0000005A   0xB2ED             UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+   \   0000005C   0x5468             STRB     R0,[R5, R1]
+   \   0000005E   0x1C6D             ADDS     R5,R5,#+1
+    252            err = (uint32)(value2);
+   \   00000060   0x0026             MOVS     R6,R4
+   \   00000062   0xB2B6             UXTH     R6,R6            ;; ZeroExt  R6,R6,#+16,#+16
+    253            _ltoa( err, &buf[tmpLen], format2 );
+   \   00000064   0x9A0C             LDR      R2,[SP, #+48]
+   \   00000066   0xA800             ADD      R0,SP,#+0
+   \   00000068   0xB2ED             UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+   \   0000006A   0x1829             ADDS     R1,R5,R0
+   \   0000006C   0x0030             MOVS     R0,R6
+   \   0000006E   0x.... 0x....      BL       _ltoa
+    254          
+    255            HalLcdWriteString( (char *)buf, line );		
+   \   00000072   0x990D             LDR      R1,[SP, #+52]
+   \   00000074   0xA800             ADD      R0,SP,#+0
+   \   00000076   0x.... 0x....      BL       HalLcdWriteString
+    256          #endif /* HAL_LCD */
+    257          }
+   \   0000007A   0xB006             ADD      SP,SP,#+24
+   \   0000007C   0xE8BD 0x81F0      POP      {R4-R8,PC}       ;; return
+    258          
+    259          /**************************************************************************************************
+    260           * @fn      HalLcdDisplayPercentBar
+    261           *
+    262           * @brief   Display percentage bar on the LCD
+    263           *
+    264           * @param   title   -
+    265           *          value   -
+    266           *
+    267           * @return  None
+    268           **************************************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    269          void HalLcdDisplayPercentBar( char *title, uint8 value )
+    270          {
+   \                     HalLcdDisplayPercentBar: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0xB086             SUB      SP,SP,#+24
+   \   00000004   0x000C             MOVS     R4,R1
+    271          #if (HAL_LCD == TRUE)
+    272            uint8 percent;
+    273            uint8 leftOver;
+    274            uint8 buf[17];
+    275            uint32 err;
+    276            uint8 x;
+    277          
+    278            /* Write the title: */
+    279            HalLcdWriteString( title, HAL_LCD_LINE_1 );
+   \   00000006   0x2101             MOVS     R1,#+1
+   \   00000008   0x.... 0x....      BL       HalLcdWriteString
+    280          
+    281            if ( value > 100 )
+   \   0000000C   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   0000000E   0x2C65             CMP      R4,#+101
+   \   00000010   0xDB00             BLT.N    ??HalLcdDisplayPercentBar_0
+    282              value = 100;
+   \   00000012   0x2464             MOVS     R4,#+100
+    283          
+    284            /* convert to blocks */
+    285            percent = (uint8)(value / 10);
+   \                     ??HalLcdDisplayPercentBar_0: (+1)
+   \   00000014   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   00000016   0x200A             MOVS     R0,#+10
+   \   00000018   0xFB94 0xF5F0      SDIV     R5,R4,R0
+    286            leftOver = (uint8)(value % 10);
+   \   0000001C   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   0000001E   0x200A             MOVS     R0,#+10
+   \   00000020   0xFB94 0xF1F0      SDIV     R1,R4,R0
+   \   00000024   0xFB00 0x4611      MLS      R6,R0,R1,R4
+    287          
+    288            /* Make window */
+    289            osal_memcpy( buf, "[          ]  ", 15 );
+   \   00000028   0x220F             MOVS     R2,#+15
+   \   0000002A   0x....             LDR.N    R1,??DataTable2_1
+   \   0000002C   0xA800             ADD      R0,SP,#+0
+   \   0000002E   0x.... 0x....      BL       osal_memcpy
+    290          
+    291            for ( x = 0; x < percent; x ++ )
+   \   00000032   0x2000             MOVS     R0,#+0
+   \   00000034   0xE005             B.N      ??HalLcdDisplayPercentBar_1
+    292            {
+    293              buf[1+x] = '>';
+   \                     ??HalLcdDisplayPercentBar_2: (+1)
+   \   00000036   0x213E             MOVS     R1,#+62
+   \   00000038   0xAA00             ADD      R2,SP,#+0
+   \   0000003A   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000003C   0x1882             ADDS     R2,R0,R2
+   \   0000003E   0x7051             STRB     R1,[R2, #+1]
+    294            }
+   \   00000040   0x1C40             ADDS     R0,R0,#+1
+   \                     ??HalLcdDisplayPercentBar_1: (+1)
+   \   00000042   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000044   0xB2ED             UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+   \   00000046   0x42A8             CMP      R0,R5
+   \   00000048   0xD3F5             BCC.N    ??HalLcdDisplayPercentBar_2
+    295          
+    296            if ( leftOver >= 5 )
+   \   0000004A   0xB2F6             UXTB     R6,R6            ;; ZeroExt  R6,R6,#+24,#+24
+   \   0000004C   0x2E05             CMP      R6,#+5
+   \   0000004E   0xDB04             BLT.N    ??HalLcdDisplayPercentBar_3
+    297              buf[1+x] = '+';
+   \   00000050   0x212B             MOVS     R1,#+43
+   \   00000052   0xAA00             ADD      R2,SP,#+0
+   \   00000054   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000056   0x1880             ADDS     R0,R0,R2
+   \   00000058   0x7041             STRB     R1,[R0, #+1]
+    298          
+    299            err = (uint32)value;
+   \                     ??HalLcdDisplayPercentBar_3: (+1)
+   \   0000005A   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+    300            _ltoa( err, (uint8*)&buf[13], 10 );
+   \   0000005C   0x220A             MOVS     R2,#+10
+   \   0000005E   0xF10D 0x010D      ADD      R1,SP,#+13
+   \   00000062   0x0020             MOVS     R0,R4
+   \   00000064   0x.... 0x....      BL       _ltoa
+    301          
+    302            HalLcdWriteString( (char*)buf, HAL_LCD_LINE_2 );
+   \   00000068   0x2102             MOVS     R1,#+2
+   \   0000006A   0xA800             ADD      R0,SP,#+0
+   \   0000006C   0x.... 0x....      BL       HalLcdWriteString
+    303          #endif /* HAL_LCD */
+    304          }
+   \   00000070   0xB006             ADD      SP,SP,#+24
+   \   00000072   0xBD70             POP      {R4-R6,PC}       ;; return
+    305          
+    306          #if (HAL_LCD == TRUE)
+    307          /**************************************************************************************************
+    308           * @fn          halLcdWriteLine
+    309           *
+    310           * @brief       Write one line on display. It is required to place a 
+    311           *              NULL terminator \0 at the end of the string
+    312           *
+    313           * @param       uint8 line - display line
+    314           *              char *pText - text buffer to write
+    315           *
+    316           * @return      none
+    317           **************************************************************************************************/
+
+   \                                 In section .text, align 2, keep-with-next
+    318          void HalLcd_HW_WriteLine(char str[], uint8 line)
+    319          {
+   \                     HalLcd_HW_WriteLine: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0xB086             SUB      SP,SP,#+24
+   \   00000004   0x0004             MOVS     R4,R0
+   \   00000006   0x000D             MOVS     R5,R1
+    320            /* Initialize with spaces to clear the line on the LCD. */
+    321            uint8 buf[] = "                     ";  
+   \   00000008   0xA800             ADD      R0,SP,#+0
+   \   0000000A   0x....             LDR.N    R1,??DataTable2_2
+   \   0000000C   0x2216             MOVS     R2,#+22
+   \   0000000E   0x.... 0x....      BL       __aeabi_memcpy
+    322            uint32 len = ((strlen(str) > HAL_LCD_MAX_CHARS) ? HAL_LCD_MAX_CHARS : strlen(str));
+   \   00000012   0x0020             MOVS     R0,R4
+   \   00000014   0x.... 0x....      BL       strlen
+   \   00000018   0x2816             CMP      R0,#+22
+   \   0000001A   0xD301             BCC.N    ??HalLcd_HW_WriteLine_0
+   \   0000001C   0x2015             MOVS     R0,#+21
+   \   0000001E   0xE002             B.N      ??HalLcd_HW_WriteLine_1
+   \                     ??HalLcd_HW_WriteLine_0: (+1)
+   \   00000020   0x0020             MOVS     R0,R4
+   \   00000022   0x.... 0x....      BL       strlen
+    323            
+    324            /* Copy string characters but not the NULL to keep spaces */
+    325            (void)memcpy(buf, str, len);    
+   \                     ??HalLcd_HW_WriteLine_1: (+1)
+   \   00000026   0xAE00             ADD      R6,SP,#+0
+   \   00000028   0x0002             MOVS     R2,R0
+   \   0000002A   0x0021             MOVS     R1,R4
+   \   0000002C   0x0030             MOVS     R0,R6
+   \   0000002E   0x.... 0x....      BL       __aeabi_memcpy
+    326          
+    327            /* Copy into the default buffer */
+    328            lcdBufferPrintString((char *)HAL_LCD_DEF_BUF, (char const *)buf, 0, (tLcdPage)line); 
+   \   00000032   0x002B             MOVS     R3,R5
+   \   00000034   0xB2DB             UXTB     R3,R3            ;; ZeroExt  R3,R3,#+24,#+24
+   \   00000036   0x2200             MOVS     R2,#+0
+   \   00000038   0xA900             ADD      R1,SP,#+0
+   \   0000003A   0x2000             MOVS     R0,#+0
+   \   0000003C   0x.... 0x....      BL       lcdBufferPrintString
+    329            
+    330            /* Flush the default buffer to the LCD */
+    331            lcdSendBuffer(HAL_LCD_DEF_BUF);                       
+   \   00000040   0x2000             MOVS     R0,#+0
+   \   00000042   0x.... 0x....      BL       lcdSendBuffer
+    332          }
+   \   00000046   0xB006             ADD      SP,SP,#+24
+   \   00000048   0xBD70             POP      {R4-R6,PC}       ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2:
+   \   00000000   0x001E8480         DC32     0x1e8480
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_1:
+   \   00000000   0x........         DC32     ?_0
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_2:
+   \   00000000   0x........         DC32     ?_1
+
+   \                                 In section .rodata, align 4
+   \                     ?_0:
+   \   00000000   0x5B 0x20          DC8 "[          ]  "
+   \              0x20 0x20    
+   \              0x20 0x20    
+   \              0x20 0x20    
+   \              0x20 0x20    
+   \              0x20 0x5D    
+   \              0x20 0x20    
+   \              0x00         
+   \   0000000F   0x00               DC8 0
+
+   \                                 In section .rodata, align 4
+   \                     ?_1:
+   \   00000000   0x20 0x20          DC8 "                     "
+   \              0x20 0x20    
+   \              0x20 0x20    
+   \              0x20 0x20    
+   \              0x20 0x20    
+   \              0x20 0x20    
+   \              0x20 0x20    
+   \              0x20 0x20    
+   \              0x20 0x20    
+   \              0x20 0x20    
+   \              0x20 0x00    
+   \   00000016   0x00 0x00          DC8 0, 0
+    333          
+    334          #endif
+    335          
+    336          /**************************************************************************************************
+    337          **************************************************************************************************/
+    338          
+    339          
+    340          
+    341          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      40   HalLcdDisplayPercentBar
+        40   -> HalLcdWriteString
+        40   -> _ltoa
+        40   -> osal_memcpy
+       8   HalLcdInit
+         8   -> bspSpiInit
+         8   -> lcdInit
+       8   HalLcdWriteScreen
+         8   -> HalLcdWriteString
+      16   HalLcdWriteString
+        16   -> HalLcd_HW_WriteLine
+        16   -> debug_str
+      48   HalLcdWriteStringValue
+        48   -> HalLcdWriteString
+        48   -> _ltoa
+        48   -> osal_memcpy
+        48   -> osal_strlen
+      48   HalLcdWriteStringValueValue
+        48   -> HalLcdWriteString
+        48   -> _ltoa
+        48   -> osal_memcpy
+        48   -> osal_strlen
+      32   HalLcdWriteValue
+        32   -> HalLcdWriteString
+        32   -> _ltoa
+      40   HalLcd_HW_WriteLine
+        40   -> __aeabi_memcpy
+        40   -> lcdBufferPrintString
+        40   -> lcdSendBuffer
+        40   -> strlen
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable2
+       4  ??DataTable2_1
+       4  ??DataTable2_2
+      16  ?_0
+      24  ?_1
+     116  HalLcdDisplayPercentBar
+      14  HalLcdInit
+      20  HalLcdWriteScreen
+      24  HalLcdWriteString
+      88  HalLcdWriteStringValue
+     128  HalLcdWriteStringValueValue
+      30  HalLcdWriteValue
+      74  HalLcd_HW_WriteLine
+
+ 
+  40 bytes in section .rodata
+ 506 bytes in section .text
+ 
+ 506 bytes of CODE  memory
+  40 bytes of CONST memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,311 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR ANSI C/C++ Compiler V7.40.1.8447/W32 for ARM       12/Apr/2015  15:43:34
+// Copyright 1999-2015 IAR Systems AB.
+//
+//    Cpu mode     =  thumb
+//    Endian       =  little
+//    Source file  =  
+//        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\OSAL_WatchApp.c
+//    Command line =  
+//        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\OSAL_WatchApp.c -D
+//        FEATURE_RESET_MACRO -D ewarm -D NWK_AUTO_POLL -D xPOWER_SAVING -D
+//        ZTOOL_P1 -D MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D
+//        LCD_SUPPORTED=YES -D CC2538_USE_ALTERNATE_INTERRUPT_MAP=1
+//        --preprocess=cl
+//        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\Debug\List\ -lC
+//        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\Debug\List\ -lB
+//        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\Debug\List\
+//        --diag_suppress Pa082 -o
+//        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\Debug\Obj\ --no_cse
+//        --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering
+//        --no_scheduling --debug --endian=little --cpu=Cortex-M3 -f
+//        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\f8wConfig.cfg
+//        (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+//        -DDEFAULT_CHANLIST=0x07FFF800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+//        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+//        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+//        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+//        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+//        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+//        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+//        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+//        -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01, 0x03, 0x05, 0x07,
+//        0x09, 0x0B, 0x0D, 0x0F, 0x00, 0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C,
+//        0x0D}" -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
+//        -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100
+//        -DRESPONSE_POLL_RATE=100 -DREJOIN_POLL_RATE=440) -f
+//        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\f8wEndev.cfg
+//        (-DMAC_CFG_TX_DATA_MAX=3 -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -e
+//        --fpu=None --dlib_config "C:\Program Files (x86)\IAR Systems\Embedded
+//        Workbench 7.2\arm\INC\c\DLib_Config_Normal.h" -I
+//        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\..\Source\ -I
+//        "C:\Texas Instruments\Z-Stack Mesh
+//        1.0.0\Projects\zstack\ZMain\TI2538DB\" -I "C:\Texas
+//        Instruments\Z-Stack Mesh 1.0.0\Components\hal\include\" -I "C:\Texas
+//        Instruments\Z-Stack Mesh 1.0.0\Components\hal\target\CC2538\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh
+//        1.0.0\Components\driverlib\cc2538\inc\" -I "C:\Texas
+//        Instruments\Z-Stack Mesh 1.0.0\Components\driverlib\cc2538\source\"
+//        -I "C:\Texas Instruments\Z-Stack Mesh
+//        1.0.0\Components\bsp\srf06eb_cc2538\drivers\source\" -I "C:\Texas
+//        Instruments\Z-Stack Mesh 1.0.0\Components\mac\include\" -I "C:\Texas
+//        Instruments\Z-Stack Mesh 1.0.0\Components\mac\high_level\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh
+//        1.0.0\Components\mac\low_level\srf05\single_chip\" -I "C:\Texas
+//        Instruments\Z-Stack Mesh 1.0.0\Components\mac\low_level\srf05\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\mt\" -I "C:\Texas
+//        Instruments\Z-Stack Mesh 1.0.0\Components\osal\include\" -I "C:\Texas
+//        Instruments\Z-Stack Mesh 1.0.0\Components\services\sdata\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\services\saddr\"
+//        -I "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\af\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\nwk\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\sapi\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\sec\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\sys\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\zdo\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\zmac\" -I
+//        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\zmac\f8w\" -Ol
+//    List file    =  
+//        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\Debug\List\OSAL_WatchApp.s
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        #define SHT_PROGBITS 0x1
+
+        EXTERN APSF_Init
+        EXTERN APSF_ProcessEvent
+        EXTERN APS_Init
+        EXTERN APS_event_loop
+        EXTERN Hal_Init
+        EXTERN Hal_ProcessEvent
+        EXTERN MT_ProcessEvent
+        EXTERN MT_TaskInit
+        EXTERN WatchApp_Init
+        EXTERN WatchApp_ProcessEvent
+        EXTERN ZDApp_Init
+        EXTERN ZDApp_event_loop
+        EXTERN macEventLoop
+        EXTERN macTaskInit
+        EXTERN nwk_event_loop
+        EXTERN nwk_init
+        EXTERN osal_mem_alloc
+        EXTERN osal_memset
+
+        PUBLIC osalInitTasks
+        PUBLIC tasksArr
+        PUBLIC tasksCnt
+        PUBLIC tasksEvents
+
+// C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\OSAL_WatchApp.c
+//    1 /*
+//    2  *     program:  OSAL_WatchApp.c
+//    3  *      Project: Zigbee Watch
+//    4  *     Version:  0.0.1 -- phase 1
+//    5  *   Copyright:  2014, Barron Associates
+//    6  *     Written:  Sunday, March 15, 2015
+//    7  *          By:  Tim Trudeau - Timware
+//    8  *   Processor:  TI CC2538
+//    9  *        Tool:  IAR Embedded Workbench
+//   10  *
+//   11  *-------------------------------------------------------------------
+//   12  *  Description:    This file contains all the settings and other functions
+//   13                   that the user should set and change.
+//   14  *******************************************************************/
+//   15 
+//   16 
+//   17 /* ------------------------------------------------------------------------------------------------
+//   18  *                                          Includes
+//   19  * ------------------------------------------------------------------------------------------------
+//   20  */
+//   21 #include "ZComDef.h"
+//   22 #include "hal_drivers.h"
+//   23 #include "OSAL.h"
+//   24 #include "OSAL_Tasks.h"
+//   25 
+//   26 #if defined ( MT_TASK )
+//   27   #include "MT.h"
+//   28   #include "MT_TASK.h"
+//   29 #endif
+//   30 
+//   31 #include "nwk.h"
+//   32 #include "APS.h"
+//   33 #include "ZDApp.h"
+//   34 #if defined ( ZIGBEE_FREQ_AGILITY ) || defined ( ZIGBEE_PANID_CONFLICT )
+//   35   #include "ZDNwkMgr.h"
+//   36 #endif
+//   37 #if defined ( ZIGBEE_FRAGMENTATION )
+//   38   #include "aps_frag.h"
+//   39 #endif
+//   40 
+//   41 #include "WatchApp.h"
+//   42 
+//   43 /* ------------------------------------------------------------------------------------------------
+//   44  *                                           Constants Global Variables
+//   45  * ------------------------------------------------------------------------------------------------
+//   46  */
+//   47 // The order in this table must be identical to the task initialization calls below in osalInitTask.
+
+        SECTION `.rodata`:CONST:REORDER:NOROOT(2)
+//   48 const pTaskEventHandlerFn tasksArr[] = {
+tasksArr:
+        DATA
+        DC32 macEventLoop, nwk_event_loop, Hal_ProcessEvent, MT_ProcessEvent
+        DC32 APS_event_loop, APSF_ProcessEvent, ZDApp_event_loop
+        DC32 WatchApp_ProcessEvent
+//   49   macEventLoop,
+//   50   nwk_event_loop,
+//   51   Hal_ProcessEvent,
+//   52 #if defined( MT_TASK )
+//   53   MT_ProcessEvent,
+//   54 #endif
+//   55   APS_event_loop,
+//   56 #if defined ( ZIGBEE_FRAGMENTATION )
+//   57   APSF_ProcessEvent,
+//   58 #endif
+//   59   ZDApp_event_loop,
+//   60 #if defined ( ZIGBEE_FREQ_AGILITY ) || defined ( ZIGBEE_PANID_CONFLICT )
+//   61   ZDNwkMgr_event_loop,
+//   62 #endif
+//   63   WatchApp_ProcessEvent
+//   64 };
+//   65 
+
+        SECTION `.rodata`:CONST:REORDER:NOROOT(0)
+//   66 const uint8 tasksCnt = sizeof( tasksArr ) / sizeof( tasksArr[0] );
+tasksCnt:
+        DATA
+        DC8 8
+
+        SECTION `.bss`:DATA:REORDER:NOROOT(2)
+//   67 uint16 *tasksEvents;
+tasksEvents:
+        DS8 4
+//   68 /* ------------------------------------------------------------------------------------------------
+//   69  *                                           Functions Declarations
+//   70  * ------------------------------------------------------------------------------------------------
+//   71  */
+//   72 void osalInitTasks( void );
+//   73 extern void WatchApp_Init( byte task_id );
+//   74 
+//   75 /*********************************************************************
+//   76  * FUNCTIONS
+//   77  *********************************************************************/
+//   78 
+//   79 /*********************************************************************
+//   80  * @fn      osalInitTasks
+//   81  *
+//   82  * @brief   This function invokes the initialization function for each task.
+//   83  *
+//   84  * @param   void
+//   85  *
+//   86  * @return  none
+//   87  */
+
+        SECTION `.text`:CODE:NOROOT(2)
+        THUMB
+//   88 void osalInitTasks( void )
+//   89 {
+osalInitTasks:
+        PUSH     {R4,LR}
+//   90   uint8 taskID = 0;
+        MOVS     R4,#+0
+//   91 
+//   92   tasksEvents = (uint16 *)osal_mem_alloc( sizeof( uint16 ) * tasksCnt);
+        LDR.N    R0,??osalInitTasks_0
+        LDRB     R0,[R0, #+0]
+        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+        LSLS     R0,R0,#+1
+        UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+        BL       osal_mem_alloc
+        LDR.N    R1,??osalInitTasks_0+0x4
+        STR      R0,[R1, #+0]
+//   93   osal_memset( tasksEvents, 0, (sizeof( uint16 ) * tasksCnt));
+        LDR.N    R0,??osalInitTasks_0
+        LDRB     R0,[R0, #+0]
+        LSLS     R2,R0,#+1
+        MOVS     R1,#+0
+        LDR.N    R0,??osalInitTasks_0+0x4
+        LDR      R0,[R0, #+0]
+        BL       osal_memset
+//   94 
+//   95   macTaskInit( taskID++ );
+        MOVS     R0,R4
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+        BL       macTaskInit
+        ADDS     R4,R4,#+1
+//   96   nwk_init( taskID++ );
+        MOVS     R0,R4
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+        BL       nwk_init
+        ADDS     R4,R4,#+1
+//   97   Hal_Init( taskID++ );
+        MOVS     R0,R4
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+        BL       Hal_Init
+        ADDS     R4,R4,#+1
+//   98 #if defined( MT_TASK )
+//   99   MT_TaskInit( taskID++ );
+        MOVS     R0,R4
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+        BL       MT_TaskInit
+        ADDS     R4,R4,#+1
+//  100 #endif
+//  101   APS_Init( taskID++ );
+        MOVS     R0,R4
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+        BL       APS_Init
+        ADDS     R4,R4,#+1
+//  102 #if defined ( ZIGBEE_FRAGMENTATION )
+//  103   APSF_Init( taskID++ );
+        MOVS     R0,R4
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+        BL       APSF_Init
+        ADDS     R4,R4,#+1
+//  104 #endif
+//  105   ZDApp_Init( taskID++ );
+        MOVS     R0,R4
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+        BL       ZDApp_Init
+        ADDS     R4,R4,#+1
+//  106 #if defined ( ZIGBEE_FREQ_AGILITY ) || defined ( ZIGBEE_PANID_CONFLICT )
+//  107   ZDNwkMgr_Init( taskID++ );
+//  108 #endif
+//  109   WatchApp_Init( taskID );
+        MOVS     R0,R4
+        UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+        BL       WatchApp_Init
+//  110 }
+        POP      {R4,PC}          ;; return
+        Nop      
+        DATA
+??osalInitTasks_0:
+        DC32     tasksCnt
+        DC32     tasksEvents
+
+        SECTION `.iar_vfe_header`:DATA:NOALLOC:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+        DC32 0
+
+        SECTION __DLIB_PERTHREAD:DATA:REORDER:NOROOT(0)
+        SECTION_TYPE SHT_PROGBITS, 0
+
+        SECTION __DLIB_PERTHREAD_init:DATA:REORDER:NOROOT(0)
+        SECTION_TYPE SHT_PROGBITS, 0
+
+        END
+//  111 
+//  112 /*********************************************************************
+//  113 *********************************************************************/
+// 
+//   4 bytes in section .bss
+//  33 bytes in section .rodata
+// 128 bytes in section .text
+// 
+// 128 bytes of CODE  memory
+//  33 bytes of CONST memory
+//   4 bytes of DATA  memory
+//
+//Errors: none
+//Warnings: none

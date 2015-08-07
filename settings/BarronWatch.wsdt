@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>BarronWatch/WATCH_HW</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>260</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><ColumnWidth0>20</ColumnWidth0><ColumnWidth1>771</ColumnWidth1><ColumnWidth2>517</ColumnWidth2><ColumnWidth3>228</ColumnWidth3></Build>
+    <Find-in-Files><PreferedWindows><Position>4</Position><ScreenPosX>1822</ScreenPosX><ScreenPosY>184</ScreenPosY><Windows/></PreferedWindows><ColumnWidth0>587</ColumnWidth0><ColumnWidth1>98</ColumnWidth1><ColumnWidth2>518</ColumnWidth2><ColumnWidth3>331</ColumnWidth3></Find-in-Files><Find-All-Declarations><PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><ColumnWidth0>580</ColumnWidth0><ColumnWidth1>82</ColumnWidth1><ColumnWidth2>994</ColumnWidth2></Find-All-Declarations><Find-All-References><PreferedWindows><Position>4</Position><ScreenPosX>1761</ScreenPosX><ScreenPosY>350</ScreenPosY><Windows/></PreferedWindows><ColumnWidth0>580</ColumnWidth0><ColumnWidth1>82</ColumnWidth1><ColumnWidth2>994</ColumnWidth2></Find-All-References><PROJECT_GUI_CALL_GRAPH><col-names><item>File</item><item>Function</item><item>Line</item></col-names><col-widths><item>200</item><item>700</item><item>100</item></col-widths><PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows></PROJECT_GUI_CALL_GRAPH><Select-Ambiguous-Definitions><PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows><Window><Factory>Build</Factory></Window></Windows></PreferedWindows><ColumnWidth0>580</ColumnWidth0><ColumnWidth1>82</ColumnWidth1><ColumnWidth2>994</ColumnWidth2></Select-Ambiguous-Definitions><TerminalIO/><Debug-Log><PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows><Window><Factory>Build</Factory></Window></Windows></PreferedWindows><ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1621</ColumnWidth1></Debug-Log><Breakpoints><PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows></Breakpoints><CRunMessageRules><col-names><item>Action</item><item>Check</item><item>Source File</item></col-names><col-widths><item>100</item><item>400</item><item>200</item></col-widths></CRunMessageRules><Register><PreferedWindows><Position>4</Position><ScreenPosX>2207</ScreenPosX><ScreenPosY>109</ScreenPosY><Windows/></PreferedWindows></Register></Static>
+    <Windows>
+      
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-13774-792</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>BarronWatch</ExpandedNode><ExpandedNode>BarronWatch/Application</ExpandedNode><ExpandedNode>BarronWatch/Application/Includes</ExpandedNode><ExpandedNode>BarronWatch/Configuration</ExpandedNode><ExpandedNode>BarronWatch/HAL</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd3><Tabs><Tab><Identity>TabID-9175-14115</Identity><TabName>Build</TabName><Factory>Build</Factory><Session/></Tab><Tab><Identity>TabID-12051-2502</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd3><Wnd4><Tabs><Tab><Identity>TabID-21155-19219</Identity><TabName>Find in Files</TabName><Factory>Find-in-Files</Factory><Session/></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd4></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\MainApplication.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>450</YPos2><SelStart2>16122</SelStart2><SelEnd2>16122</SelEnd2></Tab><ActiveTab>0</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Texas Instruments\Z-Stack Mesh 1.0.0\Components\hal\common\hal_drivers.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>209</YPos2><SelStart2>7145</SelStart2><SelEnd2>7145</SelEnd2></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\..\..\..\..\..\Texas Instruments\Z-Stack Mesh 1.0.0\Components\hal\include\hal_key.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>57</YPos2><SelStart2>3629</SelStart2><SelEnd2>3629</SelEnd2></Tab></Pane><ActivePane>0</ActivePane><Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\WatchHW.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd><XPos2>0</XPos2><YPos2>241</YPos2><SelStart2>8939</SelStart2><SelEnd2>8939</SelEnd2></Tab><ActiveTab>0</ActiveTab></Pane><Sizes><Pane><X>568198</X><Y>1000000</Y></Pane><Pane><X>431801</X><Y>1000000</Y></Pane></Sizes><SplitMode>4</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-0111B280><key>iaridepm.enu1</key></Toolbar-0111B280></Sizes></Row0><Row1><Sizes/></Row1><Row2><Sizes/></Row2></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>725</Bottom><Right>351</Right><x>-2</x><y>-2</y><xscreen>316</xscreen><yscreen>232</yscreen><sizeHorzCX>188095</sizeHorzCX><sizeHorzCY>230159</sizeHorzCY><sizeVertCX>210119</sizeVertCX><sizeVertCY>721230</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>238</Bottom><Right>1682</Right><x>-2</x><y>-2</y><xscreen>1684</xscreen><yscreen>240</yscreen><sizeHorzCX>1002381</sizeHorzCX><sizeHorzCY>238095</sizeHorzCY><sizeVertCX>119048</sizeVertCX><sizeVertCY>198413</sizeVertCY></Rect></Wnd3></Sizes></Row0></Bottom><Float><Sizes><Wnd4><Rect><Top>0</Top><Left>0</Left><Bottom>49307544</Bottom><Right>49307544</Right><x>-2</x><y>-2</y><FloatX>1822</FloatX><FloatY>184</FloatY><FloatWidth>1350</FloatWidth><FloatHeight>763</FloatHeight><xscreen>200</xscreen><yscreen>200</yscreen><sizeHorzCX>119048</sizeHorzCX><sizeHorzCY>198413</sizeHorzCY><sizeVertCX>119048</sizeVertCX><sizeVertCY>198413</sizeVertCY></Rect></Wnd4></Sizes></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

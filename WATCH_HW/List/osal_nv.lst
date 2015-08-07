@@ -1,0 +1,3526 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.40.1.8447/W32 for ARM        06/Aug/2015  22:29:18
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        C:\Texas Instruments\Z-Stack Mesh
+#        1.0.0\Components\osal\mcu\cc2538\osal_nv.c
+#    Command line =  
+#        "C:\Texas Instruments\Z-Stack Mesh
+#        1.0.0\Components\osal\mcu\cc2538\osal_nv.c" -D EVERWRIST -D
+#        FEATURE_RESET_MACRO -D ewarm -D NWK_AUTO_POLL -D xPOWER_SAVING -D
+#        ZTOOL_P1 -D xMT_TASK -D xMT_SYS_FUNC -D xMT_ZDO_FUNC -D
+#        LCD_SUPPORTED=TRUE -D CC2538_USE_ALTERNATE_INTERRUPT_MAP=1
+#        --preprocess=cl
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\WATCH_HW\List\ -lC
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\WATCH_HW\List\ -lB
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\WATCH_HW\List\
+#        --diag_suppress Pa082 -o
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\WATCH_HW\Obj\
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M3 -f
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\f8wConfig.cfg
+#        (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+#        -DDEFAULT_CHANLIST=0x07FFF800 -DZDAPP_CONFIG_PAN_ID=0xFFFF
+#        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+#        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+#        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+#        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+#        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+#        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+#        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+#        -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01, 0x03, 0x05, 0x07,
+#        0x09, 0x0B, 0x0D, 0x0F, 0x00, 0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C,
+#        0x0D}" -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
+#        -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=5000 -DQUEUED_POLL_RATE=100
+#        -DRESPONSE_POLL_RATE=100 -DREJOIN_POLL_RATE=440) -f
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\f8wEndev.cfg
+#        (-DMAC_CFG_TX_DATA_MAX=3 -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -e
+#        --fpu=None --dlib_config "C:\Program Files (x86)\IAR Systems\Embedded
+#        Workbench 7.2\arm\INC\c\DLib_Config_Normal.h" -I
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\ -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Projects\zstack\ZMain\TI2538DB\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\hal\include\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh
+#        1.0.0\Components\hal\target\CC2538\" -I "C:\Texas Instruments\Z-Stack
+#        Mesh 1.0.0\Components\driverlib\cc2538\inc\" -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Components\driverlib\cc2538\source\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh
+#        1.0.0\Components\bsp\srf06eb_cc2538\drivers\source\" -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Components\mac\include\" -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Components\mac\high_level\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh
+#        1.0.0\Components\mac\low_level\srf05\single_chip\" -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Components\mac\low_level\srf05\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\mt\" -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Components\osal\include\" -I "C:\Texas
+#        Instruments\Z-Stack Mesh 1.0.0\Components\services\sdata\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\services\saddr\"
+#        -I "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\af\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\nwk\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\sapi\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\sec\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\sys\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\stack\zdo\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\zmac\" -I
+#        "C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\zmac\f8w\" -I
+#        "C:\Texas
+#        Instruments\cc2538_foundation_firmware_1_0_1_0\driverlib\cc2538\source\"
+#        -Ol
+#    List file    =  
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\WATCH_HW\List\osal_nv.lst
+#    Object file  =  
+#        C:\Users\TimT\Documents\SandBox\ZIGBEE_WATCH_dev\WATCH_HW\Obj\osal_nv.o
+#
+###############################################################################
+
+C:\Texas Instruments\Z-Stack Mesh 1.0.0\Components\osal\mcu\cc2538\osal_nv.c
+      1          /*******************************************************************************
+      2            Filename:       OSAL_Nv.c
+      3            Revised:        $Date: 2013-09-05 09:47:48 -0700 (Thu, 05 Sep 2013) $
+      4            Revision:       $Revision: 35218 $
+      5          
+      6            Description:    This module contains the OSAL non-volatile memory functions.
+      7          
+      8          
+      9            Copyright 2010-2013 Texas Instruments Incorporated. All rights reserved.
+     10          
+     11            IMPORTANT: Your use of this Software is limited to those specific rights
+     12            granted under the terms of a software license agreement between the user
+     13            who downloaded the software, his/her employer (which must be your employer)
+     14            and Texas Instruments Incorporated (the "License").  You may not use this
+     15            Software unless you agree to abide by the terms of the License. The License
+     16            limits your use, and you acknowledge, that the Software may not be modified,
+     17            copied or distributed unless embedded on a Texas Instruments microcontroller
+     18            or used solely and exclusively in conjunction with a Texas Instruments radio
+     19            frequency transceiver, which is integrated into your product.  Other than for
+     20            the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     21            works of, modify, distribute, perform, display or sell this Software and/or
+     22            its documentation for any purpose.
+     23          
+     24            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     25            PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+     26            INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+     27            NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     28            TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     29            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     30            LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     31            INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     32            OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     33            OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     34            (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     35          
+     36            Should you have any questions regarding your right to use this Software,
+     37            contact Texas Instruments Incorporated at www.TI.com.
+     38          *******************************************************************************/
+     39          
+     40          /*******************************************************************************
+     41            Notes:
+     42              - A trick buried deep in initPage() requires that the MSB of the NV Item Id
+     43                is to be reserved for use by this module (maximum NV item Id is 0x7FFF).
+     44          *******************************************************************************/
+     45          
+     46          /*********************************************************************
+     47           * INCLUDES
+     48           */
+     49          #include "hal_adc.h"
+     50          #include "armcm3flashutil.h"
+     51          #include "hal_board_cfg.h"
+     52          #include "OSAL_Nv.h"
+     53          #include "ZComDef.h"
+     54          
+     55          /*********************************************************************
+     56           * CONSTANTS
+     57           */
+     58          
+     59          /* Physical pages per OSAL logical page - increase to get bigger OSAL_NV_ITEMs.
+     60           * Changing this number requires a corresponding change in the linker file, currently
+     61           * $PROJ_DIR$\..\..\..\Tools\"Processor Specific Name"\"Specific Name".xcl
+     62           */
+     63          #ifndef OSAL_NV_PHY_PER_PG
+     64            #define OSAL_NV_PHY_PER_PG    1
+     65          #endif
+     66          
+     67          #define OSAL_NV_PAGES_USED     (HAL_NV_PAGE_CNT / OSAL_NV_PHY_PER_PG)
+     68          #if (OSAL_NV_PAGES_USED < 2)
+     69          #error Need to increase HAL_NV_PG_CNT or decrease the OSAL_NV_PHY_PER_PG.
+     70          #endif
+     71          
+     72          #if (HAL_NV_PAGE_CNT != (OSAL_NV_PAGES_USED * OSAL_NV_PHY_PER_PG))
+     73          #error HAL_NV_PAGE_CNT must be a multiple of OSAL_NV_PHY_PER_PG
+     74          #endif
+     75          
+     76          #define OSAL_NV_PAGE_SIZE      (OSAL_NV_PHY_PER_PG * HAL_FLASH_PAGE_SIZE)
+     77          
+     78          #define OSAL_NV_ACTIVE          0x00
+     79          #define OSAL_NV_ERASED          0xFF
+     80          #define OSAL_NV_ERASED_ID       0xFFFF
+     81          #define OSAL_NV_ZEROED_ID       0x0000
+     82          // Reserve MSB of Id to signal a search for the "old" source copy (new write interrupted/failed.)
+     83          #define OSAL_NV_SOURCE_ID       0x8000
+     84          
+     85          #define OSAL_NV_PAGE_SIZE      (OSAL_NV_PHY_PER_PG * HAL_FLASH_PAGE_SIZE)
+     86          // In case pages 0-1 are ever used, define a null page value.
+     87          #define OSAL_NV_PAGE_NULL       OSAL_NV_PAGES_USED
+     88          
+     89          // In case item Id 0 is ever used, define a null item value.
+     90          #define OSAL_NV_ITEM_NULL       0
+     91          
+     92          #define OSAL_NV_WORD_SIZE       HAL_FLASH_WORD_SIZE
+     93          
+     94          #define OSAL_NV_PAGE_HDR_OFFSET 0
+     95          
+     96          #define OSAL_NV_MAX_HOT         3
+
+   \                                 In section .rodata, align 4
+     97          static const uint16 hotIds[OSAL_NV_MAX_HOT] = {
+   \                     hotIds:
+   \   00000000   0x0082 0x003A      DC16 130, 58, 59
+   \              0x003B       
+   \   00000006   0x00 0x00          DC8 0, 0
+     98            ZCD_NV_NWKKEY,
+     99            ZCD_NV_NWK_ACTIVE_KEY_INFO,
+    100            ZCD_NV_NWK_ALTERN_KEY_INFO,
+    101          };
+    102          
+    103          /*********************************************************************
+    104           * MACROS
+    105           */
+    106          
+    107          #define OSAL_NV_CHECK_BUS_VOLTAGE  HalAdcCheckVdd(VDD_MIN_NV)
+    108          
+    109          #define OSAL_NV_DATA_SIZE( LEN )  \
+    110               ((((LEN) + OSAL_NV_WORD_SIZE - 1) / OSAL_NV_WORD_SIZE) * OSAL_NV_WORD_SIZE)
+    111          
+    112          #define OSAL_NV_ITEM_SIZE( LEN )  \
+    113                 (OSAL_NV_DATA_SIZE( LEN ) + OSAL_NV_HDR_SIZE)
+    114          //  (((((LEN) + OSAL_NV_WORD_SIZE - 1) / OSAL_NV_WORD_SIZE) * OSAL_NV_WORD_SIZE) + OSAL_NV_HDR_SIZE)
+    115          
+    116          #define COMPACT_PAGE_CLEANUP( COM_PG ) st ( \
+    117            /* In order to recover from a page compaction that is interrupted,\
+    118             * the logic in osal_nv_init() depends upon the following order:\
+    119             * 1. State of the target of compaction is changed to ePgInUse.\
+    120             * 2. Compacted page is erased.\
+    121             */\
+    122            markPage( pgRes, OSAL_NV_PG_ACTIVE );  /* Mark reserve page as being active. */\
+    123            erasePage( (COM_PG) ); \
+    124            \
+    125            pgRes = (COM_PG);  /* Set the reserve page to be the newly erased page. */\
+    126          )
+    127          
+    128          #define OSAL_NV_PAGE_TO_PTR( pg ) \
+    129            ((uint8 *)((uint8 *)(((HAL_NV_PAGE_BEG + ((pg) * OSAL_NV_PHY_PER_PG)) * HAL_FLASH_PAGE_SIZE)+ (FLASH_BASE))))
+    130          
+    131          /*********************************************************************
+    132           * TYPEDEFS
+    133           */
+    134          
+    135          /* DO NOT CHANGE THIS STRUCTURE - the element order is significant */
+    136          typedef struct
+    137          {
+    138            uint16 id;    // NV item id code (0xFFFF = not active)
+    139            uint16 len;   // Length of NV item data bytes
+    140            uint16 chk;   // Byte-wise checksum of the 'len' data bytes of the item.
+    141            uint16 pad1;  // Padding ("don't care") for 32-bit flash writes
+    142            uint16 stat;  // Item status
+    143            uint16 pad2;  // Padding ("don't care") for 32-bit flash writes
+    144            uint16 live;  // NV item is 'live' if  and id !=0xFFFF
+    145            uint16 pad3;  // Padding ("don't care") for 32-bit flash writes
+    146          } osalNvHdr_t;
+    147          // Struct member offsets.
+    148          #define OSAL_NV_HDR_ID    0
+    149          #define OSAL_NV_HDR_LEN   2
+    150          #define OSAL_NV_HDR_CHK   4
+    151          #define OSAL_NV_HDR_STAT  8
+    152          #define OSAL_NV_HDR_LIVE  12
+    153          #define OSAL_NV_HDR_SIZE  16
+    154          
+    155          /* DO NOT CHANGE THIS STRUCTURE - the element order is significant */
+    156          typedef struct
+    157          {
+    158            uint16 active;
+    159            uint16 pad1;   // Padding ("don't care") for 32-bit flash writes
+    160            uint16 xfer;
+    161            uint16 pad2;   // Padding ("don't care") for 32-bit flash writes
+    162          } osalNvPgHdr_t;
+    163          // Struct member offsets.
+    164          #define OSAL_NV_PG_ACTIVE    0
+    165          #define OSAL_NV_PG_XFER      4
+    166          #define OSAL_NV_PG_HDR_SIZE  8
+    167          
+    168          // Length of any item of a page or item header struct.
+    169          #define OSAL_NV_HDR_ITEM  4
+    170          
+    171          typedef enum
+    172          {
+    173            eNvXfer,
+    174            eNvZero
+    175          } eNvHdrEnum;
+    176          
+    177          /*********************************************************************
+    178           * GLOBAL VARIABLES
+    179           */
+    180          
+    181          #ifndef OAD_KEEP_NV_PAGES
+    182          // When NV pages are to remain intact during OAD download,
+    183          // the image itself should not include NV pages.
+    184          #pragma location=HAL_NV_START_ADDR
+
+   \                                 In section .noinit, at 0x27c800
+    185          __no_init uint8 _nvBuf[OSAL_NV_PAGES_USED * OSAL_NV_PAGE_SIZE];
+   \                     _nvBuf:
+   \   00000000                      DS8 12288
+    186          #pragma required=_nvBuf
+    187          #endif // OAD_KEEP_NV_PAGES
+    188          
+    189          /******************************************************************************
+    190           * LOCAL VARIABLES
+    191           */
+    192          
+    193          // Offset into the page of the first available erased space.
+
+   \                                 In section .bss, align 4
+    194          static uint16 pgOff[OSAL_NV_PAGES_USED];
+   \                     pgOff:
+   \   00000000                      DS8 12
+   \   0000000C                      REQUIRE _nvBuf
+    195          
+    196          // Count of the bytes lost for the zeroed-out items.
+
+   \                                 In section .bss, align 4
+    197          static uint16 pgLost[OSAL_NV_PAGES_USED];
+   \                     pgLost:
+   \   00000000                      DS8 12
+    198          
+    199          // Page reserved for item compacting transfer.
+
+   \                                 In section .bss, align 1
+    200          static uint8 pgRes;
+   \                     pgRes:
+   \   00000000                      DS8 1
+    201          
+    202          // NV page and offsets for hot items.
+
+   \                                 In section .bss, align 4
+    203          static uint8 hotPg[OSAL_NV_MAX_HOT];
+   \                     hotPg:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+    204          static uint16 hotOff[OSAL_NV_MAX_HOT];
+   \                     hotOff:
+   \   00000000                      DS8 8
+    205          
+    206          // Temp header data, 2nd item does not change
+
+   \                                 In section .data, align 4
+    207          static uint16 hdrData[2] = {OSAL_NV_ERASED_ID,OSAL_NV_ERASED_ID};
+   \                     hdrData:
+   \   00000000   0xFFFF 0xFFFF      DC16 65535, 65535
+    208          
+    209          /******************************************************************************
+    210           * LOCAL FUNCTIONS
+    211           */
+    212          
+    213          static uint8  initNV( void );
+    214          
+    215          static uint8  compactPage( uint8 srcPg, uint16 skipId );
+    216          static void   erasePage( uint8 pg );
+    217          static uint16 initPage( uint8 pg, uint16 id, uint8 findDups );
+    218          static void   markPage( uint8 pg, uint8 hdrOfs );
+    219          
+    220          static uint16 findItem( uint16 id, uint8 *findPg );
+    221          static uint8  initItem( uint8 flag, uint16 id, uint16 len, void *buf );
+    222          static void   setItem( uint8 pg, uint16 offset, eNvHdrEnum stat );
+    223          
+    224          static uint16 calcChkB( uint16 len, uint8 *buf );
+    225          static uint16 calcChkF( uint8 pg, uint16 offset, uint16 len );
+    226          
+    227          static void   readHdr( uint8 pg, uint16 offset, uint8 *buf );
+    228          static void   readPgHdr( uint8 pg, uint16 offset, uint8 *buf );
+    229          
+    230          static void   writeBuf( uint8 pg, uint16 offset, uint16 len, uint8 *buf );
+    231          static void   xferBuf( uint8 srcPg, uint16 srcOff, uint8 dstPg, uint16 dstOff, uint16 len );
+    232          
+    233          static uint8  writeItem( uint8 pg, uint16 id, uint16 len, void *buf, uint8 flag );
+    234          static uint8  hotItem(uint16 id);
+    235          static void   hotItemUpdate(uint8 pg, uint16 off, uint16 id);
+    236          
+    237          /******************************************************************************
+    238           * @fn      initNV
+    239           *
+    240           * @brief   Initialize the NV flash pages.
+    241           *
+    242           * @param   none
+    243           *
+    244           * @return  TRUE
+    245           */
+
+   \                                 In section .text, align 2, keep-with-next
+    246          static uint8 initNV( void )
+    247          {
+   \                     initNV: (+1)
+   \   00000000   0xB57C             PUSH     {R2-R6,LR}
+    248            osalNvPgHdr_t pgHdr;
+    249            uint8 oldPg = OSAL_NV_PAGE_NULL;
+   \   00000002   0x2506             MOVS     R5,#+6
+    250            uint8 findDups = FALSE;
+   \   00000004   0x2400             MOVS     R4,#+0
+    251            uint8 pg;
+    252          
+    253            pgRes = OSAL_NV_PAGE_NULL;
+   \   00000006   0x2006             MOVS     R0,#+6
+   \   00000008   0x.... 0x....      LDR.W    R1,??DataTable15
+   \   0000000C   0x7008             STRB     R0,[R1, #+0]
+    254          
+    255            for ( pg = 0; pg < OSAL_NV_PAGES_USED; pg++ )
+   \   0000000E   0x2600             MOVS     R6,#+0
+   \   00000010   0xE007             B.N      ??initNV_0
+    256            {
+    257              readPgHdr( pg, OSAL_NV_PAGE_HDR_OFFSET, (uint8 *)(&pgHdr) );
+    258          
+    259              if ( pgHdr.active == OSAL_NV_ERASED_ID )
+    260              {
+    261                if ( pgRes == OSAL_NV_PAGE_NULL )
+    262                {
+    263                  pgRes = pg;
+    264                }
+    265                else
+    266                {
+    267                  // Mark the page as being active
+    268                  markPage( pg, OSAL_NV_PG_ACTIVE );
+    269                }
+    270              }
+    271              // An Xfer from this page was in progress.
+    272              else if ( pgHdr.xfer != OSAL_NV_ERASED_ID )
+   \                     ??initNV_1: (+1)
+   \   00000012   0xF8BD 0x0004      LDRH     R0,[SP, #+4]
+   \   00000016   0xF64F 0x71FF      MOVW     R1,#+65535
+   \   0000001A   0x4288             CMP      R0,R1
+   \   0000001C   0xD000             BEQ.N    ??initNV_2
+    273              {
+    274                oldPg = pg;
+   \   0000001E   0x0035             MOVS     R5,R6
+    275              }
+   \                     ??initNV_2: (+1)
+   \   00000020   0x1C76             ADDS     R6,R6,#+1
+   \                     ??initNV_0: (+1)
+   \   00000022   0xB2F6             UXTB     R6,R6            ;; ZeroExt  R6,R6,#+24,#+24
+   \   00000024   0x2E06             CMP      R6,#+6
+   \   00000026   0xDA1A             BGE.N    ??initNV_3
+   \   00000028   0xAA00             ADD      R2,SP,#+0
+   \   0000002A   0x2100             MOVS     R1,#+0
+   \   0000002C   0x0030             MOVS     R0,R6
+   \   0000002E   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000030   0x.... 0x....      BL       readPgHdr
+   \   00000034   0xF8BD 0x0000      LDRH     R0,[SP, #+0]
+   \   00000038   0xF64F 0x71FF      MOVW     R1,#+65535
+   \   0000003C   0x4288             CMP      R0,R1
+   \   0000003E   0xD1E8             BNE.N    ??initNV_1
+   \   00000040   0x.... 0x....      LDR.W    R0,??DataTable15
+   \   00000044   0x7800             LDRB     R0,[R0, #+0]
+   \   00000046   0x2806             CMP      R0,#+6
+   \   00000048   0xD103             BNE.N    ??initNV_4
+   \   0000004A   0x.... 0x....      LDR.W    R0,??DataTable15
+   \   0000004E   0x7006             STRB     R6,[R0, #+0]
+   \   00000050   0xE7E6             B.N      ??initNV_2
+   \                     ??initNV_4: (+1)
+   \   00000052   0x2100             MOVS     R1,#+0
+   \   00000054   0x0030             MOVS     R0,R6
+   \   00000056   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000058   0x.... 0x....      BL       markPage
+   \   0000005C   0xE7E0             B.N      ??initNV_2
+    276            }
+    277          
+    278            // If a page compaction was interrupted before the old page was erased.
+    279            if ( oldPg != OSAL_NV_PAGE_NULL )
+   \                     ??initNV_3: (+1)
+   \   0000005E   0xB2ED             UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+   \   00000060   0x2D06             CMP      R5,#+6
+   \   00000062   0xD017             BEQ.N    ??initNV_5
+    280            {
+    281              /* Interrupted compaction before the target of compaction was put in use;
+    282               * so erase the target of compaction and start again.
+    283               */
+    284              if ( pgRes != OSAL_NV_PAGE_NULL )
+   \   00000064   0x.... 0x....      LDR.W    R0,??DataTable15
+   \   00000068   0x7800             LDRB     R0,[R0, #+0]
+   \   0000006A   0x2806             CMP      R0,#+6
+   \   0000006C   0xD00A             BEQ.N    ??initNV_6
+    285              {
+    286                erasePage( pgRes );
+   \   0000006E   0x.... 0x....      LDR.W    R0,??DataTable15
+   \   00000072   0x7800             LDRB     R0,[R0, #+0]
+   \   00000074   0x.... 0x....      BL       erasePage
+    287                (void)compactPage( oldPg, OSAL_NV_ITEM_NULL );
+   \   00000078   0x2100             MOVS     R1,#+0
+   \   0000007A   0x0028             MOVS     R0,R5
+   \   0000007C   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000007E   0x.... 0x....      BL       compactPage
+   \   00000082   0xE011             B.N      ??initNV_7
+    288              }
+    289              /* Interrupted compaction after the target of compaction was put in use,
+    290               * but before the old page was erased; so erase it now and create a new reserve page.
+    291               */
+    292              else
+    293              {
+    294                erasePage( oldPg );
+   \                     ??initNV_6: (+1)
+   \   00000084   0x0028             MOVS     R0,R5
+   \   00000086   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000088   0x.... 0x....      BL       erasePage
+    295                pgRes = oldPg;
+   \   0000008C   0x.... 0x....      LDR.W    R0,??DataTable15
+   \   00000090   0x7005             STRB     R5,[R0, #+0]
+   \   00000092   0xE009             B.N      ??initNV_7
+    296              }
+    297            }
+    298            else if ( pgRes != OSAL_NV_PAGE_NULL )
+   \                     ??initNV_5: (+1)
+   \   00000094   0x.... 0x....      LDR.W    R0,??DataTable15
+   \   00000098   0x7800             LDRB     R0,[R0, #+0]
+   \   0000009A   0x2806             CMP      R0,#+6
+   \   0000009C   0xD004             BEQ.N    ??initNV_7
+    299            {
+    300              erasePage( pgRes );  // The last page erase could have been interrupted by a power-cycle.
+   \   0000009E   0x.... 0x....      LDR.W    R0,??DataTable15
+   \   000000A2   0x7800             LDRB     R0,[R0, #+0]
+   \   000000A4   0x.... 0x....      BL       erasePage
+    301            }
+    302            /* else if there is no reserve page, COMPACT_PAGE_CLEANUP() must have succeeded to put the old
+    303             * reserve page (i.e. the target of the compacted items) into use but got interrupted by a reset
+    304             * while trying to erase the page to be compacted. Such a page should only contain duplicate items
+    305             * (i.e. all items will be marked 'Xfer') and thus should have the lost count equal to the page
+    306             * size less the page header.
+    307             */
+    308          
+    309            for ( pg = 0; pg < OSAL_NV_PAGES_USED; pg++ )
+   \                     ??initNV_7: (+1)
+   \   000000A8   0x2600             MOVS     R6,#+0
+   \   000000AA   0xE00B             B.N      ??initNV_8
+    310            {
+    311              // Calculate page offset and lost bytes - any "old" item triggers an N^2 re-scan from start.
+    312              if ( initPage( pg, OSAL_NV_ITEM_NULL, findDups ) != OSAL_NV_ITEM_NULL )
+   \                     ??initNV_9: (+1)
+   \   000000AC   0x0022             MOVS     R2,R4
+   \   000000AE   0xB2D2             UXTB     R2,R2            ;; ZeroExt  R2,R2,#+24,#+24
+   \   000000B0   0x2100             MOVS     R1,#+0
+   \   000000B2   0x0030             MOVS     R0,R6
+   \   000000B4   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   000000B6   0x.... 0x....      BL       initPage
+   \   000000BA   0x2800             CMP      R0,#+0
+   \   000000BC   0xD001             BEQ.N    ??initNV_10
+    313              {
+    314                findDups = TRUE;
+   \   000000BE   0x2401             MOVS     R4,#+1
+    315                pg = (256 - 1);  // Pre-decrement so that loop increment will start over at zero.
+   \   000000C0   0x26FF             MOVS     R6,#+255
+    316                continue;
+    317              }
+    318            }
+   \                     ??initNV_10: (+1)
+   \   000000C2   0x1C76             ADDS     R6,R6,#+1
+   \                     ??initNV_8: (+1)
+   \   000000C4   0xB2F6             UXTB     R6,R6            ;; ZeroExt  R6,R6,#+24,#+24
+   \   000000C6   0x2E06             CMP      R6,#+6
+   \   000000C8   0xDBF0             BLT.N    ??initNV_9
+    319          
+    320            if (findDups)
+   \   000000CA   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   000000CC   0x2C00             CMP      R4,#+0
+   \   000000CE   0xD00B             BEQ.N    ??initNV_11
+    321            {
+    322              // Final pass to calculate page lost after invalidating duplicate items.
+    323              for ( pg = 0; pg < OSAL_NV_PAGES_USED; pg++ )
+   \   000000D0   0x2600             MOVS     R6,#+0
+   \   000000D2   0xE006             B.N      ??initNV_12
+    324              {
+    325                (void)initPage( pg, OSAL_NV_ITEM_NULL, FALSE );
+   \                     ??initNV_13: (+1)
+   \   000000D4   0x2200             MOVS     R2,#+0
+   \   000000D6   0x2100             MOVS     R1,#+0
+   \   000000D8   0x0030             MOVS     R0,R6
+   \   000000DA   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   000000DC   0x.... 0x....      BL       initPage
+    326              }
+   \   000000E0   0x1C76             ADDS     R6,R6,#+1
+   \                     ??initNV_12: (+1)
+   \   000000E2   0xB2F6             UXTB     R6,R6            ;; ZeroExt  R6,R6,#+24,#+24
+   \   000000E4   0x2E06             CMP      R6,#+6
+   \   000000E6   0xDBF5             BLT.N    ??initNV_13
+    327            }
+    328          
+    329            if ( pgRes == OSAL_NV_PAGE_NULL )
+   \                     ??initNV_11: (+1)
+   \   000000E8   0x.... 0x....      LDR.W    R0,??DataTable15
+   \   000000EC   0x7800             LDRB     R0,[R0, #+0]
+   \   000000EE   0x2806             CMP      R0,#+6
+   \   000000F0   0xD124             BNE.N    ??initNV_14
+    330            {
+    331              uint8 idx, mostLost = 0;
+   \   000000F2   0x2100             MOVS     R1,#+0
+    332          
+    333              for ( idx = 0; idx < OSAL_NV_PAGES_USED; idx++ )
+   \   000000F4   0x2000             MOVS     R0,#+0
+   \   000000F6   0xE00D             B.N      ??initNV_15
+    334              {
+    335                // Is this the page that was compacted?
+    336                if (pgLost[idx] == (OSAL_NV_PAGE_SIZE - OSAL_NV_PG_HDR_SIZE))
+    337                {
+    338                  mostLost = idx;
+    339                  break;
+    340                }
+    341                /* This check is not expected to be necessary because the above test should always succeed
+    342                 * with an early loop exit.
+    343                 */
+    344                else if (pgLost[idx] > pgLost[mostLost])
+   \                     ??initNV_16: (+1)
+   \   000000F8   0x.... 0x....      LDR.W    R2,??DataTable16
+   \   000000FC   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   000000FE   0xF832 0x2011      LDRH     R2,[R2, R1, LSL #+1]
+   \   00000102   0x.... 0x....      LDR.W    R3,??DataTable16
+   \   00000106   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000108   0xF833 0x3010      LDRH     R3,[R3, R0, LSL #+1]
+   \   0000010C   0x429A             CMP      R2,R3
+   \   0000010E   0xD200             BCS.N    ??initNV_17
+    345                {
+    346                  mostLost = idx;
+   \   00000110   0x0001             MOVS     R1,R0
+    347                }
+   \                     ??initNV_17: (+1)
+   \   00000112   0x1C40             ADDS     R0,R0,#+1
+   \                     ??initNV_15: (+1)
+   \   00000114   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000116   0x2806             CMP      R0,#+6
+   \   00000118   0xDA08             BGE.N    ??initNV_18
+   \   0000011A   0x.... 0x....      LDR.W    R2,??DataTable16
+   \   0000011E   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000120   0xF832 0x2010      LDRH     R2,[R2, R0, LSL #+1]
+   \   00000124   0xF5B2 0x6FFF      CMP      R2,#+2040
+   \   00000128   0xD1E6             BNE.N    ??initNV_16
+   \   0000012A   0x0001             MOVS     R1,R0
+    348              }
+    349          
+    350              pgRes = mostLost;
+   \                     ??initNV_18: (+1)
+   \   0000012C   0x.... 0x....      LDR.W    R0,??DataTable15
+   \   00000130   0x7001             STRB     R1,[R0, #+0]
+    351              erasePage( pgRes );  // The last page erase had been interrupted by a power-cycle.
+   \   00000132   0x.... 0x....      LDR.W    R0,??DataTable15
+   \   00000136   0x7800             LDRB     R0,[R0, #+0]
+   \   00000138   0x.... 0x....      BL       erasePage
+    352            }
+    353          
+    354            return TRUE;
+   \                     ??initNV_14: (+1)
+   \   0000013C   0x2001             MOVS     R0,#+1
+   \   0000013E   0xBD76             POP      {R1,R2,R4-R6,PC}  ;; return
+    355          }
+    356          
+    357          /******************************************************************************
+    358           * @fn      markPage
+    359           *
+    360           * @brief   Set specified page header status to "OSAL_NV_ZEROED_ID"
+    361           *
+    362           * @param   pg  - Valid NV page to verify and init
+    363           * @param   ofs - Page header status data offset
+    364           *
+    365           * @return  none
+    366           */
+
+   \                                 In section .text, align 2, keep-with-next
+    367          static void markPage( uint8 pg, uint8 ofs )
+    368          {
+   \                     markPage: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+   \   00000002   0x000B             MOVS     R3,R1
+    369            hdrData[0] = OSAL_NV_ZEROED_ID;
+   \   00000004   0x2100             MOVS     R1,#+0
+   \   00000006   0x.... 0x....      LDR.W    R2,??DataTable15_1
+   \   0000000A   0x8011             STRH     R1,[R2, #+0]
+    370          
+    371            flashWrite(OSAL_NV_PAGE_TO_PTR(pg) + OSAL_NV_PAGE_HDR_OFFSET + ofs,
+    372                       OSAL_NV_HDR_ITEM, (uint8 *)(hdrData));
+   \   0000000C   0x.... 0x....      LDR.W    R2,??DataTable15_1
+   \   00000010   0x2104             MOVS     R1,#+4
+   \   00000012   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000014   0xF44F 0x6400      MOV      R4,#+2048
+   \   00000018   0x.... 0x....      LDR.W    R5,??DataTable16_1  ;; 0x27c800
+   \   0000001C   0xFB04 0x5000      MLA      R0,R4,R0,R5
+   \   00000020   0xB2DB             UXTB     R3,R3            ;; ZeroExt  R3,R3,#+24,#+24
+   \   00000022   0x1818             ADDS     R0,R3,R0
+   \   00000024   0x.... 0x....      BL       flashWrite
+    373          }
+   \   00000028   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+    374          
+    375          /******************************************************************************
+    376           * @fn      initPage
+    377           *
+    378           * @brief   Walk the page items; calculate checksums, lost bytes & page offset.
+    379           *
+    380           * @param   pg - Valid NV page to verify and init.
+    381           * @param   id - Valid NV item Id to use function as a "findItem".
+    382           *               If set to NULL then just perform the page initialization.
+    383           * @param   findDups - TRUE on recursive call from initNV() to find and zero-out duplicate items
+    384           *                     left from a write that is interrupted by a reset/power-cycle.
+    385           *                     FALSE otherwise.
+    386           *
+    387           * @return  If 'id' is non-NULL and good checksums are found, return the offset
+    388           *          of the data corresponding to item Id; else OSAL_NV_ITEM_NULL.
+    389           */
+
+   \                                 In section .text, align 2, keep-with-next
+    390          static uint16 initPage( uint8 pg, uint16 id, uint8 findDups )
+    391          {
+   \                     initPage: (+1)
+   \   00000000   0xE92D 0x43F0      PUSH     {R4-R9,LR}
+   \   00000004   0xB085             SUB      SP,SP,#+20
+   \   00000006   0x0004             MOVS     R4,R0
+   \   00000008   0x000F             MOVS     R7,R1
+   \   0000000A   0x4690             MOV      R8,R2
+    392            uint16 offset = OSAL_NV_PG_HDR_SIZE;
+   \   0000000C   0x2508             MOVS     R5,#+8
+    393            uint16 sz, lost = 0;
+   \   0000000E   0x2600             MOVS     R6,#+0
+    394            osalNvHdr_t hdr;
+    395          
+    396            do
+    397            {
+    398              readHdr( pg, offset, (uint8 *)(&hdr) );
+   \                     ??initPage_0: (+1)
+   \   00000010   0xAA01             ADD      R2,SP,#+4
+   \   00000012   0x0029             MOVS     R1,R5
+   \   00000014   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   00000016   0x0020             MOVS     R0,R4
+   \   00000018   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000001A   0x.... 0x....      BL       readHdr
+    399          
+    400              if ( hdr.id == OSAL_NV_ERASED_ID )
+   \   0000001E   0xF8BD 0x0004      LDRH     R0,[SP, #+4]
+   \   00000022   0xF64F 0x71FF      MOVW     R1,#+65535
+   \   00000026   0x4288             CMP      R0,R1
+   \   00000028   0xF000 0x8081      BEQ.W    ??initPage_1
+    401              {
+    402                // No more NV items
+    403                break;
+    404              }
+    405          
+    406              // Get the actual size in bytes which is the ceiling(hdr.len)
+    407              sz = OSAL_NV_DATA_SIZE( hdr.len );
+   \                     ??initPage_2: (+1)
+   \   0000002C   0xF8BD 0x0006      LDRH     R0,[SP, #+6]
+   \   00000030   0x1CC0             ADDS     R0,R0,#+3
+   \   00000032   0x2104             MOVS     R1,#+4
+   \   00000034   0xFB90 0xF0F1      SDIV     R0,R0,R1
+   \   00000038   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   0000003A   0xEA5F 0x0980      LSLS     R9,R0,#+2
+    408          
+    409              // A bad 'len' write has blown away the rest of the page.
+    410              if (sz > (OSAL_NV_PAGE_SIZE - OSAL_NV_HDR_SIZE - offset))
+   \   0000003E   0xB2AD             UXTH     R5,R5            ;; ZeroExt  R5,R5,#+16,#+16
+   \   00000040   0xF5D5 0x60FE      RSBS     R0,R5,#+2032
+   \   00000044   0xFA1F 0xF989      UXTH     R9,R9            ;; ZeroExt  R9,R9,#+16,#+16
+   \   00000048   0x4548             CMP      R0,R9
+   \   0000004A   0xDA05             BGE.N    ??initPage_3
+    411              {
+    412                lost += (OSAL_NV_PAGE_SIZE - offset);
+   \   0000004C   0xF516 0x6000      ADDS     R0,R6,#+2048
+   \   00000050   0x1B46             SUBS     R6,R0,R5
+    413                offset = OSAL_NV_PAGE_SIZE;
+   \   00000052   0xF44F 0x6500      MOV      R5,#+2048
+    414                break;
+   \   00000056   0xE06A             B.N      ??initPage_1
+    415              }
+    416          
+    417              offset += OSAL_NV_HDR_SIZE;
+   \                     ??initPage_3: (+1)
+   \   00000058   0x3510             ADDS     R5,R5,#+16
+    418          
+    419              if ( hdr.live != OSAL_NV_ZEROED_ID )
+   \   0000005A   0xF8BD 0x0010      LDRH     R0,[SP, #+16]
+   \   0000005E   0x2800             CMP      R0,#+0
+   \   00000060   0xD05B             BEQ.N    ??initPage_4
+    420              {
+    421                /* This trick allows function to do double duty for findItem() without
+    422                 * compromising its essential functionality at powerup initialization.
+    423                 */
+    424                if ( id != OSAL_NV_ITEM_NULL )
+   \   00000062   0xB2BF             UXTH     R7,R7            ;; ZeroExt  R7,R7,#+16,#+16
+   \   00000064   0x2F00             CMP      R7,#+0
+   \   00000066   0xD019             BEQ.N    ??initPage_5
+    425                {
+    426                  /* This trick allows asking to find the old/transferred item in case
+    427                   * of a successful new item write that gets interrupted before the
+    428                   * old item can be zeroed out.
+    429                   */
+    430                  if ( (id & 0x7fff) == hdr.id )
+   \   00000068   0xB2BF             UXTH     R7,R7            ;; ZeroExt  R7,R7,#+16,#+16
+   \   0000006A   0x0478             LSLS     R0,R7,#+17       ;; ZeroExtS R0,R7,#+17,#+17
+   \   0000006C   0x0C40             LSRS     R0,R0,#+17
+   \   0000006E   0xF8BD 0x1004      LDRH     R1,[SP, #+4]
+   \   00000072   0x4288             CMP      R0,R1
+   \   00000074   0xD154             BNE.N    ??initPage_6
+    431                  {
+    432                    if ( (((id & OSAL_NV_SOURCE_ID) == 0) && (hdr.stat == OSAL_NV_ERASED_ID)) ||
+    433                         (((id & OSAL_NV_SOURCE_ID) != 0) && (hdr.stat != OSAL_NV_ERASED_ID)) )
+   \   00000076   0x0438             LSLS     R0,R7,#+16
+   \   00000078   0xD405             BMI.N    ??initPage_7
+   \   0000007A   0xF8BD 0x000C      LDRH     R0,[SP, #+12]
+   \   0000007E   0xF64F 0x71FF      MOVW     R1,#+65535
+   \   00000082   0x4288             CMP      R0,R1
+   \   00000084   0xD007             BEQ.N    ??initPage_8
+   \                     ??initPage_7: (+1)
+   \   00000086   0x0438             LSLS     R0,R7,#+16
+   \   00000088   0xD54A             BPL.N    ??initPage_6
+   \   0000008A   0xF8BD 0x000C      LDRH     R0,[SP, #+12]
+   \   0000008E   0xF64F 0x71FF      MOVW     R1,#+65535
+   \   00000092   0x4288             CMP      R0,R1
+   \   00000094   0xD044             BEQ.N    ??initPage_6
+    434                    {
+    435                      return offset;
+   \                     ??initPage_8: (+1)
+   \   00000096   0x0028             MOVS     R0,R5
+   \   00000098   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   0000009A   0xE053             B.N      ??initPage_9
+    436                    }
+    437                  }
+    438                }
+    439                // When invoked from the osal_nv_init(), verify checksums and find & zero any duplicates.
+    440                else
+    441                {
+    442                  if ( hdr.chk == calcChkF( pg, offset, hdr.len ) )
+   \                     ??initPage_5: (+1)
+   \   0000009C   0xF8BD 0x2006      LDRH     R2,[SP, #+6]
+   \   000000A0   0x0029             MOVS     R1,R5
+   \   000000A2   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   000000A4   0x0020             MOVS     R0,R4
+   \   000000A6   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   000000A8   0x.... 0x....      BL       calcChkF
+   \   000000AC   0xF8BD 0x1008      LDRH     R1,[SP, #+8]
+   \   000000B0   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   000000B2   0x4281             CMP      R1,R0
+   \   000000B4   0xD126             BNE.N    ??initPage_10
+    443                  {
+    444                    if ( findDups )
+   \   000000B6   0xFA5F 0xF888      UXTB     R8,R8            ;; ZeroExt  R8,R8,#+24,#+24
+   \   000000BA   0xF1B8 0x0F00      CMP      R8,#+0
+   \   000000BE   0xD018             BEQ.N    ??initPage_11
+    445                    {
+    446                      if ( hdr.stat == OSAL_NV_ERASED_ID )
+   \   000000C0   0xF8BD 0x000C      LDRH     R0,[SP, #+12]
+   \   000000C4   0xF64F 0x71FF      MOVW     R1,#+65535
+   \   000000C8   0x4288             CMP      R0,R1
+   \   000000CA   0xD129             BNE.N    ??initPage_6
+    447                      {
+    448                        /* The trick of setting the MSB of the item Id causes the logic
+    449                         * immediately above to return a valid page only if the header 'stat'
+    450                         * indicates that it was the older item being transferred.
+    451                         */
+    452                        uint8 findPg;
+    453                        uint16 off = findItem( (hdr.id | OSAL_NV_SOURCE_ID), &findPg );
+   \   000000CC   0xA900             ADD      R1,SP,#+0
+   \   000000CE   0xF8BD 0x0004      LDRH     R0,[SP, #+4]
+   \   000000D2   0xF450 0x4000      ORRS     R0,R0,#0x8000
+   \   000000D6   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   000000D8   0x.... 0x....      BL       findItem
+   \   000000DC   0x0001             MOVS     R1,R0
+    454          
+    455                        if ( off != OSAL_NV_ITEM_NULL )
+   \   000000DE   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   000000E0   0x2900             CMP      R1,#+0
+   \   000000E2   0xD01D             BEQ.N    ??initPage_6
+    456                        {
+    457                          setItem( findPg, off, eNvZero );  // Mark old duplicate as invalid.
+   \   000000E4   0x2201             MOVS     R2,#+1
+   \   000000E6   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   000000E8   0xF89D 0x0000      LDRB     R0,[SP, #+0]
+   \   000000EC   0x.... 0x....      BL       setItem
+   \   000000F0   0xE016             B.N      ??initPage_6
+    458                        }
+    459                      }
+    460                    }
+    461                    // Any "old" item immediately exits and triggers the N^2 exhaustive initialization.
+    462                    else if ( hdr.stat != OSAL_NV_ERASED_ID )
+   \                     ??initPage_11: (+1)
+   \   000000F2   0xF8BD 0x000C      LDRH     R0,[SP, #+12]
+   \   000000F6   0xF64F 0x71FF      MOVW     R1,#+65535
+   \   000000FA   0x4288             CMP      R0,R1
+   \   000000FC   0xD010             BEQ.N    ??initPage_6
+    463                    {
+    464                      return OSAL_NV_ERASED_ID;
+   \   000000FE   0xF64F 0x70FF      MOVW     R0,#+65535
+   \   00000102   0xE01F             B.N      ??initPage_9
+    465                    }
+    466                  }
+    467                  else
+    468                  {
+    469                    setItem( pg, offset, eNvZero );  // Mark bad checksum as invalid.
+   \                     ??initPage_10: (+1)
+   \   00000104   0x2201             MOVS     R2,#+1
+   \   00000106   0x0029             MOVS     R1,R5
+   \   00000108   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   0000010A   0x0020             MOVS     R0,R4
+   \   0000010C   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000010E   0x.... 0x....      BL       setItem
+    470                    lost += (OSAL_NV_HDR_SIZE + sz);
+   \   00000112   0xF119 0x0010      ADDS     R0,R9,#+16
+   \   00000116   0x1986             ADDS     R6,R0,R6
+   \   00000118   0xE002             B.N      ??initPage_6
+    471                  }
+    472                }
+    473              }
+    474              else
+    475              {
+    476                lost += (OSAL_NV_HDR_SIZE + sz);
+   \                     ??initPage_4: (+1)
+   \   0000011A   0xF119 0x0010      ADDS     R0,R9,#+16
+   \   0000011E   0x1986             ADDS     R6,R0,R6
+    477              }
+    478              offset += sz;
+   \                     ??initPage_6: (+1)
+   \   00000120   0xEB19 0x0505      ADDS     R5,R9,R5
+    479          
+    480            } while (offset < (OSAL_NV_PAGE_SIZE - OSAL_NV_HDR_SIZE));
+   \   00000124   0xB2AD             UXTH     R5,R5            ;; ZeroExt  R5,R5,#+16,#+16
+   \   00000126   0xF5B5 0x6FFE      CMP      R5,#+2032
+   \   0000012A   0xF6FF 0xAF71      BLT.W    ??initPage_0
+    481          
+    482            pgOff[pg] = offset;
+   \                     ??initPage_1: (+1)
+   \   0000012E   0x.... 0x....      LDR.W    R0,??DataTable17
+   \   00000132   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   00000134   0xF820 0x5014      STRH     R5,[R0, R4, LSL #+1]
+    483            pgLost[pg] = lost;
+   \   00000138   0x.... 0x....      LDR.W    R0,??DataTable16
+   \   0000013C   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   0000013E   0xF820 0x6014      STRH     R6,[R0, R4, LSL #+1]
+    484          
+    485            return OSAL_NV_ITEM_NULL;
+   \   00000142   0x2000             MOVS     R0,#+0
+   \                     ??initPage_9: (+1)
+   \   00000144   0xB005             ADD      SP,SP,#+20
+   \   00000146   0xE8BD 0x83F0      POP      {R4-R9,PC}       ;; return
+    486          }
+    487          
+    488          /******************************************************************************
+    489           * @fn      erasePage
+    490           *
+    491           * @brief   Erases a page in Flash.
+    492           *
+    493           * @param   pg - Valid NV page to erase.
+    494           *
+    495           * @return  none
+    496           */
+
+   \                                 In section .text, align 2, keep-with-next
+    497          static void erasePage( uint8 pg )
+    498          {
+   \                     erasePage: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+    499            uint8 *addr = OSAL_NV_PAGE_TO_PTR(pg);
+   \   00000004   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   00000006   0xF44F 0x6000      MOV      R0,#+2048
+   \   0000000A   0x.... 0x....      LDR.W    R1,??DataTable16_1  ;; 0x27c800
+   \   0000000E   0xFB00 0x1504      MLA      R5,R0,R4,R1
+    500            uint8 cnt = OSAL_NV_PHY_PER_PG;
+   \   00000012   0x2601             MOVS     R6,#+1
+    501          
+    502            do {
+    503              flashErasePage(addr);
+   \                     ??erasePage_0: (+1)
+   \   00000014   0x0028             MOVS     R0,R5
+   \   00000016   0x.... 0x....      BL       flashErasePage
+    504              addr += HAL_FLASH_PAGE_SIZE;
+   \   0000001A   0xF515 0x6500      ADDS     R5,R5,#+2048
+    505            } while (--cnt);
+   \   0000001E   0x1E76             SUBS     R6,R6,#+1
+   \   00000020   0xB2F6             UXTB     R6,R6            ;; ZeroExt  R6,R6,#+24,#+24
+   \   00000022   0x2E00             CMP      R6,#+0
+   \   00000024   0xD1F6             BNE.N    ??erasePage_0
+    506          
+    507            pgOff[pg] = OSAL_NV_PG_HDR_SIZE;
+   \   00000026   0x2008             MOVS     R0,#+8
+   \   00000028   0x.... 0x....      LDR.W    R1,??DataTable17
+   \   0000002C   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   0000002E   0xF821 0x0014      STRH     R0,[R1, R4, LSL #+1]
+    508            pgLost[pg] = 0;
+   \   00000032   0x2000             MOVS     R0,#+0
+   \   00000034   0x.... 0x....      LDR.W    R1,??DataTable16
+   \   00000038   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   0000003A   0xF821 0x0014      STRH     R0,[R1, R4, LSL #+1]
+    509          }
+   \   0000003E   0xBD70             POP      {R4-R6,PC}       ;; return
+    510          
+    511          /******************************************************************************
+    512           * @fn      compactPage
+    513           *
+    514           * @brief   Compacts the page specified.
+    515           *
+    516           * @param   srcPg - Valid NV page to erase.
+    517           * @param   skipId - Item Id to not compact.
+    518           *
+    519           * @return  TRUE if valid items from 'srcPg' are successully compacted onto the 'pgRes';
+    520           *          FALSE otherwise.
+    521           *          Note that on a failure, this could loop, re-erasing the 'pgRes' and re-compacting with
+    522           *          the risk of infinitely looping on HAL flash failure.
+    523           *          Worst case scenario: HAL flash starts failing in general, perhaps low Vdd?
+    524           *          All page compactions will fail which will cause all osal_nv_write() calls to return
+    525           *          NV_OPER_FAILED.
+    526           *          Eventually, all pages in use may also be in the state of "pending compaction" where
+    527           *          the page header member OSAL_NV_PG_XFER is zeroed out.
+    528           *          During this "HAL flash brown-out", the code will run and OTA should work (until low Vdd
+    529           *          causes an actual chip brown-out, of course.) Although no new NV items will be created
+    530           *          or written, the last value written with a return value of SUCCESS can continue to be
+    531           *          read successfully.
+    532           *          If eventually HAL flash starts working again, all of the pages marked as
+    533           *          "pending compaction" may or may not be eventually compacted. But, initNV() will
+    534           *          deterministically clean-up one page pending compaction per power-cycle
+    535           *          (if HAL flash is working.) Nevertheless, one erased reserve page will be maintained
+    536           *          through such a scenario.
+    537           */
+
+   \                                 In section .text, align 2, keep-with-next
+    538          static uint8 compactPage( uint8 srcPg, uint16 skipId )
+    539          {
+   \                     compactPage: (+1)
+   \   00000000   0xE92D 0x47F0      PUSH     {R4-R10,LR}
+   \   00000004   0xB086             SUB      SP,SP,#+24
+   \   00000006   0x0004             MOVS     R4,R0
+   \   00000008   0x000D             MOVS     R5,R1
+    540            uint16 srcOff = OSAL_NV_PG_HDR_SIZE;
+   \   0000000A   0x2608             MOVS     R6,#+8
+    541            uint8 rtrn = TRUE;
+   \   0000000C   0x2701             MOVS     R7,#+1
+   \   0000000E   0xE099             B.N      ??compactPage_0
+    542          
+    543            while ( srcOff < (OSAL_NV_PAGE_SIZE - OSAL_NV_HDR_SIZE ) )
+    544            {
+    545              osalNvHdr_t hdr;
+    546              uint16 sz, dstOff = pgOff[pgRes];
+    547          
+    548              readHdr( srcPg, srcOff, (uint8 *)(&hdr) );
+    549          
+    550              if ( hdr.id == OSAL_NV_ERASED_ID )
+    551              {
+    552                // No more NV items on this page
+    553                break;
+    554              }
+    555          
+    556              // Get the actual size in bytes which is the ceiling(hdr.len)
+    557              sz = OSAL_NV_DATA_SIZE( hdr.len );
+   \                     ??compactPage_1: (+1)
+   \   00000010   0xF8BD 0x0006      LDRH     R0,[SP, #+6]
+   \   00000014   0x1CC0             ADDS     R0,R0,#+3
+   \   00000016   0x2104             MOVS     R1,#+4
+   \   00000018   0xFB90 0xF0F1      SDIV     R0,R0,R1
+   \   0000001C   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   0000001E   0xEA5F 0x0980      LSLS     R9,R0,#+2
+    558          
+    559              if ( (sz > (OSAL_NV_PAGE_SIZE - OSAL_NV_HDR_SIZE - srcOff)) ||
+    560                   (sz > (OSAL_NV_PAGE_SIZE - OSAL_NV_HDR_SIZE - dstOff)) )
+   \   00000022   0xB2B6             UXTH     R6,R6            ;; ZeroExt  R6,R6,#+16,#+16
+   \   00000024   0xF5D6 0x60FE      RSBS     R0,R6,#+2032
+   \   00000028   0xFA1F 0xF989      UXTH     R9,R9            ;; ZeroExt  R9,R9,#+16,#+16
+   \   0000002C   0x4548             CMP      R0,R9
+   \   0000002E   0xDB07             BLT.N    ??compactPage_2
+   \   00000030   0xFA1F 0xF888      UXTH     R8,R8            ;; ZeroExt  R8,R8,#+16,#+16
+   \   00000034   0xF5D8 0x60FE      RSBS     R0,R8,#+2032
+   \   00000038   0xFA1F 0xF989      UXTH     R9,R9            ;; ZeroExt  R9,R9,#+16,#+16
+   \   0000003C   0x4548             CMP      R0,R9
+   \   0000003E   0xDA00             BGE.N    ??compactPage_3
+    561              {
+    562                break;
+   \                     ??compactPage_2: (+1)
+   \   00000040   0xE09B             B.N      ??compactPage_4
+    563              }
+    564          
+    565              srcOff += OSAL_NV_HDR_SIZE;
+   \                     ??compactPage_3: (+1)
+   \   00000042   0x3610             ADDS     R6,R6,#+16
+    566          
+    567              if ( (hdr.live != OSAL_NV_ZEROED_ID) && (hdr.id != skipId) )
+   \   00000044   0xF8BD 0x0010      LDRH     R0,[SP, #+16]
+   \   00000048   0x2800             CMP      R0,#+0
+   \   0000004A   0xD079             BEQ.N    ??compactPage_5
+   \   0000004C   0xF8BD 0x0004      LDRH     R0,[SP, #+4]
+   \   00000050   0xB2AD             UXTH     R5,R5            ;; ZeroExt  R5,R5,#+16,#+16
+   \   00000052   0x42A8             CMP      R0,R5
+   \   00000054   0xD074             BEQ.N    ??compactPage_5
+    568              {
+    569                if ( hdr.chk == calcChkF( srcPg, srcOff, hdr.len ) )
+   \   00000056   0xF8BD 0x2006      LDRH     R2,[SP, #+6]
+   \   0000005A   0x0031             MOVS     R1,R6
+   \   0000005C   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   0000005E   0x0020             MOVS     R0,R4
+   \   00000060   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000062   0x.... 0x....      BL       calcChkF
+   \   00000066   0xF8BD 0x1008      LDRH     R1,[SP, #+8]
+   \   0000006A   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   0000006C   0x4281             CMP      R1,R0
+   \   0000006E   0xD167             BNE.N    ??compactPage_5
+    570                {
+    571                  /* Prevent excessive re-writes to item header caused by numerous,
+    572                   * rapid, & successive OSAL_Nv interruptions caused by resets.
+    573                   */
+    574                  if ( hdr.stat == OSAL_NV_ERASED_ID )
+   \   00000070   0xF8BD 0x000C      LDRH     R0,[SP, #+12]
+   \   00000074   0xF64F 0x71FF      MOVW     R1,#+65535
+   \   00000078   0x4288             CMP      R0,R1
+   \   0000007A   0xD106             BNE.N    ??compactPage_6
+    575                  {
+    576                    setItem( srcPg, srcOff, eNvXfer );
+   \   0000007C   0x2200             MOVS     R2,#+0
+   \   0000007E   0x0031             MOVS     R1,R6
+   \   00000080   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   00000082   0x0020             MOVS     R0,R4
+   \   00000084   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000086   0x.... 0x....      BL       setItem
+    577                  }
+    578          
+    579                  if ( writeItem( pgRes, hdr.id, hdr.len, NULL, FALSE ) )
+   \                     ??compactPage_6: (+1)
+   \   0000008A   0x2000             MOVS     R0,#+0
+   \   0000008C   0x9000             STR      R0,[SP, #+0]
+   \   0000008E   0x2300             MOVS     R3,#+0
+   \   00000090   0xF8BD 0x2006      LDRH     R2,[SP, #+6]
+   \   00000094   0xF8BD 0x1004      LDRH     R1,[SP, #+4]
+   \   00000098   0x.... 0x....      LDR.W    R0,??DataTable15
+   \   0000009C   0x7800             LDRB     R0,[R0, #+0]
+   \   0000009E   0x.... 0x....      BL       writeItem
+   \   000000A2   0x2800             CMP      R0,#+0
+   \   000000A4   0xD068             BEQ.N    ??compactPage_7
+    580                  {
+    581                    uint16 chk;
+    582          
+    583                    dstOff += OSAL_NV_HDR_SIZE;
+   \   000000A6   0xF118 0x0810      ADDS     R8,R8,#+16
+    584                    xferBuf( srcPg, srcOff, pgRes, dstOff, sz );
+   \   000000AA   0x4648             MOV      R0,R9
+   \   000000AC   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   000000AE   0x9000             STR      R0,[SP, #+0]
+   \   000000B0   0x4643             MOV      R3,R8
+   \   000000B2   0xB29B             UXTH     R3,R3            ;; ZeroExt  R3,R3,#+16,#+16
+   \   000000B4   0x.... 0x....      LDR.W    R0,??DataTable15
+   \   000000B8   0x7802             LDRB     R2,[R0, #+0]
+   \   000000BA   0x0031             MOVS     R1,R6
+   \   000000BC   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   000000BE   0x0020             MOVS     R0,R4
+   \   000000C0   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   000000C2   0x.... 0x....      BL       xferBuf
+    585                    // Calculate and write the new checksum.
+    586                    hdrData[0] = calcChkF( pgRes, dstOff, hdr.len );
+   \   000000C6   0xF8BD 0x2006      LDRH     R2,[SP, #+6]
+   \   000000CA   0x4641             MOV      R1,R8
+   \   000000CC   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   000000CE   0x.... 0x....      LDR.W    R0,??DataTable15
+   \   000000D2   0x7800             LDRB     R0,[R0, #+0]
+   \   000000D4   0x.... 0x....      BL       calcChkF
+   \   000000D8   0x.... 0x....      LDR.W    R1,??DataTable15_1
+   \   000000DC   0x8008             STRH     R0,[R1, #+0]
+    587                    dstOff -= OSAL_NV_HDR_SIZE;
+   \   000000DE   0xF1B8 0x0810      SUBS     R8,R8,#+16
+    588                    flashWrite(OSAL_NV_PAGE_TO_PTR(pgRes) + dstOff + OSAL_NV_HDR_CHK,
+    589                               OSAL_NV_HDR_ITEM, (uint8 *)(hdrData));
+   \   000000E2   0x.... 0x....      LDR.W    R2,??DataTable15_1
+   \   000000E6   0x2104             MOVS     R1,#+4
+   \   000000E8   0x.... 0x....      LDR.W    R0,??DataTable15
+   \   000000EC   0x7800             LDRB     R0,[R0, #+0]
+   \   000000EE   0xF44F 0x6300      MOV      R3,#+2048
+   \   000000F2   0x.... 0x....      LDR.W    R12,??DataTable17_1  ;; 0x27c800
+   \   000000F6   0xFB03 0xC000      MLA      R0,R3,R0,R12
+   \   000000FA   0xFA1F 0xF888      UXTH     R8,R8            ;; ZeroExt  R8,R8,#+16,#+16
+   \   000000FE   0xEB18 0x0000      ADDS     R0,R8,R0
+   \   00000102   0x1D00             ADDS     R0,R0,#+4
+   \   00000104   0x.... 0x....      BL       flashWrite
+    590                    chk = hdr.chk;
+   \   00000108   0xF8BD 0xA008      LDRH     R10,[SP, #+8]
+    591                    readHdr( pgRes, dstOff, (uint8 *)(&hdr) );
+   \   0000010C   0xAA01             ADD      R2,SP,#+4
+   \   0000010E   0x4641             MOV      R1,R8
+   \   00000110   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   00000112   0x.... 0x....      LDR.W    R0,??DataTable15
+   \   00000116   0x7800             LDRB     R0,[R0, #+0]
+   \   00000118   0x.... 0x....      BL       readHdr
+    592          
+    593                    if ( chk != hdr.chk )
+   \   0000011C   0xF8BD 0x0008      LDRH     R0,[SP, #+8]
+   \   00000120   0xFA1F 0xFA8A      UXTH     R10,R10          ;; ZeroExt  R10,R10,#+16,#+16
+   \   00000124   0x4582             CMP      R10,R0
+   \   00000126   0xD001             BEQ.N    ??compactPage_8
+    594                    {
+    595                      rtrn = FALSE;
+   \   00000128   0x2700             MOVS     R7,#+0
+    596                      break;
+   \   0000012A   0xE026             B.N      ??compactPage_4
+    597                    }
+    598                    else
+    599                    {
+    600                      hotItemUpdate(pgRes, dstOff + OSAL_NV_HDR_SIZE, hdr.id);
+   \                     ??compactPage_8: (+1)
+   \   0000012C   0xF8BD 0x2004      LDRH     R2,[SP, #+4]
+   \   00000130   0xF118 0x0110      ADDS     R1,R8,#+16
+   \   00000134   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   00000136   0x.... 0x....      LDR.W    R0,??DataTable15
+   \   0000013A   0x7800             LDRB     R0,[R0, #+0]
+   \   0000013C   0x.... 0x....      BL       hotItemUpdate
+    601                    }
+    602                  }
+    603                  else
+    604                  {
+    605                    rtrn = FALSE;
+    606                    break;
+    607                  }
+    608                }
+    609              }
+    610          
+    611              srcOff += sz;
+   \                     ??compactPage_5: (+1)
+   \   00000140   0xEB19 0x0606      ADDS     R6,R9,R6
+   \                     ??compactPage_0: (+1)
+   \   00000144   0xB2B6             UXTH     R6,R6            ;; ZeroExt  R6,R6,#+16,#+16
+   \   00000146   0xF5B6 0x6FFE      CMP      R6,#+2032
+   \   0000014A   0xDA16             BGE.N    ??compactPage_4
+   \   0000014C   0x.... 0x....      LDR.W    R0,??DataTable17
+   \   00000150   0x.... 0x....      LDR.W    R1,??DataTable15
+   \   00000154   0x7809             LDRB     R1,[R1, #+0]
+   \   00000156   0xF830 0x8011      LDRH     R8,[R0, R1, LSL #+1]
+   \   0000015A   0xAA01             ADD      R2,SP,#+4
+   \   0000015C   0x0031             MOVS     R1,R6
+   \   0000015E   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   00000160   0x0020             MOVS     R0,R4
+   \   00000162   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000164   0x.... 0x....      BL       readHdr
+   \   00000168   0xF8BD 0x0004      LDRH     R0,[SP, #+4]
+   \   0000016C   0xF64F 0x71FF      MOVW     R1,#+65535
+   \   00000170   0x4288             CMP      R0,R1
+   \   00000172   0xF47F 0xAF4D      BNE.W    ??compactPage_1
+   \   00000176   0xE000             B.N      ??compactPage_4
+   \                     ??compactPage_7: (+1)
+   \   00000178   0x2700             MOVS     R7,#+0
+    612            }
+    613          
+    614            if (rtrn == FALSE)
+   \                     ??compactPage_4: (+1)
+   \   0000017A   0xB2FF             UXTB     R7,R7            ;; ZeroExt  R7,R7,#+24,#+24
+   \   0000017C   0x2F00             CMP      R7,#+0
+   \   0000017E   0xD105             BNE.N    ??compactPage_9
+    615            {
+    616              erasePage(pgRes);
+   \   00000180   0x.... 0x....      LDR.W    R0,??DataTable15
+   \   00000184   0x7800             LDRB     R0,[R0, #+0]
+   \   00000186   0x.... 0x....      BL       erasePage
+   \   0000018A   0xE00F             B.N      ??compactPage_10
+    617            }
+    618            else if (skipId == OSAL_NV_ITEM_NULL)
+   \                     ??compactPage_9: (+1)
+   \   0000018C   0xB2AD             UXTH     R5,R5            ;; ZeroExt  R5,R5,#+16,#+16
+   \   0000018E   0x2D00             CMP      R5,#+0
+   \   00000190   0xD10C             BNE.N    ??compactPage_10
+    619            {
+    620              COMPACT_PAGE_CLEANUP(srcPg);
+   \   00000192   0x2100             MOVS     R1,#+0
+   \   00000194   0x.... 0x....      LDR.W    R0,??DataTable15
+   \   00000198   0x7800             LDRB     R0,[R0, #+0]
+   \   0000019A   0x.... 0x....      BL       markPage
+   \   0000019E   0x0020             MOVS     R0,R4
+   \   000001A0   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   000001A2   0x.... 0x....      BL       erasePage
+   \   000001A6   0x.... 0x....      LDR.W    R0,??DataTable15
+   \   000001AA   0x7004             STRB     R4,[R0, #+0]
+    621            }
+    622            // else invoking function must cleanup.
+    623          
+    624            return rtrn;
+   \                     ??compactPage_10: (+1)
+   \   000001AC   0x0038             MOVS     R0,R7
+   \   000001AE   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   000001B0   0xB006             ADD      SP,SP,#+24
+   \   000001B2   0xE8BD 0x87F0      POP      {R4-R10,PC}      ;; return
+    625          }
+    626          
+    627          /******************************************************************************
+    628           * @fn      findItem
+    629           *
+    630           * @brief   Find an item Id in NV and return the page and offset to its data.
+    631           *
+    632           * @param   id - Valid NV item Id.
+    633           *
+    634           * @return  Offset of data corresponding to item Id, if found;
+    635           *          otherwise OSAL_NV_ITEM_NULL.
+    636           *
+    637           *          The page containing the item, if found;
+    638           *          otherwise no valid assignment made - left equal to item Id.
+    639           *
+    640           */
+
+   \                                 In section .text, align 2, keep-with-next
+    641          static uint16 findItem( uint16 id, uint8 *findPg )
+    642          {
+   \                     findItem: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+   \   00000004   0x000D             MOVS     R5,R1
+    643            uint16 off;
+    644            uint8 pg;
+    645          
+    646            for ( pg = 0; pg < OSAL_NV_PAGES_USED; pg++ )
+   \   00000006   0x2600             MOVS     R6,#+0
+   \   00000008   0xE000             B.N      ??findItem_0
+   \                     ??findItem_1: (+1)
+   \   0000000A   0x1C76             ADDS     R6,R6,#+1
+   \                     ??findItem_0: (+1)
+   \   0000000C   0xB2F6             UXTB     R6,R6            ;; ZeroExt  R6,R6,#+24,#+24
+   \   0000000E   0x2E06             CMP      R6,#+6
+   \   00000010   0xDA0D             BGE.N    ??findItem_2
+    647            {
+    648              if ( (off = initPage( pg, id, FALSE )) != OSAL_NV_ITEM_NULL )
+   \   00000012   0x2200             MOVS     R2,#+0
+   \   00000014   0x0021             MOVS     R1,R4
+   \   00000016   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   00000018   0x0030             MOVS     R0,R6
+   \   0000001A   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000001C   0x.... 0x....      BL       initPage
+   \   00000020   0x0001             MOVS     R1,R0
+   \   00000022   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   00000024   0x2900             CMP      R1,#+0
+   \   00000026   0xD0F0             BEQ.N    ??findItem_1
+    649              {
+    650                *findPg = pg;
+   \   00000028   0x702E             STRB     R6,[R5, #+0]
+    651                return off;
+   \   0000002A   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   0000002C   0xE00B             B.N      ??findItem_3
+    652              }
+    653            }
+    654          
+    655            // Now attempt to find the item as the "old" item of a failed/interrupted NV write.
+    656            if ( (id & OSAL_NV_SOURCE_ID) == 0 )
+   \                     ??findItem_2: (+1)
+   \   0000002E   0x0420             LSLS     R0,R4,#+16
+   \   00000030   0xD406             BMI.N    ??findItem_4
+    657              {
+    658              return findItem( (id | OSAL_NV_SOURCE_ID), findPg );
+   \   00000032   0x0029             MOVS     R1,R5
+   \   00000034   0xF454 0x4000      ORRS     R0,R4,#0x8000
+   \   00000038   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   0000003A   0xF7FF 0xFFE1      BL       findItem
+   \   0000003E   0xE002             B.N      ??findItem_3
+    659            }
+    660            else
+    661            {
+    662            *findPg = OSAL_NV_PAGE_NULL;
+   \                     ??findItem_4: (+1)
+   \   00000040   0x2006             MOVS     R0,#+6
+   \   00000042   0x7028             STRB     R0,[R5, #+0]
+    663            return OSAL_NV_ITEM_NULL;
+   \   00000044   0x2000             MOVS     R0,#+0
+   \                     ??findItem_3: (+1)
+   \   00000046   0xBD70             POP      {R4-R6,PC}       ;; return
+    664          }
+    665          }
+    666          
+    667          /******************************************************************************
+    668           * @fn      initItem
+    669           *
+    670           * @brief   An NV item is created and initialized with the data passed to the function, if any.
+    671           *
+    672           * @param   flag - TRUE if the 'buf' parameter contains data for the call to writeItem().
+    673           *                 (i.e. if invoked from osal_nv_item_init() ).
+    674           *                 FALSE if writeItem() should just write the header and the 'buf' parameter
+    675           *                 is ok to use as a return value of the page number to be cleaned with
+    676           *                 COMPACT_PAGE_CLEANUP().
+    677           *                 (i.e. if invoked from osal_nv_write() ).
+    678           * @param   id  - Valid NV item Id.
+    679           * @param   len - Item data length.
+    680           * @param  *buf - Pointer to item initalization data. Set to NULL if none.
+    681           *
+    682           * @return  The OSAL Nv page number if item write and read back checksums ok;
+    683           *          OSAL_NV_PAGE_NULL otherwise.
+    684           */
+
+   \                                 In section .text, align 2, keep-with-next
+    685          static uint8 initItem( uint8 flag, uint16 id, uint16 len, void *buf )
+    686          {
+   \                     initItem: (+1)
+   \   00000000   0xE92D 0x43F8      PUSH     {R3-R9,LR}
+   \   00000004   0x0004             MOVS     R4,R0
+   \   00000006   0x000D             MOVS     R5,R1
+   \   00000008   0x0016             MOVS     R6,R2
+   \   0000000A   0x001F             MOVS     R7,R3
+    687            uint16 sz = OSAL_NV_ITEM_SIZE( len );
+   \   0000000C   0xB2B6             UXTH     R6,R6            ;; ZeroExt  R6,R6,#+16,#+16
+   \   0000000E   0x1CF0             ADDS     R0,R6,#+3
+   \   00000010   0x2104             MOVS     R1,#+4
+   \   00000012   0xFB90 0xF0F1      SDIV     R0,R0,R1
+   \   00000016   0x0080             LSLS     R0,R0,#+2
+   \   00000018   0x3010             ADDS     R0,R0,#+16
+    688            uint8 rtrn = OSAL_NV_PAGE_NULL;
+   \   0000001A   0xF05F 0x0806      MOVS     R8,#+6
+    689            uint8 cnt = OSAL_NV_PAGES_USED;
+   \   0000001E   0x2106             MOVS     R1,#+6
+    690            uint8 pg = pgRes+1;  // Set to 1 after the reserve page to even wear across all available pages.
+   \   00000020   0x.... 0x....      LDR.W    R2,??DataTable15
+   \   00000024   0x7812             LDRB     R2,[R2, #+0]
+   \   00000026   0xF112 0x0901      ADDS     R9,R2,#+1
+    691          
+    692            do {
+    693              if (pg >= OSAL_NV_PAGES_USED)
+   \                     ??initItem_0: (+1)
+   \   0000002A   0xFA5F 0xF989      UXTB     R9,R9            ;; ZeroExt  R9,R9,#+24,#+24
+   \   0000002E   0xF1B9 0x0F06      CMP      R9,#+6
+   \   00000032   0xDB01             BLT.N    ??initItem_1
+    694              {
+    695                pg = 0;
+   \   00000034   0xF05F 0x0900      MOVS     R9,#+0
+    696              }
+    697              if ( pg != pgRes )
+   \                     ??initItem_1: (+1)
+   \   00000038   0x.... 0x....      LDR.W    R2,??DataTable15
+   \   0000003C   0x7812             LDRB     R2,[R2, #+0]
+   \   0000003E   0xFA5F 0xF989      UXTB     R9,R9            ;; ZeroExt  R9,R9,#+24,#+24
+   \   00000042   0x4591             CMP      R9,R2
+   \   00000044   0xD011             BEQ.N    ??initItem_2
+    698              {
+    699                if ( sz <= (OSAL_NV_PAGE_SIZE - pgOff[pg] + pgLost[pg]) )
+   \   00000046   0x.... 0x....      LDR.W    R2,??DataTable17
+   \   0000004A   0xFA5F 0xF989      UXTB     R9,R9            ;; ZeroExt  R9,R9,#+24,#+24
+   \   0000004E   0xF832 0x2019      LDRH     R2,[R2, R9, LSL #+1]
+   \   00000052   0xF5D2 0x6200      RSBS     R2,R2,#+2048
+   \   00000056   0x.... 0x....      LDR.W    R3,??DataTable16
+   \   0000005A   0xFA5F 0xF989      UXTB     R9,R9            ;; ZeroExt  R9,R9,#+24,#+24
+   \   0000005E   0xF833 0x3019      LDRH     R3,[R3, R9, LSL #+1]
+   \   00000062   0x189A             ADDS     R2,R3,R2
+   \   00000064   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   00000066   0x4282             CMP      R2,R0
+   \   00000068   0xDA05             BGE.N    ??initItem_3
+    700                {
+    701                  // Item fits on this page
+    702                  break;
+    703                }
+    704              }
+    705              pg++;
+   \                     ??initItem_2: (+1)
+   \   0000006A   0xF119 0x0901      ADDS     R9,R9,#+1
+    706            } while (--cnt);
+   \   0000006E   0x1E49             SUBS     R1,R1,#+1
+   \   00000070   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   00000072   0x2900             CMP      R1,#+0
+   \   00000074   0xD1D9             BNE.N    ??initItem_0
+    707          
+    708            if (cnt)
+   \                     ??initItem_3: (+1)
+   \   00000076   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   00000078   0x2900             CMP      R1,#+0
+   \   0000007A   0xD04D             BEQ.N    ??initItem_4
+    709            {
+    710              // Item will fit if an old page is compacted.
+    711              if ( sz > (OSAL_NV_PAGE_SIZE - pgOff[pg]) )
+   \   0000007C   0x.... 0x....      LDR.W    R1,??DataTable17
+   \   00000080   0xFA5F 0xF989      UXTB     R9,R9            ;; ZeroExt  R9,R9,#+24,#+24
+   \   00000084   0xF831 0x1019      LDRH     R1,[R1, R9, LSL #+1]
+   \   00000088   0xF5D1 0x6100      RSBS     R1,R1,#+2048
+   \   0000008C   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   0000008E   0x4281             CMP      R1,R0
+   \   00000090   0xDA34             BGE.N    ??initItem_5
+    712              {
+    713                // Mark the old page as being in process of compaction.
+    714                markPage( pg, OSAL_NV_PG_XFER );
+   \   00000092   0x2104             MOVS     R1,#+4
+   \   00000094   0x4648             MOV      R0,R9
+   \   00000096   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000098   0x.... 0x....      BL       markPage
+    715          
+    716                /* First the old page is compacted, then the new item will be the last one written to what
+    717                 * had been the reserved page.
+    718                 */
+    719                if (compactPage( pg, id ))
+   \   0000009C   0x0029             MOVS     R1,R5
+   \   0000009E   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   000000A0   0x4648             MOV      R0,R9
+   \   000000A2   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   000000A4   0x.... 0x....      BL       compactPage
+   \   000000A8   0x2800             CMP      R0,#+0
+   \   000000AA   0xD035             BEQ.N    ??initItem_4
+    720                {
+    721                  if ( writeItem( pgRes, id, len, buf, flag ) )
+   \   000000AC   0x0020             MOVS     R0,R4
+   \   000000AE   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   000000B0   0x9000             STR      R0,[SP, #+0]
+   \   000000B2   0x003B             MOVS     R3,R7
+   \   000000B4   0x0032             MOVS     R2,R6
+   \   000000B6   0xB292             UXTH     R2,R2            ;; ZeroExt  R2,R2,#+16,#+16
+   \   000000B8   0x0029             MOVS     R1,R5
+   \   000000BA   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   000000BC   0x.... 0x....      LDR.W    R0,??DataTable15
+   \   000000C0   0x7800             LDRB     R0,[R0, #+0]
+   \   000000C2   0x.... 0x....      BL       writeItem
+   \   000000C6   0x2800             CMP      R0,#+0
+   \   000000C8   0xD003             BEQ.N    ??initItem_6
+    722                  {
+    723                    rtrn = pgRes;
+   \   000000CA   0x.... 0x....      LDR.W    R0,??DataTable15
+   \   000000CE   0xF890 0x8000      LDRB     R8,[R0, #+0]
+    724                  }
+    725          
+    726                  if ( flag == FALSE )
+   \                     ??initItem_6: (+1)
+   \   000000D2   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   000000D4   0x2C00             CMP      R4,#+0
+   \   000000D6   0xD102             BNE.N    ??initItem_7
+    727                  {
+    728                    /* Overload 'buf' as an OUT parameter to pass back to the calling function
+    729                     * the old page to be cleaned up.
+    730                     */
+    731                    *(uint8 *)buf = pg;
+   \   000000D8   0xF887 0x9000      STRB     R9,[R7, #+0]
+   \   000000DC   0xE01C             B.N      ??initItem_4
+    732                  }
+    733                  else
+    734                  {
+    735                    /* Safe to do the compacted page cleanup even if writeItem() above failed because the
+    736                     * item does not yet exist since this call with flag==TRUE is from osal_nv_item_init().
+    737                     */
+    738                    COMPACT_PAGE_CLEANUP( pg );
+   \                     ??initItem_7: (+1)
+   \   000000DE   0x2100             MOVS     R1,#+0
+   \   000000E0   0x.... 0x....      LDR.W    R0,??DataTable15
+   \   000000E4   0x7800             LDRB     R0,[R0, #+0]
+   \   000000E6   0x.... 0x....      BL       markPage
+   \   000000EA   0x4648             MOV      R0,R9
+   \   000000EC   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   000000EE   0x.... 0x....      BL       erasePage
+   \   000000F2   0x.... 0x....      LDR.W    R0,??DataTable15
+   \   000000F6   0xF880 0x9000      STRB     R9,[R0, #+0]
+   \   000000FA   0xE00D             B.N      ??initItem_4
+    739                  }
+    740                }
+    741              }
+    742              else
+    743              {
+    744                if ( writeItem( pg, id, len, buf, flag ) )
+   \                     ??initItem_5: (+1)
+   \   000000FC   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   000000FE   0x9400             STR      R4,[SP, #+0]
+   \   00000100   0x003B             MOVS     R3,R7
+   \   00000102   0x0032             MOVS     R2,R6
+   \   00000104   0xB292             UXTH     R2,R2            ;; ZeroExt  R2,R2,#+16,#+16
+   \   00000106   0x0029             MOVS     R1,R5
+   \   00000108   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   0000010A   0x4648             MOV      R0,R9
+   \   0000010C   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000010E   0x.... 0x....      BL       writeItem
+   \   00000112   0x2800             CMP      R0,#+0
+   \   00000114   0xD000             BEQ.N    ??initItem_4
+    745                {
+    746                  rtrn = pg;
+   \   00000116   0x46C8             MOV      R8,R9
+    747                }
+    748              }
+    749            }
+    750          
+    751            return rtrn;
+   \                     ??initItem_4: (+1)
+   \   00000118   0x4640             MOV      R0,R8
+   \   0000011A   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000011C   0xE8BD 0x83F2      POP      {R1,R4-R9,PC}    ;; return
+    752          }
+    753          
+    754          /*********************************************************************
+    755           * @fn      setItem
+    756           *
+    757           * @brief   Set an item Id or status to mark its state.
+    758           *
+    759           * @param   pg - Valid NV page.
+    760           * @param   offset - Valid offset into the page of the item data - the header
+    761           *                   offset is calculated from this.
+    762           * @param   stat - Valid enum value for the item status.
+    763           *
+    764           * @return  none
+    765           */
+
+   \                                 In section .text, align 2, keep-with-next
+    766          static void setItem( uint8 pg, uint16 offset, eNvHdrEnum stat )
+    767          {
+   \                     setItem: (+1)
+   \   00000000   0xB57F             PUSH     {R0-R6,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+   \   00000004   0x000D             MOVS     R5,R1
+   \   00000006   0x0016             MOVS     R6,R2
+    768            uint8 *addr;
+    769            osalNvHdr_t hdr;
+    770          
+    771            offset -= OSAL_NV_HDR_SIZE;
+   \   00000008   0x3D10             SUBS     R5,R5,#+16
+    772            readHdr( pg, offset, (uint8 *)(&hdr) );
+   \   0000000A   0xAA00             ADD      R2,SP,#+0
+   \   0000000C   0x0029             MOVS     R1,R5
+   \   0000000E   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   00000010   0x0020             MOVS     R0,R4
+   \   00000012   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000014   0x.... 0x....      BL       readHdr
+    773          
+    774            // Address of NV item header
+    775            addr = OSAL_NV_PAGE_TO_PTR(pg) + offset;
+   \   00000018   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   0000001A   0xF44F 0x6000      MOV      R0,#+2048
+   \   0000001E   0x.... 0x....      LDR.W    R1,??DataTable17_1  ;; 0x27c800
+   \   00000022   0xFB00 0x1004      MLA      R0,R0,R4,R1
+   \   00000026   0xB2AD             UXTH     R5,R5            ;; ZeroExt  R5,R5,#+16,#+16
+   \   00000028   0x1828             ADDS     R0,R5,R0
+    776          
+    777            if ( stat == eNvXfer )
+   \   0000002A   0xB2F6             UXTB     R6,R6            ;; ZeroExt  R6,R6,#+24,#+24
+   \   0000002C   0x2E00             CMP      R6,#+0
+   \   0000002E   0xD108             BNE.N    ??setItem_0
+    778            {
+    779              hdr.stat = OSAL_NV_ACTIVE;
+   \   00000030   0x2100             MOVS     R1,#+0
+   \   00000032   0xF8AD 0x1008      STRH     R1,[SP, #+8]
+    780              flashWrite(addr + OSAL_NV_HDR_STAT, OSAL_NV_HDR_ITEM, (uint8*)(&(hdr.stat)));
+   \   00000036   0xAA02             ADD      R2,SP,#+8
+   \   00000038   0x2104             MOVS     R1,#+4
+   \   0000003A   0x3008             ADDS     R0,R0,#+8
+   \   0000003C   0x.... 0x....      BL       flashWrite
+   \   00000040   0xE01B             B.N      ??setItem_1
+    781            }
+    782            else // if ( stat == eNvZero )
+    783            {
+    784              uint16 sz = ((hdr.len + (OSAL_NV_WORD_SIZE-1)) / OSAL_NV_WORD_SIZE) * OSAL_NV_WORD_SIZE +
+    785                                                                                    OSAL_NV_HDR_SIZE;
+   \                     ??setItem_0: (+1)
+   \   00000042   0xF8BD 0x1002      LDRH     R1,[SP, #+2]
+   \   00000046   0x1CC9             ADDS     R1,R1,#+3
+   \   00000048   0x2204             MOVS     R2,#+4
+   \   0000004A   0xFB91 0xF1F2      SDIV     R1,R1,R2
+   \   0000004E   0x0089             LSLS     R1,R1,#+2
+   \   00000050   0xF111 0x0510      ADDS     R5,R1,#+16
+    786              hdr.live = OSAL_NV_ZEROED_ID;
+   \   00000054   0x2100             MOVS     R1,#+0
+   \   00000056   0xF8AD 0x100C      STRH     R1,[SP, #+12]
+    787              flashWrite(addr + OSAL_NV_HDR_LIVE, OSAL_NV_HDR_ITEM, (uint8*)(&(hdr.live)));
+   \   0000005A   0xAA03             ADD      R2,SP,#+12
+   \   0000005C   0x2104             MOVS     R1,#+4
+   \   0000005E   0x300C             ADDS     R0,R0,#+12
+   \   00000060   0x.... 0x....      BL       flashWrite
+    788              pgLost[pg] += sz;
+   \   00000064   0x.... 0x....      LDR.W    R0,??DataTable16
+   \   00000068   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   0000006A   0xF830 0x0014      LDRH     R0,[R0, R4, LSL #+1]
+   \   0000006E   0x1828             ADDS     R0,R5,R0
+   \   00000070   0x.... 0x....      LDR.W    R1,??DataTable16
+   \   00000074   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   00000076   0xF821 0x0014      STRH     R0,[R1, R4, LSL #+1]
+    789            }
+    790          }
+   \                     ??setItem_1: (+1)
+   \   0000007A   0xBD7F             POP      {R0-R6,PC}       ;; return
+    791          
+    792          /******************************************************************************
+    793           * @fn      calcChkB
+    794           *
+    795           * @brief   Calculates the data checksum over the 'buf' parameter.
+    796           *
+    797           * @param   len - Byte count of the data to be checksummed.
+    798           * @param   buf - Data buffer to be checksummed.
+    799           *
+    800           * @return  Calculated checksum of the data bytes.
+    801           */
+
+   \                                 In section .text, align 2, keep-with-next
+    802          static uint16 calcChkB( uint16 len, uint8 *buf )
+    803          {
+   \                     calcChkB: (+1)
+   \   00000000   0xB410             PUSH     {R4}
+    804            uint8 fill = len % OSAL_NV_WORD_SIZE;
+   \   00000002   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   00000004   0x2204             MOVS     R2,#+4
+   \   00000006   0xFB90 0xF3F2      SDIV     R3,R0,R2
+   \   0000000A   0xFB03 0x0312      MLS      R3,R3,R2,R0
+    805            uint16 chk;
+    806          
+    807            if ( !buf )
+   \   0000000E   0x2900             CMP      R1,#+0
+   \   00000010   0xD103             BNE.N    ??calcChkB_0
+    808            {
+    809              chk = len * OSAL_NV_ERASED;
+   \   00000012   0x21FF             MOVS     R1,#+255
+   \   00000014   0xFB01 0xF200      MUL      R2,R1,R0
+   \   00000018   0xE009             B.N      ??calcChkB_1
+    810            }
+    811            else
+    812            {
+    813              chk = 0;
+   \                     ??calcChkB_0: (+1)
+   \   0000001A   0x2200             MOVS     R2,#+0
+   \   0000001C   0xE002             B.N      ??calcChkB_2
+    814              while ( len-- )
+    815              {
+    816                chk += *buf++;
+   \                     ??calcChkB_3: (+1)
+   \   0000001E   0x780C             LDRB     R4,[R1, #+0]
+   \   00000020   0x18A2             ADDS     R2,R4,R2
+   \   00000022   0x1C49             ADDS     R1,R1,#+1
+    817              }
+   \                     ??calcChkB_2: (+1)
+   \   00000024   0x0004             MOVS     R4,R0
+   \   00000026   0x1E60             SUBS     R0,R4,#+1
+   \   00000028   0xB2A4             UXTH     R4,R4            ;; ZeroExt  R4,R4,#+16,#+16
+   \   0000002A   0x2C00             CMP      R4,#+0
+   \   0000002C   0xD1F7             BNE.N    ??calcChkB_3
+    818            }
+    819          
+    820            // calcChkF() will calculate over OSAL_NV_WORD_SIZE alignment.
+    821            if ( fill )
+   \                     ??calcChkB_1: (+1)
+   \   0000002E   0xB2DB             UXTB     R3,R3            ;; ZeroExt  R3,R3,#+24,#+24
+   \   00000030   0x2B00             CMP      R3,#+0
+   \   00000032   0xD006             BEQ.N    ??calcChkB_4
+    822            {
+    823              chk += (OSAL_NV_WORD_SIZE - fill) * OSAL_NV_ERASED;
+   \   00000034   0xB292             UXTH     R2,R2            ;; ZeroExt  R2,R2,#+16,#+16
+   \   00000036   0xB2DB             UXTB     R3,R3            ;; ZeroExt  R3,R3,#+24,#+24
+   \   00000038   0xF1D3 0x0004      RSBS     R0,R3,#+4
+   \   0000003C   0x21FF             MOVS     R1,#+255
+   \   0000003E   0xFB01 0x2200      MLA      R2,R1,R0,R2
+    824            }
+    825          
+    826            return chk;
+   \                     ??calcChkB_4: (+1)
+   \   00000042   0x0010             MOVS     R0,R2
+   \   00000044   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   00000046   0xBC10             POP      {R4}
+   \   00000048   0x4770             BX       LR               ;; return
+    827          }
+    828          
+    829          /******************************************************************************
+    830           * @fn      calcChkF
+    831           *
+    832           * @brief   Calculates the data checksum by reading the data bytes from NV.
+    833           *
+    834           * @param   pg - A valid NV Flash page.
+    835           * @param   offset - A valid offset into the page.
+    836           * @param   len - Byte count of the data to be checksummed.
+    837           *
+    838           * @return  Calculated checksum of the data bytes.
+    839           */
+
+   \                                 In section .text, align 2, keep-with-next
+    840          static uint16 calcChkF( uint8 pg, uint16 offset, uint16 len )
+    841          {
+   \                     calcChkF: (+1)
+   \   00000000   0xB410             PUSH     {R4}
+    842            uint8 *addr = OSAL_NV_PAGE_TO_PTR( pg ) + offset;
+   \   00000002   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000004   0xF44F 0x6300      MOV      R3,#+2048
+   \   00000008   0x.... 0x....      LDR.W    R4,??DataTable17_1  ;; 0x27c800
+   \   0000000C   0xFB03 0x4000      MLA      R0,R3,R0,R4
+   \   00000010   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   00000012   0x1809             ADDS     R1,R1,R0
+    843            uint16 chk = 0;
+   \   00000014   0x2000             MOVS     R0,#+0
+    844          
+    845            // Length of data extended to OSAL_NV_WORD_SIZE
+    846            len = OSAL_NV_DATA_SIZE( len );
+   \   00000016   0xB292             UXTH     R2,R2            ;; ZeroExt  R2,R2,#+16,#+16
+   \   00000018   0x1CD2             ADDS     R2,R2,#+3
+   \   0000001A   0x2304             MOVS     R3,#+4
+   \   0000001C   0xFB92 0xF2F3      SDIV     R2,R2,R3
+   \   00000020   0xB292             UXTH     R2,R2            ;; ZeroExt  R2,R2,#+16,#+16
+   \   00000022   0x0092             LSLS     R2,R2,#+2
+   \   00000024   0xE002             B.N      ??calcChkF_0
+    847          
+    848            while ( len-- )
+    849              {
+    850              chk += *addr++;
+   \                     ??calcChkF_1: (+1)
+   \   00000026   0x780B             LDRB     R3,[R1, #+0]
+   \   00000028   0x1818             ADDS     R0,R3,R0
+   \   0000002A   0x1C49             ADDS     R1,R1,#+1
+    851              }
+   \                     ??calcChkF_0: (+1)
+   \   0000002C   0x0013             MOVS     R3,R2
+   \   0000002E   0x1E5A             SUBS     R2,R3,#+1
+   \   00000030   0xB29B             UXTH     R3,R3            ;; ZeroExt  R3,R3,#+16,#+16
+   \   00000032   0x2B00             CMP      R3,#+0
+   \   00000034   0xD1F7             BNE.N    ??calcChkF_1
+    852          
+    853              return chk;
+   \   00000036   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   00000038   0xBC10             POP      {R4}
+   \   0000003A   0x4770             BX       LR               ;; return
+    854            }
+    855          
+    856          /******************************************************************************
+    857           * @fn      readHdr
+    858           *
+    859           * @brief   Reads "sizeof( osalNvHdr_t )" bytes from NV.
+    860           *
+    861           * @param   pg - Valid NV page.
+    862           * @param   offset - Valid offset into the page.
+    863           * @param   buf - Valid buffer space of at least sizeof( osalNvHdr_t ) bytes.
+    864           *
+    865           * @return  none
+    866           */
+
+   \                                 In section .text, align 2, keep-with-next
+    867          static void readHdr( uint8 pg, uint16 offset, uint8 *buf )
+    868          {
+   \                     readHdr: (+1)
+   \   00000000   0xB410             PUSH     {R4}
+    869            uint8 *addr = OSAL_NV_PAGE_TO_PTR( pg ) + offset;
+   \   00000002   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000004   0xF44F 0x6300      MOV      R3,#+2048
+   \   00000008   0x.... 0x....      LDR.W    R4,??DataTable17_1  ;; 0x27c800
+   \   0000000C   0xFB03 0x4000      MLA      R0,R3,R0,R4
+   \   00000010   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   00000012   0x1808             ADDS     R0,R1,R0
+    870            uint8 len = OSAL_NV_HDR_SIZE;
+   \   00000014   0x2110             MOVS     R1,#+16
+    871          
+    872            do
+    873            {
+    874              *buf++ = *addr++;
+   \                     ??readHdr_0: (+1)
+   \   00000016   0x7803             LDRB     R3,[R0, #+0]
+   \   00000018   0x7013             STRB     R3,[R2, #+0]
+   \   0000001A   0x1C40             ADDS     R0,R0,#+1
+   \   0000001C   0x1C52             ADDS     R2,R2,#+1
+    875            } while ( --len );
+   \   0000001E   0x1E49             SUBS     R1,R1,#+1
+   \   00000020   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   00000022   0x2900             CMP      R1,#+0
+   \   00000024   0xD1F7             BNE.N    ??readHdr_0
+    876          }
+   \   00000026   0xBC10             POP      {R4}
+   \   00000028   0x4770             BX       LR               ;; return
+    877          
+    878          /******************************************************************************
+    879           * @fn      readPgHdr
+    880           *
+    881           * @brief   Reads "sizeof( osalNvPgHdr_t )" bytes from NV.
+    882           *
+    883           * @param   pg - Valid NV page.
+    884           * @param   offset - Valid offset into the page.
+    885           * @param   buf - Valid buffer space of at least sizeof( osalNvPgHdr_t ) bytes.
+    886           *
+    887           * @return  none
+    888           */
+
+   \                                 In section .text, align 2, keep-with-next
+    889          static void readPgHdr( uint8 pg, uint16 offset, uint8 *buf )
+    890          {
+   \                     readPgHdr: (+1)
+   \   00000000   0xB410             PUSH     {R4}
+    891            uint8 *addr = OSAL_NV_PAGE_TO_PTR( pg ) + offset;
+   \   00000002   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000004   0xF44F 0x6300      MOV      R3,#+2048
+   \   00000008   0x.... 0x....      LDR.W    R4,??DataTable17_1  ;; 0x27c800
+   \   0000000C   0xFB03 0x4000      MLA      R0,R3,R0,R4
+   \   00000010   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   00000012   0x1808             ADDS     R0,R1,R0
+    892            uint8 len = OSAL_NV_PG_HDR_SIZE;
+   \   00000014   0x2108             MOVS     R1,#+8
+    893          
+    894            do
+    895            {
+    896              *buf++ = *addr++;
+   \                     ??readPgHdr_0: (+1)
+   \   00000016   0x7803             LDRB     R3,[R0, #+0]
+   \   00000018   0x7013             STRB     R3,[R2, #+0]
+   \   0000001A   0x1C40             ADDS     R0,R0,#+1
+   \   0000001C   0x1C52             ADDS     R2,R2,#+1
+    897            } while ( --len );
+   \   0000001E   0x1E49             SUBS     R1,R1,#+1
+   \   00000020   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   00000022   0x2900             CMP      R1,#+0
+   \   00000024   0xD1F7             BNE.N    ??readPgHdr_0
+    898          }
+   \   00000026   0xBC10             POP      {R4}
+   \   00000028   0x4770             BX       LR               ;; return
+    899          
+    900          /******************************************************************************
+    901           * @fn      writeBuf
+    902           *
+    903           * @brief   Writes a data buffer to NV.
+    904           *
+    905           * @param   dstPg - A valid NV Flash page.
+    906           * @param   offset - A valid offset into the page.
+    907           * @param   len  - Byte count of the data to write.
+    908           * @param   buf  - The data to write.
+    909           *
+    910           * @return  TRUE if data buf checksum matches read back checksum, else FALSE.
+    911           */
+
+   \                                 In section .text, align 2, keep-with-next
+    912          static void writeBuf( uint8 dstPg, uint16 dstOff, uint16 len, uint8 *buf )
+    913          {
+   \                     writeBuf: (+1)
+   \   00000000   0xE92D 0x41F0      PUSH     {R4-R8,LR}
+   \   00000004   0xB082             SUB      SP,SP,#+8
+   \   00000006   0x0004             MOVS     R4,R0
+   \   00000008   0x4688             MOV      R8,R1
+   \   0000000A   0x0015             MOVS     R5,R2
+   \   0000000C   0x001E             MOVS     R6,R3
+    914            uint8 *addr;
+    915            uint8 idx, rem, tmp[OSAL_NV_WORD_SIZE];
+    916          
+    917            rem = dstOff % OSAL_NV_WORD_SIZE;
+   \   0000000E   0xFA1F 0xF888      UXTH     R8,R8            ;; ZeroExt  R8,R8,#+16,#+16
+   \   00000012   0x2004             MOVS     R0,#+4
+   \   00000014   0xFB98 0xF7F0      SDIV     R7,R8,R0
+   \   00000018   0xFB07 0x8710      MLS      R7,R7,R0,R8
+    918            if ( rem )
+   \   0000001C   0xB2FF             UXTB     R7,R7            ;; ZeroExt  R7,R7,#+24,#+24
+   \   0000001E   0x2F00             CMP      R7,#+0
+   \   00000020   0xD040             BEQ.N    ??writeBuf_0
+    919            {
+    920              dstOff -= rem;
+   \   00000022   0xB2FF             UXTB     R7,R7            ;; ZeroExt  R7,R7,#+24,#+24
+   \   00000024   0xEBB8 0x0807      SUBS     R8,R8,R7
+    921              addr = OSAL_NV_PAGE_TO_PTR( dstPg ) + dstOff;
+   \   00000028   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   0000002A   0xF44F 0x6000      MOV      R0,#+2048
+   \   0000002E   0x.... 0x....      LDR.W    R1,??DataTable17_1  ;; 0x27c800
+   \   00000032   0xFB00 0x1004      MLA      R0,R0,R4,R1
+   \   00000036   0xFA1F 0xF888      UXTH     R8,R8            ;; ZeroExt  R8,R8,#+16,#+16
+   \   0000003A   0xEB18 0x0100      ADDS     R1,R8,R0
+    922          
+    923              for ( idx = 0; idx < rem; idx++ )
+   \   0000003E   0x2000             MOVS     R0,#+0
+   \   00000040   0xE005             B.N      ??writeBuf_1
+    924              {
+    925                tmp[idx] = *addr++;
+   \                     ??writeBuf_2: (+1)
+   \   00000042   0x780A             LDRB     R2,[R1, #+0]
+   \   00000044   0xAB00             ADD      R3,SP,#+0
+   \   00000046   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000048   0x54C2             STRB     R2,[R0, R3]
+   \   0000004A   0x1C49             ADDS     R1,R1,#+1
+    926              }
+   \   0000004C   0x1C40             ADDS     R0,R0,#+1
+   \                     ??writeBuf_1: (+1)
+   \   0000004E   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000050   0xB2FF             UXTB     R7,R7            ;; ZeroExt  R7,R7,#+24,#+24
+   \   00000052   0x42B8             CMP      R0,R7
+   \   00000054   0xD3F5             BCC.N    ??writeBuf_2
+    927          
+    928              while ( (idx < OSAL_NV_WORD_SIZE) && len )
+   \                     ??writeBuf_3: (+1)
+   \   00000056   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000058   0x2804             CMP      R0,#+4
+   \   0000005A   0xDA0F             BGE.N    ??writeBuf_4
+   \   0000005C   0xB2AD             UXTH     R5,R5            ;; ZeroExt  R5,R5,#+16,#+16
+   \   0000005E   0x2D00             CMP      R5,#+0
+   \   00000060   0xD00C             BEQ.N    ??writeBuf_4
+    929              {
+    930                tmp[idx++] = *buf++;
+   \   00000062   0x7831             LDRB     R1,[R6, #+0]
+   \   00000064   0xAA00             ADD      R2,SP,#+0
+   \   00000066   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000068   0x5481             STRB     R1,[R0, R2]
+   \   0000006A   0x1C76             ADDS     R6,R6,#+1
+   \   0000006C   0x1C40             ADDS     R0,R0,#+1
+    931                len--;
+   \   0000006E   0x1E6D             SUBS     R5,R5,#+1
+   \   00000070   0xE7F1             B.N      ??writeBuf_3
+    932              }
+    933          
+    934              while ( idx < OSAL_NV_WORD_SIZE )
+    935              {
+    936                tmp[idx++] = OSAL_NV_ERASED;
+   \                     ??writeBuf_5: (+1)
+   \   00000072   0x21FF             MOVS     R1,#+255
+   \   00000074   0xAA00             ADD      R2,SP,#+0
+   \   00000076   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000078   0x5481             STRB     R1,[R0, R2]
+   \   0000007A   0x1C40             ADDS     R0,R0,#+1
+    937              }
+   \                     ??writeBuf_4: (+1)
+   \   0000007C   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000007E   0x2804             CMP      R0,#+4
+   \   00000080   0xDBF7             BLT.N    ??writeBuf_5
+    938          
+    939              flashWrite(OSAL_NV_PAGE_TO_PTR(dstPg) + dstOff, OSAL_NV_WORD_SIZE, tmp);
+   \   00000082   0xAA00             ADD      R2,SP,#+0
+   \   00000084   0x2104             MOVS     R1,#+4
+   \   00000086   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   00000088   0xF44F 0x6000      MOV      R0,#+2048
+   \   0000008C   0x.... 0x....      LDR.W    R3,??DataTable17_1  ;; 0x27c800
+   \   00000090   0xFB00 0x3004      MLA      R0,R0,R4,R3
+   \   00000094   0xFA1F 0xF888      UXTH     R8,R8            ;; ZeroExt  R8,R8,#+16,#+16
+   \   00000098   0xEB18 0x0000      ADDS     R0,R8,R0
+   \   0000009C   0x.... 0x....      BL       flashWrite
+    940              dstOff += OSAL_NV_WORD_SIZE;
+   \   000000A0   0xF118 0x0804      ADDS     R8,R8,#+4
+    941            }
+    942          
+    943            rem = len % OSAL_NV_WORD_SIZE;
+   \                     ??writeBuf_0: (+1)
+   \   000000A4   0xB2AD             UXTH     R5,R5            ;; ZeroExt  R5,R5,#+16,#+16
+   \   000000A6   0x2004             MOVS     R0,#+4
+   \   000000A8   0xFB95 0xF7F0      SDIV     R7,R5,R0
+   \   000000AC   0xFB07 0x5710      MLS      R7,R7,R0,R5
+    944            len = (len / OSAL_NV_WORD_SIZE) * OSAL_NV_WORD_SIZE;
+   \   000000B0   0xB2AD             UXTH     R5,R5            ;; ZeroExt  R5,R5,#+16,#+16
+   \   000000B2   0x2004             MOVS     R0,#+4
+   \   000000B4   0xFB95 0xF0F0      SDIV     R0,R5,R0
+   \   000000B8   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   000000BA   0x0085             LSLS     R5,R0,#+2
+    945            flashWrite(OSAL_NV_PAGE_TO_PTR(dstPg) + dstOff, len, buf);
+   \   000000BC   0x0032             MOVS     R2,R6
+   \   000000BE   0x0029             MOVS     R1,R5
+   \   000000C0   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   000000C2   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   000000C4   0xF44F 0x6000      MOV      R0,#+2048
+   \   000000C8   0x.... 0x....      LDR.W    R3,??DataTable17_1  ;; 0x27c800
+   \   000000CC   0xFB00 0x3004      MLA      R0,R0,R4,R3
+   \   000000D0   0xFA1F 0xF888      UXTH     R8,R8            ;; ZeroExt  R8,R8,#+16,#+16
+   \   000000D4   0xEB18 0x0000      ADDS     R0,R8,R0
+   \   000000D8   0x.... 0x....      BL       flashWrite
+    946          
+    947            if ( rem )
+   \   000000DC   0xB2FF             UXTB     R7,R7            ;; ZeroExt  R7,R7,#+24,#+24
+   \   000000DE   0x2F00             CMP      R7,#+0
+   \   000000E0   0xD027             BEQ.N    ??writeBuf_6
+    948            {
+    949              dstOff += len;
+   \   000000E2   0xEB15 0x0808      ADDS     R8,R5,R8
+    950              buf += len;
+   \   000000E6   0xB2AD             UXTH     R5,R5            ;; ZeroExt  R5,R5,#+16,#+16
+   \   000000E8   0x19AE             ADDS     R6,R5,R6
+    951          
+    952              for ( idx = 0; idx < rem; idx++ )
+   \   000000EA   0x2000             MOVS     R0,#+0
+   \   000000EC   0xE005             B.N      ??writeBuf_7
+    953              {
+    954                tmp[idx] = *buf++;
+   \                     ??writeBuf_8: (+1)
+   \   000000EE   0x7831             LDRB     R1,[R6, #+0]
+   \   000000F0   0xAA00             ADD      R2,SP,#+0
+   \   000000F2   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   000000F4   0x5481             STRB     R1,[R0, R2]
+   \   000000F6   0x1C76             ADDS     R6,R6,#+1
+    955              }
+   \   000000F8   0x1C40             ADDS     R0,R0,#+1
+   \                     ??writeBuf_7: (+1)
+   \   000000FA   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   000000FC   0xB2FF             UXTB     R7,R7            ;; ZeroExt  R7,R7,#+24,#+24
+   \   000000FE   0x42B8             CMP      R0,R7
+   \   00000100   0xD3F5             BCC.N    ??writeBuf_8
+    956          
+    957              while ( idx < OSAL_NV_WORD_SIZE )
+   \                     ??writeBuf_9: (+1)
+   \   00000102   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000104   0x2804             CMP      R0,#+4
+   \   00000106   0xDA05             BGE.N    ??writeBuf_10
+    958              {
+    959                tmp[idx++] = OSAL_NV_ERASED;
+   \   00000108   0x21FF             MOVS     R1,#+255
+   \   0000010A   0xAA00             ADD      R2,SP,#+0
+   \   0000010C   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000010E   0x5481             STRB     R1,[R0, R2]
+   \   00000110   0x1C40             ADDS     R0,R0,#+1
+   \   00000112   0xE7F6             B.N      ??writeBuf_9
+    960              }
+    961          
+    962              flashWrite(OSAL_NV_PAGE_TO_PTR(dstPg) + dstOff, OSAL_NV_WORD_SIZE, tmp);
+   \                     ??writeBuf_10: (+1)
+   \   00000114   0xAA00             ADD      R2,SP,#+0
+   \   00000116   0x2104             MOVS     R1,#+4
+   \   00000118   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   0000011A   0xF44F 0x6000      MOV      R0,#+2048
+   \   0000011E   0x.... 0x....      LDR.W    R3,??DataTable17_1  ;; 0x27c800
+   \   00000122   0xFB00 0x3004      MLA      R0,R0,R4,R3
+   \   00000126   0xFA1F 0xF888      UXTH     R8,R8            ;; ZeroExt  R8,R8,#+16,#+16
+   \   0000012A   0xEB18 0x0000      ADDS     R0,R8,R0
+   \   0000012E   0x.... 0x....      BL       flashWrite
+    963            }
+    964          }
+   \                     ??writeBuf_6: (+1)
+   \   00000132   0xE8BD 0x81F3      POP      {R0,R1,R4-R8,PC}  ;; return
+    965          
+    966          /******************************************************************************
+    967           * @fn      xferBuf
+    968           *
+    969           * @brief   Xfers an NV buffer from one location to another, enforcing OSAL_NV_WORD_SIZE writes.
+    970           *
+    971           * @return  none
+    972           */
+
+   \                                 In section .text, align 2, keep-with-next
+    973          static void xferBuf( uint8 srcPg, uint16 srcOff, uint8 dstPg, uint16 dstOff, uint16 len )
+    974          {
+   \                     xferBuf: (+1)
+   \   00000000   0xE92D 0x47F0      PUSH     {R4-R10,LR}
+   \   00000004   0xB082             SUB      SP,SP,#+8
+   \   00000006   0x0005             MOVS     R5,R0
+   \   00000008   0x000E             MOVS     R6,R1
+   \   0000000A   0x0017             MOVS     R7,R2
+   \   0000000C   0x4698             MOV      R8,R3
+    975            uint8 *addr;
+    976            uint8 idx, rem, tmp[OSAL_NV_WORD_SIZE];
+    977          
+    978            rem = dstOff % OSAL_NV_WORD_SIZE;
+   \   0000000E   0xFA1F 0xF888      UXTH     R8,R8            ;; ZeroExt  R8,R8,#+16,#+16
+   \   00000012   0x2004             MOVS     R0,#+4
+   \   00000014   0xFB98 0xF9F0      SDIV     R9,R8,R0
+   \   00000018   0xFB09 0x8910      MLS      R9,R9,R0,R8
+   \   0000001C   0x9C0A             LDR      R4,[SP, #+40]
+    979            if ( rem )
+   \   0000001E   0xFA5F 0xF989      UXTB     R9,R9            ;; ZeroExt  R9,R9,#+24,#+24
+   \   00000022   0xF1B9 0x0F00      CMP      R9,#+0
+   \   00000026   0xD052             BEQ.N    ??xferBuf_0
+    980            {
+    981              dstOff -= rem;
+   \   00000028   0xFA5F 0xF989      UXTB     R9,R9            ;; ZeroExt  R9,R9,#+24,#+24
+   \   0000002C   0xEBB8 0x0809      SUBS     R8,R8,R9
+    982              addr = OSAL_NV_PAGE_TO_PTR( dstPg ) + dstOff;
+   \   00000030   0xB2FF             UXTB     R7,R7            ;; ZeroExt  R7,R7,#+24,#+24
+   \   00000032   0xF44F 0x6000      MOV      R0,#+2048
+   \   00000036   0x.... 0x....      LDR.W    R1,??DataTable17_1  ;; 0x27c800
+   \   0000003A   0xFB00 0x1007      MLA      R0,R0,R7,R1
+   \   0000003E   0xFA1F 0xF888      UXTH     R8,R8            ;; ZeroExt  R8,R8,#+16,#+16
+   \   00000042   0xEB18 0x0A00      ADDS     R10,R8,R0
+    983          
+    984              for ( idx = 0; idx < rem; idx++ )
+   \   00000046   0x2000             MOVS     R0,#+0
+   \   00000048   0xE007             B.N      ??xferBuf_1
+    985              {
+    986                tmp[idx] = *addr++;
+   \                     ??xferBuf_2: (+1)
+   \   0000004A   0xF89A 0x1000      LDRB     R1,[R10, #+0]
+   \   0000004E   0xAA00             ADD      R2,SP,#+0
+   \   00000050   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000052   0x5481             STRB     R1,[R0, R2]
+   \   00000054   0xF11A 0x0A01      ADDS     R10,R10,#+1
+    987              }
+   \   00000058   0x1C40             ADDS     R0,R0,#+1
+   \                     ??xferBuf_1: (+1)
+   \   0000005A   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000005C   0xFA5F 0xF989      UXTB     R9,R9            ;; ZeroExt  R9,R9,#+24,#+24
+   \   00000060   0x4548             CMP      R0,R9
+   \   00000062   0xD3F2             BCC.N    ??xferBuf_2
+    988          
+    989              addr = OSAL_NV_PAGE_TO_PTR( srcPg ) + srcOff;
+   \   00000064   0xB2ED             UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+   \   00000066   0xF44F 0x6100      MOV      R1,#+2048
+   \   0000006A   0x.... 0x....      LDR.W    R2,??DataTable17_1  ;; 0x27c800
+   \   0000006E   0xFB01 0x2105      MLA      R1,R1,R5,R2
+   \   00000072   0xB2B6             UXTH     R6,R6            ;; ZeroExt  R6,R6,#+16,#+16
+   \   00000074   0xEB16 0x0A01      ADDS     R10,R6,R1
+   \   00000078   0xE009             B.N      ??xferBuf_3
+    990          
+    991              while ( (idx < OSAL_NV_WORD_SIZE) && len )
+    992              {
+    993                tmp[idx++] = *addr++;
+   \                     ??xferBuf_4: (+1)
+   \   0000007A   0xF89A 0x1000      LDRB     R1,[R10, #+0]
+   \   0000007E   0xAA00             ADD      R2,SP,#+0
+   \   00000080   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000082   0x5481             STRB     R1,[R0, R2]
+   \   00000084   0xF11A 0x0A01      ADDS     R10,R10,#+1
+   \   00000088   0x1C40             ADDS     R0,R0,#+1
+    994                srcOff++;
+   \   0000008A   0x1C76             ADDS     R6,R6,#+1
+    995                len--;
+   \   0000008C   0x1E64             SUBS     R4,R4,#+1
+    996              }
+   \                     ??xferBuf_3: (+1)
+   \   0000008E   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000090   0x2804             CMP      R0,#+4
+   \   00000092   0xDA02             BGE.N    ??xferBuf_5
+   \   00000094   0xB2A4             UXTH     R4,R4            ;; ZeroExt  R4,R4,#+16,#+16
+   \   00000096   0x2C00             CMP      R4,#+0
+   \   00000098   0xD1EF             BNE.N    ??xferBuf_4
+    997          
+    998              while ( idx < OSAL_NV_WORD_SIZE )
+   \                     ??xferBuf_5: (+1)
+   \   0000009A   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000009C   0x2804             CMP      R0,#+4
+   \   0000009E   0xDA05             BGE.N    ??xferBuf_6
+    999              {
+   1000                tmp[idx++] = OSAL_NV_ERASED;
+   \   000000A0   0x21FF             MOVS     R1,#+255
+   \   000000A2   0xAA00             ADD      R2,SP,#+0
+   \   000000A4   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   000000A6   0x5481             STRB     R1,[R0, R2]
+   \   000000A8   0x1C40             ADDS     R0,R0,#+1
+   \   000000AA   0xE7F6             B.N      ??xferBuf_5
+   1001              }
+   1002          
+   1003              flashWrite(OSAL_NV_PAGE_TO_PTR(dstPg) + dstOff, OSAL_NV_WORD_SIZE, tmp);
+   \                     ??xferBuf_6: (+1)
+   \   000000AC   0xAA00             ADD      R2,SP,#+0
+   \   000000AE   0x2104             MOVS     R1,#+4
+   \   000000B0   0xB2FF             UXTB     R7,R7            ;; ZeroExt  R7,R7,#+24,#+24
+   \   000000B2   0xF44F 0x6000      MOV      R0,#+2048
+   \   000000B6   0x.... 0x....      LDR.W    R3,??DataTable17_1  ;; 0x27c800
+   \   000000BA   0xFB00 0x3007      MLA      R0,R0,R7,R3
+   \   000000BE   0xFA1F 0xF888      UXTH     R8,R8            ;; ZeroExt  R8,R8,#+16,#+16
+   \   000000C2   0xEB18 0x0000      ADDS     R0,R8,R0
+   \   000000C6   0x.... 0x....      BL       flashWrite
+   1004              dstOff += OSAL_NV_WORD_SIZE;
+   \   000000CA   0xF118 0x0804      ADDS     R8,R8,#+4
+   1005            }
+   1006          
+   1007            rem = len % OSAL_NV_WORD_SIZE;
+   \                     ??xferBuf_0: (+1)
+   \   000000CE   0xB2A4             UXTH     R4,R4            ;; ZeroExt  R4,R4,#+16,#+16
+   \   000000D0   0x2004             MOVS     R0,#+4
+   \   000000D2   0xFB94 0xF9F0      SDIV     R9,R4,R0
+   \   000000D6   0xFB09 0x4910      MLS      R9,R9,R0,R4
+   1008            len = (len / OSAL_NV_WORD_SIZE) * OSAL_NV_WORD_SIZE;
+   \   000000DA   0xB2A4             UXTH     R4,R4            ;; ZeroExt  R4,R4,#+16,#+16
+   \   000000DC   0x2004             MOVS     R0,#+4
+   \   000000DE   0xFB94 0xF0F0      SDIV     R0,R4,R0
+   \   000000E2   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   000000E4   0x0084             LSLS     R4,R0,#+2
+   1009            addr = OSAL_NV_PAGE_TO_PTR( srcPg ) + srcOff;
+   \   000000E6   0xB2ED             UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+   \   000000E8   0xF44F 0x6000      MOV      R0,#+2048
+   \   000000EC   0x.... 0x....      LDR.W    R1,??DataTable17_1  ;; 0x27c800
+   \   000000F0   0xFB00 0x1005      MLA      R0,R0,R5,R1
+   \   000000F4   0xB2B6             UXTH     R6,R6            ;; ZeroExt  R6,R6,#+16,#+16
+   \   000000F6   0xEB16 0x0A00      ADDS     R10,R6,R0
+   1010            flashWrite(OSAL_NV_PAGE_TO_PTR(dstPg) + dstOff, len, addr);
+   \   000000FA   0x4652             MOV      R2,R10
+   \   000000FC   0x0021             MOVS     R1,R4
+   \   000000FE   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   00000100   0xB2FF             UXTB     R7,R7            ;; ZeroExt  R7,R7,#+24,#+24
+   \   00000102   0xF44F 0x6000      MOV      R0,#+2048
+   \   00000106   0x.... 0x....      LDR.W    R3,??DataTable17_1  ;; 0x27c800
+   \   0000010A   0xFB00 0x3007      MLA      R0,R0,R7,R3
+   \   0000010E   0xFA1F 0xF888      UXTH     R8,R8            ;; ZeroExt  R8,R8,#+16,#+16
+   \   00000112   0xEB18 0x0000      ADDS     R0,R8,R0
+   \   00000116   0x.... 0x....      BL       flashWrite
+   1011          
+   1012            if ( rem )
+   \   0000011A   0xFA5F 0xF989      UXTB     R9,R9            ;; ZeroExt  R9,R9,#+24,#+24
+   \   0000011E   0xF1B9 0x0F00      CMP      R9,#+0
+   \   00000122   0xD02B             BEQ.N    ??xferBuf_7
+   1013            {
+   1014              dstOff += len;
+   \   00000124   0xEB14 0x0808      ADDS     R8,R4,R8
+   1015              addr += len;
+   \   00000128   0xB2A4             UXTH     R4,R4            ;; ZeroExt  R4,R4,#+16,#+16
+   \   0000012A   0xEB14 0x0A0A      ADDS     R10,R4,R10
+   1016          
+   1017              for ( idx = 0; idx < rem; idx++ )
+   \   0000012E   0x2000             MOVS     R0,#+0
+   \   00000130   0xE007             B.N      ??xferBuf_8
+   1018              {
+   1019                tmp[idx] = *addr++;
+   \                     ??xferBuf_9: (+1)
+   \   00000132   0xF89A 0x1000      LDRB     R1,[R10, #+0]
+   \   00000136   0xAA00             ADD      R2,SP,#+0
+   \   00000138   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000013A   0x5481             STRB     R1,[R0, R2]
+   \   0000013C   0xF11A 0x0A01      ADDS     R10,R10,#+1
+   1020              }
+   \   00000140   0x1C40             ADDS     R0,R0,#+1
+   \                     ??xferBuf_8: (+1)
+   \   00000142   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000144   0xFA5F 0xF989      UXTB     R9,R9            ;; ZeroExt  R9,R9,#+24,#+24
+   \   00000148   0x4548             CMP      R0,R9
+   \   0000014A   0xD3F2             BCC.N    ??xferBuf_9
+   1021          
+   1022              while ( idx < OSAL_NV_WORD_SIZE )
+   \                     ??xferBuf_10: (+1)
+   \   0000014C   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000014E   0x2804             CMP      R0,#+4
+   \   00000150   0xDA05             BGE.N    ??xferBuf_11
+   1023              {
+   1024                tmp[idx++] = OSAL_NV_ERASED;
+   \   00000152   0x21FF             MOVS     R1,#+255
+   \   00000154   0xAA00             ADD      R2,SP,#+0
+   \   00000156   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000158   0x5481             STRB     R1,[R0, R2]
+   \   0000015A   0x1C40             ADDS     R0,R0,#+1
+   \   0000015C   0xE7F6             B.N      ??xferBuf_10
+   1025              }
+   1026          
+   1027              flashWrite(OSAL_NV_PAGE_TO_PTR(dstPg) + dstOff, OSAL_NV_WORD_SIZE, tmp);
+   \                     ??xferBuf_11: (+1)
+   \   0000015E   0xAA00             ADD      R2,SP,#+0
+   \   00000160   0x2104             MOVS     R1,#+4
+   \   00000162   0xB2FF             UXTB     R7,R7            ;; ZeroExt  R7,R7,#+24,#+24
+   \   00000164   0xF44F 0x6000      MOV      R0,#+2048
+   \   00000168   0x.... 0x....      LDR.W    R3,??DataTable17_1  ;; 0x27c800
+   \   0000016C   0xFB00 0x3007      MLA      R0,R0,R7,R3
+   \   00000170   0xFA1F 0xF888      UXTH     R8,R8            ;; ZeroExt  R8,R8,#+16,#+16
+   \   00000174   0xEB18 0x0000      ADDS     R0,R8,R0
+   \   00000178   0x.... 0x....      BL       flashWrite
+   1028            }
+   1029          }
+   \                     ??xferBuf_7: (+1)
+   \   0000017C   0xE8BD 0x87F3      POP      {R0,R1,R4-R10,PC}  ;; return
+   1030          
+   1031          /******************************************************************************
+   1032           * @fn      writeItem
+   1033           *
+   1034           * @brief   Writes an item header/data combo to the specified NV page.
+   1035           *
+   1036           * @param   pg - Valid NV Flash page.
+   1037           * @param   id - Valid NV item Id.
+   1038           * @param   len  - Byte count of the data to write.
+   1039           * @param   buf  - The data to write. If NULL, no data/checksum write.
+   1040           * @param   flag - TRUE if the checksum should be written, FALSE otherwise.
+   1041           *
+   1042           * @return  TRUE if header/data to write matches header/data read back, else FALSE.
+   1043           */
+
+   \                                 In section .text, align 2, keep-with-next
+   1044          static uint8 writeItem( uint8 pg, uint16 id, uint16 len, void *buf, uint8 flag )
+   1045          {
+   \                     writeItem: (+1)
+   \   00000000   0xE92D 0x47FF      PUSH     {R0-R10,LR}
+   \   00000004   0x0004             MOVS     R4,R0
+   \   00000006   0x4689             MOV      R9,R1
+   \   00000008   0x0015             MOVS     R5,R2
+   \   0000000A   0x001E             MOVS     R6,R3
+   1046            uint16 hdrOff = pgOff[pg];
+   \   0000000C   0x.... 0x....      LDR.W    R0,??DataTable17
+   \   00000010   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   00000012   0xF830 0x7014      LDRH     R7,[R0, R4, LSL #+1]
+   1047            uint8 rtrn = FALSE;
+   \   00000016   0xF05F 0x0800      MOVS     R8,#+0
+   1048            osalNvHdr_t hdr;
+   1049          
+   1050            hdr.id = id;
+   \   0000001A   0xF8AD 0x9000      STRH     R9,[SP, #+0]
+   1051            hdr.len = len;
+   \   0000001E   0xF8AD 0x5002      STRH     R5,[SP, #+2]
+   1052          
+   1053            flashWrite(OSAL_NV_PAGE_TO_PTR(pg) + hdrOff + OSAL_NV_HDR_ID,
+   1054                       OSAL_NV_HDR_ITEM, (uint8 *)(&hdr));
+   \   00000022   0xAA00             ADD      R2,SP,#+0
+   \   00000024   0x2104             MOVS     R1,#+4
+   \   00000026   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   00000028   0xF44F 0x6000      MOV      R0,#+2048
+   \   0000002C   0x.... 0x....      LDR.W    R3,??DataTable16_1  ;; 0x27c800
+   \   00000030   0xFB00 0x3004      MLA      R0,R0,R4,R3
+   \   00000034   0xB2BF             UXTH     R7,R7            ;; ZeroExt  R7,R7,#+16,#+16
+   \   00000036   0x1838             ADDS     R0,R7,R0
+   \   00000038   0x.... 0x....      BL       flashWrite
+   1055            readHdr( pg, hdrOff, (uint8 *)(&hdr) );
+   \   0000003C   0xAA00             ADD      R2,SP,#+0
+   \   0000003E   0x0039             MOVS     R1,R7
+   \   00000040   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   00000042   0x0020             MOVS     R0,R4
+   \   00000044   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000046   0x.... 0x....      BL       readHdr
+   1056          
+   1057            if ( (hdr.id == id) && (hdr.len == len) )
+   \   0000004A   0xF8BD 0x0000      LDRH     R0,[SP, #+0]
+   \   0000004E   0xFA1F 0xF989      UXTH     R9,R9            ;; ZeroExt  R9,R9,#+16,#+16
+   \   00000052   0x4548             CMP      R0,R9
+   \   00000054   0xD15B             BNE.N    ??writeItem_0
+   \   00000056   0xF8BD 0x0002      LDRH     R0,[SP, #+2]
+   \   0000005A   0xB2AD             UXTH     R5,R5            ;; ZeroExt  R5,R5,#+16,#+16
+   \   0000005C   0x42A8             CMP      R0,R5
+   \   0000005E   0xD156             BNE.N    ??writeItem_0
+   1058            {
+   1059              if ( flag )
+   \   00000060   0x980C             LDR      R0,[SP, #+48]
+   \   00000062   0x2800             CMP      R0,#+0
+   \   00000064   0xD047             BEQ.N    ??writeItem_1
+   1060              {
+   1061                uint16 chk = calcChkB( len, buf );
+   \   00000066   0x0031             MOVS     R1,R6
+   \   00000068   0x0028             MOVS     R0,R5
+   \   0000006A   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   0000006C   0x.... 0x....      BL       calcChkB
+   \   00000070   0x4681             MOV      R9,R0
+   1062                uint16 datOff = hdrOff + OSAL_NV_HDR_SIZE;
+   \   00000072   0xF117 0x0A10      ADDS     R10,R7,#+16
+   1063          
+   1064                if ( buf != NULL )
+   \   00000076   0x2E00             CMP      R6,#+0
+   \   00000078   0xD008             BEQ.N    ??writeItem_2
+   1065                {
+   1066                writeBuf( pg, datOff, len, buf );
+   \   0000007A   0x0033             MOVS     R3,R6
+   \   0000007C   0x002A             MOVS     R2,R5
+   \   0000007E   0xB292             UXTH     R2,R2            ;; ZeroExt  R2,R2,#+16,#+16
+   \   00000080   0x4651             MOV      R1,R10
+   \   00000082   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   00000084   0x0020             MOVS     R0,R4
+   \   00000086   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000088   0x.... 0x....      BL       writeBuf
+   1067                }
+   1068          
+   1069                if ( chk == calcChkF( pg, datOff, len ) )
+   \                     ??writeItem_2: (+1)
+   \   0000008C   0x002A             MOVS     R2,R5
+   \   0000008E   0xB292             UXTH     R2,R2            ;; ZeroExt  R2,R2,#+16,#+16
+   \   00000090   0x4651             MOV      R1,R10
+   \   00000092   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   00000094   0x0020             MOVS     R0,R4
+   \   00000096   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000098   0x.... 0x....      BL       calcChkF
+   \   0000009C   0xFA1F 0xF989      UXTH     R9,R9            ;; ZeroExt  R9,R9,#+16,#+16
+   \   000000A0   0x4581             CMP      R9,R0
+   \   000000A2   0xD12A             BNE.N    ??writeItem_3
+   1070                {
+   1071                  hdrData[0] = chk;
+   \   000000A4   0x....             LDR.N    R0,??DataTable15_1
+   \   000000A6   0xF8A0 0x9000      STRH     R9,[R0, #+0]
+   1072                  flashWrite(OSAL_NV_PAGE_TO_PTR(pg) + hdrOff + OSAL_NV_HDR_CHK,
+   1073                             OSAL_NV_HDR_ITEM, (uint8 *)(hdrData));
+   \   000000AA   0x....             LDR.N    R2,??DataTable15_1
+   \   000000AC   0x2104             MOVS     R1,#+4
+   \   000000AE   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   000000B0   0xF44F 0x6000      MOV      R0,#+2048
+   \   000000B4   0x.... 0x....      LDR.W    R3,??DataTable16_1  ;; 0x27c800
+   \   000000B8   0xFB00 0x3004      MLA      R0,R0,R4,R3
+   \   000000BC   0xB2BF             UXTH     R7,R7            ;; ZeroExt  R7,R7,#+16,#+16
+   \   000000BE   0x1838             ADDS     R0,R7,R0
+   \   000000C0   0x1D00             ADDS     R0,R0,#+4
+   \   000000C2   0x.... 0x....      BL       flashWrite
+   1074                  readHdr( pg, hdrOff, (uint8 *)(&hdr) );
+   \   000000C6   0xAA00             ADD      R2,SP,#+0
+   \   000000C8   0x0039             MOVS     R1,R7
+   \   000000CA   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   000000CC   0x0020             MOVS     R0,R4
+   \   000000CE   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   000000D0   0x.... 0x....      BL       readHdr
+   1075          
+   1076                  if ( chk == hdr.chk )
+   \   000000D4   0xF8BD 0x0004      LDRH     R0,[SP, #+4]
+   \   000000D8   0xFA1F 0xF989      UXTH     R9,R9            ;; ZeroExt  R9,R9,#+16,#+16
+   \   000000DC   0x4581             CMP      R9,R0
+   \   000000DE   0xD10C             BNE.N    ??writeItem_3
+   1077                  {
+   1078                    hotItemUpdate(pg, hdrOff, hdr.id);
+   \   000000E0   0xF8BD 0x2000      LDRH     R2,[SP, #+0]
+   \   000000E4   0x0039             MOVS     R1,R7
+   \   000000E6   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   000000E8   0x0020             MOVS     R0,R4
+   \   000000EA   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   000000EC   0x.... 0x....      BL       hotItemUpdate
+   1079                    rtrn = TRUE;
+   \   000000F0   0xF05F 0x0801      MOVS     R8,#+1
+   \   000000F4   0xE001             B.N      ??writeItem_3
+   1080                  }
+   1081                }
+   1082              }
+   1083              else
+   1084              {
+   1085                rtrn = TRUE;
+   \                     ??writeItem_1: (+1)
+   \   000000F6   0xF05F 0x0801      MOVS     R8,#+1
+   1086              }
+   1087          
+   1088              len = OSAL_NV_ITEM_SIZE( hdr.len );
+   \                     ??writeItem_3: (+1)
+   \   000000FA   0xF8BD 0x0002      LDRH     R0,[SP, #+2]
+   \   000000FE   0x1CC0             ADDS     R0,R0,#+3
+   \   00000100   0x2104             MOVS     R1,#+4
+   \   00000102   0xFB90 0xF0F1      SDIV     R0,R0,R1
+   \   00000106   0x0080             LSLS     R0,R0,#+2
+   \   00000108   0xF110 0x0510      ADDS     R5,R0,#+16
+   \   0000010C   0xE024             B.N      ??writeItem_4
+   1089            }
+   1090            else
+   1091            {
+   1092              len = OSAL_NV_ITEM_SIZE( hdr.len );
+   \                     ??writeItem_0: (+1)
+   \   0000010E   0xF8BD 0x0002      LDRH     R0,[SP, #+2]
+   \   00000112   0x1CC0             ADDS     R0,R0,#+3
+   \   00000114   0x2104             MOVS     R1,#+4
+   \   00000116   0xFB90 0xF0F1      SDIV     R0,R0,R1
+   \   0000011A   0x0080             LSLS     R0,R0,#+2
+   \   0000011C   0xF110 0x0510      ADDS     R5,R0,#+16
+   1093          
+   1094              if (len > (OSAL_NV_PAGE_SIZE - pgOff[pg]))
+   \   00000120   0x.... 0x....      LDR.W    R0,??DataTable17
+   \   00000124   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   00000126   0xF830 0x0014      LDRH     R0,[R0, R4, LSL #+1]
+   \   0000012A   0xF5D0 0x6000      RSBS     R0,R0,#+2048
+   \   0000012E   0xB2AD             UXTH     R5,R5            ;; ZeroExt  R5,R5,#+16,#+16
+   \   00000130   0x42A8             CMP      R0,R5
+   \   00000132   0xDA06             BGE.N    ??writeItem_5
+   1095              {
+   1096                len = (OSAL_NV_PAGE_SIZE - pgOff[pg]);
+   \   00000134   0x.... 0x....      LDR.W    R0,??DataTable17
+   \   00000138   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   0000013A   0xF830 0x0014      LDRH     R0,[R0, R4, LSL #+1]
+   \   0000013E   0xF5D0 0x6500      RSBS     R5,R0,#+2048
+   1097              }
+   1098              pgLost[pg] += len;
+   \                     ??writeItem_5: (+1)
+   \   00000142   0x.... 0x....      LDR.W    R0,??DataTable16
+   \   00000146   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   00000148   0xF830 0x0014      LDRH     R0,[R0, R4, LSL #+1]
+   \   0000014C   0x1828             ADDS     R0,R5,R0
+   \   0000014E   0x.... 0x....      LDR.W    R1,??DataTable16
+   \   00000152   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   00000154   0xF821 0x0014      STRH     R0,[R1, R4, LSL #+1]
+   1099            }
+   1100          
+   1101            pgOff[pg] += len;
+   \                     ??writeItem_4: (+1)
+   \   00000158   0x.... 0x....      LDR.W    R0,??DataTable17
+   \   0000015C   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   0000015E   0xF830 0x0014      LDRH     R0,[R0, R4, LSL #+1]
+   \   00000162   0x1828             ADDS     R0,R5,R0
+   \   00000164   0x.... 0x....      LDR.W    R1,??DataTable17
+   \   00000168   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   0000016A   0xF821 0x0014      STRH     R0,[R1, R4, LSL #+1]
+   1102          
+   1103            return rtrn;
+   \   0000016E   0x4640             MOV      R0,R8
+   \   00000170   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000172   0xB004             ADD      SP,SP,#+16
+   \   00000174   0xE8BD 0x87F0      POP      {R4-R10,PC}      ;; return
+   1104          }
+   1105          
+   1106          /******************************************************************************
+   1107           * @fn      hotItem
+   1108           *
+   1109           * @brief   Look for the parameter 'id' in the hot items array.
+   1110           *
+   1111           * @param   id - A valid NV item Id.
+   1112           *
+   1113           * @return  A valid index into the hot items if the item is hot; OSAL_NV_MAX_HOT if not.
+   1114           */
+
+   \                                 In section .text, align 2, keep-with-next
+   1115          static uint8 hotItem(uint16 id)
+   1116          {
+   1117            uint8 hotIdx;
+   1118          
+   1119            for (hotIdx = 0; hotIdx < OSAL_NV_MAX_HOT; hotIdx++)
+   \                     hotItem: (+1)
+   \   00000000   0x2100             MOVS     R1,#+0
+   \   00000002   0xE000             B.N      ??hotItem_0
+   \                     ??hotItem_1: (+1)
+   \   00000004   0x1C49             ADDS     R1,R1,#+1
+   \                     ??hotItem_0: (+1)
+   \   00000006   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   00000008   0x2903             CMP      R1,#+3
+   \   0000000A   0xDA07             BGE.N    ??hotItem_2
+   1120            {
+   1121              if (hotIds[hotIdx] == id)
+   \   0000000C   0x.... 0x....      LDR.W    R2,??DataTable17_2
+   \   00000010   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   00000012   0xF832 0x2011      LDRH     R2,[R2, R1, LSL #+1]
+   \   00000016   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   00000018   0x4282             CMP      R2,R0
+   \   0000001A   0xD1F3             BNE.N    ??hotItem_1
+   1122              {
+   1123                break;
+   1124              }
+   1125            }
+   1126          
+   1127            return hotIdx;
+   \                     ??hotItem_2: (+1)
+   \   0000001C   0x0008             MOVS     R0,R1
+   \   0000001E   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000020   0x4770             BX       LR               ;; return
+   1128          }
+   1129          
+   1130          /******************************************************************************
+   1131           * @fn      hotItemUpdate
+   1132           *
+   1133           * @brief   If the parameter 'id' is a hot item, update the corresponding hot item data.
+   1134           *
+   1135           * @param   pg - The new NV page corresponding to the hot item.
+   1136           * @param   off - The new NV page offset corresponding to the hot item.
+   1137           * @param   id - A valid NV item Id.
+   1138           *
+   1139           * @return  none
+   1140           */
+
+   \                                 In section .text, align 2, keep-with-next
+   1141          static void hotItemUpdate(uint8 pg, uint16 off, uint16 id)
+   1142          {
+   \                     hotItemUpdate: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+   \   00000004   0x000D             MOVS     R5,R1
+   \   00000006   0x0010             MOVS     R0,R2
+   1143            uint8 hotIdx = hotItem(id);
+   \   00000008   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   0000000A   0x.... 0x....      BL       hotItem
+   1144          
+   1145            if (hotIdx < OSAL_NV_MAX_HOT)
+   \   0000000E   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000010   0x2803             CMP      R0,#+3
+   \   00000012   0xDA08             BGE.N    ??hotItemUpdate_0
+   1146            {
+   1147              {
+   1148                hotPg[hotIdx] = pg;
+   \   00000014   0x.... 0x....      LDR.W    R1,??DataTable17_3
+   \   00000018   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000001A   0x5444             STRB     R4,[R0, R1]
+   1149                hotOff[hotIdx] = off;
+   \   0000001C   0x.... 0x....      LDR.W    R1,??DataTable17_4
+   \   00000020   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000022   0xF821 0x5010      STRH     R5,[R1, R0, LSL #+1]
+   1150              }
+   1151            }
+   1152          }
+   \                     ??hotItemUpdate_0: (+1)
+   \   00000026   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+   1153          
+   1154          /******************************************************************************
+   1155           * @fn      osal_nv_init
+   1156           *
+   1157           * @brief   Initialize NV service.
+   1158           *
+   1159           * @param   p - Not used.
+   1160           *
+   1161           * @return  none
+   1162           */
+
+   \                                 In section .text, align 2, keep-with-next
+   1163          void osal_nv_init( void *p )
+   1164          {
+   \                     osal_nv_init: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+   1165            (void)p;  // Suppress Lint warning.
+   1166            (void)initNV();  // Always returns TRUE after pages have been erased.
+   \   00000002   0x.... 0x....      BL       initNV
+   1167          }
+   \   00000006   0xBD01             POP      {R0,PC}          ;; return
+   1168          
+   1169          /******************************************************************************
+   1170           * @fn      osal_nv_item_init
+   1171           *
+   1172           * @brief   If the NV item does not already exist, it is created and
+   1173           *          initialized with the data passed to the function, if any.
+   1174           *          This function must be called before calling osal_nv_read() or
+   1175           *          osal_nv_write().
+   1176           *
+   1177           * @param   id  - Valid NV item Id.
+   1178           * @param   len - Item length.
+   1179           * @param  *buf - Pointer to item initalization data. Set to NULL if none.
+   1180           *
+   1181           * @return  NV_ITEM_UNINIT - Id did not exist and was created successfully.
+   1182           *          SUCCESS       - Id already existed, no action taken.
+   1183           *          NV_OPER_FAILED - Failure to find or create Id.
+   1184           */
+
+   \                                 In section .text, align 2, keep-with-next
+   1185          uint8 osal_nv_item_init( uint16 id, uint16 len, void *buf )
+   1186          {
+   \                     osal_nv_item_init: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0xB082             SUB      SP,SP,#+8
+   \   00000004   0x0004             MOVS     R4,R0
+   \   00000006   0x000D             MOVS     R5,R1
+   \   00000008   0x0016             MOVS     R6,R2
+   1187            uint8 findPg;
+   1188            uint16 offset;
+   1189          
+   1190            if ( !OSAL_NV_CHECK_BUS_VOLTAGE )
+   \   0000000A   0x204E             MOVS     R0,#+78
+   \   0000000C   0x.... 0x....      BL       HalAdcCheckVdd
+   \   00000010   0x2800             CMP      R0,#+0
+   \   00000012   0xD101             BNE.N    ??osal_nv_item_init_0
+   1191            {
+   1192              return NV_OPER_FAILED;
+   \   00000014   0x200A             MOVS     R0,#+10
+   \   00000016   0xE01F             B.N      ??osal_nv_item_init_1
+   1193            }
+   1194            else if ((offset = findItem(id, &findPg)) != OSAL_NV_ITEM_NULL)
+   \                     ??osal_nv_item_init_0: (+1)
+   \   00000018   0xA900             ADD      R1,SP,#+0
+   \   0000001A   0x0020             MOVS     R0,R4
+   \   0000001C   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   0000001E   0x.... 0x....      BL       findItem
+   \   00000022   0x0001             MOVS     R1,R0
+   \   00000024   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   00000026   0x2900             CMP      R1,#+0
+   \   00000028   0xD009             BEQ.N    ??osal_nv_item_init_2
+   1195              {
+   1196              // Re-populate the NV hot item data if the corresponding items are already established.
+   1197              hotItemUpdate(findPg, offset, id);
+   \   0000002A   0x0022             MOVS     R2,R4
+   \   0000002C   0xB292             UXTH     R2,R2            ;; ZeroExt  R2,R2,#+16,#+16
+   \   0000002E   0x0001             MOVS     R1,R0
+   \   00000030   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   00000032   0xF89D 0x0000      LDRB     R0,[SP, #+0]
+   \   00000036   0x.... 0x....      BL       hotItemUpdate
+   1198          
+   1199              return SUCCESS;
+   \   0000003A   0x2000             MOVS     R0,#+0
+   \   0000003C   0xE00C             B.N      ??osal_nv_item_init_1
+   1200              }
+   1201            else if ( initItem( TRUE, id, len, buf ) != OSAL_NV_PAGE_NULL )
+   \                     ??osal_nv_item_init_2: (+1)
+   \   0000003E   0x0033             MOVS     R3,R6
+   \   00000040   0x002A             MOVS     R2,R5
+   \   00000042   0xB292             UXTH     R2,R2            ;; ZeroExt  R2,R2,#+16,#+16
+   \   00000044   0x0021             MOVS     R1,R4
+   \   00000046   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   00000048   0x2001             MOVS     R0,#+1
+   \   0000004A   0x.... 0x....      BL       initItem
+   \   0000004E   0x2806             CMP      R0,#+6
+   \   00000050   0xD001             BEQ.N    ??osal_nv_item_init_3
+   1202              {
+   1203                return NV_ITEM_UNINIT;
+   \   00000052   0x2009             MOVS     R0,#+9
+   \   00000054   0xE000             B.N      ??osal_nv_item_init_1
+   1204              }
+   1205            else
+   1206            {
+   1207              return NV_OPER_FAILED;
+   \                     ??osal_nv_item_init_3: (+1)
+   \   00000056   0x200A             MOVS     R0,#+10
+   \                     ??osal_nv_item_init_1: (+1)
+   \   00000058   0xBD76             POP      {R1,R2,R4-R6,PC}  ;; return
+   1208            }
+   1209          }
+   1210          
+   1211          /******************************************************************************
+   1212           * @fn      osal_nv_item_len
+   1213           *
+   1214           * @brief   Get the data length of the item stored in NV memory.
+   1215           *
+   1216           * @param   id  - Valid NV item Id.
+   1217           *
+   1218           * @return  Item length, if found; zero otherwise.
+   1219           */
+
+   \                                 In section .text, align 2, keep-with-next
+   1220          uint16 osal_nv_item_len( uint16 id )
+   1221          {
+   \                     osal_nv_item_len: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+   \   00000002   0xB086             SUB      SP,SP,#+24
+   \   00000004   0x0004             MOVS     R4,R0
+   1222            uint8 findPg;
+   1223            osalNvHdr_t hdr;
+   1224            uint16 offset;
+   1225            uint8 hotIdx;
+   1226          
+   1227            if ((hotIdx = hotItem(id)) < OSAL_NV_MAX_HOT)
+   \   00000006   0x0020             MOVS     R0,R4
+   \   00000008   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   0000000A   0x.... 0x....      BL       hotItem
+   \   0000000E   0x0001             MOVS     R1,R0
+   \   00000010   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   00000012   0x2903             CMP      R1,#+3
+   \   00000014   0xDA14             BGE.N    ??osal_nv_item_len_0
+   1228            {
+   1229              findPg = hotPg[hotIdx];
+   \   00000016   0x....             LDR.N    R1,??DataTable17_3
+   \   00000018   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000001A   0x5C41             LDRB     R1,[R0, R1]
+   \   0000001C   0xF88D 0x1000      STRB     R1,[SP, #+0]
+   1230              offset = hotOff[hotIdx];
+   \   00000020   0x....             LDR.N    R1,??DataTable17_4
+   \   00000022   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000024   0xF831 0x0010      LDRH     R0,[R1, R0, LSL #+1]
+   1231            }
+   1232            else if ((offset = findItem(id, &findPg)) == OSAL_NV_ITEM_NULL)
+   1233            {
+   1234              return 0;
+   1235            }
+   1236          
+   1237              readHdr( findPg, (offset - OSAL_NV_HDR_SIZE), (uint8 *)(&hdr) );
+   \                     ??osal_nv_item_len_1: (+1)
+   \   00000028   0xAA01             ADD      R2,SP,#+4
+   \   0000002A   0xF1B0 0x0110      SUBS     R1,R0,#+16
+   \   0000002E   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   00000030   0xF89D 0x0000      LDRB     R0,[SP, #+0]
+   \   00000034   0x.... 0x....      BL       readHdr
+   1238              return hdr.len;
+   \   00000038   0xF8BD 0x0006      LDRH     R0,[SP, #+6]
+   \                     ??osal_nv_item_len_2: (+1)
+   \   0000003C   0xB006             ADD      SP,SP,#+24
+   \   0000003E   0xBD10             POP      {R4,PC}          ;; return
+   \                     ??osal_nv_item_len_0: (+1)
+   \   00000040   0xA900             ADD      R1,SP,#+0
+   \   00000042   0x0020             MOVS     R0,R4
+   \   00000044   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   00000046   0x.... 0x....      BL       findItem
+   \   0000004A   0x0001             MOVS     R1,R0
+   \   0000004C   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   0000004E   0x2900             CMP      R1,#+0
+   \   00000050   0xD1EA             BNE.N    ??osal_nv_item_len_1
+   \   00000052   0x2000             MOVS     R0,#+0
+   \   00000054   0xE7F2             B.N      ??osal_nv_item_len_2
+   1239            }
+   1240          
+   1241          /******************************************************************************
+   1242           * @fn      osal_nv_write
+   1243           *
+   1244           * @brief   Write a data item to NV. Function can write an entire item to NV or
+   1245           *          an element of an item by indexing into the item with an offset.
+   1246           *
+   1247           * @param   id  - Valid NV item Id.
+   1248           * @param   ndx - Index offset into item
+   1249           * @param   len - Length of data to write.
+   1250           * @param  *buf - Data to write.
+   1251           *
+   1252           * @return  SUCCESS if successful, NV_ITEM_UNINIT if item did not
+   1253           *          exist in NV and offset is non-zero, NV_OPER_FAILED if failure.
+   1254           */
+
+   \                                 In section .text, align 2, keep-with-next
+   1255          uint8 osal_nv_write( uint16 id, uint16 ndx, uint16 len, void *buf )
+   1256          {
+   \                     osal_nv_write: (+1)
+   \   00000000   0xE92D 0x4FF8      PUSH     {R3-R11,LR}
+   \   00000004   0xB086             SUB      SP,SP,#+24
+   \   00000006   0x0005             MOVS     R5,R0
+   \   00000008   0x000E             MOVS     R6,R1
+   \   0000000A   0x0017             MOVS     R7,R2
+   1257            uint8 rtrn = SUCCESS;
+   \   0000000C   0xF05F 0x0800      MOVS     R8,#+0
+   1258          
+   1259            if ( !OSAL_NV_CHECK_BUS_VOLTAGE )
+   \   00000010   0x204E             MOVS     R0,#+78
+   \   00000012   0x.... 0x....      BL       HalAdcCheckVdd
+   \   00000016   0x2800             CMP      R0,#+0
+   \   00000018   0xD101             BNE.N    ??osal_nv_write_0
+   1260            {
+   1261              return NV_OPER_FAILED;
+   \   0000001A   0x200A             MOVS     R0,#+10
+   \   0000001C   0xE11F             B.N      ??osal_nv_write_1
+   1262            }
+   1263          
+   1264            if ( len != 0 )
+   \                     ??osal_nv_write_0: (+1)
+   \   0000001E   0xB2BF             UXTH     R7,R7            ;; ZeroExt  R7,R7,#+16,#+16
+   \   00000020   0x2F00             CMP      R7,#+0
+   \   00000022   0xF000 0x811A      BEQ.W    ??osal_nv_write_2
+   1265            {
+   1266              osalNvHdr_t hdr;
+   1267              uint16 origOff, srcOff;
+   1268              uint16 cnt, chk;
+   1269              uint8 *addr, *ptr, srcPg;
+   1270          
+   1271              origOff = srcOff = findItem( id, &srcPg );
+   \   00000026   0xA901             ADD      R1,SP,#+4
+   \   00000028   0x0028             MOVS     R0,R5
+   \   0000002A   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   0000002C   0x.... 0x....      BL       findItem
+   \   00000030   0x0004             MOVS     R4,R0
+   \   00000032   0xF8AD 0x0006      STRH     R0,[SP, #+6]
+   1272              if ( srcOff == OSAL_NV_ITEM_NULL )
+   \   00000036   0xB2A4             UXTH     R4,R4            ;; ZeroExt  R4,R4,#+16,#+16
+   \   00000038   0x2C00             CMP      R4,#+0
+   \   0000003A   0xD101             BNE.N    ??osal_nv_write_3
+   1273              {
+   1274                return NV_ITEM_UNINIT;
+   \   0000003C   0x2009             MOVS     R0,#+9
+   \   0000003E   0xE10E             B.N      ??osal_nv_write_1
+   1275              }
+   1276          
+   1277              readHdr( srcPg, (srcOff - OSAL_NV_HDR_SIZE), (uint8 *)(&hdr) );
+   \                     ??osal_nv_write_3: (+1)
+   \   00000040   0xAA02             ADD      R2,SP,#+8
+   \   00000042   0xF1B4 0x0110      SUBS     R1,R4,#+16
+   \   00000046   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   00000048   0xF89D 0x0004      LDRB     R0,[SP, #+4]
+   \   0000004C   0x.... 0x....      BL       readHdr
+   1278              if ( hdr.len < (ndx + len) )
+   \   00000050   0xF8BD 0x000A      LDRH     R0,[SP, #+10]
+   \   00000054   0xB2B6             UXTH     R6,R6            ;; ZeroExt  R6,R6,#+16,#+16
+   \   00000056   0xB2BF             UXTH     R7,R7            ;; ZeroExt  R7,R7,#+16,#+16
+   \   00000058   0x19B9             ADDS     R1,R7,R6
+   \   0000005A   0x4288             CMP      R0,R1
+   \   0000005C   0xDA01             BGE.N    ??osal_nv_write_4
+   1279              {
+   1280                return NV_OPER_FAILED;
+   \   0000005E   0x200A             MOVS     R0,#+10
+   \   00000060   0xE0FD             B.N      ??osal_nv_write_1
+   1281              }
+   1282          
+   1283              addr = OSAL_NV_PAGE_TO_PTR( srcPg ) + srcOff + ndx;
+   \                     ??osal_nv_write_4: (+1)
+   \   00000062   0xF89D 0x0004      LDRB     R0,[SP, #+4]
+   \   00000066   0xF44F 0x6100      MOV      R1,#+2048
+   \   0000006A   0x....             LDR.N    R2,??DataTable16_1  ;; 0x27c800
+   \   0000006C   0xFB01 0x2000      MLA      R0,R1,R0,R2
+   \   00000070   0xB2A4             UXTH     R4,R4            ;; ZeroExt  R4,R4,#+16,#+16
+   \   00000072   0x1820             ADDS     R0,R4,R0
+   \   00000074   0xB2B6             UXTH     R6,R6            ;; ZeroExt  R6,R6,#+16,#+16
+   \   00000076   0x1830             ADDS     R0,R6,R0
+   1284              ptr = buf;
+   \   00000078   0x9906             LDR      R1,[SP, #+24]
+   1285              cnt = len;
+   \   0000007A   0x003A             MOVS     R2,R7
+   1286              chk = 0;
+   \   0000007C   0xF05F 0x0900      MOVS     R9,#+0
+   \   00000080   0xE013             B.N      ??osal_nv_write_5
+   1287              while ( cnt-- )
+   1288              {
+   1289                if ( *addr != *ptr )
+   \                     ??osal_nv_write_6: (+1)
+   \   00000082   0x7803             LDRB     R3,[R0, #+0]
+   \   00000084   0x780C             LDRB     R4,[R1, #+0]
+   \   00000086   0x42A3             CMP      R3,R4
+   \   00000088   0xD00D             BEQ.N    ??osal_nv_write_7
+   1290                {
+   1291                  chk += 1;  // Count number of different bytes
+   \   0000008A   0xF119 0x0901      ADDS     R9,R9,#+1
+   1292                  // Calculate expected checksum after transferring old data and writing new data.
+   1293                  hdr.chk -= *addr;
+   \   0000008E   0xF8BD 0x300C      LDRH     R3,[SP, #+12]
+   \   00000092   0x7804             LDRB     R4,[R0, #+0]
+   \   00000094   0x1B1B             SUBS     R3,R3,R4
+   \   00000096   0xF8AD 0x300C      STRH     R3,[SP, #+12]
+   1294                  hdr.chk += *ptr;
+   \   0000009A   0xF8BD 0x300C      LDRH     R3,[SP, #+12]
+   \   0000009E   0x780C             LDRB     R4,[R1, #+0]
+   \   000000A0   0x18E3             ADDS     R3,R4,R3
+   \   000000A2   0xF8AD 0x300C      STRH     R3,[SP, #+12]
+   1295                }
+   1296                addr++;
+   \                     ??osal_nv_write_7: (+1)
+   \   000000A6   0x1C40             ADDS     R0,R0,#+1
+   1297                ptr++;
+   \   000000A8   0x1C49             ADDS     R1,R1,#+1
+   1298              }
+   \                     ??osal_nv_write_5: (+1)
+   \   000000AA   0x0013             MOVS     R3,R2
+   \   000000AC   0x1E5A             SUBS     R2,R3,#+1
+   \   000000AE   0xB29B             UXTH     R3,R3            ;; ZeroExt  R3,R3,#+16,#+16
+   \   000000B0   0x2B00             CMP      R3,#+0
+   \   000000B2   0xD1E6             BNE.N    ??osal_nv_write_6
+   1299          
+   1300              if ( chk != 0 )  // If the buffer to write is different in one or more bytes.
+   \   000000B4   0xFA1F 0xF989      UXTH     R9,R9            ;; ZeroExt  R9,R9,#+16,#+16
+   \   000000B8   0xF1B9 0x0F00      CMP      R9,#+0
+   \   000000BC   0xF000 0x80CD      BEQ.W    ??osal_nv_write_2
+   1301              {
+   1302                uint8 comPg = OSAL_NV_PAGE_NULL;
+   \   000000C0   0x2006             MOVS     R0,#+6
+   \   000000C2   0xF88D 0x0005      STRB     R0,[SP, #+5]
+   1303                uint8 dstPg = initItem( FALSE, id, hdr.len, &comPg );
+   \   000000C6   0xF10D 0x0305      ADD      R3,SP,#+5
+   \   000000CA   0xF8BD 0x200A      LDRH     R2,[SP, #+10]
+   \   000000CE   0x0029             MOVS     R1,R5
+   \   000000D0   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   000000D2   0x2000             MOVS     R0,#+0
+   \   000000D4   0x.... 0x....      BL       initItem
+   \   000000D8   0x0005             MOVS     R5,R0
+   1304          
+   1305                if ( dstPg != OSAL_NV_PAGE_NULL )
+   \   000000DA   0xB2ED             UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+   \   000000DC   0x2D06             CMP      R5,#+6
+   \   000000DE   0xF000 0x8087      BEQ.W    ??osal_nv_write_8
+   1306                {
+   1307                  uint16 tmp = OSAL_NV_DATA_SIZE( hdr.len );
+   \   000000E2   0xF8BD 0x000A      LDRH     R0,[SP, #+10]
+   \   000000E6   0x1CC0             ADDS     R0,R0,#+3
+   \   000000E8   0x2104             MOVS     R1,#+4
+   \   000000EA   0xFB90 0xF0F1      SDIV     R0,R0,R1
+   \   000000EE   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   000000F0   0xEA5F 0x0A80      LSLS     R10,R0,#+2
+   1308                  uint16 dstOff = pgOff[dstPg] - tmp;
+   \   000000F4   0x....             LDR.N    R0,??DataTable17
+   \   000000F6   0xB2ED             UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+   \   000000F8   0xF830 0x0015      LDRH     R0,[R0, R5, LSL #+1]
+   \   000000FC   0xEBB0 0x0B0A      SUBS     R11,R0,R10
+   1309                  srcOff = origOff;
+   \   00000100   0xF8BD 0x4006      LDRH     R4,[SP, #+6]
+   1310                  chk = hdr.chk;
+   \   00000104   0xF8BD 0x900C      LDRH     R9,[SP, #+12]
+   1311          
+   1312                  /* Prevent excessive re-writes to item header caused by numerous, rapid,
+   1313                   * and successive OSAL_Nv interruptions caused by resets.
+   1314                   */
+   1315                  if ( hdr.stat == OSAL_NV_ERASED_ID )
+   \   00000108   0xF8BD 0x0010      LDRH     R0,[SP, #+16]
+   \   0000010C   0xF64F 0x71FF      MOVW     R1,#+65535
+   \   00000110   0x4288             CMP      R0,R1
+   \   00000112   0xD106             BNE.N    ??osal_nv_write_9
+   1316                  {
+   1317                    setItem( srcPg, srcOff, eNvXfer );
+   \   00000114   0x2200             MOVS     R2,#+0
+   \   00000116   0x0021             MOVS     R1,R4
+   \   00000118   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   0000011A   0xF89D 0x0004      LDRB     R0,[SP, #+4]
+   \   0000011E   0x.... 0x....      BL       setItem
+   1318                  }
+   1319          
+   1320                  xferBuf( srcPg, srcOff, dstPg, dstOff, ndx );
+   \                     ??osal_nv_write_9: (+1)
+   \   00000122   0x0030             MOVS     R0,R6
+   \   00000124   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   00000126   0x9000             STR      R0,[SP, #+0]
+   \   00000128   0x465B             MOV      R3,R11
+   \   0000012A   0xB29B             UXTH     R3,R3            ;; ZeroExt  R3,R3,#+16,#+16
+   \   0000012C   0x002A             MOVS     R2,R5
+   \   0000012E   0xB2D2             UXTB     R2,R2            ;; ZeroExt  R2,R2,#+24,#+24
+   \   00000130   0x0021             MOVS     R1,R4
+   \   00000132   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   00000134   0xF89D 0x0004      LDRB     R0,[SP, #+4]
+   \   00000138   0x.... 0x....      BL       xferBuf
+   1321                  srcOff += ndx;
+   \   0000013C   0x1934             ADDS     R4,R6,R4
+   1322                  dstOff += ndx;
+   \   0000013E   0xEB16 0x0B0B      ADDS     R11,R6,R11
+   1323          
+   1324                  writeBuf( dstPg, dstOff, len, buf );
+   \   00000142   0x9B06             LDR      R3,[SP, #+24]
+   \   00000144   0x003A             MOVS     R2,R7
+   \   00000146   0xB292             UXTH     R2,R2            ;; ZeroExt  R2,R2,#+16,#+16
+   \   00000148   0x4659             MOV      R1,R11
+   \   0000014A   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   0000014C   0x0028             MOVS     R0,R5
+   \   0000014E   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000150   0x.... 0x....      BL       writeBuf
+   1325                  srcOff += len;
+   \   00000154   0x193C             ADDS     R4,R7,R4
+   1326                  dstOff += len;
+   \   00000156   0xEB17 0x0B0B      ADDS     R11,R7,R11
+   1327          
+   1328                  xferBuf( srcPg, srcOff, dstPg, dstOff, (hdr.len-ndx-len) );
+   \   0000015A   0xF8BD 0x000A      LDRH     R0,[SP, #+10]
+   \   0000015E   0x1B80             SUBS     R0,R0,R6
+   \   00000160   0x1BC0             SUBS     R0,R0,R7
+   \   00000162   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   00000164   0x9000             STR      R0,[SP, #+0]
+   \   00000166   0x465B             MOV      R3,R11
+   \   00000168   0xB29B             UXTH     R3,R3            ;; ZeroExt  R3,R3,#+16,#+16
+   \   0000016A   0x002A             MOVS     R2,R5
+   \   0000016C   0xB2D2             UXTB     R2,R2            ;; ZeroExt  R2,R2,#+24,#+24
+   \   0000016E   0x0021             MOVS     R1,R4
+   \   00000170   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   00000172   0xF89D 0x0004      LDRB     R0,[SP, #+4]
+   \   00000176   0x.... 0x....      BL       xferBuf
+   1329          
+   1330                  // Calculate and write the new checksum.
+   1331                  dstOff = pgOff[dstPg] - tmp;
+   \   0000017A   0x....             LDR.N    R0,??DataTable17
+   \   0000017C   0xB2ED             UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+   \   0000017E   0xF830 0x0015      LDRH     R0,[R0, R5, LSL #+1]
+   \   00000182   0xEBB0 0x0B0A      SUBS     R11,R0,R10
+   1332                  hdrData[0] = calcChkF( dstPg, dstOff, hdr.len );
+   \   00000186   0xF8BD 0x200A      LDRH     R2,[SP, #+10]
+   \   0000018A   0x4659             MOV      R1,R11
+   \   0000018C   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   0000018E   0x0028             MOVS     R0,R5
+   \   00000190   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000192   0x.... 0x....      BL       calcChkF
+   \   00000196   0x....             LDR.N    R1,??DataTable17_5
+   \   00000198   0x8008             STRH     R0,[R1, #+0]
+   1333                  dstOff -= OSAL_NV_HDR_SIZE;
+   \   0000019A   0xF1BB 0x0B10      SUBS     R11,R11,#+16
+   1334                  flashWrite(OSAL_NV_PAGE_TO_PTR(dstPg) + dstOff + OSAL_NV_HDR_CHK,
+   1335                             OSAL_NV_HDR_ITEM, (uint8 *)(hdrData));
+   \   0000019E   0x....             LDR.N    R2,??DataTable17_5
+   \   000001A0   0x2104             MOVS     R1,#+4
+   \   000001A2   0xB2ED             UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+   \   000001A4   0xF44F 0x6000      MOV      R0,#+2048
+   \   000001A8   0x....             LDR.N    R3,??DataTable16_1  ;; 0x27c800
+   \   000001AA   0xFB00 0x3005      MLA      R0,R0,R5,R3
+   \   000001AE   0xFA1F 0xFB8B      UXTH     R11,R11          ;; ZeroExt  R11,R11,#+16,#+16
+   \   000001B2   0xEB1B 0x0000      ADDS     R0,R11,R0
+   \   000001B6   0x1D00             ADDS     R0,R0,#+4
+   \   000001B8   0x.... 0x....      BL       flashWrite
+   1336                  readHdr( dstPg, dstOff, (uint8 *)(&hdr) );
+   \   000001BC   0xAA02             ADD      R2,SP,#+8
+   \   000001BE   0x4659             MOV      R1,R11
+   \   000001C0   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   000001C2   0x0028             MOVS     R0,R5
+   \   000001C4   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   000001C6   0x.... 0x....      BL       readHdr
+   1337          
+   1338                  if ( chk != hdr.chk )
+   \   000001CA   0xF8BD 0x000C      LDRH     R0,[SP, #+12]
+   \   000001CE   0xFA1F 0xF989      UXTH     R9,R9            ;; ZeroExt  R9,R9,#+16,#+16
+   \   000001D2   0x4581             CMP      R9,R0
+   \   000001D4   0xD002             BEQ.N    ??osal_nv_write_10
+   1339                  {
+   1340                    rtrn = NV_OPER_FAILED;
+   \   000001D6   0xF05F 0x080A      MOVS     R8,#+10
+   \   000001DA   0xE00B             B.N      ??osal_nv_write_11
+   1341                  }
+   1342                  else
+   1343                  {
+   1344                    hotItemUpdate(dstPg, dstOff+OSAL_NV_HDR_SIZE, hdr.id);
+   \                     ??osal_nv_write_10: (+1)
+   \   000001DC   0xF8BD 0x2008      LDRH     R2,[SP, #+8]
+   \   000001E0   0xF11B 0x0110      ADDS     R1,R11,#+16
+   \   000001E4   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   000001E6   0x0028             MOVS     R0,R5
+   \   000001E8   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   000001EA   0x.... 0x....      BL       hotItemUpdate
+   \   000001EE   0xE001             B.N      ??osal_nv_write_11
+   1345                  }
+   1346                }
+   1347                else
+   1348                {
+   1349                  rtrn = NV_OPER_FAILED;
+   \                     ??osal_nv_write_8: (+1)
+   \   000001F0   0xF05F 0x080A      MOVS     R8,#+10
+   1350                }
+   1351          
+   1352                if ( comPg != OSAL_NV_PAGE_NULL )
+   \                     ??osal_nv_write_11: (+1)
+   \   000001F4   0xF89D 0x0005      LDRB     R0,[SP, #+5]
+   \   000001F8   0x2806             CMP      R0,#+6
+   \   000001FA   0xD01C             BEQ.N    ??osal_nv_write_12
+   1353                {
+   1354                  /* Even though the page compaction succeeded, if the new item is coming from the compacted
+   1355                   * page and writing the new value failed, then the compaction must be aborted.
+   1356                   */
+   1357                  if ( (srcPg == comPg) && (rtrn == NV_OPER_FAILED) )
+   \   000001FC   0xF89D 0x0004      LDRB     R0,[SP, #+4]
+   \   00000200   0xF89D 0x1005      LDRB     R1,[SP, #+5]
+   \   00000204   0x4288             CMP      R0,R1
+   \   00000206   0xD109             BNE.N    ??osal_nv_write_13
+   \   00000208   0xFA5F 0xF888      UXTB     R8,R8            ;; ZeroExt  R8,R8,#+24,#+24
+   \   0000020C   0xF1B8 0x0F0A      CMP      R8,#+10
+   \   00000210   0xD104             BNE.N    ??osal_nv_write_13
+   1358                  {
+   1359                    erasePage( pgRes );
+   \   00000212   0x....             LDR.N    R0,??DataTable17_6
+   \   00000214   0x7800             LDRB     R0,[R0, #+0]
+   \   00000216   0x.... 0x....      BL       erasePage
+   \   0000021A   0xE00C             B.N      ??osal_nv_write_12
+   1360                  }
+   1361                  else
+   1362                  {
+   1363                    COMPACT_PAGE_CLEANUP( comPg );
+   \                     ??osal_nv_write_13: (+1)
+   \   0000021C   0x2100             MOVS     R1,#+0
+   \   0000021E   0x....             LDR.N    R0,??DataTable17_6
+   \   00000220   0x7800             LDRB     R0,[R0, #+0]
+   \   00000222   0x.... 0x....      BL       markPage
+   \   00000226   0xF89D 0x0005      LDRB     R0,[SP, #+5]
+   \   0000022A   0x.... 0x....      BL       erasePage
+   \   0000022E   0xF89D 0x0005      LDRB     R0,[SP, #+5]
+   \   00000232   0x....             LDR.N    R1,??DataTable17_6
+   \   00000234   0x7008             STRB     R0,[R1, #+0]
+   1364                  }
+   1365                }
+   1366          
+   1367                /* Zero of the old item must wait until after compact page cleanup has finished - if the item
+   1368                 * is zeroed before and cleanup is interrupted by a power-cycle, the new item can be lost.
+   1369                 */
+   1370                if ( (srcPg != comPg) && (rtrn != NV_OPER_FAILED) )
+   \                     ??osal_nv_write_12: (+1)
+   \   00000236   0xF89D 0x0004      LDRB     R0,[SP, #+4]
+   \   0000023A   0xF89D 0x1005      LDRB     R1,[SP, #+5]
+   \   0000023E   0x4288             CMP      R0,R1
+   \   00000240   0xD00B             BEQ.N    ??osal_nv_write_2
+   \   00000242   0xFA5F 0xF888      UXTB     R8,R8            ;; ZeroExt  R8,R8,#+24,#+24
+   \   00000246   0xF1B8 0x0F0A      CMP      R8,#+10
+   \   0000024A   0xD006             BEQ.N    ??osal_nv_write_2
+   1371                {
+   1372                  setItem( srcPg, origOff, eNvZero );
+   \   0000024C   0x2201             MOVS     R2,#+1
+   \   0000024E   0xF8BD 0x1006      LDRH     R1,[SP, #+6]
+   \   00000252   0xF89D 0x0004      LDRB     R0,[SP, #+4]
+   \   00000256   0x.... 0x....      BL       setItem
+   1373                }
+   1374              }
+   1375            }
+   1376          
+   1377            return rtrn;
+   \                     ??osal_nv_write_2: (+1)
+   \   0000025A   0x4640             MOV      R0,R8
+   \   0000025C   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \                     ??osal_nv_write_1: (+1)
+   \   0000025E   0xB007             ADD      SP,SP,#+28
+   \   00000260   0xE8BD 0x8FF0      POP      {R4-R11,PC}      ;; return
+   1378          }
+   1379          
+   1380          /******************************************************************************
+   1381           * @fn      osal_nv_read
+   1382           *
+   1383           * @brief   Read data from NV. This function can be used to read an entire item from NV or
+   1384           *          an element of an item by indexing into the item with an offset.
+   1385           *          Read data is copied into *buf.
+   1386           *
+   1387           * @param   id     - Valid NV item Id.
+   1388           * @param   ndx - Index offset into item
+   1389           * @param   len    - Length of data to read.
+   1390           * @param   *buf  - Data is read into this buffer.
+   1391           *
+   1392           * @return  SUCCESS if NV data was copied to the parameter 'buf'.
+   1393           *          Otherwise, NV_OPER_FAILED for failure.
+   1394           */
+
+   \                                 In section .text, align 2, keep-with-next
+   1395          uint8 osal_nv_read( uint16 id, uint16 ndx, uint16 len, void *buf )
+   1396          {
+   \                     osal_nv_read: (+1)
+   \   00000000   0xB5F8             PUSH     {R3-R7,LR}
+   \   00000002   0x0007             MOVS     R7,R0
+   \   00000004   0x000E             MOVS     R6,R1
+   \   00000006   0x0014             MOVS     R4,R2
+   \   00000008   0x001D             MOVS     R5,R3
+   1397            uint8 *addr, *ptr = (uint8 *)buf;
+   1398            uint8 findPg;
+   1399            uint16 offset;
+   1400            uint8 hotIdx;
+   1401          
+   1402            if ((hotIdx = hotItem(id)) < OSAL_NV_MAX_HOT)
+   \   0000000A   0x0038             MOVS     R0,R7
+   \   0000000C   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   0000000E   0x.... 0x....      BL       hotItem
+   \   00000012   0x0001             MOVS     R1,R0
+   \   00000014   0xB2C9             UXTB     R1,R1            ;; ZeroExt  R1,R1,#+24,#+24
+   \   00000016   0x2903             CMP      R1,#+3
+   \   00000018   0xDA14             BGE.N    ??osal_nv_read_0
+   1403            {
+   1404              findPg = hotPg[hotIdx];
+   \   0000001A   0x....             LDR.N    R1,??DataTable17_3
+   \   0000001C   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000001E   0x5C41             LDRB     R1,[R0, R1]
+   \   00000020   0xF88D 0x1000      STRB     R1,[SP, #+0]
+   1405              offset = hotOff[hotIdx];
+   \   00000024   0x....             LDR.N    R1,??DataTable17_4
+   \   00000026   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000028   0xF831 0x0010      LDRH     R0,[R1, R0, LSL #+1]
+   1406            }
+   1407            else if ((offset = findItem(id, &findPg)) == OSAL_NV_ITEM_NULL)
+   1408            {
+   1409              return NV_OPER_FAILED;
+   1410            }
+   1411          
+   1412            addr = OSAL_NV_PAGE_TO_PTR(findPg) + offset + ndx;
+   \                     ??osal_nv_read_1: (+1)
+   \   0000002C   0xF89D 0x1000      LDRB     R1,[SP, #+0]
+   \   00000030   0xF44F 0x6200      MOV      R2,#+2048
+   \   00000034   0x....             LDR.N    R3,??DataTable17_1  ;; 0x27c800
+   \   00000036   0xFB02 0x3101      MLA      R1,R2,R1,R3
+   \   0000003A   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   0000003C   0x1840             ADDS     R0,R0,R1
+   \   0000003E   0xB2B6             UXTH     R6,R6            ;; ZeroExt  R6,R6,#+16,#+16
+   \   00000040   0x1830             ADDS     R0,R6,R0
+   \   00000042   0xE00E             B.N      ??osal_nv_read_2
+   \                     ??osal_nv_read_0: (+1)
+   \   00000044   0xA900             ADD      R1,SP,#+0
+   \   00000046   0x0038             MOVS     R0,R7
+   \   00000048   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   0000004A   0x.... 0x....      BL       findItem
+   \   0000004E   0x0001             MOVS     R1,R0
+   \   00000050   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   00000052   0x2900             CMP      R1,#+0
+   \   00000054   0xD1EA             BNE.N    ??osal_nv_read_1
+   \   00000056   0x200A             MOVS     R0,#+10
+   \   00000058   0xE009             B.N      ??osal_nv_read_3
+   1413            while ( len-- )
+   1414            {
+   1415              *ptr++ = *addr++;
+   \                     ??osal_nv_read_4: (+1)
+   \   0000005A   0x7801             LDRB     R1,[R0, #+0]
+   \   0000005C   0x7029             STRB     R1,[R5, #+0]
+   \   0000005E   0x1C40             ADDS     R0,R0,#+1
+   \   00000060   0x1C6D             ADDS     R5,R5,#+1
+   1416            }
+   \                     ??osal_nv_read_2: (+1)
+   \   00000062   0x0021             MOVS     R1,R4
+   \   00000064   0x1E4C             SUBS     R4,R1,#+1
+   \   00000066   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   00000068   0x2900             CMP      R1,#+0
+   \   0000006A   0xD1F6             BNE.N    ??osal_nv_read_4
+   1417          
+   1418            return SUCCESS;
+   \   0000006C   0x2000             MOVS     R0,#+0
+   \                     ??osal_nv_read_3: (+1)
+   \   0000006E   0xBDF2             POP      {R1,R4-R7,PC}    ;; return
+   1419          }
+   1420          
+   1421          /******************************************************************************
+   1422           * @fn      osal_nv_delete
+   1423           *
+   1424           * @brief   Delete item from NV. This function will fail if the length
+   1425           *          parameter does not match the length of the item in NV.
+   1426           *
+   1427           * @param   id  - Valid NV item Id.
+   1428           * @param   len - Length of item to delete.
+   1429           *
+   1430           * @return  SUCCESS if item was deleted,
+   1431           *          NV_ITEM_UNINIT if item did not exist in NV,
+   1432           *          NV_BAD_ITEM_LEN if length parameter not correct,
+   1433           *          NV_OPER_FAILED if attempted deletion failed.
+   1434           */
+
+   \                                 In section .text, align 2, keep-with-next
+   1435          uint8 osal_nv_delete( uint16 id, uint16 len )
+   1436          {
+   \                     osal_nv_delete: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0xB082             SUB      SP,SP,#+8
+   \   00000004   0x0004             MOVS     R4,R0
+   \   00000006   0x000D             MOVS     R5,R1
+   1437            uint8 findPg;
+   1438            uint16 length;
+   1439            uint16 offset;
+   1440          
+   1441            offset = findItem( id, &findPg );
+   \   00000008   0xA900             ADD      R1,SP,#+0
+   \   0000000A   0x0020             MOVS     R0,R4
+   \   0000000C   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   0000000E   0x.... 0x....      BL       findItem
+   \   00000012   0x0006             MOVS     R6,R0
+   1442            if ( offset == OSAL_NV_ITEM_NULL )
+   \   00000014   0xB2B6             UXTH     R6,R6            ;; ZeroExt  R6,R6,#+16,#+16
+   \   00000016   0x2E00             CMP      R6,#+0
+   \   00000018   0xD101             BNE.N    ??osal_nv_delete_0
+   1443            {
+   1444              // NV item does not exist
+   1445              return NV_ITEM_UNINIT;
+   \   0000001A   0x2009             MOVS     R0,#+9
+   \   0000001C   0xE01C             B.N      ??osal_nv_delete_1
+   1446            }
+   1447          
+   1448            length = osal_nv_item_len( id );
+   \                     ??osal_nv_delete_0: (+1)
+   \   0000001E   0x0020             MOVS     R0,R4
+   \   00000020   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   00000022   0x.... 0x....      BL       osal_nv_item_len
+   1449            if ( length != len )
+   \   00000026   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   00000028   0xB2AD             UXTH     R5,R5            ;; ZeroExt  R5,R5,#+16,#+16
+   \   0000002A   0x42A8             CMP      R0,R5
+   \   0000002C   0xD001             BEQ.N    ??osal_nv_delete_2
+   1450            {
+   1451              // NV item has different length
+   1452              return NV_BAD_ITEM_LEN;
+   \   0000002E   0x200C             MOVS     R0,#+12
+   \   00000030   0xE012             B.N      ??osal_nv_delete_1
+   1453            }
+   1454          
+   1455            // Set item header ID to zero to 'delete' the item
+   1456            setItem( findPg, offset, eNvZero );
+   \                     ??osal_nv_delete_2: (+1)
+   \   00000032   0x2201             MOVS     R2,#+1
+   \   00000034   0x0031             MOVS     R1,R6
+   \   00000036   0xB289             UXTH     R1,R1            ;; ZeroExt  R1,R1,#+16,#+16
+   \   00000038   0xF89D 0x0000      LDRB     R0,[SP, #+0]
+   \   0000003C   0x.... 0x....      BL       setItem
+   1457          
+   1458            // Verify that item has been removed
+   1459            offset = findItem( id, &findPg );
+   \   00000040   0xA900             ADD      R1,SP,#+0
+   \   00000042   0x0020             MOVS     R0,R4
+   \   00000044   0xB280             UXTH     R0,R0            ;; ZeroExt  R0,R0,#+16,#+16
+   \   00000046   0x.... 0x....      BL       findItem
+   \   0000004A   0x0006             MOVS     R6,R0
+   1460            if ( offset != OSAL_NV_ITEM_NULL )
+   \   0000004C   0xB2B6             UXTH     R6,R6            ;; ZeroExt  R6,R6,#+16,#+16
+   \   0000004E   0x2E00             CMP      R6,#+0
+   \   00000050   0xD001             BEQ.N    ??osal_nv_delete_3
+   1461            {
+   1462              // Still there
+   1463              return NV_OPER_FAILED;
+   \   00000052   0x200A             MOVS     R0,#+10
+   \   00000054   0xE000             B.N      ??osal_nv_delete_1
+   1464            }
+   1465            else
+   1466            {
+   1467              // Yes, it's gone
+   1468              return SUCCESS;
+   \                     ??osal_nv_delete_3: (+1)
+   \   00000056   0x2000             MOVS     R0,#+0
+   \                     ??osal_nv_delete_1: (+1)
+   \   00000058   0xBD76             POP      {R1,R2,R4-R6,PC}  ;; return
+   1469            }
+   1470          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15:
+   \   00000000   0x........         DC32     pgRes
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable15_1:
+   \   00000000   0x........         DC32     hdrData
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable16:
+   \   00000000   0x........         DC32     pgLost
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable16_1:
+   \   00000000   0x0027C800         DC32     0x27c800
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17:
+   \   00000000   0x........         DC32     pgOff
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17_1:
+   \   00000000   0x0027C800         DC32     0x27c800
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17_2:
+   \   00000000   0x........         DC32     hotIds
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17_3:
+   \   00000000   0x........         DC32     hotPg
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17_4:
+   \   00000000   0x........         DC32     hotOff
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17_5:
+   \   00000000   0x........         DC32     hdrData
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable17_6:
+   \   00000000   0x........         DC32     pgRes
+   1471          
+   1472          /*********************************************************************
+   1473           */
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       4   calcChkB
+       4   calcChkF
+      56   compactPage
+        56   -> calcChkF
+        56   -> erasePage
+        56   -> flashWrite
+        56   -> hotItemUpdate
+        56   -> markPage
+        56   -> readHdr
+        56   -> setItem
+        56   -> writeItem
+        56   -> xferBuf
+      16   erasePage
+        16   -> flashErasePage
+      16   findItem
+        16   -> findItem
+        16   -> initPage
+       0   hotItem
+      16   hotItemUpdate
+        16   -> hotItem
+      32   initItem
+        32   -> compactPage
+        32   -> erasePage
+        32   -> markPage
+        32   -> writeItem
+      24   initNV
+        24   -> compactPage
+        24   -> erasePage
+        24   -> initPage
+        24   -> markPage
+        24   -> readPgHdr
+      48   initPage
+        48   -> calcChkF
+        48   -> findItem
+        48   -> readHdr
+        48   -> setItem
+      16   markPage
+        16   -> flashWrite
+      24   osal_nv_delete
+        24   -> findItem
+        24   -> osal_nv_item_len
+        24   -> setItem
+       8   osal_nv_init
+         8   -> initNV
+      24   osal_nv_item_init
+        24   -> HalAdcCheckVdd
+        24   -> findItem
+        24   -> hotItemUpdate
+        24   -> initItem
+      32   osal_nv_item_len
+        32   -> findItem
+        32   -> hotItem
+        32   -> readHdr
+      24   osal_nv_read
+        24   -> findItem
+        24   -> hotItem
+      64   osal_nv_write
+        64   -> HalAdcCheckVdd
+        64   -> calcChkF
+        64   -> erasePage
+        64   -> findItem
+        64   -> flashWrite
+        64   -> hotItemUpdate
+        64   -> initItem
+        64   -> markPage
+        64   -> readHdr
+        64   -> setItem
+        64   -> writeBuf
+        64   -> xferBuf
+       4   readHdr
+       4   readPgHdr
+      32   setItem
+        32   -> flashWrite
+        32   -> readHdr
+      32   writeBuf
+        32   -> flashWrite
+      48   writeItem
+        48   -> calcChkB
+        48   -> calcChkF
+        48   -> flashWrite
+        48   -> hotItemUpdate
+        48   -> readHdr
+        48   -> writeBuf
+      40   xferBuf
+        40   -> flashWrite
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable15
+       4  ??DataTable15_1
+       4  ??DataTable16
+       4  ??DataTable16_1
+       4  ??DataTable17
+       4  ??DataTable17_1
+       4  ??DataTable17_2
+       4  ??DataTable17_3
+       4  ??DataTable17_4
+       4  ??DataTable17_5
+       4  ??DataTable17_6
+   12288  _nvBuf
+      74  calcChkB
+      60  calcChkF
+     438  compactPage
+      64  erasePage
+      72  findItem
+       4  hdrData
+       8  hotIds
+      34  hotItem
+      40  hotItemUpdate
+       8  hotOff
+       4  hotPg
+     288  initItem
+     320  initNV
+     330  initPage
+      42  markPage
+      90  osal_nv_delete
+       8  osal_nv_init
+      90  osal_nv_item_init
+      86  osal_nv_item_len
+     112  osal_nv_read
+     612  osal_nv_write
+      12  pgLost
+      12  pgOff
+       1  pgRes
+      42  readHdr
+      42  readPgHdr
+     124  setItem
+     310  writeBuf
+     376  writeItem
+     384  xferBuf
+
+ 
+     37 bytes in section .bss
+      4 bytes in section .data
+ 12 288 bytes in section .noinit (abs)
+      8 bytes in section .rodata
+  4 082 bytes in section .text
+ 
+ 4 082 bytes of CODE  memory
+     8 bytes of CONST memory
+    41 bytes of DATA  memory (+ 12 288 bytes shared)
+
+Errors: none
+Warnings: none

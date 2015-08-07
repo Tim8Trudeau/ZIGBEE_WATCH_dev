@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Project>
+  <Desktop>
+    <Static>
+      <Debug-Log>
+        
+        
+      <PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1621</ColumnWidth1></Debug-Log>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1215</ColumnWidth1><ColumnWidth2>324</ColumnWidth2><ColumnWidth3>81</ColumnWidth3><PreferedWindows><Position>4</Position><ScreenPosX>148</ScreenPosX><ScreenPosY>311</ScreenPosY><Windows/></PreferedWindows></Build>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>197</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Disassembly>
+        <col-names>
+          
+          
+        <item>Disassembly</item><item>_I0</item></col-names>
+        <col-widths>
+          
+          
+        <item>500</item><item>20</item></col-widths>
+        <DisasmHistory><item>ZDO_NetworkDiscoveryConfirmCB</item><item>GPIOPinTypeGPIOOutput</item></DisasmHistory>
+        
+        
+      <PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><ShowCodeCoverage>1</ShowCodeCoverage><ShowInstrProfiling>1</ShowInstrProfiling></Disassembly>
+    <WATCH_2><expressions><item>ZMacExtAddr</item><item>zgItemTable[i].id</item><item>zgPreConfigKey</item><item>defaultKey</item><item>setDefault</item><item/></expressions><col-names><item>Expression</item><item>Location</item><item>Type</item><item>Value</item></col-names><col-widths><item>100</item><item>74</item><item>100</item><item>114</item></col-widths><PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows></WATCH_2><QuickWatch><PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><col-names><item>Expression</item><item>Location</item><item>Type</item><item>Value</item></col-names><col-widths><item>180</item><item>150</item><item>100</item><item>273</item></col-widths><QWatchHistory><item>msg_ptr</item><item>pData</item><item>MSGpkt</item><item>req</item><item>p</item><item>pMacDataTx</item><item>*msg_ptr</item><item>*(epDesc-&gt;task_id)</item><item>epDesc</item><item>msgPtr</item><item>tasksArr</item><item>WatchApp_DstAddr</item><item>WatchApp_epDesc</item><item>zgDefaultChannelList</item><item>zgPreConfigKey</item><item>defaultKey</item></QWatchHistory></QuickWatch><WATCH_3><expressions><item>tasksEvents</item><item>events</item><item>idx</item><item/></expressions><col-names><item>Expression</item><item>Location</item><item>Type</item><item>Value</item></col-names><col-widths><item>100</item><item>150</item><item>118</item><item>100</item></col-widths><PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows></WATCH_3><TerminalIO><PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><InputSource>1</InputSource><InputMode>10</InputMode><Filename>$PROJ_DIR$\TermIOInput.txt</Filename><InputEcho>1</InputEcho><ShowReset>0</ShowReset></TerminalIO><Select-Ambiguous-Definitions><PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows><Window><Factory>Debug-Log</Factory></Window><Window><Factory>Breakpoints</Factory></Window></Windows></PreferedWindows><ColumnWidth0>285</ColumnWidth0><ColumnWidth1>40</ColumnWidth1><ColumnWidth2>490</ColumnWidth2></Select-Ambiguous-Definitions><Find-in-Files><PreferedWindows><Position>4</Position><ScreenPosX>1907</ScreenPosX><ScreenPosY>436</ScreenPosY><Windows/></PreferedWindows><ColumnWidth0>505</ColumnWidth0><ColumnWidth1>40</ColumnWidth1><ColumnWidth2>812</ColumnWidth2><ColumnWidth3>230</ColumnWidth3></Find-in-Files><Find-All-References><PreferedWindows><Position>4</Position><ScreenPosX>1972</ScreenPosX><ScreenPosY>263</ScreenPosY><Windows/></PreferedWindows><ColumnWidth0>475</ColumnWidth0><ColumnWidth1>40</ColumnWidth1><ColumnWidth2>490</ColumnWidth2></Find-All-References><PROJECT_GUI_CALL_GRAPH><PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><col-names><item>File</item><item>Function</item><item>Line</item></col-names><col-widths><item>200</item><item>700</item><item>100</item></col-widths></PROJECT_GUI_CALL_GRAPH><Breakpoints><PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows><Window><Factory>Find-All-References</Factory></Window><Window><Factory>Find-in-Files</Factory></Window></Windows></PreferedWindows></Breakpoints><Find-All-Declarations><PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><ColumnWidth0>580</ColumnWidth0><ColumnWidth1>82</ColumnWidth1><ColumnWidth2>994</ColumnWidth2></Find-All-Declarations><WATCH_1><PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><expressions><item>zgDefaultChannelList</item><item>ApsUseExtendedPanID</item><item>zgItemTable</item><item>ret</item><item>pNwkDesc</item><item/></expressions><col-names><item>Expression</item><item>Location</item><item>Type</item><item>Value</item></col-names><col-widths><item>100</item><item>150</item><item>100</item><item>100</item></col-widths></WATCH_1><CallStack><col-names><item>Frame</item><item>_I0</item></col-names><col-widths><item>3500</item><item>20</item></col-widths><PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows></CallStack><Register><PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows></Register></Static>
+    <Windows>
+      
+      
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-13027-60</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>BarronWatch</ExpandedNode><ExpandedNode>BarronWatch/Application</ExpandedNode><ExpandedNode>BarronWatch/ZDO</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1><Tabs><Tab><Identity>TabID-23411-26041</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab><Tab><Identity>TabID-9006-8425</Identity><TabName>Breakpoints</TabName><Factory>Breakpoints</Factory></Tab><Tab><Identity>TabID-21732-28919</Identity><TabName>Ambiguous Definitions</TabName><Factory>Select-Ambiguous-Definitions</Factory><Session/></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd1><Wnd2><Tabs><Tab><Identity>TabID-16701-19483</Identity><TabName>Call Graph</TabName><Factory>PROJECT_GUI_CALL_GRAPH</Factory></Tab><Tab><Identity>TabID-19333-940</Identity><TabName>Find in Files</TabName><Factory>Find-in-Files</Factory><Session/></Tab></Tabs><SelectedTab>1</SelectedTab></Wnd2></Windows>
+    <Editor>
+      
+      
+      
+      
+      
+    <Pane/><ActivePane>0</ActivePane><Pane/><Sizes><Pane><X>493248</X><Y>1000000</Y></Pane><Pane><X>506751</X><Y>1000000</Y></Pane></Sizes><SplitMode>4</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-00D0B280><key>iaridepm.enu1</key></Toolbar-00D0B280></Sizes></Row0><Row1><Sizes><Toolbar-1B6F4848><key>debuggergui.enu1</key></Toolbar-1B6F4848></Sizes></Row1><Row2><Sizes/></Row2></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>628</Bottom><Right>271</Right><x>-2</x><y>-2</y><xscreen>223</xscreen><yscreen>206</yscreen><sizeHorzCX>132738</sizeHorzCX><sizeHorzCY>204365</sizeHorzCY><sizeVertCX>162500</sizeVertCX><sizeVertCY>625000</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>311</Bottom><Right>511</Right><x>-2</x><y>-2</y><xscreen>513</xscreen><yscreen>313</yscreen><sizeHorzCX>305357</sizeHorzCX><sizeHorzCY>310516</sizeHorzCY><sizeVertCX>132738</sizeVertCX><sizeVertCY>204365</sizeVertCY></Rect></Wnd1><Wnd2><Rect><Top>0</Top><Left>0</Left><Bottom>0</Bottom><Right>7</Right><x>509</x><y>-2</y><xscreen>1173</xscreen><yscreen>313</yscreen><sizeHorzCX>698214</sizeHorzCX><sizeHorzCY>310516</sizeHorzCY><sizeVertCX>102976</sizeVertCX><sizeVertCY>182540</sizeVertCY></Rect></Wnd2></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Project>
+
+
